@@ -1,0 +1,283 @@
+"""Ejecuta los cuatro recorridos en copias temporales y conserva evidencia nueva.
+
+Los fallos didácticos esperados se evalúan por identificador y tipo de error.
+La evidencia histórica distribuida nunca se sobrescribe. Requiere Python 3.10+
+y Git; no utiliza paquetes adicionales ni red.
+"""
+
+import argparse
+import json
+import platform
+import re
+import shutil
+import sqlite3
+import subprocess
+import sys
+import tempfile
+from datetime import datetime, timezone
+from pathlib import Path
+
+from preparar_laboratorio_04 import (
+    RAIZ, REFERENCIAS, ErrorPreparacion, entorno_local, guardar_json,
+    huellas_archivos, preparar,
+)
+
+
+C = ["C%02d" % n for n in range(1, 5)]
+B = ["B%02d" % n for n in range(1, 7)]
+N = ["N%02d" % n for n in range(1, 11)]
+
+
+def leer_json(ruta):
+    return json.loads(ruta.read_text(encoding="utf-8"))
+
+
+def sanear(texto, raiz, salida, temporal):
+    reemplazos = [(str(salida), "SALIDA"), (str(temporal), "TEMPORAL"),
+                  (str(raiz), "REPOSITORIO"), (str(sys.executable), "python")]
+    for original, sustituto in sorted(reemplazos, key=lambda item: len(item[0]), reverse=True):
+        texto = texto.replace(original, sustituto)
+        texto = texto.replace(original.replace("\\", "\\\\"), sustituto)
+    return re.sub(r'File "([^\"]+)"',
+                  lambda m: 'File "' + m.group(1).replace("\\", "/").split("/")[-1] + '"',
+                  texto)
+
+
+def ejecutar(argumentos, carpeta, raiz, salida, temporal, registro):
+    resultado = subprocess.run(
+        [sys.executable, *argumentos], cwd=carpeta, env=entorno_local(),
+        capture_output=True, text=True, encoding="utf-8", errors="replace",
+        check=False,
+    )
+    registro.write_text(sanear(resultado.stdout + resultado.stderr, raiz, salida, temporal),
+                        encoding="utf-8")
+    return resultado.returncode
+
+
+def evaluar_bateria(registro, identificador, ids, codigo, fallos=(), no_ejecutados=()):
+    """Evalúa un contrato observable; un error ajeno nunca cuenta como fallo esperado."""
+    fallos, no_ejecutados = set(fallos), set(no_ejecutados)
+    esperado = {i: ("FALLIDO" if i in fallos else
+                   "NO EJECUTADO" if i in no_ejecutados else "APROBADO") for i in ids}
+    casos = registro["pruebas"]
+    observados = {}
+    for caso in casos:
+        coincidencia = re.match(r"test_([cbn]\d{2})_", caso["prueba"])
+        clave = caso.get("id") or (coincidencia.group(1).upper() if coincidencia else "DESCONOCIDO")
+        if clave in observados:
+            raise ValueError("Criterio duplicado")
+        observados[clave] = caso["estado"]
+    ejecutados = len(ids) - len(no_ejecutados)
+    conteos = {
+        "aprobados": ejecutados - len(fallos), "fallidos": len(fallos),
+        "fallos_de_asercion": len(fallos), "errores_de_ejecucion": 0,
+        "bloqueados": 0, "no_ejecutados": len(no_ejecutados),
+    }
+    correcto = (
+        codigo == (1 if fallos else 0)
+        and len(casos) == len(ids) and observados == esperado
+        and all(registro[k] == valor for k, valor in conteos.items())
+        and registro.get("total", registro.get("criterios_registrados")) == len(ids)
+        and registro.get("ejecutados", ejecutados) == ejecutados
+        and all(p.get("tipo_error") == "AssertionError"
+                for p in casos if p["estado"] == "FALLIDO")
+    )
+    return {
+        "bateria": identificador,
+        "evaluacion_del_recorrido": "APROBADO" if correcto else "FALLIDO",
+        "codigo_salida_bateria": codigo,
+        "ejecutados": registro.get("ejecutados", registro.get("total")),
+        "aprobados": registro["aprobados"], "fallidos": registro["fallidos"],
+        "no_ejecutados": registro["no_ejecutados"],
+        "fallos_intencionales_esperados": sorted(fallos),
+        "criterios_observados": observados,
+    }
+
+
+def evaluar_laboratorio(numero, evidencia):
+    resumen = leer_json(evidencia / "resumen.json")
+    baterias = []
+    if numero == 1:
+        correcto = resumen["estado_del_recorrido_didactico"] == "APROBADO"
+        for estado in ["inicial", "solucion"]:
+            baterias.append(evaluar_bateria(
+                leer_json(evidencia / ("pruebas_" + estado + ".json")),
+                "laboratorio_01/" + estado, C,
+                resumen["versiones"][estado]["codigo_salida_pruebas"],
+                fallos=["C04"] if estado == "inicial" else [],
+            ))
+    elif numero == 2:
+        correcto = resumen["estado"] == "APROBADO"
+        baterias.append(evaluar_bateria(
+            leer_json(evidencia / "pruebas_solucion.json"), "laboratorio_02/solucion", C,
+            resumen["pruebas"]["codigo_salida"],
+        ))
+    else:
+        correcto = resumen["estado"] == "APROBADO"
+        por_estado = {b["estado_codigo"]: b for b in resumen["baterias"]}
+        for estado in ["base", "generado", "refactorizado", "defecto", "corregido"]:
+            baterias.append(evaluar_bateria(
+                leer_json(evidencia / ("pruebas_" + estado + ".json")),
+                "laboratorio_03/" + estado, C + B,
+                por_estado[estado]["codigo_salida"],
+                fallos=["B05", "B06"] if estado == "defecto" else [],
+                no_ejecutados=B if estado == "base" else [],
+            ))
+    return correcto and all(b["evaluacion_del_recorrido"] == "APROBADO" for b in baterias), baterias
+
+
+def verificar(salida, raiz=RAIZ):
+    raiz, salida = Path(raiz).resolve(), Path(salida).resolve()
+    if salida.exists():
+        raise ErrorPreparacion("La carpeta de salida ya existe; elige otra.")
+    if ".git" in salida.parts:
+        raise ErrorPreparacion("La salida no puede quedar dentro de metadatos Git.")
+    if not shutil.which("git"):
+        raise ErrorPreparacion("Git no está disponible en PATH.")
+    if salida.is_relative_to(raiz / "laboratorios") or salida.is_relative_to(raiz / "historiales"):
+        raise ErrorPreparacion("La evidencia nueva debe quedar fuera de las referencias distribuidas.")
+    salida.mkdir(parents=True, exist_ok=False)
+    version_git = subprocess.run(["git", "--version"], capture_output=True,
+                                  text=True, encoding="utf-8", errors="replace", check=False)
+    guardar_json(salida / "entorno.json", {
+        "fecha_hora_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "sistema": platform.system(), "python": platform.python_version(),
+        "implementacion_python": platform.python_implementation(),
+        "sqlite": sqlite3.sqlite_version, "git": version_git.stdout.strip(),
+        "dependencias": "Python estándar y Git", "red": "No utilizada",
+        "modalidad": "Comprobaciones locales ejecutadas en copias temporales",
+    })
+
+    resultados, baterias = [], []
+    with tempfile.TemporaryDirectory(prefix="verificacion_laboratorios_") as carpeta_temporal:
+        temporal = Path(carpeta_temporal)
+        for numero in [1, 2, 3]:
+            nombre = "laboratorio_%02d" % numero
+            fuente, copia = raiz / "laboratorios" / nombre, temporal / nombre
+            evidencia = salida / nombre
+            try:
+                anteriores = huellas_archivos(fuente)
+                if not anteriores or not (fuente / "verificar.py").is_file():
+                    raise ErrorPreparacion("Faltan materiales de " + nombre + ".")
+                shutil.copytree(fuente, copia)
+                codigo = ejecutar(["verificar.py", "--salida", str(evidencia)], copia,
+                                   raiz, salida, temporal, salida / (nombre + ".txt"))
+                correcto, casos = evaluar_laboratorio(numero, evidencia)
+                baterias.extend(casos)
+                conservado = anteriores == huellas_archivos(fuente)
+                resultados.append({
+                    "laboratorio": nombre,
+                    "estado": "APROBADO" if codigo == 0 and correcto and conservado else "FALLIDO",
+                    "comando_en_copia": "python verificar.py --salida SALIDA/" + nombre,
+                    "codigo_salida_verificador": codigo,
+                    "referencia_original_conservada": conservado,
+                    "evidencia": nombre + "/resumen.json",
+                })
+            except (OSError, ValueError, KeyError, TypeError, ErrorPreparacion) as error:
+                estado = error.estado if isinstance(error, ErrorPreparacion) else "FALLIDO"
+                resultados.append({"laboratorio": nombre, "estado": estado,
+                                   "motivo": "No se completó o no se pudo validar el registro del recorrido.",
+                                   "tipo_error": type(error).__name__})
+
+        nombre = "laboratorio_04"
+        try:
+            fuente = raiz / "laboratorios" / nombre
+            anteriores = huellas_archivos(fuente)
+            copia = temporal / nombre
+            preparacion = preparar(copia, raiz)
+            guardar_json(salida / "preparacion_laboratorio_04.json", preparacion)
+            evidencia = salida / nombre
+            codigo = ejecutar(["verificar.py", "--salida", str(evidencia)], copia,
+                               raiz, salida, temporal, salida / (nombre + ".txt"))
+            resumen = leer_json(evidencia / "resumen.json")
+            correcto = (codigo == 0 and resumen["estado"] == "APROBADO"
+                        and resumen["referencias"] == REFERENCIAS
+                        and resumen["arbol_actual_limpio"] is True)
+            for referencia, ids in [("inicio", C + B), ("solucion", C + B + N)]:
+                info = next(b for b in resumen["baterias"] if b["referencia"] == referencia)
+                baterias.append(evaluar_bateria(
+                    leer_json(evidencia / ("pruebas_" + referencia + ".json")),
+                    nombre + "/" + referencia, ids, info["codigo_salida"],
+                ))
+            archivo_actual = evidencia / "pruebas_arbol_actual.json"
+            codigo_actual = ejecutar(["pruebas.py", "--json", str(archivo_actual)],
+                                      copia / "repositorio", raiz, salida, temporal,
+                                      evidencia / "pruebas_arbol_actual.txt")
+            bateria_actual = evaluar_bateria(leer_json(archivo_actual), nombre + "/arbol_actual",
+                                              C + B + N, codigo_actual)
+            baterias.append(bateria_actual)
+            conservado = anteriores == huellas_archivos(fuente)
+            correcto = correcto and conservado and all(
+                b["evaluacion_del_recorrido"] == "APROBADO" for b in baterias
+                if b["bateria"].startswith(nombre + "/"))
+            resultados.append({
+                "laboratorio": nombre, "estado": "APROBADO" if correcto else "FALLIDO",
+                "comandos_en_copia": ["python verificar.py --salida SALIDA/laboratorio_04",
+                                       "python pruebas.py --json SALIDA/laboratorio_04/pruebas_arbol_actual.json (desde repositorio/)"],
+                "codigo_salida_verificador": codigo,
+                "codigo_salida_arbol_actual": codigo_actual,
+                "referencia_original_conservada": conservado,
+                "evidencia": nombre + "/resumen.json",
+                "criterios_ausentes_en_inicio": N,
+                "estado_de_criterios_ausentes_en_inicio": "NO EJECUTADO",
+            })
+        except (OSError, ValueError, KeyError, TypeError, StopIteration, ErrorPreparacion) as error:
+            estado = error.estado if isinstance(error, ErrorPreparacion) else "FALLIDO"
+            resultados.append({"laboratorio": nombre, "estado": estado,
+                               "motivo": "No se completó o no se pudo validar la reconstrucción o sus pruebas.",
+                               "tipo_error": type(error).__name__})
+
+        # Los verificadores originales ya sanean sus trazas. Esta capa elimina
+        # también las rutas de las copias temporales y de la salida actual.
+        for archivo in salida.rglob("*"):
+            if archivo.is_file() and archivo.suffix in {".json", ".txt", ".diff"}:
+                texto = archivo.read_text(encoding="utf-8")
+                archivo.write_text(sanear(texto, raiz, salida, temporal), encoding="utf-8")
+
+    aprobado = all(r["estado"] == "APROBADO" for r in resultados)
+    estado_final = "APROBADO" if aprobado else (
+        "FALLIDO" if any(r["estado"] == "FALLIDO" for r in resultados) else "BLOQUEADO")
+    resumen_general = {
+        "estado": estado_final,
+        "fecha_hora_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "objeto": "Integración local de los cuatro laboratorios distribuidos",
+        "criterio": "Patrones exactos de resultados, reconstrucción Git y conservación de referencias.",
+        "laboratorios": resultados, "baterias": baterias,
+        "fallos_intencionales": {"laboratorio_01/inicial": ["C04"],
+                                  "laboratorio_03/defecto": ["B05", "B06"]},
+        "interpretacion": "Un recorrido APROBADO conserva FALLIDO en sus criterios defectuosos esperados; no tolera otros errores.",
+        "evidencia_historica": "Conservada en cada laboratorio; estos archivos describen una ejecución nueva.",
+        "herramientas_comerciales": "NO EJECUTADO por este verificador",
+        "GitHub_Actions": "NO EJECUTADO por este verificador",
+        "limites": ["No revisa semánticamente el manuscrito ni los prompts.",
+                    "No valida rendimiento, seguridad integral, producción ni servicios externos.",
+                    "No coteja los registros ausentes de la sesión de Codex aportada por el autor.",
+                    "El árbol actual del laboratorio 4 es una copia limpia de la referencia distribuida; no se evalúa otra copia de práctica."],
+    }
+    guardar_json(salida / "resumen.json", resumen_general)
+    return resumen_general
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--salida", type=Path, default=RAIZ / "trabajo" / "verificacion",
+                        help="Carpeta nueva; por defecto trabajo/verificacion en este repositorio.")
+    opciones = parser.parse_args()
+    try:
+        registro = verificar(opciones.salida)
+    except ErrorPreparacion as error:
+        print(error.estado + ": " + str(error))
+        return 1 if error.estado == "FALLIDO" else 2
+    except (OSError, ValueError):
+        print("BLOQUEADO: no se pudo crear o completar el registro local.")
+        return 2
+    print(registro["estado"] + ": verificación conjunta.")
+    for bateria in registro["baterias"]:
+        print("{bateria}: {aprobados} aprobados, {fallidos} fallidos, {no_ejecutados} no ejecutados; recorrido {evaluacion_del_recorrido}.".format(**bateria))
+    print("Fallos intencionales admitidos exclusivamente: C04 en inicial del laboratorio 1; B05 y B06 en defecto del laboratorio 3.")
+    print("Evidencia nueva guardada en la carpeta indicada; evidencia histórica conservada.")
+    return {"APROBADO": 0, "FALLIDO": 1, "BLOQUEADO": 2}[registro["estado"]]
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,15 @@
+{
+  "README.md": "ef0ae761ed584e376c4fc46100a63802bdf575c72b68035982520263dd24fe54",
+  "laboratorio.py": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+  "pruebas.py": "a1157edb670dce7e048ccfd0a4dbae8c94e070e2db0d2de812f49ae076398f10",
+  "verificar.py": "9ce8181ed905026dcf47c5f71d4fe9b7a9cbd1455cf2bca1143f7a15fba61172",
+  "datos/esquema.sql": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+  "datos/ejemplos.sql": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+  "solucion/consulta.sql": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+  "contexto/ENCARGO_INSUFICIENTE.md": "99f35dd73f37771bca9fb5a06c98d7a647e3d00d8d65dd416a0de7bf8a3d34ca",
+  "contexto/CONTEXTO.md": "75f5ba519ec25c1fb484e353be48a57e4f96ea8fe38da55732f0743a5b2bc90b",
+  "contexto/ARQUITECTURA.md": "e2b306e6adc9b11bf2fd031870358e672a3775601696c1e47227728b52342e32",
+  "contexto/DECISIONES.md": "7f7d66c4f8535405c3c6190e8fa2d788cf326c445120176e6b36ebcea3078de6",
+  "contexto/CONTINUIDAD.md": "af3449979ca6b6d748467422df96985cbf79b171a107f176000757b09a9093a8",
+  "contexto/ENCARGO_CLARO.md": "c6e0107f9f7b4bb152c8cd0eb42c0d85cd39433f95f700d6e2d0e28c1ca20f39"
+}

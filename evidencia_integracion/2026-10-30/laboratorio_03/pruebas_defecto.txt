@@ -1,0 +1,32 @@
+Estado de codigo: defecto
+C01: APROBADO
+C02: APROBADO
+C03: APROBADO
+C04: APROBADO
+B01: APROBADO
+B02: APROBADO
+B03: APROBADO
+B04: APROBADO
+B05: FALLIDO
+Lists differ: [{'codigo': 'A04', 'nombre': 'Articulo de otra ubicacion'}] != [{'codigo': 'A01', 'nombre': 'Articulo local'}]
+
+First differing element 0:
+{'codigo': 'A04', 'nombre': 'Articulo de otra ubicacion'}
+{'codigo': 'A01', 'nombre': 'Articulo local'}
+
+- [{'codigo': 'A04', 'nombre': 'Articulo de otra ubicacion'}]
+?                ^                       ^^^ -------  ^^^^
+
++ [{'codigo': 'A01', 'nombre': 'Articulo local'}]
+?                ^                       ^   ^
+
+B06: FALLIDO
+Lists differ: [{'codigo': 'A04', 'nombre': 'Articulo de otra ubicacion'}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'codigo': 'A04', 'nombre': 'Articulo de otra ubicacion'}
+
+- [{'codigo': 'A04', 'nombre': 'Articulo de otra ubicacion'}]
++ []
+Ejecutados: 10; aprobados: 8; fallidos: 2; no ejecutados: 0.

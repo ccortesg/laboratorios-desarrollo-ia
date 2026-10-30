@@ -1,0 +1,53 @@
+{
+  "fecha_hora": "2026-10-30T02:21:15-07:00",
+  "desfase_utc": "-07:00",
+  "estado_del_recorrido_didactico": "APROBADO",
+  "criterio_del_recorrido": "El defecto inicial incumple solo C04; la solucion satisface los cuatro criterios usando la misma suite y los mismos datos.",
+  "versiones": {
+    "inicial": {
+      "estado": "FALLIDO",
+      "fallo_intencional": true,
+      "comando_pruebas": "python pruebas.py --version inicial",
+      "codigo_salida_pruebas": 1,
+      "comando_demostracion": "python laboratorio.py --version inicial --almacen ALFA",
+      "codigo_salida_demostracion": 0,
+      "articulos_observados": [
+        "A01",
+        "A04"
+      ],
+      "total": 4,
+      "aprobados": 3,
+      "fallidos": 1,
+      "fallos_de_asercion": 1,
+      "errores_de_ejecucion": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "detalle_pruebas": "pruebas_inicial.json"
+    },
+    "solucion": {
+      "estado": "APROBADO",
+      "fallo_intencional": false,
+      "comando_pruebas": "python pruebas.py --version solucion",
+      "codigo_salida_pruebas": 0,
+      "comando_demostracion": "python laboratorio.py --version solucion --almacen ALFA",
+      "codigo_salida_demostracion": 0,
+      "articulos_observados": [
+        "A01"
+      ],
+      "total": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "fallos_de_asercion": 0,
+      "errores_de_ejecucion": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "detalle_pruebas": "pruebas_solucion.json"
+    }
+  },
+  "limite": "Evidencia de ejecucion local del laboratorio sintetico. No acredita uso de Codex, Copilot o Grok Build ni validacion productiva.",
+  "herramientas_comerciales": {
+    "Codex": "NO EJECUTADO",
+    "GitHub Copilot": "NO EJECUTADO",
+    "Grok Build": "NO EJECUTADO"
+  }
+}

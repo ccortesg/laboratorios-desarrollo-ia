@@ -1,0 +1,17 @@
+--- estados/defecto.py
++++ estados/corregido.py
+@@ -1,4 +1,4 @@
+-"""Variante con defecto intencional para el recorrido de depuracion."""
++"""Correccion didactica: vuelve a transmitir el almacen seleccionado."""
+ 
+ from laboratorio import consultar_catalogo
+ 
+@@ -14,6 +14,6 @@
+ 
+ 
+ def buscar_catalogo(almacen, texto):
+-    """Filtra nombres; este estado contiene un defecto didactico conocido."""
+-    articulos = consultar_catalogo("solucion")
++    """Filtra nombres dentro de los articulos disponibles del almacen."""
++    articulos = consultar_catalogo("solucion", almacen)
+     return filtrar_por_nombre(articulos, texto)

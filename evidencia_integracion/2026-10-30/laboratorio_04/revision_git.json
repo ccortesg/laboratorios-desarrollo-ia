@@ -1,0 +1,44 @@
+{
+  "status_actual": {
+    "comando": "git status --porcelain=v1",
+    "codigo_salida": 0,
+    "salida": "",
+    "stderr_presente": false
+  },
+  "diff_actual": {
+    "comando": "git diff --",
+    "codigo_salida": 0,
+    "salida": "",
+    "stderr_presente": false
+  },
+  "diff_preparado": {
+    "comando": "git diff --cached --",
+    "codigo_salida": 0,
+    "salida": "",
+    "stderr_presente": false
+  },
+  "cambios_entre_referencias": {
+    "comando": "git diff --name-status inicio solucion --",
+    "codigo_salida": 0,
+    "salida": "M\tcontexto/ARQUITECTURA.md\nM\tcontexto/CONTEXTO.md\nM\tcontexto/CONTINUIDAD.md\nM\tcontexto/DECISIONES.md\nA\tdetalle.py\nM\tpruebas.py\nA\tpruebas_detalle.py\n",
+    "stderr_presente": false
+  },
+  "formato_entre_referencias": {
+    "comando": "git diff --check inicio solucion --",
+    "codigo_salida": 0,
+    "salida": "",
+    "stderr_presente": false
+  },
+  "integridad_git": {
+    "comando": "git fsck --no-reflogs",
+    "codigo_salida": 0,
+    "salida": "",
+    "stderr_presente": false
+  },
+  "remotos": {
+    "comando": "git remote",
+    "codigo_salida": 0,
+    "salida": "",
+    "stderr_presente": false
+  }
+}

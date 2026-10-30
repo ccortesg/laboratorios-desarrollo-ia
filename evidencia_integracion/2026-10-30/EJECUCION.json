@@ -1,0 +1,21 @@
+{
+  "estado": "APROBADO",
+  "comando_ejecutado": "python3 herramientas/verificar_todo.py --salida trabajo/verificacion_inicial",
+  "codigo_salida": 0,
+  "directorio_de_ejecucion": "Raiz del repositorio",
+  "baterias": 11,
+  "ejecutados": 106,
+  "aprobados": 103,
+  "fallidos_intencionales": 3,
+  "no_ejecutados_registrados_en_baterias": 6,
+  "criterios_ausentes_en_inicio_laboratorio_04": 10,
+  "archivos_historicos_visibles_conservados": 120,
+  "archivos_de_evidencia_generados": 54,
+  "revision_confidencialidad_nueva_evidencia": {
+    "estado": "APROBADO",
+    "archivos_inspeccionados": 54,
+    "hallazgos": [],
+    "alcance": "Patrones de rutas personales, correos, IPv4, secretos reconocibles y zonas geograficas; no garantiza deteccion universal."
+  },
+  "limite": "Ejecucion Linux local; Windows, GitHub Actions y sesiones comerciales NO EJECUTADO en esta comprobacion."
+}

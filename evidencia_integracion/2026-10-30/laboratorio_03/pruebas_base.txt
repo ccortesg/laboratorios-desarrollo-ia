@@ -1,0 +1,18 @@
+Estado de codigo: base
+C01: APROBADO
+C02: APROBADO
+C03: APROBADO
+C04: APROBADO
+B01: NO EJECUTADO
+La busqueda aun no existe en el estado base.
+B02: NO EJECUTADO
+La busqueda aun no existe en el estado base.
+B03: NO EJECUTADO
+La busqueda aun no existe en el estado base.
+B04: NO EJECUTADO
+La busqueda aun no existe en el estado base.
+B05: NO EJECUTADO
+La busqueda aun no existe en el estado base.
+B06: NO EJECUTADO
+La busqueda aun no existe en el estado base.
+Ejecutados: 4; aprobados: 4; fallidos: 0; no ejecutados: 6.

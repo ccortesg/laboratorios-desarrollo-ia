@@ -1,0 +1,66 @@
+{
+  "fecha_editorial": "2026-10-30",
+  "paquete_origen": "LABORATORIO_02_v1.0.zip",
+  "metodo": "Comparacion local de bytes y del texto de las cuatro funciones de prueba durante la preparacion; no requiere el paquete anterior para ejecutar este laboratorio.",
+  "archivos": [
+    {
+      "archivo": "laboratorio.py",
+      "sha256_origen": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "sha256_incluido": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "datos/esquema.sql",
+      "sha256_origen": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "sha256_incluido": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "datos/ejemplos.sql",
+      "sha256_origen": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "sha256_incluido": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "solucion/consulta.sql",
+      "sha256_origen": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "sha256_incluido": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    }
+  ],
+  "funciones_de_prueba": [
+    {
+      "funcion": "test_c01_habilitado_con_existencias_locales_aparece",
+      "estado": "APROBADO",
+      "sha256_texto_original": "981964d53b99a1ae17ef961fe4cea67f9dec93af3380ae4960a96c27c0f74beb",
+      "sha256_texto_incluido": "981964d53b99a1ae17ef961fe4cea67f9dec93af3380ae4960a96c27c0f74beb"
+    },
+    {
+      "funcion": "test_c02_deshabilitado_se_excluye",
+      "estado": "APROBADO",
+      "sha256_texto_original": "c08ddaac281231f166ac9e32a2da9a264301d73026afe20e194c0e5524478317",
+      "sha256_texto_incluido": "c08ddaac281231f166ac9e32a2da9a264301d73026afe20e194c0e5524478317"
+    },
+    {
+      "funcion": "test_c03_sin_existencias_se_excluye",
+      "estado": "APROBADO",
+      "sha256_texto_original": "776d35b81b595311c0c9aa93f703150794d76036a21ee36d70e48321dd5d6d38",
+      "sha256_texto_incluido": "776d35b81b595311c0c9aa93f703150794d76036a21ee36d70e48321dd5d6d38"
+    },
+    {
+      "funcion": "test_c04_existencias_en_otra_ubicacion_se_excluyen",
+      "estado": "APROBADO",
+      "sha256_texto_original": "8b435c2030a85b931fd80314f9e07114b98714a64bb7aa2dc9bd16c4b7ee0475",
+      "sha256_texto_incluido": "8b435c2030a85b931fd80314f9e07114b98714a64bb7aa2dc9bd16c4b7ee0475"
+    }
+  ],
+  "adaptacion": "setUp selecciona consulta base o buscar_catalogo(ALFA, texto vacio). Las cuatro funciones de prueba conservan su texto; el resto del ejecutor de pruebas se adapta para los cinco estados y seis casos nuevos.",
+  "alcance_previo": {
+    "archivo": "ALCANCE.md",
+    "estado": "APROBADO",
+    "sha256_registrado_antes_de_modulos": "cd0a8d7cc02667292b1a2d0357c22fc5e3fd234466e44d6641381d40c38e27c0",
+    "sha256_actual": "cd0a8d7cc02667292b1a2d0357c22fc5e3fd234466e44d6641381d40c38e27c0",
+    "metodo": "Registro del documento antes de crear los modulos nuevos; comprobacion de que su contenido se conserva."
+  },
+  "limitacion": "La procedencia identifica conservacion de materiales sinteticos, no acredita uso de una herramienta comercial ni certifica seguridad."
+}

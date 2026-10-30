@@ -1,0 +1,78 @@
+{
+  "fecha_hora_utc": "2026-10-30T09:47:07+00:00",
+  "estado": "APROBADO",
+  "origen": "LABORATORIO_01_v1.0.zip",
+  "metodo": "Comparacion de bytes de los tres SQL y del texto literal de las cuatro funciones test_c obtenido con ast.get_source_segment. Se realizo durante la preparacion; el piloto no es dependencia de ejecucion.",
+  "archivos_conservados": [
+    {
+      "archivo": "datos/esquema.sql",
+      "sha256_piloto": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "sha256_laboratorio_02": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "comparacion": "IDENTICO BYTE A BYTE",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "datos/ejemplos.sql",
+      "sha256_piloto": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "sha256_laboratorio_02": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "comparacion": "IDENTICO BYTE A BYTE",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "solucion/consulta.sql",
+      "sha256_piloto": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "sha256_laboratorio_02": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "comparacion": "IDENTICO BYTE A BYTE",
+      "estado": "APROBADO"
+    }
+  ],
+  "funciones_conservadas": [
+    {
+      "funcion": "test_c01_habilitado_con_existencias_locales_aparece",
+      "sha256_texto_piloto": "981964d53b99a1ae17ef961fe4cea67f9dec93af3380ae4960a96c27c0f74beb",
+      "sha256_texto_laboratorio_02": "981964d53b99a1ae17ef961fe4cea67f9dec93af3380ae4960a96c27c0f74beb",
+      "comparacion": "TEXTO DE FUNCION IDENTICO",
+      "estado": "APROBADO"
+    },
+    {
+      "funcion": "test_c02_deshabilitado_se_excluye",
+      "sha256_texto_piloto": "c08ddaac281231f166ac9e32a2da9a264301d73026afe20e194c0e5524478317",
+      "sha256_texto_laboratorio_02": "c08ddaac281231f166ac9e32a2da9a264301d73026afe20e194c0e5524478317",
+      "comparacion": "TEXTO DE FUNCION IDENTICO",
+      "estado": "APROBADO"
+    },
+    {
+      "funcion": "test_c03_sin_existencias_se_excluye",
+      "sha256_texto_piloto": "776d35b81b595311c0c9aa93f703150794d76036a21ee36d70e48321dd5d6d38",
+      "sha256_texto_laboratorio_02": "776d35b81b595311c0c9aa93f703150794d76036a21ee36d70e48321dd5d6d38",
+      "comparacion": "TEXTO DE FUNCION IDENTICO",
+      "estado": "APROBADO"
+    },
+    {
+      "funcion": "test_c04_existencias_en_otra_ubicacion_se_excluyen",
+      "sha256_texto_piloto": "8b435c2030a85b931fd80314f9e07114b98714a64bb7aa2dc9bd16c4b7ee0475",
+      "sha256_texto_laboratorio_02": "8b435c2030a85b931fd80314f9e07114b98714a64bb7aa2dc9bd16c4b7ee0475",
+      "comparacion": "TEXTO DE FUNCION IDENTICO",
+      "estado": "APROBADO"
+    }
+  ],
+  "adaptaciones": {
+    "laboratorio.py": [
+      "VERSIONES admite unicamente solucion.",
+      "El mensaje de version invalida se ajusta a la unica opcion.",
+      "Se retira un comentario relativo al defecto inicial."
+    ],
+    "pruebas.py": [
+      "Se ajusta la descripcion del modulo.",
+      "VERSION comienza en solucion.",
+      "Los cuerpos de las cuatro funciones de prueba no cambian."
+    ],
+    "verificar.py": [
+      "Nuevo coordinador que ejecuta solo la solucion y exige una carpeta nueva para la evidencia."
+    ],
+    "documentacion": [
+      "README y seis documentos de contexto creados para el capitulo 2."
+    ]
+  },
+  "limite": "La igualdad de archivos acredita conservacion de esos materiales; no es una certificacion de seguridad ni una evaluacion de la suficiencia documental."
+}

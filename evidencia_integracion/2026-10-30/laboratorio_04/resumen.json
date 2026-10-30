@@ -1,0 +1,61 @@
+{
+  "estado": "APROBADO",
+  "objeto": "Referencias inicio y solucion; no las ediciones actuales",
+  "referencias": {
+    "inicio": "25f9b7a6d09341b6419d3d27237f1f1b68a6b64d",
+    "solucion": "d7782e31acff5bd599f70ce6bb288f0a4219f775"
+  },
+  "baterias": [
+    {
+      "referencia": "inicio",
+      "comando_en_copia_extraida": "python pruebas.py --json resultado_pruebas.json",
+      "estado": "APROBADO",
+      "codigo_salida": 0,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "errores_de_ejecucion": 0,
+      "criterios_no_ejecutados": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N10"
+      ],
+      "motivo_no_ejecutados": "Detalle y su batería todavía no existen en inicio; no son fallos ni aprobaciones.",
+      "stderr_presente": false
+    },
+    {
+      "referencia": "solucion",
+      "comando_en_copia_extraida": "python pruebas.py --json resultado_pruebas.json",
+      "estado": "APROBADO",
+      "codigo_salida": 0,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "errores_de_ejecucion": 0,
+      "criterios_no_ejecutados": [],
+      "motivo_no_ejecutados": "",
+      "stderr_presente": false
+    }
+  ],
+  "revision_git": "APROBADO",
+  "archivos_del_cambio": [
+    "contexto/ARQUITECTURA.md",
+    "contexto/CONTEXTO.md",
+    "contexto/CONTINUIDAD.md",
+    "contexto/DECISIONES.md",
+    "detalle.py",
+    "pruebas.py",
+    "pruebas_detalle.py"
+  ],
+  "arbol_actual_limpio": true,
+  "limite_arbol_actual": "El estado y las diferencias se observan; las pruebas se ejecutan en copias de las etiquetas.",
+  "fallos_intencionales": [],
+  "sesion_codex": "NO EJECUTADO por este verificador"
+}

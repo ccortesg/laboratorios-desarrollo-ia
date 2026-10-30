@@ -1,0 +1,11 @@
+{
+  "estado": "corregido",
+  "almacen": "BETA",
+  "texto": "",
+  "articulos": [
+    {
+      "codigo": "A04",
+      "nombre": "Articulo de otra ubicacion"
+    }
+  ]
+}

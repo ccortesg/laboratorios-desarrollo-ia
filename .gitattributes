@@ -1,0 +1,7 @@
+# Keep the new integration layer stable across checkout settings.
+* text=auto eol=lf
+# Preserve imported bytes, binary packages and recorded evidence exactly.
+laboratorios/** -text
+distribuciones/** -text
+historiales/*.bundle -text
+evidencia_integracion/** -text

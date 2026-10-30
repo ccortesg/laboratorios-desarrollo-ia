@@ -1,0 +1,113 @@
+{
+  "fecha_revision": "2026-10-30",
+  "alcance": "Contraste documental del informe recibido y de los materiales distribuidos; no ejecución de Codex ni de baterías funcionales nuevas.",
+  "referencias": {
+    "inicio": "25f9b7a6d09341b6419d3d27237f1f1b68a6b64d",
+    "solucion": "d7782e31acff5bd599f70ce6bb288f0a4219f775"
+  },
+  "comprobaciones_realizadas": [
+    {
+      "id": "R01",
+      "objeto": "Referencias mencionadas en el informe",
+      "estado": "APROBADO",
+      "observado": "Coinciden con las etiquetas del repositorio original."
+    },
+    {
+      "id": "R02",
+      "objeto": "Archivos seguidos en HEAD original",
+      "estado": "APROBADO",
+      "observado": {
+        "total": 17,
+        "modo_git": "100644"
+      }
+    },
+    {
+      "id": "R03",
+      "objeto": "Diferencia entre etiquetas originales",
+      "estado": "APROBADO",
+      "observado": {
+        "archivos": [
+          "contexto/ARQUITECTURA.md",
+          "contexto/CONTEXTO.md",
+          "contexto/CONTINUIDAD.md",
+          "contexto/DECISIONES.md",
+          "detalle.py",
+          "pruebas.py",
+          "pruebas_detalle.py"
+        ],
+        "inserciones": 87,
+        "eliminaciones": 14
+      }
+    },
+    {
+      "id": "R04",
+      "objeto": "Diez métodos heredados C y B entre etiquetas",
+      "estado": "APROBADO",
+      "observado": "Texto idéntico por comparación de segmentos fuente mediante AST."
+    },
+    {
+      "id": "R05",
+      "objeto": "Alcance de verificar.py",
+      "estado": "APROBADO",
+      "observado": "La inspección de su código confirma que verifica referencias, usa sys.executable y no exige limpieza del árbol para su dictamen global."
+    },
+    {
+      "id": "R06",
+      "objeto": "Revisión de la copia saneada del informe recibido",
+      "estado": "APROBADO",
+      "observado": "Se omitió la zona geográfica de la fecha; el resto del cuerpo recibido permanece igual."
+    },
+    {
+      "id": "R07",
+      "objeto": "Cotejo independiente de JSON, salidas y manifiestos de la sesión aportada",
+      "estado": "BLOQUEADO",
+      "motivo": "No fueron adjuntados; sólo se recibió el Markdown."
+    },
+    {
+      "id": "R08",
+      "objeto": "Nueva ejecución funcional o sesión Codex durante esta revisión editorial",
+      "estado": "NO EJECUTADO",
+      "motivo": "Cambio exclusivamente documental; se conserva la evidencia histórica y la atribución del informe recibido."
+    }
+  ],
+  "resultados_segun_informe_aportado": {
+    "procedencia": "revision_1_1/EJECUCION_CODEX_04_saneado.md",
+    "modalidad": "Codex desktop, Bash en Linux; versión de app no consultada; anfitrión no determinado.",
+    "entorno": {
+      "git": "2.34.1",
+      "python3": "3.10.12",
+      "sqlite": "3.37.2"
+    },
+    "arbol_actual": {
+      "estado": "APROBADO",
+      "ejecutados": 20,
+      "aprobados": 20
+    },
+    "inicio": {
+      "estado": "APROBADO",
+      "ejecutados": 10,
+      "aprobados": 10,
+      "N01_N10": "NO EJECUTADO por ausencia de función y batería"
+    },
+    "solucion": {
+      "estado": "APROBADO",
+      "ejecutados": 20,
+      "aprobados": 20
+    },
+    "limpieza_arbol": {
+      "estado": "FALLIDO",
+      "diferencias": 17,
+      "cambio_modo": "100644 -> 100755",
+      "origen": "No determinado"
+    },
+    "python": {
+      "estado": "BLOQUEADO",
+      "salida": 127,
+      "alternativa_reportada": "python3 usada con éxito"
+    },
+    "implementacion_por_Codex": "NO EJECUTADO",
+    "nota": "Estos resultados se transcriben del informe, no son ejecuciones realizadas por la revisión editorial."
+  },
+  "fuente_publicable_sha256": "6d6e9fdebf344972a8011eceb85357e6c416e4cc09325f31f60f84201c589bbe",
+  "paquete_base_sha256": "fdfd29187c2b402d4254f6bf4d7f959b177c076da9a79533f199848187285557"
+}

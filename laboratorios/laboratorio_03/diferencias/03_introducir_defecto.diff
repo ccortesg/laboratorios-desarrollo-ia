@@ -1,0 +1,17 @@
+--- estados/refactorizado.py
++++ estados/defecto.py
+@@ -1,4 +1,4 @@
+-"""Busqueda con acceso al catalogo y filtro de nombres separados."""
++"""Variante con defecto intencional para el recorrido de depuracion."""
+ 
+ from laboratorio import consultar_catalogo
+ 
+@@ -14,6 +14,6 @@
+ 
+ 
+ def buscar_catalogo(almacen, texto):
+-    """Filtra nombres dentro de los articulos disponibles del almacen."""
+-    articulos = consultar_catalogo("solucion", almacen)
++    """Filtra nombres; este estado contiene un defecto didactico conocido."""
++    articulos = consultar_catalogo("solucion")
+     return filtrar_por_nombre(articulos, texto)

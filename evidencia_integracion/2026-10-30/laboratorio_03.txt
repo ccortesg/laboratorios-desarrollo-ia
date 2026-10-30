@@ -1,0 +1,8 @@
+Verificacion del recorrido: APROBADO
+base: 4 aprobados; 0 fallidos; 6 no ejecutados; salida 0.
+generado: 10 aprobados; 0 fallidos; 0 no ejecutados; salida 0.
+refactorizado: 10 aprobados; 0 fallidos; 0 no ejecutados; salida 0.
+defecto: 8 aprobados; 2 fallidos; 0 no ejecutados; salida 1.
+corregido: 10 aprobados; 0 fallidos; 0 no ejecutados; salida 0.
+Los fallos B05 y B06 de defecto son intencionales; no se aceptan otros fallos.
+Evidencia guardada en la carpeta nueva indicada.

@@ -1,0 +1,327 @@
+{
+  "estado": "APROBADO",
+  "fecha_hora_utc": "2026-10-30T20:59:38+00:00",
+  "objeto": "Integración local de los cuatro laboratorios distribuidos",
+  "criterio": "Patrones exactos de resultados, reconstrucción Git y conservación de referencias.",
+  "laboratorios": [
+    {
+      "laboratorio": "laboratorio_01",
+      "estado": "APROBADO",
+      "comando_en_copia": "python verificar.py --salida SALIDA/laboratorio_01",
+      "codigo_salida_verificador": 0,
+      "referencia_original_conservada": true,
+      "evidencia": "laboratorio_01/resumen.json"
+    },
+    {
+      "laboratorio": "laboratorio_02",
+      "estado": "APROBADO",
+      "comando_en_copia": "python verificar.py --salida SALIDA/laboratorio_02",
+      "codigo_salida_verificador": 0,
+      "referencia_original_conservada": true,
+      "evidencia": "laboratorio_02/resumen.json"
+    },
+    {
+      "laboratorio": "laboratorio_03",
+      "estado": "APROBADO",
+      "comando_en_copia": "python verificar.py --salida SALIDA/laboratorio_03",
+      "codigo_salida_verificador": 0,
+      "referencia_original_conservada": true,
+      "evidencia": "laboratorio_03/resumen.json"
+    },
+    {
+      "laboratorio": "laboratorio_04",
+      "estado": "APROBADO",
+      "comandos_en_copia": [
+        "python verificar.py --salida SALIDA/laboratorio_04",
+        "python pruebas.py --json SALIDA/laboratorio_04/pruebas_arbol_actual.json (desde repositorio/)"
+      ],
+      "codigo_salida_verificador": 0,
+      "codigo_salida_arbol_actual": 0,
+      "referencia_original_conservada": true,
+      "evidencia": "laboratorio_04/resumen.json",
+      "criterios_ausentes_en_inicio": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N10"
+      ],
+      "estado_de_criterios_ausentes_en_inicio": "NO EJECUTADO"
+    }
+  ],
+  "baterias": [
+    {
+      "bateria": "laboratorio_01/inicial",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 1,
+      "ejecutados": 4,
+      "aprobados": 3,
+      "fallidos": 1,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [
+        "C04"
+      ],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "FALLIDO"
+      }
+    },
+    {
+      "bateria": "laboratorio_01/solucion",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_02/solucion",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_03/base",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 6,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "NO EJECUTADO",
+        "B02": "NO EJECUTADO",
+        "B03": "NO EJECUTADO",
+        "B04": "NO EJECUTADO",
+        "B05": "NO EJECUTADO",
+        "B06": "NO EJECUTADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_03/generado",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_03/refactorizado",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_03/defecto",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 1,
+      "ejecutados": 10,
+      "aprobados": 8,
+      "fallidos": 2,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [
+        "B05",
+        "B06"
+      ],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "FALLIDO",
+        "B06": "FALLIDO"
+      }
+    },
+    {
+      "bateria": "laboratorio_03/corregido",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_04/inicio",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_04/solucion",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      }
+    },
+    {
+      "bateria": "laboratorio_04/arbol_actual",
+      "evaluacion_del_recorrido": "APROBADO",
+      "codigo_salida_bateria": 0,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "criterios_observados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      }
+    }
+  ],
+  "fallos_intencionales": {
+    "laboratorio_01/inicial": [
+      "C04"
+    ],
+    "laboratorio_03/defecto": [
+      "B05",
+      "B06"
+    ]
+  },
+  "interpretacion": "Un recorrido APROBADO conserva FALLIDO en sus criterios defectuosos esperados; no tolera otros errores.",
+  "evidencia_historica": "Conservada en cada laboratorio; estos archivos describen una ejecución nueva.",
+  "herramientas_comerciales": "NO EJECUTADO por este verificador",
+  "GitHub_Actions": "NO EJECUTADO por este verificador",
+  "limites": [
+    "No revisa semánticamente el manuscrito ni los prompts.",
+    "No valida rendimiento, seguridad integral, producción ni servicios externos.",
+    "No coteja los registros ausentes de la sesión de Codex aportada por el autor.",
+    "El árbol actual del laboratorio 4 es una copia limpia de la referencia distribuida; no se evalúa otra copia de práctica."
+  ]
+}

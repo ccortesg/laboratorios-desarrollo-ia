@@ -1,0 +1,148 @@
+{
+  "fecha_hora_utc": "2026-10-30T20:59:37+00:00",
+  "metodo": "Ejecucion local de la consulta base y de dos variantes de busqueda.",
+  "observaciones": [
+    {
+      "id": "base_beta",
+      "estado_codigo": "base",
+      "comando": "python recorrido.py --estado base --almacen BETA",
+      "codigo_salida": 0,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": ""
+      },
+      "esperado_por_regla": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "esperado_en_este_estado_didactico": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "observado": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "estado_del_comportamiento": "APROBADO",
+      "evaluacion_del_experimento": "APROBADO"
+    },
+    {
+      "id": "defecto_beta_vacio",
+      "estado_codigo": "defecto",
+      "comando": "python recorrido.py --estado defecto --almacen BETA --texto \"\"",
+      "codigo_salida": 0,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": ""
+      },
+      "esperado_por_regla": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "esperado_en_este_estado_didactico": [
+        {
+          "codigo": "A01",
+          "nombre": "Articulo local"
+        }
+      ],
+      "observado": [
+        {
+          "codigo": "A01",
+          "nombre": "Articulo local"
+        }
+      ],
+      "estado_del_comportamiento": "FALLIDO",
+      "evaluacion_del_experimento": "APROBADO"
+    },
+    {
+      "id": "defecto_beta_nombre",
+      "estado_codigo": "defecto",
+      "comando": "python recorrido.py --estado defecto --almacen BETA --texto \" OTRA \"",
+      "codigo_salida": 0,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": " OTRA "
+      },
+      "esperado_por_regla": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "esperado_en_este_estado_didactico": [],
+      "observado": [],
+      "estado_del_comportamiento": "FALLIDO",
+      "evaluacion_del_experimento": "APROBADO"
+    },
+    {
+      "id": "corregido_beta_vacio",
+      "estado_codigo": "corregido",
+      "comando": "python recorrido.py --estado corregido --almacen BETA --texto \"\"",
+      "codigo_salida": 0,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": ""
+      },
+      "esperado_por_regla": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "esperado_en_este_estado_didactico": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "observado": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "estado_del_comportamiento": "APROBADO",
+      "evaluacion_del_experimento": "APROBADO"
+    },
+    {
+      "id": "corregido_beta_nombre",
+      "estado_codigo": "corregido",
+      "comando": "python recorrido.py --estado corregido --almacen BETA --texto \" OTRA \"",
+      "codigo_salida": 0,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": " OTRA "
+      },
+      "esperado_por_regla": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "esperado_en_este_estado_didactico": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "observado": [
+        {
+          "codigo": "A04",
+          "nombre": "Articulo de otra ubicacion"
+        }
+      ],
+      "estado_del_comportamiento": "APROBADO",
+      "evaluacion_del_experimento": "APROBADO"
+    }
+  ],
+  "interpretacion": "Las cinco salidas coinciden con el experimento previsto; contrastar la causa con la llamada a la consulta.",
+  "limite": "Cinco ejecuciones sinteticas, no una prueba productiva ni evaluacion de herramientas comerciales."
+}

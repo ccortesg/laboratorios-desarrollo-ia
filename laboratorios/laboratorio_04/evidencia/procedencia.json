@@ -1,0 +1,51 @@
+{
+  "origen": "LABORATORIO_03_v1.0.zip",
+  "sha256_zip_origen": "a4cf307bc71287e3030118fb97098489b082a5935f09e601c06258e1db300d35",
+  "comparaciones": [
+    {
+      "origen_laboratorio_03": "laboratorio.py",
+      "destino_laboratorio_04": "laboratorio.py",
+      "identico_byte_a_byte": true,
+      "sha256": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+    },
+    {
+      "origen_laboratorio_03": "datos/esquema.sql",
+      "destino_laboratorio_04": "datos/esquema.sql",
+      "identico_byte_a_byte": true,
+      "sha256": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+    },
+    {
+      "origen_laboratorio_03": "datos/ejemplos.sql",
+      "destino_laboratorio_04": "datos/ejemplos.sql",
+      "identico_byte_a_byte": true,
+      "sha256": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+    },
+    {
+      "origen_laboratorio_03": "solucion/consulta.sql",
+      "destino_laboratorio_04": "solucion/consulta.sql",
+      "identico_byte_a_byte": true,
+      "sha256": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+    },
+    {
+      "origen_laboratorio_03": "estados/corregido.py",
+      "destino_laboratorio_04": "catalogo.py",
+      "identico_byte_a_byte": true,
+      "sha256": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+    }
+  ],
+  "metodos_de_prueba_conservados": [
+    "test_b01_normaliza_espacios_y_mayusculas",
+    "test_b02_termino_blanco_devuelve_disponibles",
+    "test_b03_sin_coincidencias_devuelve_lista_vacia",
+    "test_b04_nombre_remoto_no_amplia_disponibilidad",
+    "test_b05_almacen_beta_con_termino_vacio",
+    "test_b06_busqueda_normalizada_en_beta",
+    "test_c01_habilitado_con_existencias_locales_aparece",
+    "test_c02_deshabilitado_se_excluye",
+    "test_c03_sin_existencias_se_excluye",
+    "test_c04_existencias_en_otra_ubicacion_se_excluyen"
+  ],
+  "texto_metodos_identico": true,
+  "cambio_del_montaje": "Importación directa de buscar_catalogo desde catalogo.py; se elimina la selección entre estados anteriores.",
+  "registros_historicos_laboratorio_03": "No se copian como si fueran ejecuciones del laboratorio 4."
+}

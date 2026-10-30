@@ -1,0 +1,49 @@
+{
+  "estado": "APROBADO",
+  "casos_observados": [
+    {
+      "caso": "Preparador rechaza destino existente",
+      "estado": "APROBADO",
+      "salida": 2,
+      "conservacion": "Contenido y listado del destino intactos"
+    },
+    {
+      "caso": "Verificador rechaza salida existente",
+      "estado": "APROBADO",
+      "salida": 2,
+      "conservacion": "Contenido y listado del destino intactos"
+    },
+    {
+      "caso": "Detectar snapshot distinto del historial",
+      "estado": "APROBADO",
+      "estado_observado": "FALLIDO",
+      "mensaje": "Los archivos visibles no coinciden con la solución del historial."
+    },
+    {
+      "caso": "Propagar fallo inesperado C01 sin confundirlo con fallo C04 previsto",
+      "estado": "APROBADO",
+      "estado_observado": "FALLIDO",
+      "bateria_observada": {
+        "bateria": "laboratorio_01/inicial",
+        "evaluacion_del_recorrido": "FALLIDO",
+        "codigo_salida_bateria": 1,
+        "ejecutados": 4,
+        "aprobados": 2,
+        "fallidos": 2,
+        "no_ejecutados": 0,
+        "fallos_intencionales_esperados": [
+          "C04"
+        ],
+        "criterios_observados": {
+          "C01": "FALLIDO",
+          "C02": "APROBADO",
+          "C03": "APROBADO",
+          "C04": "FALLIDO"
+        }
+      }
+    }
+  ],
+  "bateria_funcional": "Este registro corresponde a la replica temporal de prueba; la ejecucion definitiva posterior se conserva en EJECUCION.json y resumen.json.",
+  "limite": "Pruebas Linux locales; no ejecucion en Windows ni GitHub Actions.",
+  "procedencia": "Comprobaciones locales efectivamente ejecutadas sobre copias de ensayo de la integracion."
+}

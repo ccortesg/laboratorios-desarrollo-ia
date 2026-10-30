@@ -1,0 +1,540 @@
+{
+  "fecha_hora_utc": "2026-10-30T09:49:10+00:00",
+  "metodo": "revision documental asistida en esta entrega",
+  "naturaleza": "Dictamen técnico por lectura semántica y contraste de documentos, código, datos y registros locales. No es una prueba con lectores humanos, una ejecución del laboratorio ni una medición de productividad.",
+  "rubrica": {
+    "naturaleza": "Rubrica de revision documental tecnica; no prueba automatica de palabras ni ensayo de productividad",
+    "alcances": [
+      "Encargo insuficiente aislado",
+      "Paquete completo de contexto y referencias locales"
+    ],
+    "estados": [
+      "APROBADO",
+      "FALLIDO",
+      "BLOQUEADO",
+      "NO EJECUTADO"
+    ],
+    "criterios": [
+      {
+        "id": "K01",
+        "criterio": "Identifica el objetivo del trabajo y el estado actual del catalogo, sin confundirlo con ampliaciones futuras."
+      },
+      {
+        "id": "K02",
+        "criterio": "Relaciona la regla local y los cuatro criterios de aceptacion con datos, implementacion y pruebas localizables."
+      },
+      {
+        "id": "K03",
+        "criterio": "Explica las responsabilidades, el flujo y el contrato del codigo existente sin inventar servicios ni componentes."
+      },
+      {
+        "id": "K04",
+        "criterio": "Explicita limites y diferencia arquitectura implementada, propuesta, supuestos y aspectos pendientes."
+      },
+      {
+        "id": "K05",
+        "criterio": "Permite localizar comandos, entorno y evidencia, diferenciando expectativas y resultados observados."
+      },
+      {
+        "id": "K06",
+        "criterio": "Conserva razones y estado de decisiones, asi como un punto concreto para retomar sin recurrir al historial."
+      }
+    ],
+    "regla_aplicada": "APROBADO requiere evidencia suficiente; FALLIDO expresa una carencia observada; BLOQUEADO requiere una precondición faltante; NO EJECUTADO indica una actividad no realizada. Se aplicaron los mismos seis criterios a los dos alcances."
+  },
+  "protocolo": {
+    "orden": [
+      "Primero se leyó la rúbrica y contexto/ENCARGO_INSUFICIENTE.md. Se fijaron las carencias del alcance A antes de consultar el resto del paquete.",
+      "Después se leyeron README.md, los otros cinco documentos de contexto, todos los scripts y SQL distribuidos y los siete registros locales de evidencia disponibles."
+    ],
+    "archivos_del_paquete_leidos": [
+      "README.md",
+      "contexto/ENCARGO_INSUFICIENTE.md",
+      "contexto/CONTEXTO.md",
+      "contexto/ARQUITECTURA.md",
+      "contexto/DECISIONES.md",
+      "contexto/CONTINUIDAD.md",
+      "contexto/ENCARGO_CLARO.md",
+      "laboratorio.py",
+      "pruebas.py",
+      "verificar.py",
+      "datos/esquema.sql",
+      "datos/ejemplos.sql",
+      "solucion/consulta.sql",
+      "evidencia/entorno.json",
+      "evidencia/procedencia.json",
+      "evidencia/pruebas_solucion.json",
+      "evidencia/catalogo_solucion.txt",
+      "evidencia/resumen.json",
+      "evidencia/sha256_fuentes.json",
+      "evidencia/pruebas_solucion.txt"
+    ],
+    "restricciones_respetadas": "No se consultaron conversaciones, memoria, materiales anteriores ni archivos de otros proyectos. No se ejecutaron los scripts, las consultas ni las pruebas del laboratorio. No se ejecutó el ejercicio dentro de Codex, GitHub Copilot ni Grok Build. No se modificaron los materiales revisados."
+  },
+  "resultados": [
+    {
+      "alcance": "A",
+      "nombre": "Encargo insuficiente aislado",
+      "estado": "FALLIDO",
+      "motivo": "El texto permite reconocer un ejercicio didáctico que invita a detectar información ausente, pero no aporta la información técnica necesaria para cumplir ninguno de los seis criterios. Las carencias se observaron en una lectura realizada; no son una precondición de lectura faltante ni una actividad omitida.",
+      "evidencias": [
+        {
+          "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+          "seccion": "Encargo con contexto insuficiente: cita del encargo y párrafo final"
+        }
+      ],
+      "criterios": [
+        {
+          "id": "K01",
+          "estado": "FALLIDO",
+          "motivo": "Afirmar que el catálogo ya funciona y pedir organizar la arquitectura no identifica qué comportamiento existe, qué entrega se espera ni si se permiten cambios funcionales. No puede deducirse el estado técnico del catálogo ni distinguir una reorganización documental de una ampliación.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+              "seccion": "Cita del encargo: catálogo, arquitectura y mejoras convenientes"
+            }
+          ]
+        },
+        {
+          "id": "K02",
+          "estado": "FALLIDO",
+          "motivo": "El encargo no define una regla de disponibilidad, criterios de aceptación, datos, implementación o pruebas. No puede deducirse qué condiciones deben conservarse, qué casos se consideran correctos ni dónde verificarlos.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+              "seccion": "Cita del encargo y párrafo final sobre reconocer reglas y evaluar una entrega"
+            }
+          ]
+        },
+        {
+          "id": "K03",
+          "estado": "FALLIDO",
+          "motivo": "La petición de organizar la arquitectura no nombra archivos, componentes, responsabilidades, entradas, salidas o contratos. No puede inferirse un flujo de ejecución ni la existencia de una interfaz, un servicio o una base de datos concretos.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+              "seccion": "Cita del encargo: organiza la arquitectura"
+            }
+          ]
+        },
+        {
+          "id": "K04",
+          "estado": "FALLIDO",
+          "motivo": "La advertencia inicial aclara que el texto es didáctico y no ordena modificar el laboratorio, pero no separa arquitectura implementada, propuesta, supuestos ni pendientes. La invitación abierta a preparar la aplicación y aplicar mejoras no permite fijar límites técnicos.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+              "seccion": "Advertencia inicial y cita del encargo"
+            }
+          ]
+        },
+        {
+          "id": "K05",
+          "estado": "FALLIDO",
+          "motivo": "No se proporcionan comandos, requisitos de entorno, archivos de resultados ni una distinción verificable entre expectativas y observaciones. La frase sobre un catálogo que funciona no constituye evidencia de ejecución.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+              "seccion": "Cita del encargo y párrafo final sobre evaluar una entrega"
+            }
+          ]
+        },
+        {
+          "id": "K06",
+          "estado": "FALLIDO",
+          "motivo": "La referencia a lo que se venía haciendo depende de información anterior no incluida. No conserva decisiones, motivos, estados ni un punto técnico concreto para retomar. El párrafo final sólo solicita identificar estas ausencias.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ENCARGO_INSUFICIENTE.md",
+              "seccion": "Cita del encargo: conservar lo importante de lo que se venía haciendo; párrafo final"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "alcance": "B",
+      "nombre": "Paquete completo de contexto y referencias locales",
+      "estado": "APROBADO",
+      "motivo": "La lectura cruzada proporciona evidencia suficiente para los seis criterios: explica el objetivo documental, conserva la regla y su trazabilidad, describe el contrato real, separa propuestas, localiza reproducción y registros e identifica decisiones y continuidad. Esta aprobación corresponde a suficiencia documental dentro del alcance revisado.",
+      "evidencias": [
+        {
+          "ruta": "README.md",
+          "seccion": "Qué vas a entregar; Recorrido; Evidencia y estados; Límites"
+        },
+        {
+          "ruta": "contexto/CONTEXTO.md",
+          "seccion": "Problema y objetivo; Regla vigente; Datos sintéticos y trazabilidad"
+        },
+        {
+          "ruta": "contexto/CONTINUIDAD.md",
+          "seccion": "Cómo retomar; Pendientes y siguiente paso acotado"
+        }
+      ],
+      "criterios": [
+        {
+          "id": "K01",
+          "estado": "APROBADO",
+          "motivo": "La entrega consiste en documentar, relacionar y verificar un catálogo local cuya consulta ya aplica la disponibilidad por almacén. README identifica la entrega de aprendizaje y CONTEXTO declara que no se ha solicitado ampliar las funciones. La implementación disponible admite únicamente solucion, en coherencia con ese punto de partida.",
+          "evidencias": [
+            {
+              "ruta": "README.md",
+              "seccion": "Introducción; Qué vas a entregar; Fuentes del ejercicio y adaptaciones"
+            },
+            {
+              "ruta": "contexto/CONTEXTO.md",
+              "seccion": "Estado; Problema y objetivo"
+            },
+            {
+              "ruta": "laboratorio.py",
+              "seccion": "VERSIONES; consultar_catalogo; main"
+            }
+          ]
+        },
+        {
+          "id": "K02",
+          "estado": "APROBADO",
+          "motivo": "La regla exige habilitación y un mismo registro de existencias que corresponda al artículo, al almacén elegido y a una cantidad positiva. La tabla C01–C04 coincide con los cuatro artículos y existencias insertados, con las condiciones de la subconsulta EXISTS y con las aserciones sobre los códigos devueltos para ALFA. El registro incluido individualiza los cuatro resultados; no se infiere cobertura de combinaciones adicionales.",
+          "evidencias": [
+            {
+              "ruta": "contexto/CONTEXTO.md",
+              "seccion": "Regla vigente; Datos sintéticos y trazabilidad"
+            },
+            {
+              "ruta": "datos/esquema.sql",
+              "seccion": "Tablas articulos, almacenes y existencias"
+            },
+            {
+              "ruta": "datos/ejemplos.sql",
+              "seccion": "INSERT INTO articulos; INSERT INTO existencias"
+            },
+            {
+              "ruta": "solucion/consulta.sql",
+              "seccion": "WHERE a.habilitado = 1; EXISTS"
+            },
+            {
+              "ruta": "pruebas.py",
+              "seccion": "DisponibilidadTests.setUp y los cuatro métodos test_c01 a test_c04"
+            },
+            {
+              "ruta": "evidencia/pruebas_solucion.json",
+              "seccion": "pruebas; total; aprobados; fallidos; no_ejecutados"
+            }
+          ]
+        },
+        {
+          "id": "K03",
+          "estado": "APROBADO",
+          "motivo": "El mapa asigna preparación de la base y enlace del parámetro a laboratorio.py, la regla al SQL, las comprobaciones a pruebas.py y la coordinación de evidencia a verificar.py. La inspección confirma una base nueva en memoria por llamada, cierre en finally, entrada version y almacen, salida de diccionarios con codigo y nombre y orden por código. La versión inválida provoca ValueError y argparse limita la opción; los documentos los identifican como observaciones de código, sin atribuirlos a las cuatro pruebas.",
+          "evidencias": [
+            {
+              "ruta": "contexto/ARQUITECTURA.md",
+              "seccion": "Componentes implementados; Flujo real de la consulta; Contrato actual por inspección del código"
+            },
+            {
+              "ruta": "laboratorio.py",
+              "seccion": "consultar_catalogo; main"
+            },
+            {
+              "ruta": "solucion/consulta.sql",
+              "seccion": "SELECT; EXISTS; ORDER BY a.codigo"
+            },
+            {
+              "ruta": "pruebas.py",
+              "seccion": "DisponibilidadTests; main"
+            },
+            {
+              "ruta": "verificar.py",
+              "seccion": "ejecutar; main"
+            }
+          ]
+        },
+        {
+          "id": "K04",
+          "estado": "APROBADO",
+          "motivo": "La arquitectura implementada se limita a componentes locales. La interfaz y la frontera de servicio figuran expresamente como propuesta pendiente, sin tecnología seleccionada. El significado de disponible se acota a cantidad positiva y se excluyen reservas, persistencia entre consultas, concurrencia, autenticación, despliegue y el reto de cantidades solicitadas. Se distinguen el estado técnico del ejercicio y la revisión editorial pendiente.",
+          "evidencias": [
+            {
+              "ruta": "README.md",
+              "seccion": "Límites"
+            },
+            {
+              "ruta": "contexto/CONTEXTO.md",
+              "seccion": "Regla vigente; Límites y referencias"
+            },
+            {
+              "ruta": "contexto/ARQUITECTURA.md",
+              "seccion": "Evolución propuesta y estado"
+            },
+            {
+              "ruta": "contexto/DECISIONES.md",
+              "seccion": "Introducción; D01; D03"
+            },
+            {
+              "ruta": "contexto/CONTINUIDAD.md",
+              "seccion": "Pendientes y siguiente paso acotado"
+            }
+          ]
+        },
+        {
+          "id": "K05",
+          "estado": "APROBADO",
+          "motivo": "README indica directorio de trabajo, Python 3.12, módulos requeridos, comandos de preparación, catálogo, batería y verificación. El verificador inspeccionado requiere una carpeta nueva, utiliza el mismo intérprete para los subprocesos y registra resultados, entorno y huellas. Los registros existentes contienen fecha, versiones, A01 observado y cuatro aprobaciones; CONTINUIDAD advierte que no equivalen a una reproducción propia. El contenido semántico de los documentos se evalúa por separado del verificador.",
+          "evidencias": [
+            {
+              "ruta": "README.md",
+              "seccion": "Preparación; Recorrido, paso 3; Evidencia y estados"
+            },
+            {
+              "ruta": "verificar.py",
+              "seccion": "FUENTES; ejecutar; main: creación de salida, ejecución, evaluación y escritura de evidencia"
+            },
+            {
+              "ruta": "contexto/CONTINUIDAD.md",
+              "seccion": "Estado verificable; Cómo retomar"
+            },
+            {
+              "ruta": "evidencia/entorno.json",
+              "seccion": "fecha_hora_utc; python; sqlite; dependencias"
+            },
+            {
+              "ruta": "evidencia/resumen.json",
+              "seccion": "demostracion; pruebas; revision_documental_automatica"
+            },
+            {
+              "ruta": "evidencia/catalogo_solucion.txt",
+              "seccion": "Salida completa"
+            },
+            {
+              "ruta": "evidencia/pruebas_solucion.txt",
+              "seccion": "Resultados de las cuatro pruebas y cierre de unittest"
+            },
+            {
+              "ruta": "evidencia/sha256_fuentes.json",
+              "seccion": "Entradas de los trece archivos fuente y documentos"
+            }
+          ]
+        },
+        {
+          "id": "K06",
+          "estado": "APROBADO",
+          "motivo": "D01 y D02 conservan razones, decisiones, consecuencias y su estado vigente; D03 conserva las razones y el estado de una propuesta futura. CONTINUIDAD señala el punto de partida, los registros que deben consultarse y una secuencia concreta para retomar, incluido el contraste de C04 y la verificación en una carpeta nueva. Antes de una ampliación exige un encargo que defina el resultado nuevo y preserve los criterios actuales. Estas instrucciones pueden seguirse desde el paquete sin recuperar conversaciones.",
+          "evidencias": [
+            {
+              "ruta": "contexto/DECISIONES.md",
+              "seccion": "D01; D02; D03; Cómo actualizar estos registros"
+            },
+            {
+              "ruta": "contexto/CONTINUIDAD.md",
+              "seccion": "Punto de partida; Estado verificable; Cómo retomar; Pendientes y siguiente paso acotado"
+            },
+            {
+              "ruta": "contexto/ENCARGO_CLARO.md",
+              "seccion": "OBJETIVO; A — ACUERDA; R — RESUELVE; O — OBSERVA"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "respuestas_sobre_el_paquete_completo": [
+    {
+      "pregunta": "¿Por qué se excluye A04 en ALFA?",
+      "respuesta": "A04 está habilitado, pero su único registro de existencias es BETA con 9 unidades. Para ALFA no existe una fila del mismo artículo que cumpla simultáneamente el almacén solicitado y una cantidad positiva. Por ello la subconsulta EXISTS no lo acepta. Su exclusión se deduce de los datos y de la consulta inspeccionados; además, la ejecución ya registrada marca C04 como APROBADO. No se realizó una ejecución propia.",
+      "evidencias": [
+        {
+          "ruta": "contexto/CONTEXTO.md",
+          "seccion": "Regla vigente; fila C04 en Datos sintéticos y trazabilidad"
+        },
+        {
+          "ruta": "datos/ejemplos.sql",
+          "seccion": "A04 en INSERT INTO articulos e INSERT INTO existencias"
+        },
+        {
+          "ruta": "solucion/consulta.sql",
+          "seccion": "EXISTS: e.articulo = a.codigo, e.almacen = :almacen y e.cantidad > 0"
+        },
+        {
+          "ruta": "evidencia/pruebas_solucion.json",
+          "seccion": "pruebas: test_c04_existencias_en_otra_ubicacion_se_excluyen"
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Dónde se aplica la ubicación?",
+      "respuesta": "La terminal recibe --almacen, cuyo valor inicial es ALFA, y lo entrega a consultar_catalogo(version, almacen). Esa función enlaza el valor con el parámetro SQL almacen mediante conexion.execute. La condición que decide la pertenencia al catálogo es e.almacen = :almacen dentro de EXISTS en solucion/consulta.sql, junto con la correspondencia del artículo y la cantidad positiva. El verificador coordina la ejecución; no filtra artículos por su cuenta.",
+      "evidencias": [
+        {
+          "ruta": "laboratorio.py",
+          "seccion": "main: --almacen y llamada a consultar_catalogo; consultar_catalogo: conexion.execute"
+        },
+        {
+          "ruta": "solucion/consulta.sql",
+          "seccion": "EXISTS: e.almacen = :almacen"
+        },
+        {
+          "ruta": "contexto/ARQUITECTURA.md",
+          "seccion": "Flujo real de la consulta"
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se comprueba C04 con el ejecutor disponible?",
+      "respuesta": "Desde la raíz del laboratorio, python pruebas.py --version solucion ejecuta la batería completa, que incluye test_c04_existencias_en_otra_ubicacion_se_excluyen. setUp consulta ALFA y ese método exige que A04 no esté en los códigos devueltos. La interfaz de pruebas.py acepta --version y --json; no expone un selector de criterio individual. Para conservar también entorno, demostración y resultados se usa python verificar.py --salida mi_evidencia con un nombre de carpeta que aún no exista. El registro distribuido ya contiene C04 aprobado, pero estos comandos no se ejecutaron durante esta revisión.",
+      "evidencias": [
+        {
+          "ruta": "README.md",
+          "seccion": "Recorrido, paso 3; Evidencia y estados"
+        },
+        {
+          "ruta": "pruebas.py",
+          "seccion": "DisponibilidadTests.setUp; test_c04_existencias_en_otra_ubicacion_se_excluyen; main"
+        },
+        {
+          "ruta": "verificar.py",
+          "seccion": "main: --salida y ejecución de pruebas.py"
+        },
+        {
+          "ruta": "evidencia/pruebas_solucion.json",
+          "seccion": "pruebas: resultado de C04"
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Qué existe frente a lo que es una propuesta?",
+      "respuesta": "Existen un ejecutor Python, tres SQL para esquema, datos y consulta, una base SQLite en memoria reconstruida en cada llamada, cuatro pruebas con ALFA y un coordinador de evidencia local, además de la documentación y los registros distribuidos. D01 y D02 describen decisiones vigentes en el laboratorio. Una interfaz y una frontera de servicio son la propuesta futura D03: falta definir usuarios, entradas, errores, autorizaciones, persistencia y criterios antes de elegir tecnología. El paquete no implementa API HTTP, frontend, servicio remoto ni base persistente, y su existencia no puede inferirse del mapa.",
+      "evidencias": [
+        {
+          "ruta": "contexto/ARQUITECTURA.md",
+          "seccion": "Componentes implementados; Contrato actual por inspección del código; Evolución propuesta y estado"
+        },
+        {
+          "ruta": "contexto/DECISIONES.md",
+          "seccion": "D01; D02; D03"
+        },
+        {
+          "ruta": "laboratorio.py",
+          "seccion": "consultar_catalogo"
+        },
+        {
+          "ruta": "README.md",
+          "seccion": "Límites"
+        }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es el siguiente paso acotado?",
+      "respuesta": "Para retomar este laboratorio, leer el contexto y las decisiones, contrastar C04 entre datos, consulta y prueba y realizar una verificación local con python verificar.py --salida mi_evidencia en una carpeta nueva; después conservar los resultados y explicar cualquier discrepancia. Ése es el siguiente paso para una reproducción propia; esta revisión sólo contrastó los registros distribuidos. Para una etapa de programación posterior, redactar primero un encargo específico que establezca el nuevo resultado esperado y cómo conservar C01–C04. La nota de continuidad no autoriza construir una aplicación completa ni implementar D03 automáticamente.",
+      "evidencias": [
+        {
+          "ruta": "contexto/CONTINUIDAD.md",
+          "seccion": "Cómo retomar; Pendientes y siguiente paso acotado"
+        },
+        {
+          "ruta": "contexto/ENCARGO_CLARO.md",
+          "seccion": "L — LIMITA; A — ACUERDA; R — RESUELVE; O — OBSERVA"
+        },
+        {
+          "ruta": "contexto/DECISIONES.md",
+          "seccion": "D03"
+        }
+      ]
+    }
+  ],
+  "separacion_de_evidencia": {
+    "inspeccion_de_codigo": {
+      "realizada": true,
+      "alcance": "Lectura de laboratorio.py, pruebas.py, verificar.py y los tres SQL; contraste con los documentos. Sustenta afirmaciones sobre estructura, flujo y contrato, sin certificar su ejecución durante esta revisión."
+    },
+    "ejecucion_ya_registrada": {
+      "fecha_hora_utc_declarada": "2026-10-30T09:47:07+00:00",
+      "entorno_declarado": "CPython 3.12.14, SQLite 3.53.1 y Linux; biblioteca estándar; base en memoria.",
+      "resultado_leido": "evidencia/resumen.json registra APROBADO, A01 como único artículo observado en ALFA, códigos de salida 0 y cuatro pruebas aprobadas, sin fallos, bloqueos ni omisiones. Las salidas de texto y el registro por prueba son coherentes con ese resumen.",
+      "evidencias": [
+        {
+          "ruta": "evidencia/entorno.json",
+          "seccion": "Registro completo"
+        },
+        {
+          "ruta": "evidencia/resumen.json",
+          "seccion": "fecha_hora_utc; demostracion; pruebas"
+        },
+        {
+          "ruta": "evidencia/catalogo_solucion.txt",
+          "seccion": "Salida completa"
+        },
+        {
+          "ruta": "evidencia/pruebas_solucion.json",
+          "seccion": "Totales y pruebas"
+        },
+        {
+          "ruta": "evidencia/pruebas_solucion.txt",
+          "seccion": "Resultados de las cuatro pruebas y cierre de unittest"
+        }
+      ],
+      "limite": "Se informa el contenido de los registros aportados. Su reproducción, la comparación con el piloto y el recálculo de huellas no se realizaron en esta revisión."
+    },
+    "ejecucion_propia": {
+      "estado": "NO EJECUTADO",
+      "motivo": "El encargo de revisión autoriza lectura documental y prohíbe ejecutar el laboratorio. No se ejecutaron demostración, pruebas, SQL ni verificador; no se atribuyen resultados propios a los comandos documentados.",
+      "referencias_del_trabajo_no_realizado": [
+        {
+          "ruta": "README.md",
+          "seccion": "Recorrido, paso 3"
+        },
+        {
+          "ruta": "verificar.py",
+          "seccion": "main"
+        }
+      ]
+    }
+  },
+  "hallazgos_y_pendientes": {
+    "correcciones_del_contenido_requeridas_antes_de_entrega": [],
+    "conclusion_sobre_correcciones": "No se detectaron contradicciones o carencias del paquete completo que obliguen a corregir su contenido para satisfacer K01–K06. Las carencias del alcance A pertenecen al encargo insuficiente preparado como ejercicio didáctico.",
+    "incorporacion_pendiente": {
+      "ruta_destino": "evidencia/revision_contexto.json",
+      "descripcion": "La incorporación del dictamen documental está pendiente. El archivo anunciado no formó parte de las evidencias usadas y su ausencia durante esta revisión no se clasificó como defecto del contenido.",
+      "anuncios_localizados": [
+        {
+          "ruta": "README.md",
+          "seccion": "Cómo evaluar el contexto"
+        },
+        {
+          "ruta": "contexto/CONTINUIDAD.md",
+          "seccion": "Estado verificable"
+        }
+      ]
+    },
+    "pendientes_declarados_por_el_paquete": [
+      {
+        "descripcion": "Revisión editorial del piloto, evolución propuesta D03 y reto de cantidades solicitadas pendientes; no se acreditan aplicación productiva ni uso del paquete en herramientas comerciales.",
+        "evidencias": [
+          {
+            "ruta": "contexto/CONTINUIDAD.md",
+            "seccion": "Pendientes y siguiente paso acotado"
+          },
+          {
+            "ruta": "contexto/DECISIONES.md",
+            "seccion": "D03"
+          }
+        ]
+      }
+    ]
+  },
+  "limites": [
+    "El dictamen evalúa suficiencia y coherencia documental mediante lectura real de los materiales enumerados; no demuestra que otro lector o una herramienta los interprete correctamente.",
+    "No se realizaron pruebas con lectores humanos ni se midió productividad, tiempo de comprensión o eficacia de una herramienta comercial.",
+    "Los cuatro escenarios sintéticos con ALFA no prueban todas las combinaciones de datos, validaciones de entradas, errores, concurrencia, reservas o operación productiva.",
+    "Las afirmaciones de conservación respecto al piloto proceden de evidencia/procedencia.json. El material anterior no fue consultado y la comparación no se repitió.",
+    "evidencia/sha256_fuentes.json fue leído como registro de trece huellas. No se recalcularon hashes ni se efectuó una auditoría de integridad o seguridad.",
+    "La aprobación documental no modifica los resultados funcionales registrados ni acredita una ejecución propia.",
+    "La futura incorporación de evidencia/revision_contexto.json no se utilizó como prueba circular de suficiencia."
+  ],
+  "integracion_en_paquete": {
+    "estado": "APROBADO",
+    "fecha_hora_utc": "2026-10-30T09:52:42+00:00",
+    "ruta": "evidencia/revision_contexto.json",
+    "nota": "Este registro se incorporó al paquete después de la revisión y completa el pendiente de integración descrito en el dictamen; no modifica sus evaluaciones."
+  }
+}
