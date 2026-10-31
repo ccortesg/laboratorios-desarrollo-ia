@@ -1,0 +1,52 @@
+APROBADO: verificación conjunta.
+Alcance ejecutado: APROBADO.
+Extremo a extremo del laboratorio 6: APROBADO.
+Extremo a extremo del laboratorio 7: APROBADO.
+Huellas de salidas: APROBADO; 64/64 coinciden con los bytes finales.
+laboratorio_01/inicial: 3 aprobados, 1 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_01/solucion: 4 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_02/solucion: 4 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_03/base: 4 aprobados, 0 fallidos, 6 no ejecutados; recorrido APROBADO.
+laboratorio_03/generado: 10 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_03/refactorizado: 10 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_03/defecto: 8 aprobados, 2 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_03/corregido: 10 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_04/inicio: 10 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_04/solucion: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_04/arbol_actual: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_05/base_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_05/base_resumen: 0 aprobados, 0 fallidos, 6 no ejecutados; recorrido APROBADO.
+laboratorio_05/propuesta_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_05/propuesta_resumen: 4 aprobados, 2 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_05/solucion_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_05/solucion_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/base_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/base_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/base_http: 0 aprobados, 0 fallidos, 5 no ejecutados; recorrido APROBADO.
+laboratorio_06/base_navegador: 0 aprobados, 0 fallidos, 3 no ejecutados; recorrido APROBADO.
+laboratorio_06/propuesta_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/propuesta_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/propuesta_http: 5 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/propuesta_navegador: 2 aprobados, 1 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/solucion_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/solucion_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/solucion_http: 5 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_06/solucion_navegador: 3 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/base_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/base_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/base_http: 5 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/base_navegador: 3 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/base_integracion: 0 aprobados, 0 fallidos, 17 no ejecutados; recorrido APROBADO.
+laboratorio_07/propuesta_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/propuesta_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/propuesta_http: 5 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/propuesta_navegador: 3 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/propuesta_integracion: 15 aprobados, 2 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/solucion_heredados: 20 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/solucion_resumen: 6 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/solucion_http: 5 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/solucion_navegador: 3 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+laboratorio_07/solucion_integracion: 17 aprobados, 0 fallidos, 0 no ejecutados; recorrido APROBADO.
+Totales: 44 baterías, 408 ejecuciones, 400 aprobados, 8 fallidos, 0 bloqueados, 37 no ejecutados en baterías; 10 criterios ausentes registrados aparte.
+Fallos intencionales admitidos exclusivamente: C04 en inicial del laboratorio 1; B05 y B06 en defecto del laboratorio 3; P04 y P05 en propuesta del laboratorio 5; W05 en propuesta del laboratorio 6, únicamente al ejecutar navegador; I01 e I07 en propuesta del laboratorio 7.
+Evidencia nueva guardada en la carpeta indicada; evidencia histórica conservada.

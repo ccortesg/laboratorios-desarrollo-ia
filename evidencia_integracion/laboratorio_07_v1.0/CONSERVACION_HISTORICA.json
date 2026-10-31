@@ -1,0 +1,11 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-10-31T18:05:58.469977+00:00",
+  "base": "6382e05846e149a9a72f7fdc56da48c37a873833",
+  "archivos_historicos_comparados_byte_a_byte": 575,
+  "modificados": [],
+  "entradas_previas_procedencia_conservadas": 6,
+  "continuidad_versiones_cuerpos_historicos_intactos": true,
+  "referencias_remotas": "RECONFIRMACION_REMOTA.json",
+  "alcance": "Labs 1–6, ZIP previos, historiales y evidencia anterior; no se han recalculado sus huellas."
+}

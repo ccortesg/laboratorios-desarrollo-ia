@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Catálogo local · Laboratorio 6</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/estilos.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="cabecera">
+    <a class="marca" href="/">Catálogo local</a>
+    <span>Laboratorio 6 · Datos sintéticos</span>
+  </header>
+  <main>
+    <p class="etiqueta">Consulta de inventario</p>
+    <h1>Disponibilidad por almacén</h1>
+    <p class="introduccion">Encuentra los artículos habilitados con existencias en la ubicación seleccionada.</p>
+    <div class="paneles">
+      <section class="panel" aria-labelledby="titulo-consulta">
+        <h2 id="titulo-consulta">Prepara tu consulta</h2>
+        <form id="consulta">
+          <label for="almacen">Almacén</label>
+          <select id="almacen" name="almacen" required>
+            <option value="ALFA">ALFA</option>
+            <option value="BETA">BETA</option>
+          </select>
+          <label for="nombre">Nombre del artículo <span class="opcional">(opcional)</span></label>
+          <input id="nombre" name="nombre" type="search" autocomplete="off" aria-describedby="ayuda-nombre" placeholder="Por ejemplo, local">
+          <p id="ayuda-nombre" class="ayuda">Deja el nombre vacío para consultar todos los artículos disponibles del almacén.</p>
+          <button id="consultar" type="submit">Consultar catálogo</button>
+        </form>
+      </section>
+      <section class="panel resultados" aria-labelledby="titulo-resultados" aria-busy="false" id="panel-resultados">
+        <h2 id="titulo-resultados">Resultado de la consulta</h2>
+        <p id="mensaje" role="status" aria-live="polite" data-estado="espera">Selecciona un almacén y consulta el catálogo.</p>
+        <p id="error" role="alert" hidden></p>
+        <div id="resultado" hidden>
+          <dl class="resumen">
+            <div><dt>Almacén consultado</dt><dd id="almacen-resultado"></dd></div>
+            <div><dt>Artículos disponibles</dt><dd id="total"></dd></div>
+          </dl>
+          <h3>Códigos encontrados</h3>
+          <ul id="codigos" aria-label="Códigos encontrados"></ul>
+        </div>
+      </section>
+    </div>
+    <p class="nota">El total cuenta artículos, no unidades de existencias. Esta demostración utiliza cuatro artículos ficticios.</p>
+  </main>
+  <footer>Práctica local de contexto, implementación y verificación.</footer>
+</body>
+</html>

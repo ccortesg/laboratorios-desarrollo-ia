@@ -1,0 +1,10 @@
+{
+  "fecha_hora_utc": "2026-10-31T17:47:28.021052+00:00",
+  "contrato": "contexto/CONTRATO_INTEGRACION.md",
+  "sha256": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd",
+  "fase": "Contrato registrado antes de implementar código nuevo",
+  "fallos_intencionales": [
+    "I01",
+    "I07"
+  ]
+}

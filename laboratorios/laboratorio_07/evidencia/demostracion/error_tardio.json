@@ -1,0 +1,75 @@
+{
+  "estado_codigo": "solucion",
+  "antes": [
+    [
+      "A01",
+      "ALFA",
+      7
+    ],
+    [
+      "A02",
+      "ALFA",
+      4
+    ],
+    [
+      "A03",
+      "ALFA",
+      0
+    ],
+    [
+      "A04",
+      "BETA",
+      9
+    ]
+  ],
+  "importaciones": [
+    {
+      "numero": 1,
+      "informe": {
+        "estado": "RECHAZADO",
+        "sha256_fuente": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+        "filas_leidas": 2,
+        "filas_validadas": 1,
+        "filas_aplicadas": 0,
+        "filas_sin_cambio": 0,
+        "errores": [
+          {
+            "fila": 3,
+            "campo": "existencias",
+            "codigo": "CANTIDAD_INVALIDA",
+            "mensaje": "Se requiere un entero entre 0 y 2147483647."
+          }
+        ]
+      },
+      "existencias": [
+        [
+          "A01",
+          "ALFA",
+          7
+        ],
+        [
+          "A02",
+          "ALFA",
+          4
+        ],
+        [
+          "A03",
+          "ALFA",
+          0
+        ],
+        [
+          "A04",
+          "BETA",
+          9
+        ]
+      ],
+      "catalogo": {
+        "almacen": "ALFA",
+        "total": 1,
+        "codigos": [
+          "A01"
+        ]
+      }
+    }
+  ]
+}

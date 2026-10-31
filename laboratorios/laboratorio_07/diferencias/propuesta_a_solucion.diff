@@ -1,0 +1,11 @@
+--- estados/propuesta/importacion.py
++++ estados/solucion/importacion.py
+@@ -76,7 +76,7 @@
+             previo = conexion.execute(
+                 "SELECT cantidad FROM existencias WHERE articulo = ? AND almacen = ?",
+                 (articulo, almacen)).fetchone()
+-            cantidad_final = cantidad + (previo[0] if previo is not None else 0)  # DEFECTO INTENCIONAL: suma
++            cantidad_final = cantidad
+             if previo is None or previo[0] != cantidad_final:
+                 cambios += 1
+             conexion.execute(

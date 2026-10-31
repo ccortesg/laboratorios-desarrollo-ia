@@ -1,0 +1,103 @@
+{
+  "estado": "APROBADO",
+  "fecha_hora_utc": "2026-10-31T18:03:26.417985+00:00",
+  "base": "6382e05846e149a9a72f7fdc56da48c37a873833",
+  "fuente_nueva": "qa_recolector/comandos.json",
+  "evidencia_conjunta_revisada": "qa_conjunta/resumen.json",
+  "checks": [
+    {
+      "id": "Q01",
+      "estado": "APROBADO",
+      "metodo": "Comparación exacta de bytes frente a base",
+      "detalle": "En huellas_evidencia.py cambia únicamente una cadena help; la lógica y los protocolos permanecen idénticos."
+    },
+    {
+      "id": "Q02",
+      "estado": "APROBADO",
+      "metodo": "Cotejo del archivo de pruebas y ejecución real nueva",
+      "detalle": "Las ocho pruebas específicas están intactas y terminan OK, código 0; no se suman a los casos del catálogo."
+    },
+    {
+      "id": "Q03",
+      "estado": "APROBADO",
+      "metodo": "Revisión de código/AST y cotejo de evidencia conjunta existente",
+      "detalle": "Evaluar_bateria conserva validación de ids únicos, estados exactos, AssertionError y códigos; la nueva propuesta sólo admite I01/I07."
+    },
+    {
+      "id": "Q04",
+      "estado": "APROBADO",
+      "metodo": "Revisión de condición por número de laboratorio y lectura de resultados",
+      "detalle": "Base 7 omite exclusivamente los 17 I; conserva sus bateríasweb. Base 6 mantiene su comportamiento anterior."
+    },
+    {
+      "id": "Q05",
+      "estado": "APROBADO",
+      "metodo": "Conciliación de baterías y resumen ya ejecutados",
+      "detalle": "Totales recalculados408 ejecuciones, 400 APROBADO, 8 FALLIDO, 0 bloqueados y 37 NO EJECUTADO; diez criterios N ausentes separados. No se ejecutó otra batería conjunta en esta revisión."
+    },
+    {
+      "id": "Q06",
+      "estado": "APROBADO",
+      "metodo": "Comparación AST, revisión de cierre y comprobador de sólo lectura",
+      "detalle": "Saneamiento conserva su lógica; cierre valida captura, procesa sólo carpeta nueva y calcula hashes finales. Se verifican todas las 64 huellas del conjunto."
+    },
+    {
+      "id": "Q07",
+      "estado": "APROBADO",
+      "metodo": "git diff contra base en archivos históricos protegidos",
+      "detalle": "Sin cambios versionados en laboratorios 1–6, historiales y evidencia histórica de integración."
+    }
+  ],
+  "totales_conjunto_observados": {
+    "laboratorios": 7,
+    "baterias": 44,
+    "ejecutados": 408,
+    "aprobados": 400,
+    "fallidos": 8,
+    "bloqueados": 0,
+    "no_ejecutados_en_baterias": 37,
+    "no_ejecutados_fuera_de_baterias": 10
+  },
+  "fallos_didacticos_observados": {
+    "laboratorio_01/inicial": [
+      "C04"
+    ],
+    "laboratorio_03/defecto": [
+      "B05",
+      "B06"
+    ],
+    "laboratorio_05/propuesta_resumen": [
+      "P04",
+      "P05"
+    ],
+    "laboratorio_06/propuesta_navegador": [
+      "W05"
+    ],
+    "laboratorio_07/propuesta_integracion": [
+      "I01",
+      "I07"
+    ]
+  },
+  "huellas_conjunto": {
+    "estado": "APROBADO",
+    "comprobadas": 64,
+    "coincidentes": 64,
+    "discrepancias": []
+  },
+  "huellas_qa": {
+    "estado": "APROBADO",
+    "comprobadas": 2,
+    "coincidentes": 2,
+    "discrepancias": []
+  },
+  "archivos_historicos_modificados": [],
+  "sha256_verificar_todo": "f3327bf11f0ad6686874fee43d4f2568558bf4b3cb1858b1cc5d0f777819a2ee",
+  "sha256_huellas_evidencia": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+  "sha256_pruebas_huellas": "49c1892607cb5609aec93a8f5f15b614bdd869cd7242181d8b196fec12069c9d",
+  "modificaciones_realizadas_por_revision": [],
+  "limites": [
+    "Revisión focalizada y ejecución de las ocho pruebas existentes. No se añadieron pruebas ni se modificó código.",
+    "La verificación conjunta fue ejecutada por el flujo principal; aquí se cotejaron sus registros.",
+    "No acredita una ejecución Windows ni certificación productiva."
+  ]
+}

@@ -1,0 +1,6 @@
+W01: APROBADO
+W02: APROBADO
+W03: APROBADO
+W04.a: APROBADO
+W04.b: APROBADO
+{"ejecutados": 5, "aprobados": 5, "fallidos": 0, "bloqueados": 0, "no_ejecutados": 0}

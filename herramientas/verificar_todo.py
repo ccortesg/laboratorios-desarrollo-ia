@@ -1,8 +1,8 @@
-"""Ejecuta los seis recorridos en copias temporales y conserva evidencia nueva.
+"""Ejecuta los siete recorridos en copias temporales y conserva evidencia nueva.
 
 Los fallos didácticos esperados se evalúan por identificador y tipo de error.
 La evidencia histórica distribuida nunca se sobrescribe. Requiere Python 3.10+
-y Git. El laboratorio 6 usa HTTP local; --navegador requiere Node, Playwright
+y Git. Los laboratorios 6 y 7 usan HTTP local; --navegador requiere Node, Playwright
 y Chromium instalados. No descarga dependencias ni contacta servicios externos.
 """
 
@@ -34,6 +34,9 @@ N = ["N%02d" % n for n in range(1, 11)]
 P = ["P%02d" % n for n in range(1, 7)]
 W_HTTP = ["W01", "W02", "W03", "W04.a", "W04.b"]
 W_NAVEGADOR = ["W05", "W06.a", "W06.b"]
+I = (["I01"] + ["I02." + c for c in "abcde"]
+     + ["I03." + c for c in "abc"] + ["I04." + c for c in "abcd"]
+     + ["I05", "I06", "I07", "I08"])
 
 
 def leer_json(ruta):
@@ -200,34 +203,42 @@ def huellas_laboratorio_web(carpeta):
     return resultado
 
 
-def evaluar_laboratorio_web(evidencia, navegador):
+def evaluar_laboratorio_web(evidencia, navegador, numero=6):
     resumen = leer_json(evidencia / "resumen.json")
     comandos = leer_json(evidencia / "comandos.json")["registros"]
     codigos = {comando["id"]: comando["codigo_salida"] for comando in comandos}
     grupos = {"heredados": C + B + N, "resumen": P,
               "http": W_HTTP, "navegador": W_NAVEGADOR}
+    if numero == 7:
+        grupos["integracion"] = I
     estados = ["base", "propuesta", "solucion"]
     ids_comandos = {estado + "_" + grupo for estado in estados for grupo in grupos}
     pares = {(estado, grupo) for estado in estados for grupo in grupos}
-    estructura = (len(comandos) == 12 and set(codigos) == ids_comandos
-                  and len(resumen["baterias"]) == 12
+    estructura = (len(comandos) == len(ids_comandos) and set(codigos) == ids_comandos
+                  and len(resumen["baterias"]) == len(ids_comandos)
                   and {(b["estado_codigo"], b["bateria"])
                        for b in resumen["baterias"]} == pares
                   and resumen["conservacion_heredados"] == "APROBADO"
-                  and resumen["base_sin_incremento_web"] == "APROBADO"
+                  and resumen["base_sin_incremento_web" if numero == 6
+                              else "base_sin_incremento_integracion"] == "APROBADO"
                   and resumen["navegador_solicitado"] == navegador)
     baterias = []
     declaradas = {(b["estado_codigo"], b["bateria"]): b for b in resumen["baterias"]}
     for estado in estados:
         for grupo, ids in grupos.items():
             nombre = estado + "_" + grupo
-            no_ejecutados = (ids if (estado == "base" and grupo in {"http", "navegador"})
-                            or (grupo == "navegador" and not navegador) else [])
+            sin_incremento = (estado == "base" and (
+                (numero == 6 and grupo in {"http", "navegador"})
+                or (numero == 7 and grupo == "integracion")))
+            no_ejecutados = ids if sin_incremento or (grupo == "navegador" and not navegador) else []
+            fallos = (["W05"] if numero == 6 and estado == "propuesta"
+                      and grupo == "navegador" and navegador else
+                      ["I01", "I07"] if numero == 7 and estado == "propuesta"
+                      and grupo == "integracion" else [])
             baterias.append(evaluar_bateria(
-                leer_json(evidencia / (nombre + ".json")), "laboratorio_06/" + nombre,
+                leer_json(evidencia / (nombre + ".json")), "laboratorio_%02d/" % numero + nombre,
                 ids, codigos[nombre],
-                fallos=["W05"] if estado == "propuesta" and grupo == "navegador"
-                and navegador else [], no_ejecutados=no_ejecutados,
+                fallos=fallos, no_ejecutados=no_ejecutados,
                 permitir_bloqueo=not no_ejecutados,
             ))
             declarada = declaradas[(estado, grupo)]
@@ -271,7 +282,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
         "implementacion_python": platform.python_implementation(),
         "sqlite": sqlite3.sqlite_version, "git": version_git.stdout.strip(),
         "dependencias": "Python estándar y Git; Node, Playwright y Chromium si se solicita navegador",
-        "red": "Solo HTTP de la aplicación local del laboratorio 6",
+        "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 y 7",
         "navegador_solicitado": navegador,
         "modalidad": "Comprobaciones locales ejecutadas en copias temporales",
     })
@@ -382,49 +393,52 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                                "motivo": "No se completó o no se pudo validar el registro del recorrido.",
                                "tipo_error": type(error).__name__})
 
-        nombre = "laboratorio_06"
-        fuente, copia = raiz / "laboratorios" / nombre, temporal / nombre
-        evidencia = salida / nombre
-        try:
-            anteriores = huellas_laboratorio_web(fuente)
-            if not anteriores or not (fuente / "verificar.py").is_file():
-                raise ErrorPreparacion("Faltan materiales de " + nombre + ".")
-            shutil.copytree(fuente, copia, ignore=shutil.ignore_patterns(
-                "node_modules", "__pycache__", "trabajo", "*.pyc", "*.pyo"))
-            argumentos = ["verificar.py", "--salida", str(evidencia)]
-            if navegador:
-                argumentos += ["--navegador", "--node", node]
-            # La copia temporal no duplica dependencias. Se usa la instalación del
-            # laboratorio original y, en segundo lugar, el NODE_PATH ya configurado.
-            rutas_node = [str(fuente / "node_modules")]
-            if os.environ.get("NODE_PATH"):
-                rutas_node.append(os.environ["NODE_PATH"])
-            codigo = ejecutar(argumentos, copia, raiz, salida, temporal,
-                               salida / (nombre + ".txt"),
-                               {"NODE_PATH": os.pathsep.join(rutas_node)})
-            correcto, casos, estado = evaluar_laboratorio_web(evidencia, navegador)
-            baterias.extend(casos)
-            conservado = anteriores == huellas_laboratorio_web(fuente)
-            codigo_esperado = {"APROBADO": 0, "NO EJECUTADO": 0,
-                               "FALLIDO": 1, "BLOQUEADO": 2}[estado]
-            valido = correcto and conservado and codigo == codigo_esperado
-            resultados.append({
-                "laboratorio": nombre, "estado": estado if valido else "FALLIDO",
-                "alcance_ejecutado": ("APROBADO" if estado == "NO EJECUTADO" else estado)
-                if valido else "FALLIDO",
-                "comando_en_copia": "python verificar.py --salida SALIDA/" + nombre
-                + (" --navegador --node node" if navegador else ""),
-                "codigo_salida_verificador": codigo,
-                "referencia_original_conservada": conservado,
-                "evidencia": nombre + "/resumen.json",
-                "navegador_solicitado": navegador,
-                "dependencias": "No se copian node_modules; se resuelven en el original o NODE_PATH.",
-            })
-        except (OSError, ValueError, KeyError, TypeError, ErrorPreparacion) as error:
-            estado = error.estado if isinstance(error, ErrorPreparacion) else "FALLIDO"
-            resultados.append({"laboratorio": nombre, "estado": estado,
-                               "motivo": "No se completó o no se pudo validar el recorrido web.",
-                               "tipo_error": type(error).__name__})
+        for numero in [6, 7]:
+            nombre = "laboratorio_%02d" % numero
+            fuente, copia = raiz / "laboratorios" / nombre, temporal / nombre
+            evidencia = salida / nombre
+            try:
+                anteriores = huellas_laboratorio_web(fuente)
+                if not anteriores or not (fuente / "verificar.py").is_file():
+                    raise ErrorPreparacion("Faltan materiales de " + nombre + ".")
+                shutil.copytree(fuente, copia, ignore=shutil.ignore_patterns(
+                    "node_modules", "__pycache__", "trabajo", "*.pyc", "*.pyo"))
+                argumentos = ["verificar.py", "--salida", str(evidencia)]
+                if navegador:
+                    argumentos += ["--navegador", "--node", node]
+                # La copia temporal no duplica dependencias. Se usa la instalación del
+                # laboratorio original y, en segundo lugar, el NODE_PATH ya configurado.
+                rutas_node = [str(fuente / "node_modules"),
+                              str(raiz / "laboratorios" / "laboratorio_06" / "node_modules"),
+                              str(raiz / "laboratorios" / "laboratorio_07" / "node_modules")]
+                if os.environ.get("NODE_PATH"):
+                    rutas_node.append(os.environ["NODE_PATH"])
+                codigo = ejecutar(argumentos, copia, raiz, salida, temporal,
+                                   salida / (nombre + ".txt"),
+                                   {"NODE_PATH": os.pathsep.join(rutas_node)})
+                correcto, casos, estado = evaluar_laboratorio_web(evidencia, navegador, numero)
+                baterias.extend(casos)
+                conservado = anteriores == huellas_laboratorio_web(fuente)
+                codigo_esperado = {"APROBADO": 0, "NO EJECUTADO": 0,
+                                   "FALLIDO": 1, "BLOQUEADO": 2}[estado]
+                valido = correcto and conservado and codigo == codigo_esperado
+                resultados.append({
+                    "laboratorio": nombre, "estado": estado if valido else "FALLIDO",
+                    "alcance_ejecutado": ("APROBADO" if estado == "NO EJECUTADO" else estado)
+                    if valido else "FALLIDO",
+                    "comando_en_copia": "python verificar.py --salida SALIDA/" + nombre
+                    + (" --navegador --node node" if navegador else ""),
+                    "codigo_salida_verificador": codigo,
+                    "referencia_original_conservada": conservado,
+                    "evidencia": nombre + "/resumen.json",
+                    "navegador_solicitado": navegador,
+                    "dependencias": "No se copian node_modules; se resuelven en el original o NODE_PATH.",
+                })
+            except (OSError, ValueError, KeyError, TypeError, ErrorPreparacion) as error:
+                estado = error.estado if isinstance(error, ErrorPreparacion) else "FALLIDO"
+                resultados.append({"laboratorio": nombre, "estado": estado,
+                                   "motivo": "No se completó o no se pudo validar el recorrido web.",
+                                   "tipo_error": type(error).__name__})
 
         # Validar captura, sanear sin conversión de saltos y calcular las huellas
         # de los bytes finales. Sólo se procesa esta carpeta de ejecución nueva.
@@ -441,10 +455,12 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
     resumen_general = {
         "estado": estado_final,
         "fecha_hora_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "objeto": "Integración local de los seis laboratorios distribuidos",
+        "objeto": "Integración local de los siete laboratorios distribuidos",
         "alcance_ejecutado": "APROBADO" if estado_final == "NO EJECUTADO" else estado_final,
         "extremo_a_extremo_laboratorio_06": next(
             (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_06"), "NO EJECUTADO"),
+        "extremo_a_extremo_laboratorio_07": next(
+            (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_07"), "NO EJECUTADO"),
         "criterio": "Patrones exactos de resultados, reconstrucción Git y conservación de referencias.",
         "laboratorios": resultados, "baterias": baterias,
         "totales": {
@@ -460,7 +476,8 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
         "fallos_intencionales": {"laboratorio_01/inicial": ["C04"],
                                   "laboratorio_03/defecto": ["B05", "B06"],
                                   "laboratorio_05/propuesta_resumen": ["P04", "P05"],
-                                  "laboratorio_06/propuesta_navegador": ["W05"]},
+                                  "laboratorio_06/propuesta_navegador": ["W05"],
+                                  "laboratorio_07/propuesta_integracion": ["I01", "I07"]},
         "interpretacion": "Un recorrido APROBADO conserva FALLIDO en sus criterios defectuosos esperados; no tolera otros errores. "
         "Sin --navegador, salida 0 aprueba únicamente el alcance ejecutado y el estado global es NO EJECUTADO.",
         "evidencia_historica": "Conservada en cada laboratorio; estos archivos describen una ejecución nueva.",
@@ -495,6 +512,7 @@ def main():
     print(registro["estado"] + ": verificación conjunta.")
     print("Alcance ejecutado: " + registro["alcance_ejecutado"] + ".")
     print("Extremo a extremo del laboratorio 6: " + registro["extremo_a_extremo_laboratorio_06"] + ".")
+    print("Extremo a extremo del laboratorio 7: " + registro["extremo_a_extremo_laboratorio_07"] + ".")
     print("Huellas de salidas: {estado}; {coincidentes}/{comprobadas} coinciden con los bytes finales."
           .format(**registro["huellas_salidas"]))
     for bateria in registro["baterias"]:
@@ -505,7 +523,8 @@ def main():
           .format(**registro["totales"]))
     print("Fallos intencionales admitidos exclusivamente: C04 en inicial del laboratorio 1; "
           "B05 y B06 en defecto del laboratorio 3; P04 y P05 en propuesta del laboratorio 5; "
-          "W05 en propuesta del laboratorio 6, únicamente al ejecutar navegador.")
+          "W05 en propuesta del laboratorio 6, únicamente al ejecutar navegador; "
+          "I01 e I07 en propuesta del laboratorio 7.")
     print("Evidencia nueva guardada en la carpeta indicada; evidencia histórica conservada.")
     return {"APROBADO": 0, "NO EJECUTADO": 0, "FALLIDO": 1, "BLOQUEADO": 2}[registro["estado"]]
 

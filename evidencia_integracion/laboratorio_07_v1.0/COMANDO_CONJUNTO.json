@@ -1,0 +1,8 @@
+{
+  "comando": "python herramientas/verificar_todo.py --navegador --salida SALIDA_NUEVA",
+  "inicio_utc": "2026-10-31T17:57:40.705769+00:00",
+  "fin_utc": "2026-10-31T17:58:08.712691+00:00",
+  "codigo_salida": 0,
+  "sha256_stdout": "c595096e29521f73ee0b098794f836bab4cfd84e5a031f24e162729e5031561d",
+  "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

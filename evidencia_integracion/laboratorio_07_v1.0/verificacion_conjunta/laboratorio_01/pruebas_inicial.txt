@@ -1,0 +1,22 @@
+test_c01_habilitado_con_existencias_locales_aparece (__main__.DisponibilidadTests.test_c01_habilitado_con_existencias_locales_aparece)
+C01: habilitado con existencias locales aparece. ... ok
+test_c02_deshabilitado_se_excluye (__main__.DisponibilidadTests.test_c02_deshabilitado_se_excluye)
+C02: deshabilitado con existencias locales se excluye. ... ok
+test_c03_sin_existencias_se_excluye (__main__.DisponibilidadTests.test_c03_sin_existencias_se_excluye)
+C03: habilitado sin existencias disponibles se excluye. ... ok
+test_c04_existencias_en_otra_ubicacion_se_excluyen (__main__.DisponibilidadTests.test_c04_existencias_en_otra_ubicacion_se_excluyen)
+C04: existencias solo en otra ubicacion se excluyen. ... FAIL
+
+======================================================================
+FAIL: test_c04_existencias_en_otra_ubicacion_se_excluyen (__main__.DisponibilidadTests.test_c04_existencias_en_otra_ubicacion_se_excluyen)
+C04: existencias solo en otra ubicacion se excluyen.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "pruebas.py", line 35, in test_c04_existencias_en_otra_ubicacion_se_excluyen
+    self.assertNotIn("A04", self.codigos)
+AssertionError: 'A04' unexpectedly found in ['A01', 'A04']
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+FAILED (failures=1)

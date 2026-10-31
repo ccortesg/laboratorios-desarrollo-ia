@@ -1,0 +1,16 @@
+base_heredados: patrón APROBADO
+base_resumen: patrón APROBADO
+base_http: patrón APROBADO
+base_navegador: patrón APROBADO
+propuesta_heredados: patrón APROBADO
+propuesta_resumen: patrón APROBADO
+propuesta_http: patrón APROBADO
+propuesta_navegador: patrón APROBADO
+solucion_heredados: patrón APROBADO
+solucion_resumen: patrón APROBADO
+solucion_http: patrón APROBADO
+solucion_navegador: patrón APROBADO
+Estado global: APROBADO
+Alcance ejecutado: APROBADO
+Extremo a extremo: APROBADO
+{"ejecutados": 94, "aprobados": 93, "fallidos": 1, "bloqueados": 0, "no_ejecutados": 8, "errores_de_ejecucion": 0}

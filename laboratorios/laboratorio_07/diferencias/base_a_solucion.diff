@@ -1,0 +1,220 @@
+--- estados/base/catalogo.py
++++ estados/solucion/catalogo.py
+@@ -13,7 +13,7 @@
+     return resultado
+ 
+ 
+-def buscar_catalogo(almacen, texto):
++def buscar_catalogo(almacen, texto, *, conexion=None):
+     """Filtra nombres dentro de los articulos disponibles del almacen."""
+-    articulos = consultar_catalogo("solucion", almacen)
++    articulos = consultar_catalogo("solucion", almacen, conexion=conexion)
+     return filtrar_por_nombre(articulos, texto)
+--- estados/base/detalle.py
++++ estados/solucion/detalle.py
+@@ -3,9 +3,9 @@
+ from laboratorio import consultar_catalogo
+ 
+ 
+-def obtener_articulo(almacen, codigo):
++def obtener_articulo(almacen, codigo, *, conexion=None):
+     """Devuelve el registro disponible con codigo exacto, o None."""
+-    for articulo in consultar_catalogo("solucion", almacen):
++    for articulo in consultar_catalogo("solucion", almacen, conexion=conexion):
+         if articulo["codigo"] == codigo:
+             return articulo
+     return None
+--- estados/base/importacion.py
++++ estados/solucion/importacion.py
+@@ -0,0 +1,116 @@
++"""Adaptador CSV local: valida el contrato y aplica cantidades absolutas."""
++
++import csv
++import hashlib
++import io
++from pathlib import Path
++import re
++import sqlite3
++
++CABECERA = ["codigo_articulo", "almacen", "existencias"]
++MAX_EXISTENCIAS = 2147483647
++
++
++def error(fila, campo, codigo, mensaje):
++    return {"fila": fila, "campo": campo, "codigo": codigo, "mensaje": mensaje}
++
++
++def leer_csv(contenido):
++    """Interpreta bytes UTF-8; no interpreta las reglas de negocio."""
++    try:
++        texto = contenido.decode("utf-8-sig")
++    except UnicodeDecodeError:
++        return [], [error(None, "archivo", "CODIFICACION", "Se requiere UTF-8 válido.")]
++    lector = csv.reader(io.StringIO(texto, newline=""), delimiter=",", strict=True)
++    registros = []
++    try:
++        cabecera = next(lector, None)
++        if cabecera != CABECERA:
++            return [], [error(1, "cabecera", "CABECERA", "El encabezado debe coincidir con el contrato.")]
++        for campos in lector:
++            registros.append((lector.line_num, campos))
++    except csv.Error:
++        return registros, [error(lector.line_num, "archivo", "SINTAXIS_CSV", "CSV no interpretable.")]
++    if not registros:
++        return [], [error(1, "archivo", "SIN_DATOS", "Se requiere al menos una fila de datos.")]
++    return registros, []
++
++
++def validar_filas(conexion, registros):
++    """Traduce filas válidas a tuplas internas sin escribir en la base."""
++    articulos = {fila[0] for fila in conexion.execute("SELECT codigo FROM articulos")}
++    almacenes = {fila[0] for fila in conexion.execute("SELECT codigo FROM almacenes")}
++    validas, errores, vistos = [], [], set()
++    for numero, campos in registros:
++        anteriores = len(errores)
++        if len(campos) != 3:
++            errores.append(error(numero, "fila", "COLUMNAS", "Se requieren exactamente tres campos."))
++            continue
++        articulo, almacen, cantidad = campos
++        if articulo not in articulos:
++            errores.append(error(numero, "codigo_articulo", "ARTICULO_DESCONOCIDO", "El código exacto no existe."))
++        if almacen not in almacenes:
++            errores.append(error(numero, "almacen", "ALMACEN_DESCONOCIDO", "El almacén exacto no existe."))
++        if not re.fullmatch(r"[0-9]+", cantidad) or len(cantidad.lstrip("0")) > 10:
++            errores.append(error(numero, "existencias", "CANTIDAD_INVALIDA", "Se requiere un entero entre 0 y 2147483647."))
++            numero_cantidad = None
++        else:
++            numero_cantidad = int(cantidad.lstrip("0") or "0")
++            if numero_cantidad > MAX_EXISTENCIAS:
++                errores.append(error(numero, "existencias", "CANTIDAD_INVALIDA", "Se requiere un entero entre 0 y 2147483647."))
++        par = (articulo, almacen)
++        if par in vistos:
++            errores.append(error(numero, "fila", "PAR_DUPLICADO", "El par artículo–almacén está repetido."))
++        vistos.add(par)
++        if len(errores) == anteriores:
++            validas.append((articulo, almacen, numero_cantidad))
++    return validas, errores
++
++
++def aplicar_filas(conexion, filas):
++    """Confirma todos los cambios o revierte si falla una escritura."""
++    cambios = 0
++    with conexion:
++        conexion.execute("BEGIN")
++        for articulo, almacen, cantidad in filas:
++            previo = conexion.execute(
++                "SELECT cantidad FROM existencias WHERE articulo = ? AND almacen = ?",
++                (articulo, almacen)).fetchone()
++            cantidad_final = cantidad
++            if previo is None or previo[0] != cantidad_final:
++                cambios += 1
++            conexion.execute(
++                "INSERT INTO existencias (articulo, almacen, cantidad) VALUES (?, ?, ?) "
++                "ON CONFLICT (articulo, almacen) DO UPDATE SET cantidad = excluded.cantidad",
++                (articulo, almacen, cantidad_final))
++    return cambios
++
++
++def importar_existencias(conexion, archivo):
++    """El llamador conserva su conexión; el informe no contiene rutas privadas."""
++    informe = {"estado": "RECHAZADO", "sha256_fuente": None,
++               "filas_leidas": 0, "filas_validadas": 0,
++               "filas_aplicadas": 0, "filas_sin_cambio": 0, "errores": []}
++    if conexion.in_transaction:
++        informe["errores"] = [error(None, "conexion", "TRANSACCION_PREVIA", "Confirma los cambios previos antes de importar.")]
++        return informe
++    try:
++        contenido = Path(archivo).read_bytes()
++    except OSError:
++        informe["errores"] = [error(None, "archivo", "LECTURA", "No fue posible leer el archivo de entrada.")]
++        return informe
++    informe["sha256_fuente"] = hashlib.sha256(contenido).hexdigest()
++    registros, errores_lectura = leer_csv(contenido)
++    filas, errores_validacion = validar_filas(conexion, registros)
++    informe.update(filas_leidas=len(registros), filas_validadas=len(filas),
++                   errores=errores_lectura + errores_validacion)
++    if informe["errores"]:
++        return informe
++    try:
++        cambios = aplicar_filas(conexion, filas)
++    except sqlite3.Error:
++        informe["errores"] = [error(None, "base", "ESCRITURA", "No se aplicó el archivo; la transacción se revirtió.")]
++        return informe
++    informe.update(estado="APLICADO", filas_aplicadas=cambios,
++                   filas_sin_cambio=len(filas) - cambios)
++    return informe
+--- estados/base/laboratorio.py
++++ estados/solucion/laboratorio.py
+@@ -1,34 +1,41 @@
+-"""Catalogo sintetico para observar una regla de disponibilidad por almacen."""
++"""Catálogo sintético con conexión opcional para consultar la integración."""
+ 
+ import argparse
+ import sqlite3
+ from pathlib import Path
+ 
+-
+ BASE = Path(__file__).resolve().parent
+ VERSIONES = ("solucion",)
+ 
+ 
+-def consultar_catalogo(version, almacen="ALFA"):
+-    """Devuelve registros de una base nueva en memoria; no modifica archivos."""
+-    if version not in VERSIONES:
+-        raise ValueError("Version desconocida: use solucion.")
+-
++def crear_conexion():
++    """Crea una base desechable con los datos sintéticos de referencia."""
+     conexion = sqlite3.connect(":memory:")
+     conexion.row_factory = sqlite3.Row
+     try:
+-        conexion.executescript(
+-            (BASE / "datos" / "esquema.sql").read_text(encoding="utf-8")
+-        )
+-        conexion.executescript(
+-            (BASE / "datos" / "ejemplos.sql").read_text(encoding="utf-8")
+-        )
++        for nombre in ("esquema.sql", "ejemplos.sql"):
++            conexion.executescript((BASE / "datos" / nombre).read_text(encoding="utf-8"))
++        return conexion
++    except Exception:
++        conexion.close()
++        raise
++
++
++def consultar_catalogo(version, almacen="ALFA", *, conexion=None):
++    """Consulta la conexión recibida; sin ella conserva la base nueva anterior."""
++    if version not in VERSIONES:
++        raise ValueError("Version desconocida: use solucion.")
++    propia = conexion is None
++    if propia:
++        conexion = crear_conexion()
++    try:
+         consulta = (BASE / version / "consulta.sql").read_text(encoding="utf-8")
+-        # El parametro se enlaza en SQLite; no se concatena al texto SQL.
+-        filas = conexion.execute(consulta, {"almacen": almacen}).fetchall()
+-        return [dict(fila) for fila in filas]
++        cursor = conexion.execute(consulta, {"almacen": almacen})
++        columnas = [columna[0] for columna in cursor.description]
++        return [dict(zip(columnas, fila)) for fila in cursor.fetchall()]
+     finally:
+-        conexion.close()
++        if propia:
++            conexion.close()
+ 
+ 
+ def main():
+--- estados/base/resumen.py
++++ estados/solucion/resumen.py
+@@ -6,9 +6,9 @@
+ from catalogo import buscar_catalogo
+ 
+ 
+-def resumir_catalogo(almacen, texto=""):
++def resumir_catalogo(almacen, texto="", *, conexion=None):
+     """Cuenta artículos disponibles que coinciden con la búsqueda por nombre."""
+-    articulos = buscar_catalogo(almacen, texto)
++    articulos = buscar_catalogo(almacen, texto, conexion=conexion)
+     return {
+         "almacen": almacen,
+         "total": len(articulos),

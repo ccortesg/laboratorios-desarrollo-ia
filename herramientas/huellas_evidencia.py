@@ -129,7 +129,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("carpeta", type=Path)
     parser.add_argument("--esperadas", type=int,
-                        help="Número de huellas exigido; la integración completa actual declara 34.")
+                        help="Número de huellas exigido para la ejecución que se está verificando.")
     opciones = parser.parse_args()
     try:
         resultado = comprobar_huellas(opciones.carpeta)

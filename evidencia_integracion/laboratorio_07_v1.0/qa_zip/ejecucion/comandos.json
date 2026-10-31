@@ -1,0 +1,333 @@
+{
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas.",
+  "registros": [
+    {
+      "id": "base_heredados",
+      "inicio_utc": "2026-10-31T18:02:39.492360+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/base/pruebas.py",
+        "--json",
+        "<SALIDA>/base_heredados.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:39.581247+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_heredados.stdout.txt",
+      "stderr": "base_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_resumen",
+      "inicio_utc": "2026-10-31T18:02:39.582634+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--directorio",
+        "estados/base",
+        "--json",
+        "<SALIDA>/base_resumen.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:39.760694+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_resumen.stdout.txt",
+      "stderr": "base_resumen.stderr.txt",
+      "sha256_stdout": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_http",
+      "inicio_utc": "2026-10-31T18:02:39.761207+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_http.py",
+        "--directorio",
+        "estados/base",
+        "--json",
+        "<SALIDA>/base_http.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:40.413306+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_http.stdout.txt",
+      "stderr": "base_http.stderr.txt",
+      "sha256_stdout": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_navegador",
+      "inicio_utc": "2026-10-31T18:02:40.454599+00:00",
+      "directorio": ".",
+      "comando": [
+        "node",
+        "pruebas_navegador.cjs",
+        "--url",
+        "<URL_LOCAL>",
+        "--estado",
+        "base",
+        "--json",
+        "<SALIDA>/base_navegador.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:43.768431+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_navegador.stdout.txt",
+      "stderr": "base_navegador.stderr.txt",
+      "sha256_stdout": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_integracion",
+      "inicio_utc": "2026-10-31T18:02:44.066900+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_integracion.py",
+        "--estado",
+        "base",
+        "--json",
+        "<SALIDA>/base_integracion.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:44.154310+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_integracion.stdout.txt",
+      "stderr": "base_integracion.stderr.txt",
+      "sha256_stdout": "2029c079f32c7834d9b10ec92725138cbd5fde2a885f56213430a15a6114abca",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "2029c079f32c7834d9b10ec92725138cbd5fde2a885f56213430a15a6114abca",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_heredados",
+      "inicio_utc": "2026-10-31T18:02:44.155294+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/propuesta/pruebas.py",
+        "--json",
+        "<SALIDA>/propuesta_heredados.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:44.234619+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_heredados.stdout.txt",
+      "stderr": "propuesta_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_resumen",
+      "inicio_utc": "2026-10-31T18:02:44.236232+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--directorio",
+        "estados/propuesta",
+        "--json",
+        "<SALIDA>/propuesta_resumen.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:44.416835+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_resumen.stdout.txt",
+      "stderr": "propuesta_resumen.stderr.txt",
+      "sha256_stdout": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_http",
+      "inicio_utc": "2026-10-31T18:02:44.417686+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_http.py",
+        "--directorio",
+        "estados/propuesta",
+        "--json",
+        "<SALIDA>/propuesta_http.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:45.058762+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_http.stdout.txt",
+      "stderr": "propuesta_http.stderr.txt",
+      "sha256_stdout": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_navegador",
+      "inicio_utc": "2026-10-31T18:02:45.067410+00:00",
+      "directorio": ".",
+      "comando": [
+        "node",
+        "pruebas_navegador.cjs",
+        "--url",
+        "<URL_LOCAL>",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_navegador.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:48.210186+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_navegador.stdout.txt",
+      "stderr": "propuesta_navegador.stderr.txt",
+      "sha256_stdout": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_integracion",
+      "inicio_utc": "2026-10-31T18:02:48.398264+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_integracion.py",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_integracion.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:48.499182+00:00",
+      "codigo_salida": 1,
+      "stdout": "propuesta_integracion.stdout.txt",
+      "stderr": "propuesta_integracion.stderr.txt",
+      "sha256_stdout": "082688aae38fb27253870413d561967e162dd8c340d984240a50ef96af0894a0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "082688aae38fb27253870413d561967e162dd8c340d984240a50ef96af0894a0",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_heredados",
+      "inicio_utc": "2026-10-31T18:02:48.499943+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/solucion/pruebas.py",
+        "--json",
+        "<SALIDA>/solucion_heredados.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:48.574751+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_heredados.stdout.txt",
+      "stderr": "solucion_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_resumen",
+      "inicio_utc": "2026-10-31T18:02:48.576266+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--directorio",
+        "estados/solucion",
+        "--json",
+        "<SALIDA>/solucion_resumen.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:48.756475+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_resumen.stdout.txt",
+      "stderr": "solucion_resumen.stderr.txt",
+      "sha256_stdout": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_http",
+      "inicio_utc": "2026-10-31T18:02:48.757022+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_http.py",
+        "--directorio",
+        "estados/solucion",
+        "--json",
+        "<SALIDA>/solucion_http.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:49.385104+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_http.stdout.txt",
+      "stderr": "solucion_http.stderr.txt",
+      "sha256_stdout": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_navegador",
+      "inicio_utc": "2026-10-31T18:02:49.391929+00:00",
+      "directorio": ".",
+      "comando": [
+        "node",
+        "pruebas_navegador.cjs",
+        "--url",
+        "<URL_LOCAL>",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_navegador.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:52.515966+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_navegador.stdout.txt",
+      "stderr": "solucion_navegador.stderr.txt",
+      "sha256_stdout": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_integracion",
+      "inicio_utc": "2026-10-31T18:02:52.771706+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_integracion.py",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_integracion.json"
+      ],
+      "fin_utc": "2026-10-31T18:02:52.870300+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_integracion.stdout.txt",
+      "stderr": "solucion_integracion.stderr.txt",
+      "sha256_stdout": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "convenciones_del_productor": "python y node representan los ejecutables elegidos; <SALIDA> es el destino nuevo; <URL_LOCAL> es el servidor real iniciado en puerto libre. Las salidas de procesos se conservan como bytes sin transformación. Las entradas sin comando representan casos expresamente no ejecutados o bloqueados."
+}

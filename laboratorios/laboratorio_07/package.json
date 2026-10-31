@@ -1,0 +1,12 @@
+{
+  "name": "laboratorio-07-integracion-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependencia opcional para comprobar el navegador del laboratorio sintético",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "bateria": "http",
+  "estado_codigo": "base",
+  "casos_registrados": 5,
+  "criterios_distintos": 4,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 5,
+  "pruebas": [
+    {
+      "id": "W01",
+      "prueba": "test_w01_alfa_sin_nombre",
+      "criterio": "W01: ALFA sin nombre devuelve un artículo local por HTTP.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base todavía no tiene servidor ni interfaz web.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "W02",
+      "prueba": "test_w02_beta_nombre_normalizado",
+      "criterio": "W02: BETA y OTRA con espacios conservan nombre y almacén.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base todavía no tiene servidor ni interfaz web.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "W03",
+      "prueba": "test_w03_consulta_valida_vacia",
+      "criterio": "W03: ALFA y otra devuelven 200 y un resumen vacío.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base todavía no tiene servidor ni interfaz web.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "W04.a",
+      "prueba": "test_w04a_almacen_omitido",
+      "criterio": "W04.a: omitir el almacén devuelve 400 con error explícito.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base todavía no tiene servidor ni interfaz web.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "W04.b",
+      "prueba": "test_w04b_almacen_vacio",
+      "criterio": "W04.b: almacén vacío devuelve 400 sin elegir un valor implícito.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base todavía no tiene servidor ni interfaz web.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    }
+  ],
+  "alcance": "Peticiones HTTP contra un servidor real local; no prueba el navegador."
+}

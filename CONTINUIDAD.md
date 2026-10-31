@@ -1,3 +1,31 @@
+# Continuidad vigente · Integración 1.3 preparada
+
+**Fecha:** 31 de octubre de 2026. El maestro editorial v1.0 sigue vigente. Los estados actuales son [ESTADO_DEL_LIBRO_v1.6.md](docs/estados/ESTADO_DEL_LIBRO_v1.6.md) y [ESTADO_REPOSITORIO_v1.5.md](docs/estados/ESTADO_REPOSITORIO_v1.5.md). Los capítulos 1–7 permanecen pendientes de revisión editorial del autor.
+
+## Cierres anteriores confirmados
+
+El laboratorio 6 ya fue integrado y verificado en Windows por el autor. Las etiquetas lab-06-v1.0 y repositorio-v1.2 conservan el commit 31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd. La corrección del recolector fue integrada después: main está confirmado en 6382e05846e149a9a72f7fdc56da48c37a873833, árbol 680fa6135ed0aae40e962ec3f893d72ece1389c1.
+
+H01 está cerrado para ejecuciones nuevas. La evidencia Windows corregida acreditó 34/34 huellas finales; las divergencias del registro anterior se conservan como antecedentes. La producción del laboratorio 7 parte del recolector corregido. Las notas antiguas de subida del laboratorio 6 o de corrección pendiente no describen el estado vigente.
+
+## Incremento preparado
+
+El laboratorio 7 añade importación CSV de existencias absolutas, validación completa, aplicación transaccional y consulta sobre la misma conexión. Conserva C/B/N/P/W y añade I01–I08 con diecisiete casos. El defecto didáctico de propuesta suma cantidades y produce exactamente los fallos I01 e I07.
+
+La ejecución autónoma con navegador obtuvo APROBADO: quince baterías, 136 ejecuciones, 134 aprobaciones y dos fallos didácticos; diecisiete casos I de base NO EJECUTADO. La solución satisfizo 51/51 casos y coincidieron 30/30 huellas.
+
+La verificación conjunta local obtuvo APROBADO: 44 baterías, 408 ejecuciones, 400 aprobaciones, ocho fallos didácticos y cero bloqueos; 37 NO EJECUTADO en baterías y diez criterios ausentes aparte. Coincidieron 64/64 huellas finales. La evidencia nueva está en evidencia_integracion/laboratorio_07_v1.0/ y no sustituye registros históricos.
+
+## Siguiente operación
+
+La integración 1.3 está preparada localmente. Windows para laboratorio 7, la integración en main, la subida y las etiquetas nuevas están NO EJECUTADO. Los nombres previstos son lab-07-v1.0 y repositorio-v1.3. Antes de aplicarla, comprobar de nuevo main, preservar cambios y seguir las instrucciones del paquete. No se requiere volver a aplicar la corrección del recolector.
+
+El capítulo 7 y su Word forman parte de la entrega editorial. No se acredita una nueva sesión comercial mediante estas pruebas ni se redactó el capítulo 8.
+
+## Antecedentes conservados
+
+El contenido siguiente conserva sus fechas, resultados y pendientes históricos. No sustituye las actualizaciones anteriores ni permite atribuir al laboratorio 7 una ejecución Windows previa.
+
 # Continuidad vigente · Integración 1.2 preparada
 
 **Fecha: 31 de octubre de 2026 (UTC).** El maestro editorial v1.0 permanece vigente. El estado del libro es v1.5 y el estado operativo del repositorio es v1.3; estas versiones son independientes de la integración técnica 1.2.

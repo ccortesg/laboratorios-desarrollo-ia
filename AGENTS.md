@@ -4,7 +4,7 @@
 
 Este repositorio reúne ejercicios sintéticos del libro «Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro». El principio rector es definir bien el trabajo y reconocer con evidencia cuándo está terminado.
 
-Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–6 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
+Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–7 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
 
 ## Trabajo autorizado
 
@@ -28,6 +28,8 @@ W01–W06: resumen HTTP real por almacén y nombre, 400 sin almacén, transició
 
 No implementes cantidades, reservas, aplicación completa ni capítulos posteriores sin el encargo correspondiente.
 
+I01–I08: importación CSV de existencias absolutas, validación del archivo completo, identificadores exactos, rechazo sin cambios parciales, repetición idempotente e informe trazable. Lee `laboratorios/laboratorio_07/contexto/CONTRATO_INTEGRACION.md`. Los 17 casos nuevos se suman a los 34 casos heredados de la solución. La propuesta suma por error y conserva FALLIDO en I01/I07.
+
 ## Método CLARO
 
 1. Contextualiza objetivo, comportamiento actual y esperado, archivos y datos relevantes.
@@ -40,7 +42,7 @@ No implementes cantidades, reservas, aplicación completa ni capítulos posterio
 
 `python herramientas/verificar_todo.py --navegador --salida trabajo/otra_verificacion` ejecuta el recorrido completo en copias temporales y requiere una carpeta nueva. Python 3.10+, Git y dependencias opcionales de navegador instaladas según el README. Las pruebas usan HTTP local; no descargan herramientas. Sin `--navegador`, el alcance dominio/HTTP puede aprobar, pero el global queda NO EJECUTADO, aunque la salida sea 0.
 
-Conserva el patrón exacto de fallos esperados: C04 en el inicial del laboratorio 1; B05 y B06 en el defecto del laboratorio 3; P04 y P05 en la propuesta del laboratorio 5; W05 en propuesta del laboratorio 6 al ejecutar navegador. Un fallo diferente es un problema pendiente. B01–B06 en la base del laboratorio 3 y P01–P06 en la base del laboratorio 5 permanecen NO EJECUTADO. Los ocho casos web de base 6 también quedan NO EJECUTADO porque allí no existe la web.
+Conserva el patrón exacto de fallos esperados: C04 en el inicial del laboratorio 1; B05 y B06 en el defecto del laboratorio 3; P04 y P05 en la propuesta del laboratorio 5; W05 en propuesta del laboratorio 6 al ejecutar navegador; I01/I07 en propuesta del laboratorio 7. Un fallo diferente es un problema pendiente. B01–B06 en la base del laboratorio 3 y P01–P06 en la base del laboratorio 5 permanecen NO EJECUTADO. Los ocho casos web de base 6 también quedan NO EJECUTADO porque allí no existe la web. En base 7 sí existe la web; sus 17 casos de importación permanecen NO EJECUTADO.
 
 En el laboratorio 4, comprueba tanto las etiquetas como el árbol de trabajo cuando haya modificaciones. El verificador histórico por sí solo no acredita el código editado.
 
@@ -50,4 +52,4 @@ Clasifica cada comprobación como APROBADO, FALLIDO, BLOQUEADO o NO EJECUTADO. D
 
 Revisa texto, código, datos, rutas, resultados, metadatos e historial. Omite personas, clientes, marcas laborales, direcciones identificables, secretos y combinaciones que reconozcan sistemas reales. Las tecnologías públicas necesarias para enseñar pueden nombrarse. Para afirmaciones actuales sobre productos, utiliza fuentes oficiales y registra la fecha de consulta.
 
-Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial vigente es ESTADO_DEL_LIBRO_v1.5.md, conservado en las entregas del libro.
+Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial vigente es ESTADO_DEL_LIBRO_v1.6.md y el operativo es ESTADO_REPOSITORIO_v1.5.md. La producción del capítulo 7 conserva los ocho tests y la corrección H01 del recolector. Las huellas finales corresponden a bytes guardados; los históricos nunca se reparan retroactivamente. La única modificación al auxiliar de huellas en esta etapa aclara el texto de ayuda de --esperadas, sin alterar sus funciones.

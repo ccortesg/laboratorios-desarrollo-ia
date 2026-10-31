@@ -1,0 +1,61 @@
+{
+  "estado_estructural": "APROBADO",
+  "estado_visual": "APROBADO",
+  "parrafos_contenido": 160,
+  "tablas": 2,
+  "secciones": 10,
+  "bloques_codigo": 13,
+  "hipervinculos_unicos": 6,
+  "equivalencia_texto_en_orden": true,
+  "equivalencia_codigo": true,
+  "equivalencia_urls": true,
+  "metadatos_personales_vacios": true,
+  "sin_comentarios_ni_revisiones": true,
+  "sha256_markdown": "ad96f66e0f98d0f29143ced0ef5bbd4ed810f779bb9e789e0d9695ad4cbb311f",
+  "sha256_docx": "e5963c840201ec47ffa37518f05c9dd0199da203cfbbd64b80c02b002a200e7d",
+  "palabras_markdown_por_espacios": 4677,
+  "fuente_presentacion": "CAPITULO_06_v1.0.docx",
+  "paginas": 11,
+  "paginas_inspeccionadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "fallos_pendientes": [],
+  "render_revisado": "render_final",
+  "ajuste_final": "Espaciado posterior del párrafo Normal: 4 pt; fuente de 12 pt e interlineado conservados. Retirada la zona geográfica de la nota bibliográfica.",
+  "revision_visual_por_tramos": [
+    {
+      "paginas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "estado": "APROBADO",
+      "procedencia": "Inspección del agente principal comunicada tras revisar los PNG originales del render final."
+    },
+    {
+      "paginas": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "estado": "APROBADO",
+      "procedencia": "Inspección independiente de los PNG originales del render final."
+    }
+  ],
+  "entregables_congelados": true
+}

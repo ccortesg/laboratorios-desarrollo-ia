@@ -1,0 +1,50 @@
+{
+  "fecha_consulta_utc": "2026-10-31T17:51:01.598583+00:00",
+  "archivos": [
+    {
+      "archivo": "CAPITULO_06_v1.0.docx",
+      "bytes": 52311,
+      "sha256": "dd3e37a0a85b5c47dfdd24bd5e5a734adc782bba5e09f6693a45c5ef834489ab"
+    },
+    {
+      "archivo": "CAPITULO_06_v1.0.md",
+      "bytes": 32628,
+      "sha256": "ad517a34f21e703348f62fee3a6852a52b23498f41a105568f2781755d863a9a"
+    },
+    {
+      "archivo": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md",
+      "bytes": 10048,
+      "sha256": "2f57a9c3304b56c6c662a39afaaf8e893934725811cf5d46c518572b0b776357"
+    },
+    {
+      "archivo": "ESTADO_DEL_LIBRO_v1.5.2.md",
+      "bytes": 6593,
+      "sha256": "5fb358ed1ae6b0423900b8d3614ef4ef486b0f5c0750ee6e17b047f771acd48c"
+    },
+    {
+      "archivo": "ESTADO_REPOSITORIO_v1.4.1.md",
+      "bytes": 7419,
+      "sha256": "db4b02b19565d0c8d3b0b653fe94fe42dc593f895e1801badfaf1a9cb363afa1"
+    },
+    {
+      "archivo": "LABORATORIO_06_v1.0.zip",
+      "bytes": 408418,
+      "sha256": "79728447611c6ddbb1ab1615ca573a1e7199390c4890ec8796e699003b0880ef"
+    },
+    {
+      "archivo": "REVISION_CORRECCION_HUELLAS_WINDOWS_v1.0.zip",
+      "bytes": 20827,
+      "sha256": "c2990f5cff89bce005d949cab46e7245a21bb401e174e993de20c9e3f8225992"
+    }
+  ],
+  "laboratorio_06_zip_vs_repositorio": {
+    "estado": "APROBADO",
+    "archivos": 112,
+    "coincidentes": 112
+  },
+  "revision_huellas_manifiesto": {
+    "estado": "APROBADO",
+    "archivos": 6,
+    "coincidentes": 6
+  }
+}

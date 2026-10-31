@@ -1,0 +1,14 @@
+{
+  "estado": "APROBADO",
+  "origen": "LABORATORIO_07_v1.0.zip descomprimido en carpeta nueva",
+  "comando": "python verificar.py --navegador --salida SALIDA_NUEVA",
+  "inicio_utc": "2026-10-31T18:02:39.375835+00:00",
+  "fin_utc": "2026-10-31T18:02:52.909165+00:00",
+  "codigo_salida": 0,
+  "sha256_stdout": "0ae365575ec7cb4e4b8c654bf116cde53bbad1fcde008b0411097ea725da4576",
+  "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifiesto_comprobado": 139,
+  "archivos_distribuidos_modificados": 0,
+  "zip_sha256": "2f579f87eb3a907e67ab195acb285543ee5997a805ff1add2e422dc7bc9b0b85",
+  "entorno": "Linux; ejecución local con Chromium, no Windows ni herramienta comercial"
+}

@@ -1,3 +1,23 @@
+# Versiones vigentes · Integración 1.3 preparada
+
+**Fecha:** 31 de octubre de 2026. La versión técnica preparada es 1.3; el estado operativo es [1.5](docs/estados/ESTADO_REPOSITORIO_v1.5.md) y el estado del libro es [1.6](docs/estados/ESTADO_DEL_LIBRO_v1.6.md). El maestro editorial permanece en 1.0.
+
+| Entrega o corrección | Situación confirmada |
+| --- | --- |
+| Integración 1.2 y laboratorio 6 | Publicados por el autor; lab-06-v1.0 y repositorio-v1.2 permanecen en 31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd. |
+| Corrección del recolector posterior a 1.2 | main confirmado en 6382e05846e149a9a72f7fdc56da48c37a873833; H01 cerrado para nuevas ejecuciones. No creó una etiqueta nueva. |
+| Laboratorio 7 v1.0 e integración 1.3 | Preparados y verificados localmente. lab-07-v1.0 y repositorio-v1.3 son etiquetas previstas, no creadas. |
+
+Las nueve etiquetas existentes conservan sus referencias. Los laboratorios 1–6, sus distribuciones, historiales y evidencias permanecen como antecedentes; el incremento y su evidencia se añaden por separado. La prueba local no acredita una subida ni una ejecución Windows del laboratorio 7.
+
+El contrato nuevo incorpora I01–I08 sin cambiar C/B/N/P/W. La verificación conjunta de siete laboratorios registró 44 baterías, 408 ejecuciones, 400 aprobaciones y ocho fallos didácticos, con 64/64 huellas coincidentes. El detalle y el cierre del empaquetado están en el estado operativo.
+
+Los capítulos 1–7 continúan pendientes de revisión editorial del autor. Manuscritos y Word permanecen en la entrega editorial.
+
+## Historial conservado
+
+Los textos siguientes se conservan como referencias históricas. Sus expresiones de preparación o publicación pendiente corresponden a la fecha de cada entrega, no al estado vigente que encabeza este archivo.
+
 # Versiones y procedencia
 
 **Integración preparada: 1.2 · Fecha: 31 de octubre de 2026 (UTC).**

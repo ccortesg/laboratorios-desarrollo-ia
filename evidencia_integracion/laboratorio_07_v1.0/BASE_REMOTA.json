@@ -1,0 +1,48 @@
+{
+  "fecha_consulta_utc": "2026-10-31T17:45:34.134Z",
+  "repo": "https://github.com/ccortesg/laboratorios-desarrollo-ia",
+  "main": "6382e05846e149a9a72f7fdc56da48c37a873833",
+  "arbol": "680fa6135ed0aae40e962ec3f893d72ece1389c1",
+  "padres": [
+    "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd"
+  ],
+  "tags": [
+    {
+      "ref": "refs/tags/lab-01-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40"
+    },
+    {
+      "ref": "refs/tags/lab-02-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40"
+    },
+    {
+      "ref": "refs/tags/lab-03-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40"
+    },
+    {
+      "ref": "refs/tags/lab-04-v1.1",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40"
+    },
+    {
+      "ref": "refs/tags/lab-05-v1.0",
+      "sha": "67edef7b44524f5f621e9b060c6b9c523c1b05a8"
+    },
+    {
+      "ref": "refs/tags/lab-06-v1.0",
+      "sha": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.1",
+      "sha": "67edef7b44524f5f621e9b060c6b9c523c1b05a8"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.2",
+      "sha": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd"
+    }
+  ],
+  "metodo": "Consulta GitHub GET; base local contrastada por árbol Git. Sin escritura remota."
+}

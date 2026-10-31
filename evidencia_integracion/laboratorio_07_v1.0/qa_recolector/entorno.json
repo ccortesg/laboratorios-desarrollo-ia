@@ -1,0 +1,8 @@
+{
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "fecha_hora_utc": "2026-10-31T18:02:16.731853+00:00",
+  "alcance": "Ocho pruebas específicas del recolector; no se suman a ejecuciones funcionales del catálogo.",
+  "saneamiento": "No se registran hostname, usuario, variables de entorno o rutas identificables."
+}

@@ -10,3 +10,9 @@ evidencia_integracion/** -text
 laboratorios/laboratorio_05/diferencias/*.diff -whitespace
 laboratorios/laboratorio_06/diferencias/*.diff -whitespace
 evidencia_integracion/laboratorio_06_v1.0/**/*.diff -whitespace
+# Lab 7: preserve meaningful blank context lines in recorded patches.
+laboratorios/laboratorio_07/diferencias/*.diff -whitespace
+evidencia_integracion/laboratorio_07_v1.0/**/*.diff -whitespace
+# These separately delivered historical Markdown files retain their exact bytes.
+docs/estados/ESTADO_DEL_LIBRO_v1.5.2.md -text whitespace=-blank-at-eol
+docs/estados/ESTADO_REPOSITORIO_v1.4.1.md -text whitespace=-blank-at-eol

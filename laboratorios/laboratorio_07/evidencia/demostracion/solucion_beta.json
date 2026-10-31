@@ -1,0 +1,105 @@
+{
+  "estado_codigo": "solucion",
+  "antes": [
+    [
+      "A01",
+      "ALFA",
+      7
+    ],
+    [
+      "A02",
+      "ALFA",
+      4
+    ],
+    [
+      "A03",
+      "ALFA",
+      0
+    ],
+    [
+      "A04",
+      "BETA",
+      9
+    ]
+  ],
+  "importaciones": [
+    {
+      "numero": 1,
+      "informe": {
+        "estado": "APLICADO",
+        "sha256_fuente": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+        "filas_leidas": 4,
+        "filas_validadas": 4,
+        "filas_aplicadas": 4,
+        "filas_sin_cambio": 0,
+        "errores": []
+      },
+      "existencias": [
+        [
+          "A01",
+          "ALFA",
+          5
+        ],
+        [
+          "A02",
+          "ALFA",
+          8
+        ],
+        [
+          "A03",
+          "ALFA",
+          3
+        ],
+        [
+          "A04",
+          "BETA",
+          0
+        ]
+      ],
+      "catalogo": {
+        "almacen": "BETA",
+        "total": 0,
+        "codigos": []
+      }
+    },
+    {
+      "numero": 2,
+      "informe": {
+        "estado": "APLICADO",
+        "sha256_fuente": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+        "filas_leidas": 4,
+        "filas_validadas": 4,
+        "filas_aplicadas": 0,
+        "filas_sin_cambio": 4,
+        "errores": []
+      },
+      "existencias": [
+        [
+          "A01",
+          "ALFA",
+          5
+        ],
+        [
+          "A02",
+          "ALFA",
+          8
+        ],
+        [
+          "A03",
+          "ALFA",
+          3
+        ],
+        [
+          "A04",
+          "BETA",
+          0
+        ]
+      ],
+      "catalogo": {
+        "almacen": "BETA",
+        "total": 0,
+        "codigos": []
+      }
+    }
+  ]
+}
