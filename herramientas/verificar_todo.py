@@ -20,6 +20,8 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
+from huellas_evidencia import ErrorHuellas, cerrar_evidencia
+
 from preparar_laboratorio_04 import (
     RAIZ, REFERENCIAS, ErrorPreparacion, entorno_local, guardar_json,
     huellas_archivos, preparar,
@@ -424,12 +426,13 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                                "motivo": "No se completó o no se pudo validar el recorrido web.",
                                "tipo_error": type(error).__name__})
 
-        # Los verificadores originales ya sanean sus trazas. Esta capa elimina
-        # también las rutas de las copias temporales y de la salida actual.
-        for archivo in salida.rglob("*"):
-            if archivo.is_file() and archivo.suffix in {".json", ".txt", ".diff"}:
-                texto = archivo.read_text(encoding="utf-8")
-                archivo.write_text(sanear(texto, raiz, salida, temporal), encoding="utf-8")
+        # Validar captura, sanear sin conversión de saltos y calcular las huellas
+        # de los bytes finales. Sólo se procesa esta carpeta de ejecución nueva.
+        try:
+            huellas_salidas = cerrar_evidencia(
+                salida, lambda texto: sanear(texto, raiz, salida, temporal))
+        except ErrorHuellas as error:
+            raise ErrorPreparacion(str(error), estado="FALLIDO") from error
 
     estado_final = ("FALLIDO" if any(r["estado"] == "FALLIDO" for r in resultados)
                     else "BLOQUEADO" if any(r["estado"] == "BLOQUEADO" for r in resultados)
@@ -461,6 +464,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
         "interpretacion": "Un recorrido APROBADO conserva FALLIDO en sus criterios defectuosos esperados; no tolera otros errores. "
         "Sin --navegador, salida 0 aprueba únicamente el alcance ejecutado y el estado global es NO EJECUTADO.",
         "evidencia_historica": "Conservada en cada laboratorio; estos archivos describen una ejecución nueva.",
+        "huellas_salidas": huellas_salidas,
         "herramientas_comerciales": "NO EJECUTADO por este verificador",
         "GitHub_Actions": "NO EJECUTADO por este verificador",
         "limites": ["No revisa semánticamente el manuscrito ni los prompts.",
@@ -491,6 +495,8 @@ def main():
     print(registro["estado"] + ": verificación conjunta.")
     print("Alcance ejecutado: " + registro["alcance_ejecutado"] + ".")
     print("Extremo a extremo del laboratorio 6: " + registro["extremo_a_extremo_laboratorio_06"] + ".")
+    print("Huellas de salidas: {estado}; {coincidentes}/{comprobadas} coinciden con los bytes finales."
+          .format(**registro["huellas_salidas"]))
     for bateria in registro["baterias"]:
         print("{bateria}: {aprobados} aprobados, {fallidos} fallidos, {no_ejecutados} no ejecutados; recorrido {evaluacion_del_recorrido}.".format(**bateria))
     print("Totales: {baterias} baterías, {ejecutados} ejecuciones, {aprobados} aprobados, "
