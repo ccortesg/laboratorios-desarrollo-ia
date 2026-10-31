@@ -1,0 +1,183 @@
+{
+  "bateria": "http",
+  "estado_codigo": "solucion",
+  "casos_registrados": 5,
+  "criterios_distintos": 4,
+  "ejecutados": 5,
+  "aprobados": 5,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "W01",
+      "prueba": "test_w01_alfa_sin_nombre",
+      "criterio": "W01: ALFA sin nombre devuelve un artículo local por HTTP.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "metodo": "GET",
+        "ruta": "/api/resumen?almacen=ALFA"
+      },
+      "esperado": {
+        "estado_http": 200,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "almacen": "ALFA",
+          "total": 1,
+          "codigos": [
+            "A01"
+          ]
+        }
+      },
+      "observado": {
+        "estado_http": 200,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "almacen": "ALFA",
+          "total": 1,
+          "codigos": [
+            "A01"
+          ]
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "W02",
+      "prueba": "test_w02_beta_nombre_normalizado",
+      "criterio": "W02: BETA y OTRA con espacios conservan nombre y almacén.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "metodo": "GET",
+        "ruta": "/api/resumen?almacen=BETA&nombre=+OTRA+"
+      },
+      "esperado": {
+        "estado_http": 200,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "almacen": "BETA",
+          "total": 1,
+          "codigos": [
+            "A04"
+          ]
+        }
+      },
+      "observado": {
+        "estado_http": 200,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "almacen": "BETA",
+          "total": 1,
+          "codigos": [
+            "A04"
+          ]
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "W03",
+      "prueba": "test_w03_consulta_valida_vacia",
+      "criterio": "W03: ALFA y otra devuelven 200 y un resumen vacío.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "metodo": "GET",
+        "ruta": "/api/resumen?almacen=ALFA&nombre=otra"
+      },
+      "esperado": {
+        "estado_http": 200,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "almacen": "ALFA",
+          "total": 0,
+          "codigos": []
+        }
+      },
+      "observado": {
+        "estado_http": 200,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "almacen": "ALFA",
+          "total": 0,
+          "codigos": []
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "W04.a",
+      "prueba": "test_w04a_almacen_omitido",
+      "criterio": "W04.a: omitir el almacén devuelve 400 con error explícito.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "metodo": "GET",
+        "ruta": "/api/resumen?"
+      },
+      "esperado": {
+        "estado_http": 400,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "error": {
+            "codigo": "ALMACEN_REQUERIDO",
+            "mensaje": "Selecciona un almacén."
+          }
+        }
+      },
+      "observado": {
+        "estado_http": 400,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "error": {
+            "codigo": "ALMACEN_REQUERIDO",
+            "mensaje": "Selecciona un almacén."
+          }
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "W04.b",
+      "prueba": "test_w04b_almacen_vacio",
+      "criterio": "W04.b: almacén vacío devuelve 400 sin elegir un valor implícito.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "metodo": "GET",
+        "ruta": "/api/resumen?almacen="
+      },
+      "esperado": {
+        "estado_http": 400,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "error": {
+            "codigo": "ALMACEN_REQUERIDO",
+            "mensaje": "Selecciona un almacén."
+          }
+        }
+      },
+      "observado": {
+        "estado_http": 400,
+        "tipo_contenido": "application/json; charset=utf-8",
+        "json": {
+          "error": {
+            "codigo": "ALMACEN_REQUERIDO",
+            "mensaje": "Selecciona un almacén."
+          }
+        }
+      },
+      "comando_terminal": null
+    }
+  ],
+  "alcance": "Peticiones HTTP contra un servidor real local; no prueba el navegador."
+}

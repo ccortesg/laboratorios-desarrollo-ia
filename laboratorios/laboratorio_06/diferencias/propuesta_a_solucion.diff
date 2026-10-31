@@ -1,0 +1,16 @@
+--- estados/propuesta/web/app.js
++++ estados/solucion/web/app.js
+@@ -9,12 +9,10 @@
+ const resultado = document.querySelector("#resultado");
+ const panel = document.querySelector("#panel-resultados");
+ const codigos = document.querySelector("#codigos");
+-// Defecto didáctico: conserva el almacén inicial aunque cambie el formulario.
+-const almacenInicial = selector.value;
+ 
+ formulario.addEventListener("submit", async (evento) => {
+   evento.preventDefault();
+-  const almacen = almacenInicial;
++  const almacen = selector.value;
+   const parametros = new URLSearchParams({ almacen, nombre: nombre.value });
+   boton.disabled = selector.disabled = nombre.disabled = true;
+   panel.setAttribute("aria-busy", "true");

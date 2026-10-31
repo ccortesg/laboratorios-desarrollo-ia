@@ -1,0 +1,90 @@
+{
+  "fecha_hora_utc": "2026-10-31T07:03:46+00:00",
+  "estado": "APROBADO",
+  "criterio": "Patron exacto de las cinco baterias y cinco observaciones diagnosticas.",
+  "baterias": [
+    {
+      "estado_codigo": "base",
+      "evaluacion_del_recorrido": "APROBADO",
+      "comando": "python pruebas.py --estado base",
+      "codigo_salida": 0,
+      "criterios_registrados": 10,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 6,
+      "fallos_intencionales_esperados": [],
+      "detalle": "pruebas_base.json"
+    },
+    {
+      "estado_codigo": "generado",
+      "evaluacion_del_recorrido": "APROBADO",
+      "comando": "python pruebas.py --estado generado",
+      "codigo_salida": 0,
+      "criterios_registrados": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "detalle": "pruebas_generado.json"
+    },
+    {
+      "estado_codigo": "refactorizado",
+      "evaluacion_del_recorrido": "APROBADO",
+      "comando": "python pruebas.py --estado refactorizado",
+      "codigo_salida": 0,
+      "criterios_registrados": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "detalle": "pruebas_refactorizado.json"
+    },
+    {
+      "estado_codigo": "defecto",
+      "evaluacion_del_recorrido": "APROBADO",
+      "comando": "python pruebas.py --estado defecto",
+      "codigo_salida": 1,
+      "criterios_registrados": 10,
+      "ejecutados": 10,
+      "aprobados": 8,
+      "fallidos": 2,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [
+        "B05",
+        "B06"
+      ],
+      "detalle": "pruebas_defecto.json"
+    },
+    {
+      "estado_codigo": "corregido",
+      "evaluacion_del_recorrido": "APROBADO",
+      "comando": "python pruebas.py --estado corregido",
+      "codigo_salida": 0,
+      "criterios_registrados": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "fallos_intencionales_esperados": [],
+      "detalle": "pruebas_corregido.json"
+    }
+  ],
+  "observaciones_diagnosticas": {
+    "total": 5,
+    "evaluacion_del_experimento": "APROBADO",
+    "detalle": "observacion_diagnostica.json"
+  },
+  "revision_documental_automatica": {
+    "estado": "NO EJECUTADO",
+    "motivo": "El script no evalua semanticamente prompts ni documentos."
+  },
+  "herramientas_comerciales": {
+    "Codex": "NO EJECUTADO",
+    "GitHub Copilot": "NO EJECUTADO",
+    "Grok Build": "NO EJECUTADO"
+  },
+  "limite": "Escenarios locales sinteticos; no prueba equivalencia universal, eficacia de prompts ni preparacion productiva."
+}

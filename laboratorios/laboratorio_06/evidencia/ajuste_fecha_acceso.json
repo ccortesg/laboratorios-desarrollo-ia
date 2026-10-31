@@ -1,0 +1,13 @@
+{
+  "estado": "APROBADO",
+  "motivo": "Alinear la fecha editorial con el contexto vigente; no cambia el acceso observado.",
+  "original": "acceso_grok_inicial.json",
+  "sha256_original": "87f419d63ec250481a3eef8274ec6d509d6da72c2a9f5321acedc57b8c0b9a8f",
+  "actual": "acceso_grok.json",
+  "sha256_actual": "7f8379818d5f076f873e1b0da7b17541aa70bf8ea817ef3f5e0dc29e0493475b",
+  "campos_modificados": [
+    "fecha_editorial",
+    "nota_fecha_editorial"
+  ],
+  "timestamp_tecnico_conservado": true
+}

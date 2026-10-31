@@ -1,0 +1,228 @@
+{
+  "convenciones": "python y node representan los ejecutables elegidos; <SALIDA> es el destino nuevo; <URL_LOCAL> es el servidor real iniciado en puerto libre. Las salidas de procesos se conservan como bytes sin transformación. Las entradas sin comando representan casos expresamente no ejecutados o bloqueados.",
+  "registros": [
+    {
+      "id": "base_heredados",
+      "inicio_utc": "2026-10-31T07:02:05.753131+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/base/pruebas.py",
+        "--json",
+        "<SALIDA>/base_heredados.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:05.806550+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_heredados.stdout.txt",
+      "stderr": "base_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_resumen",
+      "inicio_utc": "2026-10-31T07:02:05.806989+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--directorio",
+        "estados/base",
+        "--json",
+        "<SALIDA>/base_resumen.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:05.914375+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_resumen.stdout.txt",
+      "stderr": "base_resumen.stderr.txt",
+      "sha256_stdout": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_http",
+      "inicio_utc": "2026-10-31T07:02:05.914782+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_http.py",
+        "--estado",
+        "base",
+        "--json",
+        "<SALIDA>/base_http.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:05.985912+00:00",
+      "codigo_salida": 0,
+      "stdout": "base_http.stdout.txt",
+      "stderr": "base_http.stderr.txt",
+      "sha256_stdout": "e3acb1aebb255335010bd79b1912709cd91491c8f874f79ca5e043f6c537d2e1",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_navegador",
+      "comando": null,
+      "codigo_salida": null,
+      "estado": "NO EJECUTADO",
+      "motivo": "La base no tiene el incremento web."
+    },
+    {
+      "id": "propuesta_heredados",
+      "inicio_utc": "2026-10-31T07:02:05.986473+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/propuesta/pruebas.py",
+        "--json",
+        "<SALIDA>/propuesta_heredados.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:06.035265+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_heredados.stdout.txt",
+      "stderr": "propuesta_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_resumen",
+      "inicio_utc": "2026-10-31T07:02:06.035691+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--directorio",
+        "estados/propuesta",
+        "--json",
+        "<SALIDA>/propuesta_resumen.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:06.142418+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_resumen.stdout.txt",
+      "stderr": "propuesta_resumen.stderr.txt",
+      "sha256_stdout": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_http",
+      "inicio_utc": "2026-10-31T07:02:06.142840+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_http.py",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_http.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:06.728759+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_http.stdout.txt",
+      "stderr": "propuesta_http.stderr.txt",
+      "sha256_stdout": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_navegador",
+      "inicio_utc": "2026-10-31T07:02:06.752547+00:00",
+      "directorio": ".",
+      "comando": [
+        "node",
+        "pruebas_navegador.cjs",
+        "--url",
+        "<URL_LOCAL>",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_navegador.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:09.201817+00:00",
+      "codigo_salida": 1,
+      "stdout": "propuesta_navegador.stdout.txt",
+      "stderr": "propuesta_navegador.stderr.txt",
+      "sha256_stdout": "0b7d522584450bfde38fc033743531b9740c2d2628e708e980f4a200f52bb5ba",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_heredados",
+      "inicio_utc": "2026-10-31T07:02:09.541871+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/solucion/pruebas.py",
+        "--json",
+        "<SALIDA>/solucion_heredados.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:09.593656+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_heredados.stdout.txt",
+      "stderr": "solucion_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_resumen",
+      "inicio_utc": "2026-10-31T07:02:09.594073+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--directorio",
+        "estados/solucion",
+        "--json",
+        "<SALIDA>/solucion_resumen.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:09.710338+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_resumen.stdout.txt",
+      "stderr": "solucion_resumen.stderr.txt",
+      "sha256_stdout": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_http",
+      "inicio_utc": "2026-10-31T07:02:09.710868+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_http.py",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_http.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:10.312621+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_http.stdout.txt",
+      "stderr": "solucion_http.stderr.txt",
+      "sha256_stdout": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_navegador",
+      "inicio_utc": "2026-10-31T07:02:10.315396+00:00",
+      "directorio": ".",
+      "comando": [
+        "node",
+        "pruebas_navegador.cjs",
+        "--url",
+        "<URL_LOCAL>",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_navegador.json"
+      ],
+      "fin_utc": "2026-10-31T07:02:12.813039+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_navegador.stdout.txt",
+      "stderr": "solucion_navegador.stderr.txt",
+      "sha256_stdout": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

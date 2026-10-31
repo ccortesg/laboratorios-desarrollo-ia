@@ -1,0 +1,23 @@
+{
+  "fuente": "Laboratorio 5 v1.0; estado solucion",
+  "archivo_zip_sha256": "82130be2e74782c699c5aef6e70ab9e715cc9c68676c873c67f39fd2f37a2f8c",
+  "archivos_heredados": {
+    "catalogo.py": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+    "datos/ejemplos.sql": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+    "datos/esquema.sql": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+    "detalle.py": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+    "laboratorio.py": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+    "pruebas.py": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+    "pruebas_detalle.py": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+    "resumen.py": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+    "solucion/consulta.sql": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+  },
+  "pruebas_resumen_sha256": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+  "adaptacion": "Invocar pruebas_resumen.py con --directorio para los tres estados; ningún método, entrada o expectativa fue cambiado.",
+  "estados_copiados": [
+    "base",
+    "propuesta",
+    "solucion"
+  ],
+  "atribucion": "Implementación didáctica local de ChatGPT; no acredita uso real de Grok Build."
+}

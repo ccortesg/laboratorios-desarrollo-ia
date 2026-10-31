@@ -1,8 +1,8 @@
 # Versiones y procedencia
 
-**Integración del repositorio:** 1.1 · **Fecha:** 30 de octubre de 2026.
+**Integración preparada: 1.2 · Fecha: 31 de octubre de 2026 (UTC).**
 
-Las versiones de laboratorio conservan el significado de sus entregas editoriales. La versión 1.0 identifica su primera integración conjunta; la 1.1 incorpora el laboratorio 5 sin modificar los cuatro paquetes anteriores.
+El estado operativo es `ESTADO_REPOSITORIO_v1.3.md`; el estado editorial es `ESTADO_DEL_LIBRO_v1.5.md`. Sus números no sustituyen la versión de integración del repositorio.
 
 | Laboratorio | Paquete de referencia | Etiqueta de integración |
 | --- | --- | --- |
@@ -11,26 +11,22 @@ Las versiones de laboratorio conservan el significado de sus entregas editoriale
 | 03 | `distribuciones/LABORATORIO_03_v1.0.zip` | `lab-03-v1.0` |
 | 04 | `distribuciones/LABORATORIO_04_v1.1.zip` | `lab-04-v1.1` |
 | 05 | `distribuciones/LABORATORIO_05_v1.0.zip` | `lab-05-v1.0` |
+| 06 | `distribuciones/LABORATORIO_06_v1.0.zip` | `lab-06-v1.0`, prevista, no creada |
 
-Las cuatro etiquetas de laboratorios 1–4 identifican el mismo commit de importación conjunta. No representan commits retrospectivos de las fechas de producción de cada capítulo. `repositorio-v1.0` identifica también esa integración. La creación de una etiqueta local no acredita una publicación de Release en GitHub.
+## Referencias observadas
 
-`lab-05-v1.0` y `repositorio-v1.1` corresponden al commit que integre esta actualización. Deben crearse después de comprobar el cambio; este documento no acredita por sí solo su creación o subida. Las cinco etiquetas anteriores se conservan en su commit original.
+La integración inicial 1.0 conserva las cinco etiquetas de laboratorios 1–4 y `repositorio-v1.0` en `52875ff15c6648f9a042a15a94da812e37effa40`. Son etiquetas de importación conjunta, no commits retrospectivos de las fechas de escritura.
+
+La integración 1.1 está confirmada en `67edef7b44524f5f621e9b060c6b9c523c1b05a8`, árbol `a1d70872f969886c5f33f88692b61e90579a18ed`. `main`, `lab-05-v1.0` y `repositorio-v1.1` coincidieron al consultar GitHub. Se conserva esa referencia como base del parche nuevo.
+
+La integración 1.2 está preparada localmente. Después de aplicar, revisar, comprobar y crear el commit correspondiente, podrán crearse únicamente `lab-06-v1.0` y `repositorio-v1.2`. No se movieron ni se sustituyeron etiquetas anteriores. Ningún documento local acredita por sí solo una subida o una Release.
 
 ## Conservación
 
-La primera integración importó 120 archivos visibles, sin cambios de bytes: 17 del laboratorio 1, 21 del 2, 46 del 3 y 36 del 4. Los 38 archivos internos del Git original del laboratorio 4 no se incluyen como un `.git` anidado en el árbol principal. El ZIP original los conserva y `historiales/laboratorio_04.bundle` transporta sus objetos y referencias.
+Los 198 archivos visibles y los cinco ZIP anteriores conservan sus bytes: 17 archivos del laboratorio 1, 21 del 2, 46 del 3, 36 del 4 y 78 del 5. El laboratorio 6 añade 112 archivos idénticos a su ZIP; el total es 310. No incorpora Git anidado ni dependencias descargadas.
 
-El laboratorio 5 añade 78 archivos visibles idénticos a su ZIP; el total actual es 198. No incluye un Git anidado.
+Los 38 archivos internos del Git original del laboratorio 4 permanecen en su ZIP. `historiales/laboratorio_04.bundle` conserva sus objetos y referencias: `inicio` apunta a `25f9b7a6d09341b6419d3d27237f1f1b68a6b64d` y `solucion` a `d7782e31acff5bd599f70ce6bb288f0a4219f775`.
 
-Las huellas de los paquetes están en `distribuciones/SHA256SUMS`; las de cada archivo visible, en `PROCEDENCIA.json`. La copia preparada permite recuperar las etiquetas originales:
+Las huellas de los seis paquetes están en `distribuciones/SHA256SUMS`; cada archivo visible está inventariado en `PROCEDENCIA.json`. La evidencia nueva se añade por separado en `evidencia_integracion/laboratorio_06_v1.0/`.
 
-| Referencia del ejercicio 4 | Commit original |
-| --- | --- |
-| `inicio` | `25f9b7a6d09341b6419d3d27237f1f1b68a6b64d` |
-| `solucion` | `d7782e31acff5bd599f70ce6bb288f0a4219f775` |
-
-## Evolución
-
-Una corrección documental tendrá una versión identificable. Un cambio de comportamiento requerirá contrato, pruebas y evidencia nueva. Los archivos históricos y los ZIP de referencia conservarán sus huellas. Las nuevas ejecuciones se guardan por separado.
-
-El maestro editorial v1.0 y el estado del libro v1.4 son las referencias editoriales vigentes. Los capítulos 1–5 permanecen pendientes de revisión del autor. El manuscrito y su Word siguen en el flujo editorial; aquí se incorpora el laboratorio 5.
+El documento maestro editorial v1.0 sigue vigente. Los capítulos 1–6 permanecen pendientes de revisión del autor. Manuscritos y Word se conservan fuera del repositorio técnico.

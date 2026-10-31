@@ -1,0 +1,11 @@
+{
+  "fecha_hora": "2026-10-31T00:03:46-07:00",
+  "desfase_utc": "-07:00",
+  "python": "3.12.14",
+  "implementacion_python": "CPython",
+  "sqlite": "3.53.1",
+  "sistema": "Linux",
+  "dependencias": "Solo biblioteca estandar de Python",
+  "base_de_datos": "SQLite en memoria, reconstruida en cada consulta",
+  "red": "No utilizada por el laboratorio"
+}

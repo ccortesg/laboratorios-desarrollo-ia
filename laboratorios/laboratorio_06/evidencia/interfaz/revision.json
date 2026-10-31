@@ -1,0 +1,27 @@
+{
+  "estado": "APROBADO",
+  "alcance": "Inspección visual de cuatro capturas y navegación de teclado observada; complementa y no se suma a las 94 ejecuciones funcionales.",
+  "fecha_hora_utc": "2026-10-31T06:56:53.300Z",
+  "navegador": "156.0.8078.80",
+  "anchos": [
+    1280,
+    390
+  ],
+  "orden_de_foco": [
+    "marca",
+    "almacen",
+    "nombre",
+    "consultar"
+  ],
+  "consulta_con_enter": "A01",
+  "desbordamiento_horizontal_390": false,
+  "imagenes": [
+    "escritorio.png",
+    "movil.png",
+    "vacio.png",
+    "error.png"
+  ],
+  "limites": "No es una auditoría WCAG ni prueba con lector de pantalla o dispositivos físicos.",
+  "inspeccion_visual": "APROBADO",
+  "observaciones_visuales": "Se inspeccionaron las cuatro capturas: formularios, resultados, estado vacío y alerta legibles, sin recortes ni solapamientos en los anchos observados. En móvil los paneles se apilan."
+}

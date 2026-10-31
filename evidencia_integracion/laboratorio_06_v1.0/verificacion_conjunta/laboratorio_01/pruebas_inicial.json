@@ -1,0 +1,40 @@
+{
+  "version": "inicial",
+  "total": 4,
+  "aprobados": 3,
+  "fallidos": 1,
+  "fallos_de_asercion": 1,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "prueba": "test_c01_habilitado_con_existencias_locales_aparece",
+      "criterio": "C01: habilitado con existencias locales aparece.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null
+    },
+    {
+      "prueba": "test_c02_deshabilitado_se_excluye",
+      "criterio": "C02: deshabilitado con existencias locales se excluye.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null
+    },
+    {
+      "prueba": "test_c03_sin_existencias_se_excluye",
+      "criterio": "C03: habilitado sin existencias disponibles se excluye.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null
+    },
+    {
+      "prueba": "test_c04_existencias_en_otra_ubicacion_se_excluyen",
+      "criterio": "C04: existencias solo en otra ubicacion se excluyen.",
+      "estado": "FALLIDO",
+      "detalle": "'A04' unexpectedly found in ['A01', 'A04']",
+      "tipo_error": "AssertionError"
+    }
+  ]
+}

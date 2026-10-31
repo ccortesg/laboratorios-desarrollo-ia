@@ -1,0 +1,6 @@
+W01: NO EJECUTADO
+W02: NO EJECUTADO
+W03: NO EJECUTADO
+W04.a: NO EJECUTADO
+W04.b: NO EJECUTADO
+{"ejecutados": 0, "aprobados": 0, "fallidos": 0, "bloqueados": 0, "no_ejecutados": 5}

@@ -1,0 +1,19 @@
+{
+  "estado": "APROBADO",
+  "fecha_consulta_utc": "2026-10-31",
+  "commit": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+  "arbol": "a1d70872f969886c5f33f88692b61e90579a18ed",
+  "referencias_coincidentes": [
+    "main",
+    "lab-05-v1.0",
+    "repositorio-v1.1"
+  ],
+  "archivos_versionados_base": 273,
+  "archivos_visibles_laboratorios_base": 198,
+  "zip_base": 5,
+  "fuente": "Lecturas del repositorio autorizado mediante la integración GitHub; sin escrituras.",
+  "preparacion_local": "Los 273 blobs se cotejaron con el árbol remoto. La copia de revisión se inicializó localmente y tiene el mismo árbol; su commit técnico no se presenta como historia remota.",
+  "integracion_laboratorio_05": "CONFIRMADA",
+  "integracion_laboratorio_06": "PREPARADA LOCALMENTE; NO SUBIDA",
+  "etiquetas_previas_conservadas": true
+}

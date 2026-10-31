@@ -1,0 +1,11 @@
+{
+  "fecha_hora_utc": "2026-10-31T07:03:48.060801+00:00",
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "navegador_solicitado": true,
+  "dependencias_aplicacion": "Python estándar; recursos web locales.",
+  "dependencias_navegador": "Node y Playwright opcionales para comprobar W05–W06.",
+  "atribucion": "Ejecución local; no acredita uso de Grok Build.",
+  "saneamiento": "Se omiten identidad, rutas del equipo y variables de entorno."
+}

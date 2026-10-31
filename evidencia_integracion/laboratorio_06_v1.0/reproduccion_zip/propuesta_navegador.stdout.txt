@@ -1,0 +1,4 @@
+W05: FALLIDO
+W06.a: APROBADO
+W06.b: APROBADO
+{"ejecutados":3,"aprobados":2,"fallidos":1,"bloqueados":0,"no_ejecutados":0}

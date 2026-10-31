@@ -8,3 +8,5 @@ evidencia_integracion/** -text
 
 # Unified diff context lines retain their leading space, including blank lines.
 laboratorios/laboratorio_05/diferencias/*.diff -whitespace
+laboratorios/laboratorio_06/diferencias/*.diff -whitespace
+evidencia_integracion/laboratorio_06_v1.0/**/*.diff -whitespace

@@ -1,0 +1,174 @@
+{
+  "estado": "APROBADO",
+  "archivos_comprobados": 28,
+  "registros": [
+    {
+      "archivo": "estados/base/catalogo.py",
+      "esperado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/datos/ejemplos.sql",
+      "esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/datos/esquema.sql",
+      "esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/detalle.py",
+      "esperado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/laboratorio.py",
+      "esperado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/pruebas.py",
+      "esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/pruebas_detalle.py",
+      "esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/resumen.py",
+      "esperado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+      "observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/solucion/consulta.sql",
+      "esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/catalogo.py",
+      "esperado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/datos/ejemplos.sql",
+      "esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/datos/esquema.sql",
+      "esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/detalle.py",
+      "esperado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/laboratorio.py",
+      "esperado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas.py",
+      "esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas_detalle.py",
+      "esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/resumen.py",
+      "esperado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+      "observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/solucion/consulta.sql",
+      "esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/catalogo.py",
+      "esperado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/datos/ejemplos.sql",
+      "esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/datos/esquema.sql",
+      "esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/detalle.py",
+      "esperado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/laboratorio.py",
+      "esperado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/pruebas.py",
+      "esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/pruebas_detalle.py",
+      "esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/resumen.py",
+      "esperado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+      "observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/solucion/consulta.sql",
+      "esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_resumen.py",
+      "esperado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+      "observado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+      "estado": "APROBADO"
+    }
+  ]
+}

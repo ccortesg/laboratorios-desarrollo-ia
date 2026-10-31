@@ -1,3 +1,31 @@
+# Continuidad vigente · Integración 1.2 preparada
+
+**Fecha: 31 de octubre de 2026 (UTC).** El maestro editorial v1.0 permanece vigente. El estado del libro es v1.5 y el estado operativo del repositorio es v1.3; estas versiones son independientes de la integración técnica 1.2.
+
+## Observaciones posteriores al cierre de la integración 1.1
+
+**Integración remota del laboratorio 5: APROBADO.** Se volvieron a consultar las referencias del repositorio autorizado: `main`, `lab-05-v1.0` y `repositorio-v1.1` apuntan a `67edef7b44524f5f621e9b060c6b9c523c1b05a8`, árbol `a1d70872f969886c5f33f88692b61e90579a18ed`. Ese es el punto de partida de esta entrega. Las cinco etiquetas anteriores conservan su commit original. Las notas antiguas de subida pendiente no describen el estado vigente.
+
+**Ejecución Windows aportada por el autor: APROBADO en el alcance observado.** La captura muestra Python 3.11.9 y el verificador de los laboratorios 1–5 con 17 baterías, 178 ejecuciones, 173 aprobaciones y cinco fallos intencionales. También registra 12 NO EJECUTADO en baterías y diez N ausentes aparte. No se presenta como ejecución realizada por el editor, como certificación general de Windows ni como prueba del laboratorio 6. La captura original no se incorpora a los materiales publicables porque contiene identificadores del entorno del autor.
+
+## Incremento de esta entrega
+
+El laboratorio 6 está completo: añade formulario, adaptador HTTP y representación del resumen real. Conserva los cuatro artículos y C/B/N/P; incorpora W01–W06 con ocho casos. La ejecución Linux con navegador obtuvo 94 ejecuciones, 93 aprobaciones y un fallo intencional W05 en propuesta; ocho casos web de base NO EJECUTADO. La solución satisfizo 34/34. La evidencia nueva no sustituye los registros históricos.
+
+La verificación conjunta de esta integración obtuvo APROBADO, salida 0: 29 baterías, 272 ejecuciones, 266 aprobaciones y seis fallos didácticos; 20 NO EJECUTADO en baterías y diez N ausentes aparte. Una extracción nueva del ZIP reprodujo el patrón 94/93/1 del laboratorio 6. Los registros están en `evidencia_integracion/laboratorio_06_v1.0/COMPROBACION.json` y sus subdirectorios.
+
+El capítulo 6 y su Word permanecen fuera del repositorio técnico. Los capítulos 1–6 siguen pendientes de revisión editorial del autor. El reto de limpiar la búsqueda no se implementó. No se redactó el capítulo 7.
+
+**Acceso utilizable a Grok Build: BLOQUEADO. Interacciones comerciales: NO EJECUTADO.** Se inspeccionaron los accesos disponibles sin enviar prompts al servicio. El código y las comprobaciones son locales. Los ejemplos del laboratorio no constituyen sesiones de Grok Build.
+
+La integración 1.2 se prepara y verifica en una copia aislada. GitHub se utilizó solo para lectura. No se hizo push ni se crearon ramas, pull requests o etiquetas remotas. Las etiquetas nuevas previstas son `lab-06-v1.0` y `repositorio-v1.2`, únicamente después de revisar y aplicar el cambio. Las instrucciones exactas están en el paquete de integración entregado por separado.
+
+Siguiente paso: aplicar el parche en una rama local, ejecutar el verificador completo con navegador en Windows, revisar el cambio y realizar la subida como operación posterior. Conservar la evidencia de esa ejecución como nueva observación. La revisión del autor debe centrarse en voz, profundidad técnica y utilidad práctica.
+
+## Antecedente conservado de la integración 1.1
+
+El texto siguiente conserva la situación y las observaciones anteriores. Sus pendientes de subida y Windows quedaron complementados por las observaciones vigentes de arriba; no se reinterpretan sus ejecuciones originales.
+
 # Continuidad de los laboratorios
 
 **Fecha:** 30 de octubre de 2026 · **Integración:** 1.1.

@@ -1,0 +1,8 @@
+{
+  "estado": "APROBADO",
+  "archivo": "soporte_web.py",
+  "sha256_antes": "8fa8242133f8dff18e67d8cb0c8ce29916d14f2ed92fe0e86be363e9c2d2ff85",
+  "sha256_despues": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c",
+  "cambio": "Se eliminó exclusivamente una línea vacía final detectada al revisar el parche; no cambió el código ejecutable.",
+  "evidencia_anterior": "Las huellas de ejecucion_local se conservan sin reescribir. La reproducción del ZIP final registra la versión distribuida."
+}

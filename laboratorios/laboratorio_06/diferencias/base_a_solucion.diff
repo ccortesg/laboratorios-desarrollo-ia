@@ -1,0 +1,245 @@
+--- /dev/null
++++ estados/solucion/servidor.py
+@@ -0,0 +1,94 @@
++"""Servidor didáctico local: HTTP adapta el resumen existente, sin reescribirlo."""
++
++import argparse
++from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
++import json
++from pathlib import Path
++from urllib.parse import parse_qs, urlsplit
++
++from resumen import resumir_catalogo
++
++BASE = Path(__file__).resolve().parent
++RECURSOS = {
++    "/": ("index.html", "text/html; charset=utf-8"),
++    "/index.html": ("index.html", "text/html; charset=utf-8"),
++    "/app.js": ("app.js", "text/javascript; charset=utf-8"),
++    "/estilos.css": ("estilos.css", "text/css; charset=utf-8"),
++}
++ERROR_ALMACEN = {"error": {"codigo": "ALMACEN_REQUERIDO",
++                            "mensaje": "Selecciona un almacén."}}
++
++
++class Manejador(BaseHTTPRequestHandler):
++    server_version = "LaboratorioHTTP"
++    sys_version = ""
++
++    def log_message(self, formato, *argumentos):
++        # La aplicación no registra direcciones ni consultas del lector.
++        pass
++
++    def responder(self, estado, contenido, tipo):
++        self.send_response(estado)
++        self.send_header("Content-Type", tipo)
++        self.send_header("Content-Length", str(len(contenido)))
++        self.send_header("Cache-Control", "no-store")
++        self.send_header("X-Content-Type-Options", "nosniff")
++        self.send_header("Content-Security-Policy", "default-src 'self'; "
++                         "script-src 'self'; style-src 'self'; "
++                         "connect-src 'self'; img-src 'self' data:; "
++                         "base-uri 'none'; form-action 'self'")
++        self.end_headers()
++        self.wfile.write(contenido)
++
++    def responder_json(self, estado, datos):
++        contenido = json.dumps(datos, ensure_ascii=False).encode("utf-8")
++        self.responder(estado, contenido, "application/json; charset=utf-8")
++
++    def do_GET(self):
++        partes = urlsplit(self.path)
++        if partes.path == "/api/resumen":
++            parametros = parse_qs(partes.query, keep_blank_values=True)
++            almacen = parametros.get("almacen", [""])[0]
++            if not almacen.strip():
++                self.responder_json(400, ERROR_ALMACEN)
++                return
++            nombre = parametros.get("nombre", [""])[0]
++            try:
++                datos = resumir_catalogo(almacen, nombre)
++            except Exception:
++                self.responder_json(500, {"error": {
++                    "codigo": "CONSULTA_FALLIDA",
++                    "mensaje": "No fue posible consultar el catálogo."}})
++                return
++            self.responder_json(200, datos)
++        elif partes.path in RECURSOS:
++            nombre, tipo = RECURSOS[partes.path]
++            self.responder(200, (BASE / "web" / nombre).read_bytes(), tipo)
++        else:
++            self.responder_json(404, {"error": {
++                "codigo": "RUTA_NO_ENCONTRADA", "mensaje": "Ruta no encontrada."}})
++
++
++def crear_servidor(puerto=8000):
++    return ThreadingHTTPServer(("127.0.0.1", puerto), Manejador)
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--puerto", type=int, default=8000)
++    opciones = parser.parse_args()
++    if not 0 <= opciones.puerto <= 65535:
++        parser.error("El puerto debe estar entre 0 y 65535.")
++    with crear_servidor(opciones.puerto) as servidor:
++        print(json.dumps({"servidor": "local",
++                          "url": "http://127.0.0.1:" + str(servidor.server_port)}),
++              flush=True)
++        try:
++            servidor.serve_forever()
++        except KeyboardInterrupt:
++            pass
++    return 0
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+--- /dev/null
++++ estados/solucion/web/app.js
+@@ -0,0 +1,50 @@
++"use strict";
++
++const formulario = document.querySelector("#consulta");
++const selector = document.querySelector("#almacen");
++const nombre = document.querySelector("#nombre");
++const boton = document.querySelector("#consultar");
++const mensaje = document.querySelector("#mensaje");
++const error = document.querySelector("#error");
++const resultado = document.querySelector("#resultado");
++const panel = document.querySelector("#panel-resultados");
++const codigos = document.querySelector("#codigos");
++
++formulario.addEventListener("submit", async (evento) => {
++  evento.preventDefault();
++  const almacen = selector.value;
++  const parametros = new URLSearchParams({ almacen, nombre: nombre.value });
++  boton.disabled = selector.disabled = nombre.disabled = true;
++  panel.setAttribute("aria-busy", "true");
++  resultado.hidden = true;
++  error.hidden = true;
++  error.textContent = "";
++  codigos.replaceChildren();
++  mensaje.dataset.estado = "cargando";
++  mensaje.textContent = "Consultando disponibilidad…";
++  try {
++    const respuesta = await fetch(`/api/resumen?${parametros}`);
++    if (!respuesta.ok) throw new Error("Consulta no disponible");
++    const datos = await respuesta.json();
++    document.querySelector("#almacen-resultado").textContent = datos.almacen;
++    document.querySelector("#total").textContent = String(datos.total);
++    for (const codigo of datos.codigos) {
++      const elemento = document.createElement("li");
++      elemento.textContent = codigo;
++      codigos.append(elemento);
++    }
++    resultado.hidden = false;
++    mensaje.dataset.estado = datos.total === 0 ? "vacio" : "exito";
++    mensaje.textContent = datos.total === 0
++      ? "No hay artículos disponibles que coincidan con la búsqueda."
++      : "Consulta completada.";
++  } catch {
++    mensaje.dataset.estado = "error";
++    mensaje.textContent = "La consulta no se completó.";
++    error.textContent = "No fue posible consultar el catálogo. Inténtalo de nuevo.";
++    error.hidden = false;
++  } finally {
++    boton.disabled = selector.disabled = nombre.disabled = false;
++    panel.setAttribute("aria-busy", "false");
++  }
++});
+--- /dev/null
++++ estados/solucion/web/estilos.css
+@@ -0,0 +1,35 @@
++:root { font-family: system-ui, sans-serif; color: #17283f; background: #f4f7fb; line-height: 1.55; }
++* { box-sizing: border-box; }
++body { margin: 0; }
++.cabecera { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem max(1.4rem, calc((100vw - 1120px) / 2)); background: #142d4e; color: #e7effb; }
++.marca { font-size: 1.15rem; font-weight: 750; color: white; text-decoration: none; }
++.cabecera span { font-size: .85rem; }
++main { max-width: 1120px; margin: 3rem auto; padding: 0 1.4rem; }
++.etiqueta { font-size: .78rem; color: #235b96; text-transform: uppercase; letter-spacing: .13em; font-weight: 750; margin-bottom: .5rem; }
++h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.17; margin: 0 0 1rem; letter-spacing: -.03em; }
++.introduccion { color: #506176; max-width: 720px; margin-bottom: 2rem; }
++.paneles { display: grid; grid-template-columns: 1fr 1.05fr; gap: 1.5rem; }
++.panel { background: white; border: 1px solid #d8e2ee; border-radius: 12px; padding: 1.8rem; box-shadow: 0 4px 15px #20365308; }
++h2 { font-size: 1.2rem; margin: 0 0 1.6rem; }
++h3 { font-size: .95rem; margin: 1.5rem 0 .75rem; }
++label { display: block; font-size: .92rem; font-weight: 650; margin: 1rem 0 .45rem; }
++select, input { width: 100%; background: white; border: 1px solid #8b9bb0; color: #17283f; border-radius: 6px; padding: .75rem; font: inherit; }
++.opcional { font-weight: 400; color: #52647a; }
++.ayuda, .nota { font-size: .85rem; color: #52647a; }
++.ayuda { margin: .55rem 0 1.45rem; }
++button { padding: .85rem 1.25rem; background: #185ca3; color: white; border: 1px solid #185ca3; border-radius: 7px; font: inherit; font-weight: 650; cursor: pointer; }
++button:hover { background: #124879; }
++button:disabled { opacity: .65; cursor: progress; }
++button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #e6a52c; outline-offset: 3px; }
++.resumen { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid #e3e9f1; padding-top: 1.3rem; margin: 1.4rem 0 0; }
++dt { font-size: .8rem; color: #52647a; }
++dd { font-size: 1.7rem; font-weight: 750; margin: .3rem 0 0; }
++#codigos { list-style: none; padding: 0; margin: 0; }
++#codigos li { display: inline-block; margin: 0 .5rem .5rem 0; background: #eaf2fc; border: 1px solid #c7daf0; padding: .3rem .7rem; border-radius: 5px; font-family: ui-monospace, monospace; }
++#mensaje { color: #465b73; }
++#mensaje[data-estado="vacio"] { color: #5c4e25; }
++#error { color: #9a241c; font-weight: 600; }
++.nota { margin-top: 1.4rem; }
++footer { max-width: 1120px; margin: 0 auto 2rem; padding: 0 1.4rem; color: #52647a; font-size: .8rem; }
++[hidden] { display: none !important; }
++@media (max-width: 760px) { .paneles { grid-template-columns: 1fr; } .cabecera { align-items: flex-start; flex-direction: column; gap: .2rem; } main { margin-top: 2rem; } .panel { padding: 1.3rem; } }
+--- /dev/null
++++ estados/solucion/web/index.html
+@@ -0,0 +1,54 @@
++<!doctype html>
++<html lang="es">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width,initial-scale=1">
++  <meta name="color-scheme" content="light">
++  <title>Catálogo local · Laboratorio 6</title>
++  <link rel="icon" href="data:,">
++  <link rel="stylesheet" href="/estilos.css">
++  <script src="/app.js" defer></script>
++</head>
++<body>
++  <header class="cabecera">
++    <a class="marca" href="/">Catálogo local</a>
++    <span>Laboratorio 6 · Datos sintéticos</span>
++  </header>
++  <main>
++    <p class="etiqueta">Consulta de inventario</p>
++    <h1>Disponibilidad por almacén</h1>
++    <p class="introduccion">Encuentra los artículos habilitados con existencias en la ubicación seleccionada.</p>
++    <div class="paneles">
++      <section class="panel" aria-labelledby="titulo-consulta">
++        <h2 id="titulo-consulta">Prepara tu consulta</h2>
++        <form id="consulta">
++          <label for="almacen">Almacén</label>
++          <select id="almacen" name="almacen" required>
++            <option value="ALFA">ALFA</option>
++            <option value="BETA">BETA</option>
++          </select>
++          <label for="nombre">Nombre del artículo <span class="opcional">(opcional)</span></label>
++          <input id="nombre" name="nombre" type="search" autocomplete="off" aria-describedby="ayuda-nombre" placeholder="Por ejemplo, local">
++          <p id="ayuda-nombre" class="ayuda">Deja el nombre vacío para consultar todos los artículos disponibles del almacén.</p>
++          <button id="consultar" type="submit">Consultar catálogo</button>
++        </form>
++      </section>
++      <section class="panel resultados" aria-labelledby="titulo-resultados" aria-busy="false" id="panel-resultados">
++        <h2 id="titulo-resultados">Resultado de la consulta</h2>
++        <p id="mensaje" role="status" aria-live="polite" data-estado="espera">Selecciona un almacén y consulta el catálogo.</p>
++        <p id="error" role="alert" hidden></p>
++        <div id="resultado" hidden>
++          <dl class="resumen">
++            <div><dt>Almacén consultado</dt><dd id="almacen-resultado"></dd></div>
++            <div><dt>Artículos disponibles</dt><dd id="total"></dd></div>
++          </dl>
++          <h3>Códigos encontrados</h3>
++          <ul id="codigos" aria-label="Códigos encontrados"></ul>
++        </div>
++      </section>
++    </div>
++    <p class="nota">El total cuenta artículos, no unidades de existencias. Esta demostración utiliza cuatro artículos ficticios.</p>
++  </main>
++  <footer>Práctica local de contexto, implementación y verificación.</footer>
++</body>
++</html>

@@ -7,3 +7,6 @@ Thumbs.db
 .env.*
 .venv/
 venv/
+
+# Dependencias locales opcionales de las pruebas de navegador.
+node_modules/

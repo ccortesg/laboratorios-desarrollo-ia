@@ -1,0 +1,18 @@
+{
+  "estado": "APROBADO",
+  "procedencia": "Captura aportada por el autor en la conversación; no ejecución realizada por el editor.",
+  "alcance": "Verificación conjunta de laboratorios 1–5 tras integrar laboratorio 5.",
+  "sistema": "Windows, terminal Git Bash",
+  "python_observado": "3.11.9",
+  "baterias": 17,
+  "ejecutados": 178,
+  "aprobados": 173,
+  "fallidos_intencionales": 5,
+  "no_ejecutados_en_baterias": 12,
+  "no_ejecutados_fuera_de_baterias": 10,
+  "salida_global_visible": "APROBADO",
+  "codigo_de_salida": "No visible en la captura; no se infiere.",
+  "fecha_de_ejecucion": "No acreditada por un reloj visible en la captura.",
+  "limite": "No acredita Windows para laboratorio 6, uso de Copilot, Grok Build ni certificación general de plataforma.",
+  "confidencialidad": "No se redistribuye la captura; se transcriben solo las observaciones técnicas pertinentes sin identificadores del equipo."
+}

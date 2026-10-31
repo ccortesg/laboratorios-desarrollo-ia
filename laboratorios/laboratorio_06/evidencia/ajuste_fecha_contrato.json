@@ -1,0 +1,9 @@
+{
+  "fecha_hora_utc": "2026-10-31T06:59:36.168272+00:00",
+  "motivo": "Corrección de la fecha editorial al 31 de octubre de 2026. No cambia el contrato funcional ni los criterios.",
+  "archivo_previo_conservado": "evidencia/ALCANCE_PREVIO.md",
+  "sha256_previo": "3f6a9e70a5f56e324f700054afff6e1c41320b71594f21a956311705df44d3df",
+  "archivo_actual": "ALCANCE.md",
+  "sha256_actual": "20d17cd628b19000425fed2b607a78425c5a0ee8c7d3b54336c1bedf079fb36d",
+  "alcance": "Una sustitución de fecha en metadatos editoriales. Los resultados de ejecución permanecen intactos."
+}

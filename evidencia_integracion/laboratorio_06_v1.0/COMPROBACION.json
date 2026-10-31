@@ -1,0 +1,81 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-10-31",
+  "base_remota": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+  "arbol_base": "a1d70872f969886c5f33f88692b61e90579a18ed",
+  "comando_conjunto_publicado": "python herramientas/verificar_todo.py --navegador --salida trabajo/verificacion_integracion_06",
+  "seleccion_del_entorno": "Se indicó Node del entorno y un Chromium local mediante --node, NODE_PATH y LAB06_CHROMIUM; los registros publican alias y versiones, no rutas del equipo.",
+  "codigo_salida_conjunto": 0,
+  "totales_conjunto": {
+    "laboratorios": 6,
+    "baterias": 29,
+    "ejecutados": 272,
+    "aprobados": 266,
+    "fallidos": 6,
+    "bloqueados": 0,
+    "no_ejecutados_en_baterias": 20,
+    "no_ejecutados_fuera_de_baterias": 10
+  },
+  "herramientas_comerciales": "NO EJECUTADO",
+  "Grok_Build_acceso": "BLOQUEADO",
+  "Windows_laboratorio_06": "NO EJECUTADO",
+  "Windows_laboratorios_01_a_05": "Evidencia aportada por el autor, registrada por separado; no ejecución de esta sesión.",
+  "conservacion": {
+    "archivos_visibles_cotejados": 310,
+    "paquetes_zip_cotejados": 6,
+    "laboratorios_01_a_05_y_zip_y_bundle": "Intactos; sin cambios frente a la base verificada.",
+    "originales_editoriales": "Conservados, fuera del repositorio técnico."
+  },
+  "integracion_remota": "NO EJECUTADO; preparación local para una subida posterior.",
+  "interpretacion": "Las nuevas ejecuciones no se suman para inflar cobertura: el ZIP reproduce las mismas expectativas y el conjunto añade laboratorio 6 al patrón histórico.",
+  "limites": [
+    "No es auditoría integral de seguridad, carga ni accesibilidad.",
+    "Los seis fallos del conjunto son los casos didácticos exactos, no defectos pendientes de solución.",
+    "La aplicación real usa solo HTTP local y los datos sintéticos autorizados."
+  ],
+  "reproduccion_zip_inicial": {
+    "estado": "APROBADO",
+    "paquete": {
+      "archivo": "LABORATORIO_06_v1.0.zip",
+      "archivos": 111,
+      "archivos_cubiertos_manifest": 110,
+      "bytes": 407825,
+      "sha256": "148e1744ebf3662753c48f28afe28eec5065a71d1176ce6ab273d4c417b26ff6"
+    },
+    "CRC": "APROBADO",
+    "huellas_manifest": "110/110 APROBADO",
+    "codigo_salida": 0,
+    "totales": {
+      "ejecutados": 94,
+      "aprobados": 93,
+      "fallidos": 1,
+      "bloqueados": 0,
+      "no_ejecutados": 8,
+      "errores_de_ejecucion": 0
+    },
+    "carpeta_nueva": true
+  },
+  "reproduccion_zip_final": {
+    "estado": "APROBADO",
+    "paquete": {
+      "archivo": "LABORATORIO_06_v1.0.zip",
+      "archivos": 112,
+      "archivos_cubiertos_manifest": 111,
+      "bytes": 408418,
+      "sha256": "79728447611c6ddbb1ab1615ca573a1e7199390c4890ec8796e699003b0880ef"
+    },
+    "CRC": "APROBADO",
+    "huellas_manifest": "111/111 APROBADO",
+    "codigo_salida": 0,
+    "totales": {
+      "ejecutados": 94,
+      "aprobados": 93,
+      "fallidos": 1,
+      "bloqueados": 0,
+      "no_ejecutados": 8,
+      "errores_de_ejecucion": 0
+    },
+    "carpeta_nueva": true
+  },
+  "ajuste_final": "Solo se eliminó una línea vacía final de soporte_web.py. Se conserva el hash anterior y posterior en el laboratorio y se volvió a reproducir el ZIP final. No cambió el comportamiento."
+}
