@@ -1,0 +1,21 @@
+--- propuesta/resumen.py
++++ solucion/resumen.py
+@@ -1,14 +1,14 @@
+-"""Propuesta didáctica con defecto intencional; no generada por Copilot."""
++"""Resumen local del catálogo disponible; implementación didáctica."""
+ 
+ import argparse
+ import json
+ 
+-from laboratorio import consultar_catalogo
++from catalogo import buscar_catalogo
+ 
+ 
+ def resumir_catalogo(almacen, texto=""):
+-    """Defecto deliberado: consulta disponibilidad pero ignora el nombre."""
+-    articulos = consultar_catalogo("solucion", almacen)
++    """Cuenta artículos disponibles que coinciden con la búsqueda por nombre."""
++    articulos = buscar_catalogo(almacen, texto)
+     return {
+         "almacen": almacen,
+         "total": len(articulos),

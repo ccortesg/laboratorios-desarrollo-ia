@@ -1,0 +1,149 @@
+{
+  "estado": "APROBADO",
+  "archivos": [
+    {
+      "archivo": "estados/base/laboratorio.py",
+      "sha256_esperado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/catalogo.py",
+      "sha256_esperado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/detalle.py",
+      "sha256_esperado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/pruebas.py",
+      "sha256_esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/pruebas_detalle.py",
+      "sha256_esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/datos/esquema.sql",
+      "sha256_esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/datos/ejemplos.sql",
+      "sha256_esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/solucion/consulta.sql",
+      "sha256_esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/laboratorio.py",
+      "sha256_esperado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/catalogo.py",
+      "sha256_esperado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/detalle.py",
+      "sha256_esperado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas.py",
+      "sha256_esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas_detalle.py",
+      "sha256_esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/datos/esquema.sql",
+      "sha256_esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/datos/ejemplos.sql",
+      "sha256_esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/solucion/consulta.sql",
+      "sha256_esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/laboratorio.py",
+      "sha256_esperado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/catalogo.py",
+      "sha256_esperado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/detalle.py",
+      "sha256_esperado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/pruebas.py",
+      "sha256_esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/pruebas_detalle.py",
+      "sha256_esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/datos/esquema.sql",
+      "sha256_esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/datos/ejemplos.sql",
+      "sha256_esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/solucion/consulta.sql",
+      "sha256_esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    }
+  ]
+}

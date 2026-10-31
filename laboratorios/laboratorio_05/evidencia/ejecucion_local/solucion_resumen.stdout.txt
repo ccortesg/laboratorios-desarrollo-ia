@@ -1,0 +1,8 @@
+Bateria: resumen; estado: solucion
+P01: APROBADO
+P02: APROBADO
+P03: APROBADO
+P04: APROBADO
+P05: APROBADO
+P06: APROBADO
+Ejecutados: 6; aprobados: 6; fallidos: 0; no ejecutados: 0.

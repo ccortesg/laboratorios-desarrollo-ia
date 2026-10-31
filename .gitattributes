@@ -5,3 +5,6 @@ laboratorios/** -text
 distribuciones/** -text
 historiales/*.bundle -text
 evidencia_integracion/** -text
+
+# Unified diff context lines retain their leading space, including blank lines.
+laboratorios/laboratorio_05/diferencias/*.diff -whitespace

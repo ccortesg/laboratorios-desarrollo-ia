@@ -1,0 +1,62 @@
+{
+  "nota": "python identifica el intérprete de esta ejecución; se omite su ruta absoluta. Salidas conservadas sin transformación. Estas tres demostraciones no se suman al recuento de 72 pruebas.",
+  "registros": [
+    {
+      "id": "propuesta_alfa_otra",
+      "comando": [
+        "python",
+        "-B",
+        "estados/propuesta/resumen.py",
+        "--almacen",
+        "ALFA",
+        "--nombre",
+        "otra"
+      ],
+      "inicio_utc": "2026-10-31T04:20:44.164941+00:00",
+      "fin_utc": "2026-10-31T04:20:44.194818+00:00",
+      "codigo_salida": 0,
+      "stdout": "propuesta_alfa_otra.stdout.txt",
+      "stderr": "propuesta_alfa_otra.stderr.txt",
+      "sha256_stdout": "07f8151272da23d5b6a7929d53b7732ee681a98a71f694dfaa11abe212997d21",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_alfa_otra",
+      "comando": [
+        "python",
+        "-B",
+        "estados/solucion/resumen.py",
+        "--almacen",
+        "ALFA",
+        "--nombre",
+        "otra"
+      ],
+      "inicio_utc": "2026-10-31T04:20:44.194870+00:00",
+      "fin_utc": "2026-10-31T04:20:44.227236+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_alfa_otra.stdout.txt",
+      "stderr": "solucion_alfa_otra.stderr.txt",
+      "sha256_stdout": "feaec98c45cd8bf44d2e31f99c46ae2f50493050ffd33569ad919f69d1016d1e",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_beta_otra",
+      "comando": [
+        "python",
+        "-B",
+        "estados/solucion/resumen.py",
+        "--almacen",
+        "BETA",
+        "--nombre",
+        " OTRA "
+      ],
+      "inicio_utc": "2026-10-31T04:20:44.227268+00:00",
+      "fin_utc": "2026-10-31T04:20:44.263409+00:00",
+      "codigo_salida": 0,
+      "stdout": "solucion_beta_otra.stdout.txt",
+      "stderr": "solucion_beta_otra.stderr.txt",
+      "sha256_stdout": "452ccddbea287f1f6c14f01c88df299e4e05337c5a0507efaa78eac3663c8798",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

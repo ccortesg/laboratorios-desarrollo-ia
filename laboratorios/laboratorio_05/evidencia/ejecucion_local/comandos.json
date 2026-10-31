@@ -1,0 +1,119 @@
+{
+  "convenciones": "python representa el mismo intérprete que ejecutó verificar.py; <SALIDA> representa la carpeta nueva indicada. Sólo se sustituyen esas rutas. stdout y stderr se conservan como bytes sin transformación.",
+  "registros": [
+    {
+      "id": "base_heredados",
+      "inicio_utc": "2026-10-31T04:19:50.248934+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/base/pruebas.py",
+        "--json",
+        "<SALIDA>/base_heredados.json"
+      ],
+      "codigo_salida": 0,
+      "fin_utc": "2026-10-31T04:19:50.299964+00:00",
+      "stdout": "base_heredados.stdout.txt",
+      "stderr": "base_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_resumen",
+      "inicio_utc": "2026-10-31T04:19:50.300420+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--estado",
+        "base",
+        "--json",
+        "<SALIDA>/base_resumen.json"
+      ],
+      "codigo_salida": 0,
+      "fin_utc": "2026-10-31T04:19:50.347685+00:00",
+      "stdout": "base_resumen.stdout.txt",
+      "stderr": "base_resumen.stderr.txt",
+      "sha256_stdout": "3c211336a1777a3df1adfd8f79fa570df99dd31f70e7bb55bf1f703b1fab8db0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_heredados",
+      "inicio_utc": "2026-10-31T04:19:50.348027+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/propuesta/pruebas.py",
+        "--json",
+        "<SALIDA>/propuesta_heredados.json"
+      ],
+      "codigo_salida": 0,
+      "fin_utc": "2026-10-31T04:19:50.398554+00:00",
+      "stdout": "propuesta_heredados.stdout.txt",
+      "stderr": "propuesta_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_resumen",
+      "inicio_utc": "2026-10-31T04:19:50.399210+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_resumen.json"
+      ],
+      "codigo_salida": 1,
+      "fin_utc": "2026-10-31T04:19:50.523699+00:00",
+      "stdout": "propuesta_resumen.stdout.txt",
+      "stderr": "propuesta_resumen.stderr.txt",
+      "sha256_stdout": "5f7feba0fb9864994afa3b6656d2cbc5a3312b614bd3d56d83f1ec3d0ca2c115",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_heredados",
+      "inicio_utc": "2026-10-31T04:19:50.524222+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "estados/solucion/pruebas.py",
+        "--json",
+        "<SALIDA>/solucion_heredados.json"
+      ],
+      "codigo_salida": 0,
+      "fin_utc": "2026-10-31T04:19:50.590001+00:00",
+      "stdout": "solucion_heredados.stdout.txt",
+      "stderr": "solucion_heredados.stderr.txt",
+      "sha256_stdout": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_resumen",
+      "inicio_utc": "2026-10-31T04:19:50.590452+00:00",
+      "directorio": ".",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_resumen.py",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_resumen.json"
+      ],
+      "codigo_salida": 0,
+      "fin_utc": "2026-10-31T04:19:50.736459+00:00",
+      "stdout": "solucion_resumen.stdout.txt",
+      "stderr": "solucion_resumen.stderr.txt",
+      "sha256_stdout": "f2c79f2b4d81cd3a37e0489b4ded44675aeed56b376a028d2b0c7f5f6af8d299",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

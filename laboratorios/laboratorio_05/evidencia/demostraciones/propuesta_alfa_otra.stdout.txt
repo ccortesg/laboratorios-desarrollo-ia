@@ -1,0 +1,1 @@
+{"almacen": "ALFA", "total": 1, "codigos": ["A01"]}

@@ -1,0 +1,1 @@
+{"almacen": "BETA", "total": 1, "codigos": ["A04"]}

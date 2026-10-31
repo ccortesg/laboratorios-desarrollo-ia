@@ -2,11 +2,11 @@
 
 Material práctico de **Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro**.
 
-Cuatro laboratorios locales sobre un catálogo ficticio de solicitudes e inventario. Practican una regla de negocio, la preparación de contexto, encargos de generación/refactorización/depuración y la revisión de cambios en Git. Todos los datos y escenarios se crearon para el libro.
+Cinco laboratorios locales sobre un catálogo ficticio de solicitudes e inventario. Practican una regla de negocio, la preparación de contexto, encargos de generación/refactorización/depuración, la revisión de cambios en Git y la comparación entre sugerencias y encargos delegados. Todos los datos y escenarios se crearon para el libro.
 
 **Promesa:** aprende a transformar problemas de software en instrucciones claras, cambios revisables y resultados comprobables, aprovechando la IA desde tu primera sesión.
 
-**Estado editorial:** los capítulos 1 a 4 siguen pendientes de revisión del autor. La integración de este repositorio no equivale a aprobación editorial. El manuscrito se conserva en las entregas editoriales del libro.
+**Estado editorial:** los capítulos 1 a 5 siguen pendientes de revisión del autor. La integración de este repositorio no equivale a aprobación editorial. El manuscrito se conserva en las entregas editoriales del libro.
 
 ## Empieza aquí
 
@@ -36,6 +36,7 @@ Un resultado global **APROBADO** significa que cada estado reproduce exactamente
 | [02: contexto y arquitectura](laboratorios/laboratorio_02/README.md) | 1.0 | Encargo CLARO, reglas, mapa de responsabilidades, decisiones y continuidad. |
 | [03: generar, refactorizar y depurar](laboratorios/laboratorio_03/README.md) | 1.0 | Cinco estados relacionados, prompts didácticos, diferencias y B01–B06. |
 | [04: revisión sobre un repositorio](laboratorios/laboratorio_04/LEEME_REVISION_1_1.md) | 1.1 | Consulta exacta por código, N01–N10, historia Git y atribución del informe Codex. |
+| [05: de la sugerencia al trabajo delegado](laboratorios/laboratorio_05/README.md) | 1.0 | Resumen del catálogo, terminal JSON, P01–P06 y revisión de un filtro omitido. |
 
 **Antes de abrir las instrucciones históricas del laboratorio 4:** su carpeta visible en `laboratorios/` es una instantánea de lectura sin un Git anidado. Sus README originales describen el paquete autónomo. Para seguir el ejercicio de ramas y diferencias, prepara la copia independiente como se indica a continuación.
 
@@ -76,26 +77,49 @@ En `inicio` se esperan diez aprobaciones; en `solucion`, veinte. Las pruebas del
 | 04 / inicio | 10 | Ninguno | 0 |
 | 04 / solución | 20 | Ninguno | 0 |
 | 04 / árbol actual recién reconstruido | 20 | Ninguno | 0 |
+| 05 / base / heredados | 20 | Ninguno | 0 |
+| 05 / base / resumen | 0 | Ninguno | 6: P01–P06 |
+| 05 / propuesta / heredados | 20 | Ninguno | 0 |
+| 05 / propuesta / resumen | 4 | P04 y P05 | 0 |
+| 05 / solución / heredados | 20 | Ninguno | 0 |
+| 05 / solución / resumen | 6 | Ninguno | 0 |
 
 N01–N10 todavía no existen en `inicio` del laboratorio 4. El resumen los identifica por separado como **NO EJECUTADO**; no son diez pruebas omitidas por `unittest` ni diez aprobaciones.
 
 El criterio central permanece igual: un artículo aparece sólo si está habilitado y tiene existencias positivas en el almacén seleccionado. La búsqueda por nombre y el detalle reutilizan esa regla. No hay reservas, cantidades solicitadas, frontend ni servicios productivos.
+
+## Practicar el laboratorio 5
+
+El paquete autónomo está en `distribuciones/LABORATORIO_05_v1.0.zip`. Para practicar,
+extráelo en una carpeta nueva dentro de `trabajo/`, conservando los archivos importados:
+
+```bash
+python -m zipfile -e distribuciones/LABORATORIO_05_v1.0.zip trabajo/practica_05
+cd trabajo/practica_05/laboratorio_05
+python verificar.py --salida mi_evidencia
+```
+
+Utiliza otro nombre si ya existe `trabajo/practica_05`. La solución aprueba 26 criterios.
+La propuesta incorrecta conserva FALLIDO en P04/P05; la base omite seis criterios nuevos.
+La verificación conjunta ampliada espera 17 baterías, 178 ejecuciones, 173 aprobaciones,
+cinco fallos didácticos y 12 NO EJECUTADO en baterías. Los diez N ausentes en el inicio
+del laboratorio 4 se registran aparte. Consulta la [comprobación de integración](evidencia_integracion/laboratorio_05_v1.0/COMPROBACION.json).
 
 ## Dónde está cada cosa
 
 | Ruta | Función |
 | --- | --- |
 | `laboratorios/` | Código, datos sintéticos, contexto, prompts y evidencia histórica importados sin modificar sus bytes. |
-| `distribuciones/` | Los cuatro ZIP autónomos originales y sus SHA-256. |
+| `distribuciones/` | Los cinco ZIP autónomos originales y sus SHA-256. |
 | `historiales/` | Bundle con la historia original del ejercicio Git del laboratorio 4. |
 | `herramientas/` | Preparación y verificación común, sin dependencias externas. |
 | `evidencia_integracion/2026-10-30/` | Registros saneados de la nueva ejecución local de integración. |
 | `trabajo/` | Copias de práctica y resultados personales; Git la ignora. |
-| [PROCEDENCIA.json](PROCEDENCIA.json) | Huellas de los 120 archivos importados y de los paquetes originales. |
+| [PROCEDENCIA.json](PROCEDENCIA.json) | Huellas de los 198 archivos importados y de los paquetes originales. |
 | [VERSIONES.md](VERSIONES.md) | Correspondencia entre versiones y etiquetas del repositorio. |
 | [CONTINUIDAD.md](CONTINUIDAD.md) | Decisiones, evidencia, pendientes y siguiente tarea. |
 
-Los registros nuevos no sustituyen los históricos. El informe saneado aportado sobre Codex desktop permanece identificado como evidencia documental del autor. Su carpeta de respaldo no se recibió; una ejecución nueva de estas pruebas no la reemplaza.
+Los registros nuevos no sustituyen los históricos. El informe histórico saneado sobre Codex desktop conserva su procedencia. La evidencia nueva auditada en ESTADO_REPOSITORIO_v1.2.md corresponde a otra sesión y se conserva en las entregas del libro; no reemplaza la carpeta histórica aún ausente. Copilot permanece NO EJECUTADO en la producción del laboratorio 5.
 
 ## Trabajar con un asistente
 

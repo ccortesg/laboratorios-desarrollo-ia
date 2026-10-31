@@ -1,0 +1,188 @@
+{
+  "bateria": "resumen",
+  "estado_codigo": "solucion",
+  "criterios_registrados": 6,
+  "ejecutados": 6,
+  "aprobados": 6,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "P01",
+      "prueba": "test_p01_resumen_alfa_sin_argumento_texto",
+      "criterio": "P01: ALFA sin texto cuenta un artículo, no siete unidades.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "almacen": "ALFA",
+        "texto": "",
+        "argumento_texto_omitido": true
+      },
+      "esperado": {
+        "almacen": "ALFA",
+        "total": 1,
+        "codigos": [
+          "A01"
+        ]
+      },
+      "observado": {
+        "almacen": "ALFA",
+        "total": 1,
+        "codigos": [
+          "A01"
+        ]
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "P02",
+      "prueba": "test_p02_resumen_beta_vacio",
+      "criterio": "P02: BETA con texto vacío devuelve únicamente A04.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": "",
+        "argumento_texto_omitido": false
+      },
+      "esperado": {
+        "almacen": "BETA",
+        "total": 1,
+        "codigos": [
+          "A04"
+        ]
+      },
+      "observado": {
+        "almacen": "BETA",
+        "total": 1,
+        "codigos": [
+          "A04"
+        ]
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "P03",
+      "prueba": "test_p03_nombre_normalizado",
+      "criterio": "P03: BETA y OTRA con espacios conservan la coincidencia.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "almacen": "BETA",
+        "texto": " OTRA ",
+        "argumento_texto_omitido": false
+      },
+      "esperado": {
+        "almacen": "BETA",
+        "total": 1,
+        "codigos": [
+          "A04"
+        ]
+      },
+      "observado": {
+        "almacen": "BETA",
+        "total": 1,
+        "codigos": [
+          "A04"
+        ]
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "P04",
+      "prueba": "test_p04_nombre_sin_coincidencia_local",
+      "criterio": "P04: ALFA y otra producen un resumen vacío.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "almacen": "ALFA",
+        "texto": "otra",
+        "argumento_texto_omitido": false
+      },
+      "esperado": {
+        "almacen": "ALFA",
+        "total": 0,
+        "codigos": []
+      },
+      "observado": {
+        "almacen": "ALFA",
+        "total": 0,
+        "codigos": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "P05",
+      "prueba": "test_p05_terminal_filtra_nombre",
+      "criterio": "P05: la terminal devuelve JSON vacío para BETA e inexistente.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "almacen": "BETA",
+        "nombre": "inexistente"
+      },
+      "esperado": {
+        "codigo_salida": 0,
+        "stderr": "",
+        "json": {
+          "almacen": "BETA",
+          "total": 0,
+          "codigos": []
+        }
+      },
+      "observado": {
+        "codigo_salida": 0,
+        "stdout": "{\"almacen\": \"BETA\", \"total\": 0, \"codigos\": []}\n",
+        "stderr": "",
+        "json": {
+          "almacen": "BETA",
+          "total": 0,
+          "codigos": []
+        }
+      },
+      "comando_terminal": [
+        "python",
+        "-B",
+        "resumen.py",
+        "--almacen",
+        "BETA",
+        "--nombre",
+        "inexistente"
+      ]
+    },
+    {
+      "id": "P06",
+      "prueba": "test_p06_terminal_exige_almacen",
+      "criterio": "P06: omitir almacén produce salida 2 y ningún JSON de éxito.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "argumentos": []
+      },
+      "esperado": {
+        "codigo_salida": 2,
+        "stdout": "",
+        "stderr_menciona": "--almacen"
+      },
+      "observado": {
+        "codigo_salida": 2,
+        "stdout": "",
+        "stderr": "usage: resumen.py [-h] --almacen ALMACEN [--nombre NOMBRE]\nresumen.py: error: the following arguments are required: --almacen\n"
+      },
+      "comando_terminal": [
+        "python",
+        "-B",
+        "resumen.py"
+      ]
+    }
+  ]
+}

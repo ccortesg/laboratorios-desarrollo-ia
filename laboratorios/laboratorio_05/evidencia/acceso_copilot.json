@@ -1,0 +1,84 @@
+{
+  "fecha_utc": "2026-10-31T04:15:21.480215+00:00",
+  "deteccion_comandos": {
+    "python3": true,
+    "git": true,
+    "gh": false,
+    "copilot": false,
+    "code": true,
+    "codex": false
+  },
+  "pruebas_ide": [
+    {
+      "comando": [
+        "code",
+        "--version"
+      ],
+      "codigo_salida": 127,
+      "stdout_relevante": [],
+      "stderr_presente": true,
+      "salida_completa_no_publicada": "La sonda inicial registró código y presencia de stderr; el texto completo se capturó en el diagnóstico posterior."
+    },
+    {
+      "comando": [
+        "code",
+        "--list-extensions",
+        "--show-versions"
+      ],
+      "codigo_salida": 127,
+      "stdout_relevante": [],
+      "stderr_presente": true,
+      "salida_completa_no_publicada": "La sonda inicial registró código y presencia de stderr; el texto completo se capturó en el diagnóstico posterior."
+    }
+  ],
+  "diagnostico": {
+    "fecha_utc": "2026-10-31T04:16:10.378980+00:00",
+    "registros": [
+      {
+        "comando": [
+          "code",
+          "--version"
+        ],
+        "codigo_salida": 127,
+        "stdout": "",
+        "stderr_saneado": "code or code-insiders is not installed\n",
+        "stderr_sha256_original": "3b99d4ed0298863f2fc3c302a85b4f88790d47bd39ae560a52501350c23b1ada",
+        "saneamiento": "Ninguna sustitución fue necesaria: el mensaje no contiene rutas ni datos de cuenta; bytes conservados."
+      },
+      {
+        "comando": [
+          "code",
+          "--list-extensions",
+          "--show-versions"
+        ],
+        "codigo_salida": 127,
+        "stdout": "",
+        "stderr_saneado": "code or code-insiders is not installed\n",
+        "stderr_sha256_original": "3b99d4ed0298863f2fc3c302a85b4f88790d47bd39ae560a52501350c23b1ada",
+        "saneamiento": "Ninguna sustitución fue necesaria: el mensaje no contiene rutas ni datos de cuenta; bytes conservados."
+      }
+    ]
+  },
+  "comprobacion_disponibilidad": "APROBADO",
+  "interpretacion_code": "Se encontró un envoltorio de comando, pero ambas invocaciones terminan con 127. No demuestra un editor disponible.",
+  "herramientas_sesion": {
+    "herramientas_copilot_invocables_observadas": 0,
+    "consulta_plugin": "La búsqueda ofreció el conector GitHub habilitado; no confirmó una interfaz invocable de Copilot.",
+    "alcance": "Observaciones del agente principal sobre capacidades expuestas; no inventario de la cuenta del autor."
+  },
+  "operacion_comercial": {
+    "iniciar_sesion_copilot": {
+      "estado": "BLOQUEADO",
+      "motivo": "No existe una interfaz invocable de Copilot confirmada en esta sesión."
+    },
+    "generar_sugerencia": "NO EJECUTADO",
+    "delegar_encargo": "NO EJECUTADO",
+    "revisar_con_copilot": "NO EJECUTADO"
+  },
+  "limites": [
+    "No se verificó la suscripción del autor.",
+    "No se inspeccionaron credenciales ni se cambiaron permisos o configuraciones.",
+    "Python y Git disponibles no acreditan una ejecución de Copilot.",
+    "El laboratorio y su propuesta intencional se construyeron localmente para el libro."
+  ]
+}

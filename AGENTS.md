@@ -4,7 +4,7 @@
 
 Este repositorio reúne ejercicios sintéticos del libro «Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro». El principio rector es definir bien el trabajo y reconocer con evidencia cuándo está terminado.
 
-Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–4 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
+Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–5 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
 
 ## Trabajo autorizado
 
@@ -22,6 +22,8 @@ B01–B06: búsqueda por fragmento del nombre con `strip()` y `casefold()`; bús
 
 N01–N10: detalle por coincidencia exacta del código dentro del catálogo disponible; devuelve un diccionario o `None`. No se normalizan códigos ni se admiten prefijos. Entradas del ejercicio: cadenas.
 
+P01–P06: resumen de artículos disponibles por almacén y nombre; almacén, total y códigos; terminal JSON con almacén obligatorio. Lee ALCANCE.md del laboratorio 5. La propuesta omite el nombre intencionalmente; la solución conserva los 26 criterios.
+
 No implementes cantidades, reservas, aplicación completa ni capítulos posteriores sin el encargo correspondiente.
 
 ## Método CLARO
@@ -36,7 +38,7 @@ No implementes cantidades, reservas, aplicación completa ni capítulos posterio
 
 `python herramientas/verificar_todo.py --salida trabajo/otra_verificacion` ejecuta el recorrido completo en copias temporales y requiere una carpeta nueva. Python 3.10+ y Git; sin paquetes adicionales ni red.
 
-Conserva el patrón exacto de fallos esperados: C04 en el inicial del laboratorio 1; B05 y B06 en el defecto del laboratorio 3. Un fallo diferente es un problema pendiente. B01–B06 en la base del laboratorio 3 permanecen NO EJECUTADO.
+Conserva el patrón exacto de fallos esperados: C04 en el inicial del laboratorio 1; B05 y B06 en el defecto del laboratorio 3; P04 y P05 en la propuesta del laboratorio 5. Un fallo diferente es un problema pendiente. B01–B06 en la base del laboratorio 3 y P01–P06 en la base del laboratorio 5 permanecen NO EJECUTADO.
 
 En el laboratorio 4, comprueba tanto las etiquetas como el árbol de trabajo cuando haya modificaciones. El verificador histórico por sí solo no acredita el código editado.
 
@@ -46,4 +48,4 @@ Clasifica cada comprobación como APROBADO, FALLIDO, BLOQUEADO o NO EJECUTADO. D
 
 Revisa texto, código, datos, rutas, resultados, metadatos e historial. Omite personas, clientes, marcas laborales, direcciones identificables, secretos y combinaciones que reconozcan sistemas reales. Las tecnologías públicas necesarias para enseñar pueden nombrarse. Para afirmaciones actuales sobre productos, utiliza fuentes oficiales y registra la fecha de consulta.
 
-Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. Una nueva comprobación local no resuelve la ausencia de los registros de la sesión Codex que describe el informe recibido.
+Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial vigente es ESTADO_DEL_LIBRO_v1.4.md, conservado en las entregas del libro.

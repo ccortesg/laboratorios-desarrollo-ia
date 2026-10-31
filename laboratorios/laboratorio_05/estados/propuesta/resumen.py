@@ -1,0 +1,30 @@
+"""Propuesta didáctica con defecto intencional; no generada por Copilot."""
+
+import argparse
+import json
+
+from laboratorio import consultar_catalogo
+
+
+def resumir_catalogo(almacen, texto=""):
+    """Defecto deliberado: consulta disponibilidad pero ignora el nombre."""
+    articulos = consultar_catalogo("solucion", almacen)
+    return {
+        "almacen": almacen,
+        "total": len(articulos),
+        "codigos": [articulo["codigo"] for articulo in articulos],
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--almacen", required=True)
+    parser.add_argument("--nombre", default="")
+    opciones = parser.parse_args()
+    resultado = resumir_catalogo(opciones.almacen, opciones.nombre)
+    print(json.dumps(resultado, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
