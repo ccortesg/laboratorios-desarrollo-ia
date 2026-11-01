@@ -1,0 +1,30 @@
+{
+  "estado": "APROBADO",
+  "codigo_salida": 0,
+  "entorno": "Linux; Playwright1.62.1 y Chrome for Testing151.0.7922.34",
+  "zip": "LABORATORIO_09_v1.0.zip",
+  "sha256_zip": "6010765d31beab92b35447439864e5af0b321c99962b7bc692a0dacf66ecc17a",
+  "archivos_extraidos": 292,
+  "fuentes_conservadas": true,
+  "totales": {
+    "ejecutados": 222,
+    "aprobados": 210,
+    "fallidos": 12,
+    "bloqueados": 0,
+    "no_ejecutados": 0,
+    "errores_de_ejecucion": 0
+  },
+  "huellas_funcionales": {
+    "estado": "APROBADO",
+    "comprobadas": 54,
+    "coincidentes": 54,
+    "discrepancias": []
+  },
+  "huellas_captura_y_funcionales": {
+    "estado": "APROBADO",
+    "comprobadas": 56,
+    "coincidentes": 56,
+    "discrepancias": []
+  },
+  "limite": "Ejecución nueva desde el ZIP descomprimido enLinux; no Windows ni WSL. No se suma a otra batería para multiplicar cobertura."
+}

@@ -1,0 +1,10 @@
+{
+  "fecha_hora_utc": "2026-11-01T21:39:40.607975+00:00",
+  "tipo": "corrección de instrumentación; contrato funcional conservado",
+  "archivo": "pruebas_seguridad_navegador.cjs",
+  "sha256_antes": "ecbb5fa12fe6ff6757b527ccb1b3e63d052b7e06a32a9726f51ac58540fe32c2",
+  "sha256_despues": "77db77240865b117e18249d47a5f69bc5a96c16f6bc194a3dd4684f6d2b8e3ec",
+  "observacion": "response.json() no completó tras HTTP 400 en dos pruebas aisladas, con Chrome for Testing 156 y 151; el código alcanzó la espera del estado de la pantalla.",
+  "decision": "S06 observa HTTP 400, error visible, resultados previos ocultos, controles y recuperación. S04.a conserva la comprobación por HTTP del código y JSON exactos. No se cambia aplicación ni se amplía el plazo.",
+  "limite": "La causa interna del bloqueo de lectura de cuerpo no se ha determinado; no se atribuye a una versión concreta del navegador."
+}

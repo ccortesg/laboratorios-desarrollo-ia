@@ -1,0 +1,6 @@
+{
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "modalidad": "Ejecución local independiente; sin red."
+}

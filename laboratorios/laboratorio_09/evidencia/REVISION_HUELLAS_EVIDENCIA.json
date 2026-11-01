@@ -1,0 +1,8 @@
+{
+  "estado": "APROBADO",
+  "comprobadas": 118,
+  "coincidentes": 118,
+  "discrepancias": [],
+  "fecha_hora_utc": "2026-11-01T21:42:03.883824+00:00",
+  "tipo": "auditoría de integridad; no se suma a casos funcionales"
+}

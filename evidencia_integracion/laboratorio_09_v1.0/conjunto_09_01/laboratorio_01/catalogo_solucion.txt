@@ -1,0 +1,3 @@
+Version: solucion
+Almacen seleccionado: ALFA
+Articulos: A01

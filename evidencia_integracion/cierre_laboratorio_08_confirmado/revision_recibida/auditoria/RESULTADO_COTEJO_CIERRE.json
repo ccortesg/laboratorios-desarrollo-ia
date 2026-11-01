@@ -1,0 +1,441 @@
+{
+  "estado": "APROBADO",
+  "fecha_revision_utc": "2026-11-01T20:53:04.134324+00:00",
+  "alcance": "Cotejo documental y de bytes; consulta remota independiente conservada. Sin ejecutar scripts del ZIP ni pruebas funcionales.",
+  "comprobaciones": [
+    {
+      "comprobacion": "Identidad del ZIP recibido",
+      "estado": "APROBADO",
+      "detalle": "0cc40f48d9ce456c9f88cc333fb5ec1a6614cc332b7ee43a10804a751198d37f"
+    },
+    {
+      "comprobacion": "Identidad independiente del paquete original",
+      "estado": "APROBADO",
+      "detalle": "9b7326bfc365631765ae6f9213ecb7dce77454debcb6472b045f73020b9c62cd"
+    },
+    {
+      "comprobacion": "Cobertura exacta del manifiesto recibido",
+      "estado": "APROBADO",
+      "detalle": {
+        "archivos": 116,
+        "declaraciones": 115
+      }
+    },
+    {
+      "comprobacion": "Bytes del manifiesto recibido",
+      "estado": "APROBADO",
+      "detalle": {
+        "coincidentes": 115,
+        "errores": []
+      }
+    },
+    {
+      "comprobacion": "Copia incorporada frente al original recuperado por separado",
+      "estado": "APROBADO",
+      "detalle": {
+        "archivos": 27,
+        "diferencias": []
+      }
+    },
+    {
+      "comprobacion": "Manifiesto original",
+      "estado": "APROBADO",
+      "detalle": {
+        "archivos_declarados": 26
+      }
+    },
+    {
+      "comprobacion": "Contrato de origen e identidades de arbol",
+      "estado": "APROBADO",
+      "detalle": {
+        "base": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+        "windows": "9ea6109fe8e89a2785bdce255252ffaabea1d122",
+        "documental": "d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0"
+      }
+    },
+    {
+      "comprobacion": "Parche y mapa protegido",
+      "estado": "APROBADO",
+      "detalle": "Huellas cotejadas con la entrega original; no se ejecuta el parche."
+    },
+    {
+      "comprobacion": "Separacion del alcance documental y protegido",
+      "estado": "APROBADO",
+      "detalle": {
+        "protegidos": 1486,
+        "documentales": 25,
+        "recalculo_individual_de_blobs_remotos": "NO EJECUTADO"
+      }
+    },
+    {
+      "comprobacion": "Seis enlaces de la cadena documental",
+      "estado": "APROBADO",
+      "detalle": [
+        {
+          "enlace": "antes/configuracion",
+          "coincide": true
+        },
+        {
+          "enlace": "antes/manifiesto",
+          "coincide": true
+        },
+        {
+          "enlace": "preparado/antes",
+          "coincide": true
+        },
+        {
+          "enlace": "prepublicacion/preparado",
+          "coincide": true
+        },
+        {
+          "enlace": "cierre/prepublicacion",
+          "coincide": true
+        },
+        {
+          "enlace": "cierre/configuracion",
+          "coincide": true
+        }
+      ]
+    },
+    {
+      "comprobacion": "Preparacion y cierre registrados",
+      "estado": "APROBADO",
+      "detalle": "La limpieza local corresponde al instante capturado, no a una consulta actual del ordenador del autor."
+    },
+    {
+      "comprobacion": "Resumen de 23 operaciones frente a sus capturas",
+      "estado": "APROBADO",
+      "detalle": [
+        {
+          "captura": "01_paquete",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "VERIFICAR_PAQUETE.py"
+          ]
+        },
+        {
+          "captura": "02_acceso_lectura",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "ls-remote",
+            "--refs",
+            "origin",
+            "refs/heads/main",
+            "refs/tags/*"
+          ]
+        },
+        {
+          "captura": "03_acceso_publicacion",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "push",
+            "--dry-run",
+            "--atomic",
+            "--no-follow-tags",
+            "origin",
+            "refs/heads/main:refs/heads/main"
+          ]
+        },
+        {
+          "captura": "04_pruebas_recolector",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "herramientas/pruebas/test_huellas_evidencia.py"
+          ]
+        },
+        {
+          "captura": "05_configuracion_montaje",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "config",
+            "--local",
+            "core.filemode",
+            "false"
+          ]
+        },
+        {
+          "captura": "06_refrescar_estadisticas",
+          "codigo_salida": 128,
+          "comando": [
+            "git",
+            "update-index",
+            "--refresh"
+          ]
+        },
+        {
+          "captura": "07_refrescar_estadisticas_reintento",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "update-index",
+            "--refresh"
+          ]
+        },
+        {
+          "captura": "08_preparar",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "<PAQUETE>/GESTIONAR_CIERRE_08.py",
+            "preparar",
+            "--repositorio",
+            ".",
+            "--salida",
+            "trabajo/cierre_lab08_wsl_01"
+          ]
+        },
+        {
+          "captura": "09_indice_revisado",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "trabajo/cierre_lab08_wsl_01_operaciones/verificar_indice.py"
+          ]
+        },
+        {
+          "captura": "10_revision_windows_incorporada",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "evidencia_integracion/cierre_laboratorio_08_windows/revision_recibida/VERIFICAR_PAQUETE.py"
+          ]
+        },
+        {
+          "captura": "11_commit",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "commit",
+            "-m",
+            "Integra laboratorio 8 y evidencia verificada en Windows"
+          ]
+        },
+        {
+          "captura": "12_fetch_sin_etiquetas",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "fetch",
+            "--no-tags",
+            "origin"
+          ]
+        },
+        {
+          "captura": "13_incorporar_main_local",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "merge",
+            "--no-edit",
+            "main"
+          ]
+        },
+        {
+          "captura": "14_incorporar_main_remoto",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "merge",
+            "--no-edit",
+            "origin/main"
+          ]
+        },
+        {
+          "captura": "15_ascendencia_y_contenido",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "trabajo/cierre_lab08_wsl_01_operaciones/verificar_git.py",
+            "integrado"
+          ]
+        },
+        {
+          "captura": "16_cambiar_a_main",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "switch",
+            "main"
+          ]
+        },
+        {
+          "captura": "17_integracion_avance_rapido",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "merge",
+            "--ff-only",
+            "integracion/laboratorio-08"
+          ]
+        },
+        {
+          "captura": "18_comprobar",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "<PAQUETE>/GESTIONAR_CIERRE_08.py",
+            "comprobar",
+            "--repositorio",
+            ".",
+            "--salida",
+            "trabajo/cierre_lab08_wsl_01"
+          ]
+        },
+        {
+          "captura": "19_etiqueta_lab08",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "tag",
+            "lab-08-v1.0",
+            "HEAD"
+          ]
+        },
+        {
+          "captura": "20_etiqueta_repositorio",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "tag",
+            "repositorio-v1.4",
+            "HEAD"
+          ]
+        },
+        {
+          "captura": "21_objetivos_locales",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "rev-parse",
+            "HEAD",
+            "lab-08-v1.0",
+            "repositorio-v1.4",
+            "HEAD^{tree}"
+          ]
+        },
+        {
+          "captura": "22_push_atomico",
+          "codigo_salida": 0,
+          "comando": [
+            "git",
+            "push",
+            "--atomic",
+            "--no-follow-tags",
+            "origin",
+            "refs/heads/main:refs/heads/main",
+            "refs/tags/lab-08-v1.0:refs/tags/lab-08-v1.0",
+            "refs/tags/repositorio-v1.4:refs/tags/repositorio-v1.4"
+          ]
+        },
+        {
+          "captura": "23_referencias_publicadas",
+          "codigo_salida": 0,
+          "comando": [
+            "python3",
+            "-B",
+            "trabajo/cierre_lab08_wsl_01_operaciones/verificar_git.py",
+            "publicado"
+          ]
+        }
+      ]
+    },
+    {
+      "comprobacion": "Huellas finales explicitamente declaradas",
+      "estado": "APROBADO",
+      "detalle": {
+        "declaradas": 32,
+        "coincidentes": 32,
+        "flujos_sin_huella_separada": 14,
+        "cobertura_de_esos_flujos": "Manifiesto general final; no se reconstruyen hashes de captura."
+      }
+    },
+    {
+      "comprobacion": "Incidencia de indice conservada y resuelta",
+      "estado": "APROBADO",
+      "detalle": {
+        "fallos_registrados": [
+          [
+            "06_refrescar_estadisticas",
+            128
+          ]
+        ],
+        "reintento": 0
+      }
+    },
+    {
+      "comprobacion": "Ocho pruebas WSL del recolector en captura",
+      "estado": "APROBADO",
+      "detalle": "Revision de la salida recibida; las pruebas no se reejecutan en esta auditoria."
+    },
+    {
+      "comprobacion": "Publicacion atomica exacta registrada",
+      "estado": "APROBADO",
+      "detalle": {
+        "comando": [
+          "git",
+          "push",
+          "--atomic",
+          "--no-follow-tags",
+          "origin",
+          "refs/heads/main:refs/heads/main",
+          "refs/tags/lab-08-v1.0:refs/tags/lab-08-v1.0",
+          "refs/tags/repositorio-v1.4:refs/tags/repositorio-v1.4"
+        ],
+        "codigo_salida": 0
+      }
+    },
+    {
+      "comprobacion": "Referencias nuevas e historicas en consulta independiente",
+      "estado": "APROBADO",
+      "detalle": {
+        "fecha_consulta": "2026-11-01 20:48:55 UTC",
+        "historicas": 11,
+        "nuevas": 2,
+        "main": "9212ee99b88f70f0b289837b88d6bbf34da91a52"
+      }
+    },
+    {
+      "comprobacion": "Commit remoto y arbol preparado previamente",
+      "estado": "APROBADO",
+      "detalle": {
+        "sha": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+        "arbol": "d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0",
+        "padres": [
+          "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622"
+        ],
+        "fecha_commit_utc": "2026-11-01T20:34:00Z",
+        "mensaje": "Integra laboratorio 8 y evidencia verificada en Windows"
+      }
+    },
+    {
+      "comprobacion": "Estado final recibido y observacion remota independiente",
+      "estado": "APROBADO",
+      "detalle": "La consulta externa confirma las identidades; no constituye una nueva publicacion."
+    },
+    {
+      "comprobacion": "Originales de entrada conservados",
+      "estado": "APROBADO",
+      "detalle": "Lectura binaria; ningun archivo recibido fue reescrito."
+    }
+  ],
+  "limites": [
+    "No se reejecutaron las 583 pruebas funcionales historicas de Windows.",
+    "No se reejecutaron aqui las ocho pruebas WSL del recolector; se reviso su captura.",
+    "No se recalcularon individualmente 1.486 blobs remotos: se cotejo su mapa original, sus registros de conservacion y la igualdad del arbol Git remoto con el arbol documental del paquete previo.",
+    "No se reconstruyeron hashes capturados ausentes de las primeras siete operaciones.",
+    "El codigo no realiza nuevas consultas remotas al reproducir esta auditoria: comprueba la instantanea fechada proporcionada."
+  ],
+  "observacion_documental": "Las referencias heredadas a Git Bash en dos estados y metodo_subida se precisan como WSL2/Linux en las notas y en la nueva continuidad, sin reescribir originales."
+}

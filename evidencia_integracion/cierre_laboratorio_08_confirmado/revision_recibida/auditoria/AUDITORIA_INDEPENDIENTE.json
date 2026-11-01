@@ -1,0 +1,429 @@
+{
+  "version": "1.0",
+  "fecha_utc": "2026-11-01T20:50:27.494574+00:00",
+  "estado": "APROBADO",
+  "alcance": "Auditoría independiente de los bytes del ZIP y la coherencia de evidencias entregadas. Sin ejecutar código recibido, sin extraer archivos, sin acceder al repositorio ni a red.",
+  "fuente": {
+    "nombre": "EVIDENCIA_CIERRE_LAB08_WSL_01.zip",
+    "bytes": 321086,
+    "sha256": "0cc40f48d9ce456c9f88cc333fb5ec1a6614cc332b7ee43a10804a751198d37f"
+  },
+  "identidad": {
+    "base_commit": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+    "arbol_windows_auditado": "9ea6109fe8e89a2785bdce255252ffaabea1d122",
+    "commit_cierre": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+    "arbol_cierre": "d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0"
+  },
+  "comprobaciones": [
+    {
+      "id": "A01",
+      "estado": "APROBADO",
+      "descripcion": "SHA-256 del ZIP recibido coincide con el declarado por el autor",
+      "detalle": "0cc40f48d9ce456c9f88cc333fb5ec1a6614cc332b7ee43a10804a751198d37f"
+    },
+    {
+      "id": "A02",
+      "estado": "APROBADO",
+      "descripcion": "CRC y descompresión de todas las entradas del ZIP"
+    },
+    {
+      "id": "A03",
+      "estado": "APROBADO",
+      "descripcion": "Entradas únicas, relativas, sin escapes de ruta ni enlaces simbólicos",
+      "detalle": {
+        "entradas": 116,
+        "rutas_inseguras": []
+      }
+    },
+    {
+      "id": "A04",
+      "estado": "APROBADO",
+      "descripcion": "Cobertura exacta del manifiesto final: 115 entradas para 116 archivos",
+      "detalle": {
+        "archivos": 116,
+        "entradas_manifiesto": 115
+      }
+    },
+    {
+      "id": "A05",
+      "estado": "APROBADO",
+      "descripcion": "Los 115 SHA-256 coinciden con los bytes de los archivos conservados",
+      "detalle": {
+        "coincidentes": 115,
+        "discrepancias": []
+      }
+    },
+    {
+      "id": "A06",
+      "estado": "APROBADO",
+      "descripcion": "La copia del paquete original contiene las 27 rutas declaradas y conserva sus bytes",
+      "detalle": {
+        "archivos": 27
+      }
+    },
+    {
+      "id": "A07",
+      "estado": "APROBADO",
+      "descripcion": "El manifiesto del paquete original cubre exactamente sus 26 archivos"
+    },
+    {
+      "id": "A08",
+      "estado": "APROBADO",
+      "descripcion": "Huellas del parche y mapa protegido enlazadas por BASE_CIERRE.json"
+    },
+    {
+      "id": "A09",
+      "estado": "APROBADO",
+      "descripcion": "Identidad del auxiliar original: no se sustituyó por otro",
+      "detalle": "32deab51e649f9e5625c3c635bf8d63920e644cbfee98bf1f7d2e00c002664ce"
+    },
+    {
+      "id": "A10",
+      "estado": "APROBADO",
+      "descripcion": "Seis enlaces SHA-256 de la cadena antes → preparado → prepublicación → cierre",
+      "detalle": {
+        "enlaces": [
+          {
+            "enlace": "antes.base",
+            "archivo": "paquete_original/BASE_CIERRE.json",
+            "coincide": true
+          },
+          {
+            "enlace": "preparado.antes",
+            "archivo": "antes.json",
+            "coincide": true
+          },
+          {
+            "enlace": "prepublicacion.preparado",
+            "archivo": "preparado.json",
+            "coincide": true
+          },
+          {
+            "enlace": "cierre.prepublicacion",
+            "archivo": "prepublicacion.json",
+            "coincide": true
+          },
+          {
+            "enlace": "cierre.base",
+            "archivo": "paquete_original/BASE_CIERRE.json",
+            "coincide": true
+          },
+          {
+            "enlace": "antes.manifiesto_original",
+            "archivo": "paquete_original/SHA256SUMS",
+            "coincide": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A11",
+      "estado": "APROBADO",
+      "descripcion": "La documentación parte del árbol Windows corregido sin adelantar main al preparar"
+    },
+    {
+      "id": "A12",
+      "estado": "APROBADO",
+      "descripcion": "Prepublicación y cierre describen main en el commit y árbol esperados, con árbol de trabajo limpio"
+    },
+    {
+      "id": "A13",
+      "estado": "APROBADO",
+      "descripcion": "Orden temporal de las cuatro fases documentales",
+      "detalle": [
+        "2026-11-01T20:31:41+00:00",
+        "2026-11-01T20:33:27+00:00",
+        "2026-11-01T20:38:43+00:00",
+        "2026-11-01T20:41:44+00:00"
+      ]
+    },
+    {
+      "id": "A14",
+      "estado": "APROBADO",
+      "descripcion": "Las 23 capturas coinciden con RESUMEN_OPERACIONES.json",
+      "detalle": {
+        "APROBADO": 22,
+        "FALLIDO": 1
+      }
+    },
+    {
+      "id": "A15",
+      "estado": "APROBADO",
+      "descripcion": "32 huellas finales explícitas de stdout/stderr cotejadas con los bytes guardados",
+      "detalle": {
+        "declaradas": 32,
+        "coincidentes": 32,
+        "sin_huella_capturada_final_individual": 14,
+        "capturadas_distintas_de_finales": []
+      }
+    },
+    {
+      "id": "A16",
+      "estado": "APROBADO",
+      "descripcion": "Los 46 flujos de las 23 capturas están cubiertos por el manifiesto final"
+    },
+    {
+      "id": "A17",
+      "estado": "APROBADO",
+      "descripcion": "Intervalos válidos, fases dependientes en orden y solapamientos limitados a comprobaciones independientes",
+      "detalle": {
+        "solapamientos_comprobaciones_independientes": [
+          [
+            "02_acceso_lectura",
+            "03_acceso_publicacion"
+          ],
+          [
+            "09_indice_revisado",
+            "10_revision_windows_incorporada"
+          ]
+        ],
+        "explicacion": "Lectura de referencias con dry-run y revisión del índice con verificación del paquete incorporado se ejecutaron en paralelo; no se exige secuencia artificial entre comprobaciones independientes."
+      }
+    },
+    {
+      "id": "A18",
+      "estado": "APROBADO",
+      "descripcion": "Único fallo conservado: index.lock en refresco del índice, seguido por reintento exitoso"
+    },
+    {
+      "id": "A19",
+      "estado": "APROBADO",
+      "descripcion": "Ocho pruebas del recolector aprobadas en esta ejecución WSL",
+      "detalle": {
+        "numero_pruebas": 8,
+        "nombres": [
+          "test_comprobador_detecta_modificacion_posterior_sin_escribir",
+          "test_conserva_resultados_y_aclara_convenciones",
+          "test_huella_inicial_incorrecta_rechaza_sin_reescritura",
+          "test_no_ejecutado_sin_salidas_no_inventa_huellas",
+          "test_preserva_lf_crlf_unicode_y_salida_vacia",
+          "test_referencia_externa_se_rechaza_sin_escribir",
+          "test_registro_incompleto_no_se_omite_silenciosamente",
+          "test_saneamiento_actualiza_huella_final_y_conserva_captura"
+        ],
+        "captura": "operaciones/04_pruebas_recolector"
+      }
+    },
+    {
+      "id": "A20",
+      "estado": "APROBADO",
+      "descripcion": "El ajuste core.filemode=false está documentado como configuración local del repositorio"
+    },
+    {
+      "id": "A21",
+      "estado": "APROBADO",
+      "descripcion": "Nueve comandos mutadores y de sincronización coinciden con el alcance autorizado, sin referencias forzadas",
+      "detalle": {
+        "11_commit": [
+          "git",
+          "commit",
+          "-m",
+          "Integra laboratorio 8 y evidencia verificada en Windows"
+        ],
+        "12_fetch_sin_etiquetas": [
+          "git",
+          "fetch",
+          "--no-tags",
+          "origin"
+        ],
+        "13_incorporar_main_local": [
+          "git",
+          "merge",
+          "--no-edit",
+          "main"
+        ],
+        "14_incorporar_main_remoto": [
+          "git",
+          "merge",
+          "--no-edit",
+          "origin/main"
+        ],
+        "16_cambiar_a_main": [
+          "git",
+          "switch",
+          "main"
+        ],
+        "17_integracion_avance_rapido": [
+          "git",
+          "merge",
+          "--ff-only",
+          "integracion/laboratorio-08"
+        ],
+        "19_etiqueta_lab08": [
+          "git",
+          "tag",
+          "lab-08-v1.0",
+          "HEAD"
+        ],
+        "20_etiqueta_repositorio": [
+          "git",
+          "tag",
+          "repositorio-v1.4",
+          "HEAD"
+        ],
+        "22_push_atomico": [
+          "git",
+          "push",
+          "--atomic",
+          "--no-follow-tags",
+          "origin",
+          "refs/heads/main:refs/heads/main",
+          "refs/tags/lab-08-v1.0:refs/tags/lab-08-v1.0",
+          "refs/tags/repositorio-v1.4:refs/tags/repositorio-v1.4"
+        ]
+      }
+    },
+    {
+      "id": "A22",
+      "estado": "APROBADO",
+      "descripcion": "Las salidas acreditan commit creado, conservación de ambos main y avance rápido final"
+    },
+    {
+      "id": "A23",
+      "estado": "APROBADO",
+      "descripcion": "La captura del push atómico registra actualización de main y creación exclusiva de las dos etiquetas previstas"
+    },
+    {
+      "id": "A24",
+      "estado": "APROBADO",
+      "descripcion": "Consultas anteriores y posteriores conservan las 11 etiquetas históricas y añaden únicamente dos etiquetas nuevas"
+    },
+    {
+      "id": "A25",
+      "estado": "APROBADO",
+      "descripcion": "Identidades locales, origin/main, índice y referencias remotas registradas son coherentes"
+    },
+    {
+      "id": "A26",
+      "estado": "APROBADO",
+      "descripcion": "REFERENCIAS_ANTES_Y_DESPUES enlaza la misma captura de publicación sin reconstruir argumentos distintos"
+    },
+    {
+      "id": "A27",
+      "estado": "APROBADO",
+      "descripcion": "Comprobaciones Git de cierre: ascendencia conservada y estado limpio",
+      "detalle": {
+        "comandos": 17
+      }
+    },
+    {
+      "id": "A28",
+      "estado": "APROBADO",
+      "descripcion": "Parche, contrato y revisión del índice coinciden en 25 rutas documentales separadas de 1.486 protegidas",
+      "detalle": {
+        "rutas_documentales": 25,
+        "rutas_protegidas": 1486
+      }
+    },
+    {
+      "id": "A29",
+      "estado": "APROBADO",
+      "descripcion": "Revisión documentada del índice completo: 549 rutas de integración y árbol final esperado"
+    },
+    {
+      "id": "A30",
+      "estado": "APROBADO",
+      "descripcion": "Conservación de 1.486 archivos y 25 rutas documentales declarada coherentemente en las tres fases"
+    },
+    {
+      "id": "A31",
+      "estado": "APROBADO",
+      "descripcion": "Los registros internos del auxiliar conservan códigos de salida cero",
+      "detalle": {
+        "COMANDOS_PREPARAR.json": 26,
+        "COMANDOS_COMPROBAR.json": 23,
+        "COMANDOS_REGISTRAR.json": 16
+      }
+    },
+    {
+      "id": "A32",
+      "estado": "APROBADO",
+      "descripcion": "El entorno de cierre se identifica como WSL2/Linux, Git 2.34.1 y Python 3.10.12"
+    },
+    {
+      "id": "A33",
+      "estado": "APROBADO",
+      "descripcion": "Se distingue la ejecución nueva del recolector de las 583 ejecuciones funcionales históricas de Windows"
+    },
+    {
+      "id": "A34",
+      "estado": "APROBADO",
+      "descripcion": "Los estados conservan la revisión editorial pendiente de los capítulos 1–8 y las identidades del cierre"
+    },
+    {
+      "id": "A35",
+      "estado": "APROBADO",
+      "descripcion": "Revisión de patrones identificables en registros y documentación nueva: sin coincidencias",
+      "detalle": {
+        "archivos_textuales_revisados": 83,
+        "alcance": "Rutas personales, correos, credenciales en URL y patrones de tokens; no constituye demostración de ausencia de todo secreto imaginable. URL y rutas del proyecto sintético autorizado permitidas.",
+        "hallazgos": []
+      }
+    },
+    {
+      "id": "A36",
+      "estado": "APROBADO",
+      "descripcion": "El ZIP recibido conserva sus bytes tras la auditoría de sólo lectura",
+      "detalle": {
+        "bytes": 321086,
+        "sha256": "0cc40f48d9ce456c9f88cc333fb5ec1a6614cc332b7ee43a10804a751198d37f"
+      }
+    }
+  ],
+  "resumen": {
+    "comprobaciones_auditoria": 36,
+    "aprobadas": 36,
+    "fallidas": 0,
+    "archivos_zip": 116,
+    "entradas_manifiesto": 115,
+    "archivos_paquete_original": 27,
+    "capturas_operacion": 23,
+    "capturas_exitosas": 22,
+    "capturas_fallo_resuelto": 1,
+    "flujos_bajo_manifiesto": 46,
+    "huellas_finales_explicitas_cotejadas": 32,
+    "pruebas_recolector_wsl": 8,
+    "ejecuciones_funcionales_nuevas": "NO EJECUTADO"
+  },
+  "observaciones": [
+    {
+      "id": "O01",
+      "nivel": "DOCUMENTAL_MENOR",
+      "archivos": [
+        "ESTADO_DEL_LIBRO_v1.7.4.md",
+        "ESTADO_REPOSITORIO_v1.6.4.md",
+        "RESULTADO_CIERRE.json",
+        "NOTAS_ENTORNO_Y_ALCANCE.md"
+      ],
+      "detalle": "Los estados y el campo metodo_subida conservan una frase fija del auxiliar que menciona Git Bash. La nota de entorno explica expresamente que el cierre real se ejecutó con Git Linux desde WSL. Las capturas corroboran WSL2/Linux. No invalida el cierre; en una nueva continuidad debe citarse la captura WSL, conservando íntegros los originales."
+    },
+    {
+      "id": "O02",
+      "nivel": "LIMITE_TRAZABILIDAD",
+      "archivos": [
+        "operaciones/01_paquete/comando.json",
+        "operaciones/07_refrescar_estadisticas_reintento/comando.json",
+        "NOTAS_ENTORNO_Y_ALCANCE.md"
+      ],
+      "detalle": "Las siete primeras capturas no declaran huellas separadas del flujo capturado y del archivo saneado. Sus 14 archivos stdout/stderr están incluidos en el manifiesto final de 115 entradas. No se atribuyen hashes originales inexistentes. Las 16 capturas posteriores sí declaran 32 huellas finales y capturadas."
+    },
+    {
+      "id": "O03",
+      "nivel": "ALCANCE_HISTORICO",
+      "detalle": "La causa concreta del proceso concurrente que generó index.lock se explica narrativamente. Las capturas demuestran el error de bloqueo y el reintento exitoso; por sí solas no identifican el proceso propietario del lock. No se registra una orden de borrado de lock ni reset destructivo."
+    },
+    {
+      "id": "O04",
+      "nivel": "PROCEDENCIA",
+      "detalle": "583 ejecuciones funcionales, 571 aprobaciones y 12 fallos didácticos pertenecen a Windows previamente auditado. Esta revisión no las ejecutó nuevamente. Las ocho pruebas nuevas del recolector son WSL y se mantienen separadas."
+    }
+  ],
+  "limites": [
+    "No se consultó el remoto actual; se cotejaron las respuestas Git conservadas en el ZIP. La revisión remota independiente corresponde al agente principal.",
+    "El ZIP contiene el mapa de 1.486 rutas protegidas y capturas de su cotejo, pero no todos los blobs del repositorio. No se afirma una nueva comparación independiente de los 1.486 blobs en esta auditoría.",
+    "Un manifiesto SHA-256 permite detectar discrepancias respecto a valores declarados; no es una firma de autoría ni prueba independiente de la ejecución de cada proceso. Se revisó coherencia cruzada de las capturas disponibles.",
+    "No se reejecutaron scripts del paquete, pruebas funcionales, navegador, importadores ni comandos Git mutadores.",
+    "Las huellas capturadas anteriores al saneamiento se preservan como declaraciones del recolector; cuando difieren de los bytes finales no se reconstruyen originales retirados.",
+    "Los estados finales y comprobantes posteriores permanecen fuera del commit publicado; ello está explicado y no exige mover etiquetas."
+  ]
+}

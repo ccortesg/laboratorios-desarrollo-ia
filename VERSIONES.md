@@ -1,3 +1,35 @@
+# Versiones vigentes · cierre 1.5 preparado, publicación pendiente
+
+**Fecha:** 1 de noviembre de 2026. Estados documentales [libro 1.8.2](docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md) y [repositorio 1.7.2](docs/estados/ESTADO_REPOSITORIO_v1.7.2.md). La revisión recibida 1.8.1/1.7.1 se conserva exacta. Maestro editorial 1.0; capítulos 1–9 pendientes de revisión editorial.
+
+| Referencia | Situación de preparación |
+| --- | --- |
+| Trece etiquetas históricas, hasta lab-08-v1.0/repositorio-v1.4 | Identidades conservadas y reconsultadas antes del cierre. |
+| LABORATORIO_09_v1.0.zip | Distribución verificada, sin regenerar ni cambiar bytes. |
+| lab-09-v1.0 y repositorio-v1.5 | Únicas etiquetas nuevas autorizadas; publicación pendiente de comprobar. |
+| Árbol funcional auditado | 251105483bc5bef040c57dc3a036d5bc3a7e0da0; separado del árbol documental de cierre. |
+
+La publicación se realiza como operación posterior mediante el encargo ya invocado. Sus SHA y estados posteriores 1.8.3/1.7.3 se documentan fuera del commit que verifican. Esta preparación no anticipa esos identificadores ni afirma el resultado del push. [Revisión incorporada](evidencia_integracion/revision_laboratorio_09_wsl/README.md).
+
+## Antecedentes íntegros
+
+# Versiones vigentes · integración 1.5 preparada
+
+**Fecha:** 1 de noviembre de 2026. Estado editorial 1.8 y estado operativo 1.7; el maestro permanece 1.0. Las numeraciones documentales son independientes de las versiones técnicas.
+
+| Referencia | Situación |
+| --- | --- |
+| lab-08-v1.0 y repositorio-v1.4 | Publicadas y confirmadas en 9212ee99b88f70f0b289837b88d6bbf34da91a52; distribución corregida 8 v1.0.1 y original conservadas. |
+| LABORATORIO_09_v1.0.zip | Preparado, ejecutado y revisado localmente; 292 archivos autónomos. |
+| lab-09-v1.0 | Nombre previsto para el próximo cierre; NO CREADO. |
+| repositorio-v1.5 | Nombre previsto para el próximo cierre; NO CREADO. |
+
+Las trece etiquetas existentes se conservan. El parche se prepara sobre la base confirmada, con la incorporación documental de los estados posteriores al cierre del 8 y su revisión WSL. No hay commit nuevo, integración en main ni push de esta entrega. Los capítulos 1–9 siguen pendientes de revisión editorial. Consulta los estados vigentes y BASE_INTEGRACION.json del paquete para la identidad del árbol preparado y sus pruebas.
+
+## Antecedentes conservados
+
+Las notas siguientes mantienen sus estados históricos. Sus pendientes de cierre del 8 ya fueron resueltos y no sustituyen la situación actual.
+
 # Versiones vigentes · cierre de la integración 1.4
 
 La distribución de trabajo del laboratorio 8 es `LABORATORIO_08_v1.0.1.zip`, aprobada en Windows por el autor y auditada. Su ZIP 1.0 permanece como antecedente. Los estados documentales de esta preparación son libro 1.7.3 y repositorio 1.6.3; la revisión Windows previa está en 1.7.2/1.6.2.

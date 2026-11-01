@@ -1,0 +1,38 @@
+{
+  "inicio": {
+    ".gitignore": "896996eb686ef9fffa6243725702becf36771e10410afbe5e0dd51e971272e6b",
+    "AGENTS.md": "2b5fb25553cc94926e079a4eea18f50249fed395dd4e01894843a9e451eb5666",
+    "ALCANCE.md": "5f0c07fed1653a4d544290ba237efb25d9662ac432d554615b8e8f4951219937",
+    "README.md": "52c13e41494383e1ed2f9f9e8f915860a04070174ee142698604cbd8caa7fe98",
+    "catalogo.py": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+    "contexto/ARQUITECTURA.md": "31b26bdc3e156d6e4ced1dbb5dfda5546eb76cf06088045b65217263d4b57868",
+    "contexto/CONTEXTO.md": "f4f8bac5e255b8e0bffc061c811cf935c8ce6144ea4642d112d3e07102dcd95c",
+    "contexto/CONTINUIDAD.md": "5e6c53fca871327564440064442dfaa25c7d7c769e7c5a0b2b67fdfe650de795",
+    "contexto/DECISIONES.md": "0edff19cc10cfff0938e391dffac88628ea5056d99f99177018f87ff41ade3aa",
+    "datos/ejemplos.sql": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+    "datos/esquema.sql": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+    "laboratorio.py": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+    "prompts/ENCARGO.md": "d3c7a6a269a24d16f66b7fa91d73ad58e43c200c00d2bc8a1cb1f756b8a7c8ab",
+    "pruebas.py": "81eb81164018aa396d35c89c41e73825b24e0a46150e5900a5a4ab91f76467b0",
+    "solucion/consulta.sql": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+  },
+  "solucion": {
+    ".gitignore": "896996eb686ef9fffa6243725702becf36771e10410afbe5e0dd51e971272e6b",
+    "AGENTS.md": "2b5fb25553cc94926e079a4eea18f50249fed395dd4e01894843a9e451eb5666",
+    "ALCANCE.md": "5f0c07fed1653a4d544290ba237efb25d9662ac432d554615b8e8f4951219937",
+    "README.md": "52c13e41494383e1ed2f9f9e8f915860a04070174ee142698604cbd8caa7fe98",
+    "catalogo.py": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+    "contexto/ARQUITECTURA.md": "326d0975ab5f554741a5865222bfc4ffae9aba848dd5d0b3e7ba116dedb23454",
+    "contexto/CONTEXTO.md": "2f126f92f079cc4f2b5edc7731c171c4dc407a78c175dd13a8e31b9b6b907445",
+    "contexto/CONTINUIDAD.md": "0951df3752165086cfa40f9b20c35da398103217c8ab70273e8f02d1342d7f2d",
+    "contexto/DECISIONES.md": "01a8db68ef4b7fab5e2860c24d0d88d8d68ba2371eb894ed651adb411831c920",
+    "datos/ejemplos.sql": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+    "datos/esquema.sql": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+    "detalle.py": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+    "laboratorio.py": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+    "prompts/ENCARGO.md": "d3c7a6a269a24d16f66b7fa91d73ad58e43c200c00d2bc8a1cb1f756b8a7c8ab",
+    "pruebas.py": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+    "pruebas_detalle.py": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+    "solucion/consulta.sql": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+  }
+}

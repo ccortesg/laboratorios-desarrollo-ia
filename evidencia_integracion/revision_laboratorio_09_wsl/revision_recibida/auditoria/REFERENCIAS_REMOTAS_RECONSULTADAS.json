@@ -1,0 +1,80 @@
+{
+  "estado": "APROBADO",
+  "fecha_consulta_utc": "2026-11-01 22:37:39 UTC",
+  "fuentes": [
+    "https://api.github.com/repos/ccortesg/laboratorios-desarrollo-ia/git/ref/heads/main",
+    "https://api.github.com/repos/ccortesg/laboratorios-desarrollo-ia/git/refs/tags"
+  ],
+  "main": {
+    "ref": "refs/heads/main",
+    "sha": "9212ee99b88f70f0b289837b88d6bbf34da91a52"
+  },
+  "etiquetas": [
+    {
+      "ref": "refs/tags/lab-01-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-02-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-03-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-04-v1.1",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-05-v1.0",
+      "sha": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-06-v1.0",
+      "sha": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-07-v1.0",
+      "sha": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-08-v1.0",
+      "sha": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.1",
+      "sha": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.2",
+      "sha": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.3",
+      "sha": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.4",
+      "sha": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+      "tipo": "commit"
+    }
+  ],
+  "alcance": "Consulta nueva de sólo lectura desde esta revisión. No modifica GitHub ni la copia WSL del autor."
+}

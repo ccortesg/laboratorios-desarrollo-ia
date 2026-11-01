@@ -1,0 +1,20 @@
+{
+  "registros": [
+    {
+      "id": "regresiones_evaluador_09",
+      "comando": "python -B -m unittest discover -s herramientas/pruebas -p test_evaluador_laboratorio_09.py -v",
+      "inicio_utc": "2026-11-01T21:26:25.139347+00:00",
+      "fin_utc": "2026-11-01T21:26:25.235678+00:00",
+      "codigo_salida": 0,
+      "alcance": "Nueve regresiones de infraestructura del evaluador; no pruebas funcionales del catálogo.",
+      "stdout": "stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "stderr.txt",
+      "sha256_stderr": "0c1c182ffe0a8e37f67337452bc6c7c8d3fe2821155ef029c6c51823a9a80144",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "0c1c182ffe0a8e37f67337452bc6c7c8d3fe2821155ef029c6c51823a9a80144"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

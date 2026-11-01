@@ -1,0 +1,141 @@
+{
+  "estado_codigo": "base",
+  "criterios_registrados": 10,
+  "ejecutados": 4,
+  "aprobados": 4,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 6,
+  "pruebas": [
+    {
+      "id": "C01",
+      "prueba": "test_c01_habilitado_con_existencias_locales_aparece",
+      "criterio": "C01: habilitado con existencias locales aparece.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": [
+        "A01"
+      ]
+    },
+    {
+      "id": "C02",
+      "prueba": "test_c02_deshabilitado_se_excluye",
+      "criterio": "C02: deshabilitado con existencias locales se excluye.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": [
+        "A01"
+      ]
+    },
+    {
+      "id": "C03",
+      "prueba": "test_c03_sin_existencias_se_excluye",
+      "criterio": "C03: habilitado sin existencias disponibles se excluye.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": [
+        "A01"
+      ]
+    },
+    {
+      "id": "C04",
+      "prueba": "test_c04_existencias_en_otra_ubicacion_se_excluyen",
+      "criterio": "C04: existencias solo en otra ubicacion se excluyen.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": [
+        "A01"
+      ]
+    },
+    {
+      "id": "B01",
+      "prueba": "test_b01_normaliza_espacios_y_mayusculas",
+      "criterio": "B01: buscar LoCaL con espacios en ALFA devuelve A01.",
+      "estado": "NO EJECUTADO",
+      "detalle": "La busqueda aun no existe en el estado base.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": null
+    },
+    {
+      "id": "B02",
+      "prueba": "test_b02_termino_blanco_devuelve_disponibles",
+      "criterio": "B02: termino blanco en ALFA devuelve A01.",
+      "estado": "NO EJECUTADO",
+      "detalle": "La busqueda aun no existe en el estado base.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": null
+    },
+    {
+      "id": "B03",
+      "prueba": "test_b03_sin_coincidencias_devuelve_lista_vacia",
+      "criterio": "B03: termino inexistente en ALFA devuelve lista vacia.",
+      "estado": "NO EJECUTADO",
+      "detalle": "La busqueda aun no existe en el estado base.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": null
+    },
+    {
+      "id": "B04",
+      "prueba": "test_b04_nombre_remoto_no_amplia_disponibilidad",
+      "criterio": "B04: buscar otra en ALFA no incorpora el articulo remoto.",
+      "estado": "NO EJECUTADO",
+      "detalle": "La busqueda aun no existe en el estado base.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": null
+    },
+    {
+      "id": "B05",
+      "prueba": "test_b05_almacen_beta_con_termino_vacio",
+      "criterio": "B05: termino vacio en BETA devuelve A04.",
+      "estado": "NO EJECUTADO",
+      "detalle": "La busqueda aun no existe en el estado base.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": null
+    },
+    {
+      "id": "B06",
+      "prueba": "test_b06_busqueda_normalizada_en_beta",
+      "criterio": "B06: buscar OTRA con espacios en BETA devuelve A04.",
+      "estado": "NO EJECUTADO",
+      "detalle": "La busqueda aun no existe en el estado base.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "codigos_catalogo": null
+    }
+  ]
+}

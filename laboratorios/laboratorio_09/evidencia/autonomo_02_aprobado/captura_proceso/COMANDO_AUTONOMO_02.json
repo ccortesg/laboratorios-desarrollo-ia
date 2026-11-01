@@ -1,0 +1,20 @@
+{
+  "inicio_utc": "2026-11-01T21:39:55.854229+00:00",
+  "comando": [
+    "python",
+    "-B",
+    "verificar.py",
+    "--navegador",
+    "--salida",
+    "<SALIDA>"
+  ],
+  "directorio": "LABORATORIO_09",
+  "dependencia_navegador": "Chrome for Testing 151.0.7922.34 (ejecutable oficial indicado con LAB06_CHROMIUM); Playwright 1.62.1",
+  "cambio_desde_intento_previo": "Sólo instrumentación S06: lectura HTTP/DOM y recuperación; se conserva el contrato. Navegador 151 ya reprodujo el problema con el código anterior en una ejecución aislada.",
+  "fin_utc": "2026-11-01T21:40:29.406380+00:00",
+  "codigo_salida": 0,
+  "stdout": "autonomo_02.stdout.txt",
+  "sha256_stdout": "dee76826ed6f92764194ad56d5df82a352aa66d17a8a77c5822a23321dc2a88b",
+  "stderr": "autonomo_02.stderr.txt",
+  "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

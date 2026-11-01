@@ -1,0 +1,6 @@
+{
+  "estado": "defecto",
+  "almacen": "BETA",
+  "texto": " OTRA ",
+  "articulos": []
+}

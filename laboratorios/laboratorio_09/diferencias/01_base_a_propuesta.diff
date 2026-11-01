@@ -1,0 +1,76 @@
+--- /dev/null
++++ estados/propuesta/politica_consulta.py
+@@ -0,0 +1,42 @@
++"""Contrato de entrada HTTP: sintaxis, ambigüedad y límites antes del dominio."""
++import re
++from urllib.parse import parse_qsl
++
++MAX_QUERY_BYTES = 2048
++MAX_NOMBRE = 80
++
++
++class ErrorConsulta(ValueError):
++    def __init__(self, estado_http, codigo, mensaje):
++        super().__init__(mensaje)
++        self.estado_http = estado_http
++        self.publico = {"error": {"codigo": codigo, "mensaje": mensaje}}
++
++
++def leer_consulta(query):
++    if len(query.encode("utf-8")) > MAX_QUERY_BYTES:
++        raise ErrorConsulta(414, "CONSULTA_DEMASIADO_LARGA", "La consulta supera el tamaño permitido.")
++    if re.search(r"%(?![0-9A-Fa-f]{2})", query):
++        raise ErrorConsulta(400, "CONSULTA_INVALIDA", "La consulta no tiene una codificación válida.")
++    try:
++        pares = parse_qsl(query, keep_blank_values=True, strict_parsing=True,
++                          encoding="utf-8", errors="strict")
++    except (ValueError, UnicodeError):
++        raise ErrorConsulta(400, "CONSULTA_INVALIDA", "La consulta no tiene una codificación válida.") from None
++    # Defecto didáctico: se pierde la duplicidad antes de comprobarla.
++    pares = list(dict(pares).items())
++    vistos = set()
++    for clave, _ in pares:
++        if clave in vistos:
++            raise ErrorConsulta(400, "PARAMETRO_REPETIDO", "Cada parámetro debe aparecer una sola vez.")
++        vistos.add(clave)
++    if vistos - {"almacen", "nombre"}:
++        raise ErrorConsulta(400, "PARAMETRO_DESCONOCIDO", "La consulta contiene un parámetro no admitido.")
++    parametros = dict(pares)
++    almacen = parametros.get("almacen", "")
++    if not almacen.strip():
++        raise ErrorConsulta(400, "ALMACEN_REQUERIDO", "Selecciona un almacén.")
++    nombre = parametros.get("nombre", "")
++    if len(nombre) > MAX_NOMBRE:
++        raise ErrorConsulta(400, "NOMBRE_DEMASIADO_LARGO", "El nombre admite hasta 80 puntos de código Unicode.")
++    return almacen, nombre
+--- estados/base/servidor.py
++++ estados/propuesta/servidor.py
+@@ -4,9 +4,10 @@
+ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+ import json
+ from pathlib import Path
+-from urllib.parse import parse_qs, urlsplit
++from urllib.parse import urlsplit
+ 
+ from resumen import resumir_catalogo
++from politica_consulta import leer_consulta, ErrorConsulta
+ from persistencia import abrir_base, ErrorBase, validar_alias
+ from origen import registrar_origen, validar_destino, ErrorDiagnostico
+ 
+@@ -49,12 +50,11 @@
+     def do_GET(self):
+         partes = urlsplit(self.path)
+         if partes.path == "/api/resumen":
+-            parametros = parse_qs(partes.query, keep_blank_values=True)
+-            almacen = parametros.get("almacen", [""])[0]
+-            if not almacen.strip():
+-                self.responder_json(400, ERROR_ALMACEN)
++            try:
++                almacen, nombre = leer_consulta(partes.query)
++            except ErrorConsulta as error:
++                self.responder_json(error.estado_http, error.publico)
+                 return
+-            nombre = parametros.get("nombre", [""])[0]
+             try:
+                 if self.server.base_persistente is None:
+                     datos = resumir_catalogo(almacen, nombre)

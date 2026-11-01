@@ -1,0 +1,21 @@
+test_comprobador_detecta_modificacion_posterior_sin_escribir (test_huellas_evidencia.HuellasEvidenciaTests.test_comprobador_detecta_modificacion_posterior_sin_escribir)
+H09: la inspección debe aprobar bytes válidos y detectar su cambio. ... ok
+test_conserva_resultados_y_aclara_convenciones (test_huellas_evidencia.HuellasEvidenciaTests.test_conserva_resultados_y_aclara_convenciones)
+H04: sanear no cambia criterios, estados, totales ni códigos de salida. ... ok
+test_huella_inicial_incorrecta_rechaza_sin_reescritura (test_huellas_evidencia.HuellasEvidenciaTests.test_huella_inicial_incorrecta_rechaza_sin_reescritura)
+H06: no debe ocultar una alteración previa recalculando las huellas. ... ok
+test_no_ejecutado_sin_salidas_no_inventa_huellas (test_huellas_evidencia.HuellasEvidenciaTests.test_no_ejecutado_sin_salidas_no_inventa_huellas)
+H05: el registro sin proceso mantiene su ausencia de stdout y stderr. ... ok
+test_preserva_lf_crlf_unicode_y_salida_vacia (test_huellas_evidencia.HuellasEvidenciaTests.test_preserva_lf_crlf_unicode_y_salida_vacia)
+H01/H02: sin sustituciones, los bytes deben conservarse exactamente. ... ok
+test_referencia_externa_se_rechaza_sin_escribir (test_huellas_evidencia.HuellasEvidenciaTests.test_referencia_externa_se_rechaza_sin_escribir)
+H07: el contrato sólo admite nombres simples dentro de la evidencia. ... ok
+test_registro_incompleto_no_se_omite_silenciosamente (test_huellas_evidencia.HuellasEvidenciaTests.test_registro_incompleto_no_se_omite_silenciosamente)
+H06/H07: una salida declarada sin huella es un registro incompleto. ... ok
+test_saneamiento_actualiza_huella_final_y_conserva_captura (test_huellas_evidencia.HuellasEvidenciaTests.test_saneamiento_actualiza_huella_final_y_conserva_captura)
+H03/H08: una sustitución real cambia la huella final, no la capturada. ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.020s
+
+OK

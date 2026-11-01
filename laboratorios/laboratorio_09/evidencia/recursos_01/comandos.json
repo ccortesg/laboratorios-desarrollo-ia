@@ -1,0 +1,23 @@
+{
+  "convenciones": "Cuatro regresiones de infraestructura; no se suman a casos funcionales.",
+  "registros": [
+    {
+      "inicio_utc": "2026-11-01T21:32:52.610836+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_recursos.py"
+      ],
+      "directorio": "LABORATORIO_09",
+      "tipo": "infraestructura; no se suma a casos funcionales",
+      "fin_utc": "2026-11-01T21:32:52.869525+00:00",
+      "codigo_salida": 0,
+      "estado": "APROBADO",
+      "stdout": "recursos_01.stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "recursos_01.stderr.txt",
+      "sha256_stderr": "ad5c0b061e429f995e66074e10da97ceccdc3cde8489ad02dd8dbf6de83feea8",
+      "id": "regresiones_recursos"
+    }
+  ]
+}

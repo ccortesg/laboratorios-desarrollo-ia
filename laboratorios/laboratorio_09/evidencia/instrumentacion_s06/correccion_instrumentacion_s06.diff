@@ -1,0 +1,30 @@
+--- pruebas_seguridad_navegador.cjs (antes)
++++ pruebas_seguridad_navegador.cjs (corregido)
+@@ -10,7 +10,7 @@
+   id: "S06", entrada: { almacen: "ALFA", nombre_largo_puntos_codigo: 81,
+     secuencia: ["consulta válida", "consulta demasiado larga", "consulta válida"] },
+   esperado: { antes: { http: 200, estado: "exito", codigos: ["A01", "A03"] },
+-    rechazo: { http: 400, codigo: "NOMBRE_DEMASIADO_LARGO", estado: "error",
++    rechazo: { http: 400, estado: "error",
+       resultado_oculto: true, error_visible: true, codigos: [], controles_habilitados: true },
+     despues: { http: 200, estado: "exito", codigos: ["A03"], error_visible: false } },
+   observado: {}, estado: "NO EJECUTADO", tipo_error: null, detalle: ""
+@@ -40,7 +40,9 @@
+   await page.waitForFunction(() => !document.querySelector("#consultar").disabled
+     && ["exito", "vacio", "error"].includes(document.querySelector("#mensaje").dataset.estado));
+   return {
+-    http: respuesta.status(), json: await respuesta.json(),
++    // La pantalla rechaza HTTP no satisfactorio sin consumir su cuerpo. S06
++    // observa la respuesta y el DOM; S04.a verifica por HTTP el JSON exacto.
++    http: respuesta.status(),
+     estado: await page.locator("#mensaje").getAttribute("data-estado"),
+     codigos: await page.locator("#codigos li").allTextContents(),
+     resultado_oculto: await page.locator("#resultado").isHidden(),
+@@ -78,7 +80,6 @@
+     assert.equal(antes.http, 200); assert.equal(antes.estado, "exito");
+     assert.deepEqual(antes.codigos, ["A01", "A03"]);
+     assert.equal(rechazo.http, 400);
+-    assert.equal(rechazo.json.error.codigo, "NOMBRE_DEMASIADO_LARGO");
+     assert.equal(rechazo.estado, "error");
+     assert.equal(rechazo.resultado_oculto, true); assert.equal(rechazo.error_visible, true);
+     assert.deepEqual(rechazo.codigos, []); assert.equal(rechazo.controles_habilitados, true);

@@ -1,0 +1,99 @@
+{
+  "estado": "APROBADO",
+  "fecha_auditoria_utc": "2026-11-01T22:46:38.096708+00:00",
+  "objeto": "Revisión técnica de la integración del laboratorio 9 aportada por el autor como ejecución Codex en WSL.",
+  "no_es_cierre_publicado": true,
+  "zip_recibido": {
+    "fecha_consulta_utc": "2026-11-01T22:36:58.032405+00:00",
+    "archivo": "EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+    "sha256": "6aaeb6ce9e0cf781239499fae2f57bb147b5b2b07b7a20d5cfbd5d61a4ffb239",
+    "bytes": 412572,
+    "entradas": 453,
+    "bytes_extraidos": 1968076,
+    "crc": "APROBADO",
+    "rutas": "APROBADO",
+    "archivo_original_conservado": true
+  },
+  "base": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+  "arbol_preparado": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+  "rama_aportada": "codex/integracion-laboratorio-09",
+  "funcional": {
+    "laboratorios": 9,
+    "baterias": 92,
+    "ejecutados": 805,
+    "aprobados": 781,
+    "fallidos": 24,
+    "bloqueados": 0,
+    "no_ejecutados_en_baterias": 48,
+    "no_ejecutados_fuera_de_baterias": 10
+  },
+  "errores_de_ejecucion": 0,
+  "laboratorio_09": {
+    "base": {
+      "casos_registrados": 74,
+      "ejecutados": 74,
+      "aprobados": 65,
+      "fallidos": 9,
+      "fallos_de_asercion": 9,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    "propuesta": {
+      "casos_registrados": 74,
+      "ejecutados": 74,
+      "aprobados": 71,
+      "fallidos": 3,
+      "fallos_de_asercion": 3,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    "solucion": {
+      "casos_registrados": 74,
+      "ejecutados": 74,
+      "aprobados": 74,
+      "fallidos": 0,
+      "fallos_de_asercion": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    }
+  },
+  "infraestructura_separada": {
+    "recolector": 8,
+    "evaluador_09": 9,
+    "recursos_sqlite": 4,
+    "estado": "APROBADO"
+  },
+  "integridad": {
+    "archivos_zip": 453,
+    "archivos_manifestados": 452,
+    "huellas_finales_declaradas": 210,
+    "huellas_finales_coincidentes": 210,
+    "fuentes_referenciadas": 387,
+    "fuentes_coincidentes": 387,
+    "insumos_exactos": 8,
+    "archivos_protegidos": 1502
+  },
+  "alcances": {
+    "ejecucion_funcional_aportada": "APROBADO",
+    "auditoria_local_evidencia": "APROBADO",
+    "reconsulta_GitHub": "APROBADO",
+    "nueva_bateria_funcional_en_esta_revision": "NO EJECUTADO",
+    "reconstruccion_dos_capturas_originales_no_incluidas": "NO EJECUTADO",
+    "commit_de_cierre": "NO EJECUTADO",
+    "integracion_main": "NO EJECUTADO",
+    "creacion_etiquetas_nuevas": "NO EJECUTADO",
+    "push": "NO EJECUTADO",
+    "revision_editorial_autor": "PENDIENTE capítulos 1–9"
+  },
+  "incidencias_pendientes": [],
+  "limites": [
+    "Las huellas finales y la coherencia de contenido no son una autenticación retrospectiva del equipo productor.",
+    "La copia WSL del autor no fue accedida directamente. Su estado se acredita mediante los registros recibidos.",
+    "Las dos capturas originales distintas de sus bytes finales se conservaron fuera del ZIP según su productor; no se pueden reconstruir desde el hash.",
+    "Las URL del repositorio autorizado se conservan en documentación operativa.",
+    "La aprobación técnica no autoriza por sí misma una publicación; el prompt de cierre es un encargo futuro."
+  ]
+}

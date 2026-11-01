@@ -1,0 +1,23 @@
+{
+  "inicio_utc": "2026-11-01T21:35:54.329163+00:00",
+  "comando": [
+    "node",
+    "pruebas_seguridad_navegador.cjs",
+    "--url",
+    "<URL_LOCAL>",
+    "--json",
+    "<TRABAJO>/navegador.json"
+  ],
+  "instrumentacion": "DEBUG=pw:api; controlador y CJS originales sin modificación",
+  "timeout_segundos": 70,
+  "codigo_salida": null,
+  "estado": "FALLIDO",
+  "tipo_error": "TimeoutExpired",
+  "fin_utc": "2026-11-01T21:37:04.406606+00:00",
+  "stdout": "stdout.txt",
+  "sha256_captura_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "stderr.txt",
+  "sha256_captura_stderr": "30ca98293e53fde7578734477f587ebf13c2c567fbabf4c3fc5d0e829ed89883",
+  "sha256_stderr": "dfe30659b9fb4762c5de893f3c03b521eeb2c18132f3ee920217274c8dfdaa69"
+}

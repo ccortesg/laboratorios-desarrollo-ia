@@ -1,0 +1,692 @@
+{
+  "bateria": "integracion",
+  "estado_codigo": "copia_del_lector",
+  "casos_registrados": 17,
+  "criterios_distintos": 8,
+  "ejecutados": 17,
+  "aprobados": 17,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "I01",
+      "prueba": "test_i01_archivo_valido_y_catalogo_misma_base",
+      "criterio": "I01: la actualización absoluta cambia la disponibilidad real del catálogo.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "ALFA": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "BETA": {
+          "almacen": "BETA",
+          "total": 0,
+          "codigos": []
+        },
+        "existencias": [
+          [
+            "A01",
+            "ALFA",
+            5
+          ],
+          [
+            "A02",
+            "ALFA",
+            8
+          ],
+          [
+            "A03",
+            "ALFA",
+            3
+          ],
+          [
+            "A04",
+            "BETA",
+            0
+          ]
+        ],
+        "habilitado_A02": 0
+      },
+      "observado": {
+        "ALFA": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "BETA": {
+          "almacen": "BETA",
+          "total": 0,
+          "codigos": []
+        },
+        "existencias": [
+          [
+            "A01",
+            "ALFA",
+            5
+          ],
+          [
+            "A02",
+            "ALFA",
+            8
+          ],
+          [
+            "A03",
+            "ALFA",
+            3
+          ],
+          [
+            "A04",
+            "BETA",
+            0
+          ]
+        ],
+        "habilitado_A02": 0
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I02.a",
+      "prueba": "test_i02a_cabecera_incorrecta",
+      "criterio": "I02.a: encabezado con campo incorrecto o en otro orden se rechaza.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "5999228e282a41782fe0d5c0a930791854dc3b223060adfdc1d61e1ed633a2b5"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "CABECERA",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "5999228e282a41782fe0d5c0a930791854dc3b223060adfdc1d61e1ed633a2b5",
+          "filas_leidas": 0,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 1,
+              "campo": "cabecera",
+              "codigo": "CABECERA",
+              "mensaje": "El encabezado debe coincidir con el contrato."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I02.b",
+      "prueba": "test_i02b_columnas_extra_o_ausentes",
+      "criterio": "I02.b: una fila debe tener exactamente tres columnas.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "fd02b896f429c715167c2636f3c05de43033e0599a80f396113143f27bf06363"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "COLUMNAS",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "fd02b896f429c715167c2636f3c05de43033e0599a80f396113143f27bf06363",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "fila",
+              "codigo": "COLUMNAS",
+              "mensaje": "Se requieren exactamente tres campos."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I02.c",
+      "prueba": "test_i02c_codificacion_invalida",
+      "criterio": "I02.c: bytes que no representan UTF-8 se rechazan.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "b68bb8b3cee426774c48aa1619fd58627fbbfd206065c4aa94ac3d8af6191506"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "CODIFICACION",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "b68bb8b3cee426774c48aa1619fd58627fbbfd206065c4aa94ac3d8af6191506",
+          "filas_leidas": 0,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": null,
+              "campo": "archivo",
+              "codigo": "CODIFICACION",
+              "mensaje": "Se requiere UTF-8 válido."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I02.d",
+      "prueba": "test_i02d_archivo_sin_datos",
+      "criterio": "I02.d: vacío y encabezado sin registros no producen un éxito vacío.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "fb83265a6ee540a7be1aa2b417cb7569bddc905e023a07f9c733b5724aecfd87"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "SIN_DATOS",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "fb83265a6ee540a7be1aa2b417cb7569bddc905e023a07f9c733b5724aecfd87",
+          "filas_leidas": 0,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 1,
+              "campo": "archivo",
+              "codigo": "SIN_DATOS",
+              "mensaje": "Se requiere al menos una fila de datos."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I02.e",
+      "prueba": "test_i02e_fila_vacia",
+      "criterio": "I02.e: una fila vacía se rechaza y no se omite silenciosamente.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "dbba28366d4914c14afde5d1329699239dae2db069fc2674c5fb57669abc03f6"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "COLUMNAS",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "dbba28366d4914c14afde5d1329699239dae2db069fc2674c5fb57669abc03f6",
+          "filas_leidas": 2,
+          "filas_validadas": 1,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 3,
+              "campo": "fila",
+              "codigo": "COLUMNAS",
+              "mensaje": "Se requieren exactamente tres campos."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I03.a",
+      "prueba": "test_i03a_articulo_desconocido",
+      "criterio": "I03.a: no se crea un artículo desconocido al importar.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "4ee3806ba74481311288fb4e70f2023f4f3ede46ae5c1adcf81ea4ad2104327b"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "ARTICULO_DESCONOCIDO",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "4ee3806ba74481311288fb4e70f2023f4f3ede46ae5c1adcf81ea4ad2104327b",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "codigo_articulo",
+              "codigo": "ARTICULO_DESCONOCIDO",
+              "mensaje": "El código exacto no existe."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I03.b",
+      "prueba": "test_i03b_almacen_desconocido",
+      "criterio": "I03.b: no se crea un almacén desconocido al importar.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "1aa86b696406c90783b996b41e02a10020d08e6f6172c9c340d57602a3b4623f"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "ALMACEN_DESCONOCIDO",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "1aa86b696406c90783b996b41e02a10020d08e6f6172c9c340d57602a3b4623f",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "almacen",
+              "codigo": "ALMACEN_DESCONOCIDO",
+              "mensaje": "El almacén exacto no existe."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I03.c",
+      "prueba": "test_i03c_identificadores_exactos",
+      "criterio": "I03.c: los códigos no heredan strip o casefold de la búsqueda por nombre.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "8ade12835340be59580a1f1005818d3e762fd9a7384cd75a8e11075a71d95bb8"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "ARTICULO_DESCONOCIDO",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "8ade12835340be59580a1f1005818d3e762fd9a7384cd75a8e11075a71d95bb8",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "codigo_articulo",
+              "codigo": "ARTICULO_DESCONOCIDO",
+              "mensaje": "El código exacto no existe."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I04.a",
+      "prueba": "test_i04a_cantidad_negativa",
+      "criterio": "I04.a: una cantidad negativa se rechaza antes de escribir.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "68cf644fae7ed92742e04f906fc2fb351f64c9bc363d5618b807eb2605b7559a"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "CANTIDAD_INVALIDA",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "68cf644fae7ed92742e04f906fc2fb351f64c9bc363d5618b807eb2605b7559a",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "existencias",
+              "codigo": "CANTIDAD_INVALIDA",
+              "mensaje": "Se requiere un entero entre 0 y 2147483647."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I04.b",
+      "prueba": "test_i04b_cantidad_fraccionaria",
+      "criterio": "I04.b: una cantidad fraccionaria no se redondea silenciosamente.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "22d4b621ab4e26b2f13d1bf06a8e0c02db4fa2f5a08e321b79485ffa4befa37c"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "CANTIDAD_INVALIDA",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "22d4b621ab4e26b2f13d1bf06a8e0c02db4fa2f5a08e321b79485ffa4befa37c",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "existencias",
+              "codigo": "CANTIDAD_INVALIDA",
+              "mensaje": "Se requiere un entero entre 0 y 2147483647."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I04.c",
+      "prueba": "test_i04c_cantidad_no_numerica",
+      "criterio": "I04.c: texto y campos vacíos no se convierten a cero.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "53ccebfa13912a95aaf0eedf6d2524493d4796c25cf3e6cdd0a14b249836af74"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "CANTIDAD_INVALIDA",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "53ccebfa13912a95aaf0eedf6d2524493d4796c25cf3e6cdd0a14b249836af74",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "existencias",
+              "codigo": "CANTIDAD_INVALIDA",
+              "mensaje": "Se requiere un entero entre 0 y 2147483647."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I04.d",
+      "prueba": "test_i04d_cantidad_fuera_de_rango",
+      "criterio": "I04.d: el rango contractual se comprueba antes de SQLite.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "9e5c9494860a5169d94c38ff644879fec634bf71e9b9358973b1f8e30ccea464"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "CANTIDAD_INVALIDA",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "9e5c9494860a5169d94c38ff644879fec634bf71e9b9358973b1f8e30ccea464",
+          "filas_leidas": 1,
+          "filas_validadas": 0,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 2,
+              "campo": "existencias",
+              "codigo": "CANTIDAD_INVALIDA",
+              "mensaje": "Se requiere un entero entre 0 y 2147483647."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I05",
+      "prueba": "test_i05_par_duplicado",
+      "criterio": "I05: se rechaza el par repetido sin escoger primera o última fila.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "PAR_DUPLICADO",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "informe": {
+          "estado": "RECHAZADO",
+          "sha256_fuente": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6",
+          "filas_leidas": 2,
+          "filas_validadas": 1,
+          "filas_aplicadas": 0,
+          "filas_sin_cambio": 0,
+          "errores": [
+            {
+              "fila": 3,
+              "campo": "fila",
+              "codigo": "PAR_DUPLICADO",
+              "mensaje": "El par artículo–almacén está repetido."
+            }
+          ]
+        },
+        "sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I06",
+      "prueba": "test_i06_error_tardio_sin_cambio_parcial",
+      "criterio": "I06: validación tardía y escritura rechazada conservan las tres tablas.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+      },
+      "esperado": {
+        "estado": "RECHAZADO",
+        "codigo_error": "ESCRITURA",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "validacion_tardia": {
+          "informe": {
+            "estado": "RECHAZADO",
+            "sha256_fuente": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+            "filas_leidas": 2,
+            "filas_validadas": 1,
+            "filas_aplicadas": 0,
+            "filas_sin_cambio": 0,
+            "errores": [
+              {
+                "fila": 3,
+                "campo": "existencias",
+                "codigo": "CANTIDAD_INVALIDA",
+                "mensaje": "Se requiere un entero entre 0 y 2147483647."
+              }
+            ]
+          },
+          "sin_cambios": true
+        },
+        "fallo_escritura_controlado": {
+          "informe": {
+            "estado": "RECHAZADO",
+            "sha256_fuente": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+            "filas_leidas": 4,
+            "filas_validadas": 4,
+            "filas_aplicadas": 0,
+            "filas_sin_cambio": 0,
+            "errores": [
+              {
+                "fila": null,
+                "campo": "base",
+                "codigo": "ESCRITURA",
+                "mensaje": "No se aplicó el archivo; la transacción se revirtió."
+              }
+            ]
+          },
+          "sin_cambios": true
+        },
+        "isolation_level": null,
+        "transaccion_cerrada": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I07",
+      "prueba": "test_i07_repeticion_y_pares_omitidos",
+      "criterio": "I07: dos importaciones sobre la misma base son idempotentes.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "cantidad_A01": 5,
+        "mismo_estado": true,
+        "pares_omitidos_intactos": true,
+        "cambios_segunda": 0
+      },
+      "observado": {
+        "cantidad_A01": 5,
+        "mismo_estado": true,
+        "pares_omitidos_intactos": true,
+        "cambios_segunda": 0
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "I08",
+      "prueba": "test_i08_informe_y_error_localizable",
+      "criterio": "I08: SHA-256 y conteos describen los bytes leídos y el resultado real.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "estado": "APLICADO",
+        "sha256_fuente": "b9ede3a863457bd8c7b1a68ecaa64e00fdee9febfc8a53c855b6c5d28d917f50",
+        "filas_leidas": 1,
+        "filas_validadas": 1,
+        "filas_aplicadas": 1,
+        "filas_sin_cambio": 0,
+        "errores": []
+      },
+      "observado": {
+        "estado": "APLICADO",
+        "sha256_fuente": "b9ede3a863457bd8c7b1a68ecaa64e00fdee9febfc8a53c855b6c5d28d917f50",
+        "filas_leidas": 1,
+        "filas_validadas": 1,
+        "filas_aplicadas": 1,
+        "filas_sin_cambio": 0,
+        "errores": []
+      },
+      "comando_terminal": null
+    }
+  ]
+}

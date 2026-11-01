@@ -1,0 +1,46 @@
+{
+  "estado": "APROBADO",
+  "insumos": [
+    {
+      "archivo": "CAPITULO_08_v1.0.docx",
+      "bytes": 51011,
+      "sha256": "ab1bf895bd007dd1a4deb3fe9616d23e752b694b027f920585e64fb4b28e8117"
+    },
+    {
+      "archivo": "CAPITULO_08_v1.0.md",
+      "bytes": 31525,
+      "sha256": "3b68f764acd2a9326777acb46c7703233dbbe4f5d211ee6b2a6f3c53b4e529e5"
+    },
+    {
+      "archivo": "CIERRE_LABORATORIO_08_CONFIRMADO_v1.0.md",
+      "bytes": 5345,
+      "sha256": "48bd1ecc13edab9e343d6e85ce9dae4eaf7c581bd4c286b4d20603df43ca15b4"
+    },
+    {
+      "archivo": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md",
+      "bytes": 10048,
+      "sha256": "2f57a9c3304b56c6c662a39afaaf8e893934725811cf5d46c518572b0b776357"
+    },
+    {
+      "archivo": "ESTADO_DEL_LIBRO_v1.7.4.md",
+      "bytes": 1840,
+      "sha256": "91addfbd951c1c6305ca4192191c729881ee4016ef55e79b735bb7fe0f8502fe"
+    },
+    {
+      "archivo": "ESTADO_REPOSITORIO_v1.6.4.md",
+      "bytes": 1841,
+      "sha256": "bc9610a714ff83cd1aa10923ae311467dce52653b0dce50baa000137143b8ba9"
+    },
+    {
+      "archivo": "LABORATORIO_08_v1.0.1.zip",
+      "bytes": 163680,
+      "sha256": "8e445b1ecb195e96999f9ab7123e4bbeb93ce43a056a0fefbb91e3379f617cea"
+    },
+    {
+      "archivo": "REVISION_CIERRE_LABORATORIO_08_WSL_v1.0.zip",
+      "bytes": 580070,
+      "sha256": "ab564ebf0f690ca7f386678c31b8400a04205e4e34124b92441eacc81a59445e"
+    }
+  ],
+  "limite": "Identidades de los archivos utilizados; el contenido se revisó por separado. No se atribuye su autoría o ejecución a esta nueva entrega."
+}

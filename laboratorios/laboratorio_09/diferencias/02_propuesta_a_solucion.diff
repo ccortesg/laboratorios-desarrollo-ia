@@ -1,0 +1,12 @@
+--- estados/propuesta/politica_consulta.py
++++ estados/solucion/politica_consulta.py
+@@ -23,8 +23,7 @@
+                           encoding="utf-8", errors="strict")
+     except (ValueError, UnicodeError):
+         raise ErrorConsulta(400, "CONSULTA_INVALIDA", "La consulta no tiene una codificación válida.") from None
+-    # Defecto didáctico: se pierde la duplicidad antes de comprobarla.
+-    pares = list(dict(pares).items())
++    # La lista conserva cada aparición; todavía no se colapsan claves.
+     vistos = set()
+     for clave, _ in pares:
+         if clave in vistos:

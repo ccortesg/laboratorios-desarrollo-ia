@@ -1,14 +1,16 @@
 # Laboratorios de desarrollo de software con IA
 
+**Cierre del laboratorio 9 preparado, publicación pendiente:** revisión WSL incorporada; estados [libro 1.8.2](docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md) y [repositorio 1.7.2](docs/estados/ESTADO_REPOSITORIO_v1.7.2.md). Consulta [la revisión](evidencia_integracion/revision_laboratorio_09_wsl/README.md) y la [continuidad vigente](CONTINUIDAD.md). El encargo del autor autoriza el commit y la publicación limitada; el comprobante posterior se entrega fuera del commit que acredita.
+
 **Actualización técnica del laboratorio 8:** distribución [1.0.1](distribuciones/LABORATORIO_08_v1.0.1.zip), con cierre explícito de SQLite en las pruebas. La ejecución Windows original falló y se conserva; la corrección fue ejecutada por el autor y su evidencia está auditada como APROBADO. Consulta [continuidad vigente](CONTINUIDAD.md).
 
 Material práctico de **Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro**.
 
-Ocho laboratorios locales sobre un catálogo ficticio de solicitudes e inventario. Practican una regla de negocio, la preparación de contexto, encargos de generación/refactorización/depuración, la revisión de cambios en Git, la comparación entre sugerencias y encargos delegados, el recorrido de una aplicación web local, la importación transaccional de datos externos sintéticos y la investigación del origen de datos entre procesos. Todos los datos y escenarios se crearon para el libro.
+Nueve laboratorios locales sobre un catálogo ficticio de solicitudes e inventario. Practican una regla de negocio, la preparación de contexto, encargos de generación/refactorización/depuración, la revisión de cambios en Git, la comparación entre sugerencias y encargos delegados, el recorrido de una aplicación web local, la importación transaccional de datos externos sintéticos la investigación del origen de datos entre procesos y una política de entrada HTTP con casos negativos y recuperación. Todos los datos y escenarios se crearon para el libro.
 
 **Promesa:** aprende a transformar problemas de software en instrucciones claras, cambios revisables y resultados comprobables, aprovechando la IA desde tu primera sesión.
 
-**Estado editorial:** los capítulos 1 a 8 siguen pendientes de revisión del autor. La integración de este repositorio no equivale a aprobación editorial. El manuscrito se conserva en las entregas editoriales del libro.
+**Estado editorial:** los capítulos 1 a 9 siguen pendientes de revisión del autor. La integración de este repositorio no equivale a aprobación editorial. El manuscrito se conserva en las entregas editoriales del libro.
 
 ## Empieza aquí
 
@@ -31,7 +33,7 @@ python herramientas/verificar_todo.py --salida trabajo/verificacion_02
 Sin `--navegador`, el comando anterior aprueba únicamente el alcance ejecutado; el global y el extremo a extremo quedan **NO EJECUTADO**. El código 0 no acredita la interfaz. Para solicitar el recorrido completo, prepara la dependencia opcional y ejecuta desde la raíz:
 
 ```bash
-cd laboratorios/laboratorio_08
+cd laboratorios/laboratorio_09
 npm install --ignore-scripts --package-lock=false
 npx --no-install playwright install chromium
 cd ../..
@@ -52,6 +54,7 @@ Un resultado global **APROBADO** exige también la interacción real del navegad
 | [06: aplicación web local](laboratorios/laboratorio_06/README.md) | 1.0 | Formulario, HTTP real, resumen, W01–W06 y defecto de selección detectado en navegador. |
 | [07: datos e integraciones](laboratorios/laboratorio_07/README.md) | 1.0 | Contrato CSV, existencias absolutas, atomicidad, idempotencia e I01–I08. |
 | [08: depuración con evidencia](laboratorios/laboratorio_08/README.md) | 1.0.1 | Persistencia explícita, procesos separados, origen efectivo, hipótesis discriminantes y D01–D08. |
+| [09: confiabilidad y seguridad](laboratorios/laboratorio_09/README.md) | 1.0 | Política de query HTTP, límites de confianza, casos negativos, recuperación y S01–S08. |
 
 **Antes de abrir las instrucciones históricas del laboratorio 4:** su carpeta visible en `laboratorios/` es una instantánea de lectura sin un Git anidado. Sus README originales describen el paquete autónomo. Para seguir el ejercicio de ramas y diferencias, prepara la copia independiente como se indica a continuación.
 
@@ -161,17 +164,29 @@ El escenario D04 mantiene un servidor en funcionamiento, observa la pantalla ini
 
 La evidencia original del laboratorio está dentro de su distribución y en `evidencia_integracion/laboratorio_08_v1.0/`. La ejecución Windows corregida del 8, sus auditorías y el ZIP recibido están en `evidencia_integracion/cierre_laboratorio_08_windows/`. La evidencia Windows del 7 sigue separada en `evidencia_integracion/cierre_laboratorio_07_confirmado/`. Cada ejecución conserva su atribución; ninguna acredita por sí misma uso de una herramienta comercial.
 
+## Practicar el laboratorio 9
+
+Extrae `distribuciones/LABORATORIO_09_v1.0.zip` en una carpeta nueva. Prepara su dependencia de navegador y ejecuta `python -B verificar.py --navegador --salida trabajo/una_ejecucion_nueva` desde la raíz extraída.
+
+La base conserva los 62 casos de la solución corregida del 8. La política nueva valida la query antes de consultar el catálogo: rechaza repeticiones, claves adicionales, codificación inválida y tamaños fuera del contrato. La propuesta pierde duplicados al construir un diccionario prematuramente; la solución los detecta cuando todavía existen los pares originales.
+
+El autónomo registró APROBADO: 27 baterías, 222 ejecuciones, 210 APROBADO y doce FALLIDO previstos; 54/54 huellas finales. Los nueve fallos de base pertenecen a la política nueva, y los tres de propuesta son exclusivamente S02.a/S02.b/S02.c. La solución aprobó 74/74. El ZIP descomprimido reprodujo esos resultados. La evidencia conserva un intento con dos errores inesperados del instrumento S06 y su corrección, sin convertirlos en fallos didácticos.
+
+El conjunto nuevo de nueve laboratorios obtuvo APROBADO: 92 baterías, 805 ejecuciones, 781 APROBADO y 24 FALLIDO didácticos, cero bloqueos, 48 NO EJECUTADO en baterías y diez ausentes aparte; 156/156 huellas funcionales. Las ocho pruebas del recolector, nueve del evaluador y cuatro de recursos SQLite se registran separadamente. La ejecución de esta entrega es Linux; no acredita Windows ni uso de herramientas comerciales.
+
+Consulta `contexto/CONTRATO_SEGURIDAD.md` dentro del laboratorio y `evidencia_integracion/laboratorio_09_v1.0/` para los comandos y resultados. La política y los ensayos son acotados a este proyecto local; no constituyen una evaluación integral de seguridad productiva.
+
 ## Dónde está cada cosa
 
 | Ruta | Función |
 | --- | --- |
 | `laboratorios/` | Código, datos sintéticos, contexto, prompts y evidencia histórica importados sin modificar sus bytes. |
-| `distribuciones/` | Los ocho ZIP autónomos y sus SHA-256. |
+| `distribuciones/` | Los paquetes autónomos actuales, versiones históricas y sus SHA-256. |
 | `historiales/` | Bundle con la historia original del ejercicio Git del laboratorio 4. |
 | `herramientas/` | Preparación y verificación común; navegador automatizado opcional con dependencias de prueba. |
 | `evidencia_integracion/2026-10-30/` | Registros históricos saneados de la primera integración. |
 | `trabajo/` | Copias de práctica y resultados personales; Git la ignora. |
-| [PROCEDENCIA.json](PROCEDENCIA.json) | Huellas por archivo y paquete; las entradas anteriores se conservan y se añade la del laboratorio 8. |
+| [PROCEDENCIA.json](PROCEDENCIA.json) | Huellas por archivo y paquete; las entradas anteriores se conservan y se añade la del laboratorio 9. |
 | [VERSIONES.md](VERSIONES.md) | Correspondencia entre versiones y etiquetas del repositorio. |
 | [CONTINUIDAD.md](CONTINUIDAD.md) | Decisiones, evidencia, pendientes y siguiente tarea. |
 
@@ -185,7 +200,9 @@ Los prompts incluidos son ejemplos didácticos. Ejecutar los scripts localmente 
 
 ## Situación remota y continuidad
 
-La base de integración es `46f389bc4acf3e231a8eb1a1bb3972db0fe7e622`, árbol `b123b5969e8077ba0cb3c4eedc9b348f94294652`. La consulta de preparación del cierre confirma main y las once etiquetas históricas conservadas. El código del árbol preparado `9ea6109fe8e89a2785bdce255252ffaabea1d122` ya aprobó en Windows. La integración técnica 1.4 incorpora esta documentación para el cierre autorizado: `lab-08-v1.0` identificará la primera publicación del laboratorio 8 con la distribución corregida 1.0.1, y `repositorio-v1.4` el conjunto. La publicación sólo se acredita después de consultar sus referencias reales. Consulta `docs/estados/ESTADO_REPOSITORIO_v1.6.3.md`; las versiones documentales y técnicas son independientes.
+Base registrada: `9212ee99b88f70f0b289837b88d6bbf34da91a52`, árbol `d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0`. La consulta del 1 de noviembre de 2026 a las 21:50:33 UTC confirmó main, lab-08-v1.0 y repositorio-v1.4 en ese commit y las trece etiquetas intactas. El cierre del laboratorio 8 está publicado; se incorporan sus estados posteriores 1.7.4/1.6.4 y su revisión, conservando la precisión de entorno WSL y el antecedente funcional Windows.
+
+La integración técnica 1.5 está auditada en WSL sobre `251105483bc5bef040c57dc3a036d5bc3a7e0da0`. El cierre documental incorpora los estados 1.8.1/1.7.1 exactos y prepara 1.8.2/1.7.2. La publicación autorizada de main y únicamente `lab-09-v1.0`/`repositorio-v1.5` se comprobará después, conservando todas las referencias históricas; sus comprobantes quedarán fuera del commit que acreditan. Las 805 ejecuciones son evidencia anterior: el cierre documental ejecuta las ocho pruebas del recolector y comprueba identidad y huellas. Las versiones documentales y técnicas son independientes; capítulos 1–9 pendientes de revisión editorial.
 
 ## Distribución y revisión
 

@@ -4,7 +4,7 @@
 
 Este repositorio reúne ejercicios sintéticos del libro «Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro». El principio rector es definir bien el trabajo y reconocer con evidencia cuándo está terminado.
 
-Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–8 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
+Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–9 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
 
 ## Trabajo autorizado
 
@@ -56,10 +56,18 @@ Clasifica cada comprobación como APROBADO, FALLIDO, BLOQUEADO o NO EJECUTADO. D
 
 Revisa texto, código, datos, rutas, resultados, metadatos e historial. Omite personas, clientes, marcas laborales, direcciones identificables, secretos y combinaciones que reconozcan sistemas reales. Las tecnologías públicas necesarias para enseñar pueden nombrarse. Para afirmaciones actuales sobre productos, utiliza fuentes oficiales y registra la fecha de consulta.
 
-Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial de esta preparación es ESTADO_DEL_LIBRO_v1.7.3.md y el operativo es ESTADO_REPOSITORIO_v1.6.3.md. Los estados posteriores del cierre confirmado se generan con las referencias observadas después de publicar. El cierre Windows y remoto del laboratorio 7 está confirmado por los estados 1.6.2 y 1.5.2, conservados como antecedentes. La producción del capítulo 8 conserva sin cambios el auxiliar de huellas y sus ocho pruebas. Las huellas finales corresponden a bytes guardados; los históricos nunca se reparan retroactivamente.
+Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial de esta preparación es ESTADO_DEL_LIBRO_v1.8.2.md y el operativo es ESTADO_REPOSITORIO_v1.7.2.md; las revisiones recibidas 1.8.1/1.7.1 se conservan exactas. Los estados posteriores al cierre del laboratorio 8, libro 1.7.4 y repositorio 1.6.4, y su aclaración de entorno WSL ya están incorporados como antecedentes exactos. El cierre Windows y remoto del laboratorio 7 está confirmado por los estados 1.6.2 y 1.5.2, conservados como antecedentes. La producción del capítulo 8 conserva sin cambios el auxiliar de huellas y sus ocho pruebas. Las huellas finales corresponden a bytes guardados; los históricos nunca se reparan retroactivamente.
 
-La producción del capítulo 8 terminó preparada para revisión. La ejecución Windows posterior ya está auditada y APROBADO. En el encargo de cierre vigente, el autor autoriza expresamente crear el commit, integrar main y publicar únicamente las etiquetas nuevas lab-08-v1.0 y repositorio-v1.4 junto con main. Conservar los avances y etiquetas históricas; no forzar referencias. Esa autorización no acredita que las operaciones hayan ocurrido: el comprobante se genera después de verificar las referencias remotas. No redactar el capítulo 9.
+El cierre del laboratorio 8 está confirmado en 9212ee99b88f70f0b289837b88d6bbf34da91a52. El autor ha invocado el encargo de cierre del laboratorio 9: autoriza incorporar documentación y evidencia revisadas, crear el commit, integrar en main conservando avances y publicar mediante push atómico sólo main y las etiquetas ligeras nuevas lab-09-v1.0 y repositorio-v1.5. El estado de preparación conserva la publicación pendiente; registra el resultado real y los estados posteriores fuera del commit que acreditan. Conserva las trece etiquetas históricas y cualquier referencia añadida después, sin forzar ni reaplicar el parche. No redactar todavía el capítulo 10.
 
 ## Corrección de recursos del laboratorio 8
 
 La ejecución Windows v1.0 resultó FALLIDO por limpieza de bases abiertas y está auditada. La distribución 1.0.1 corrige los auxiliares y añade cuatro pruebas de recursos. No confundir las nuevas regresiones con criterios funcionales. Conservar captura Windows fallida, distribuciones anteriores y pruebas del recolector. La ejecución corregida Windows del autor está APROBADO y conservada en evidencia_integracion/cierre_laboratorio_08_windows/. El cierre añade documentación y evidencia, conservando el código probado. No reaplicar la corrección ni reutilizar su auxiliar sobre un árbol documental distinto.
+
+## Incremento de confiabilidad y seguridad del laboratorio 9
+
+Lee `laboratorios/laboratorio_09/contexto/CONTRATO_SEGURIDAD.md`, registrado antes de implementar. La base es la solución corregida del laboratorio 8: sus 62 casos heredados se ejecutan en los tres estados, incluida base. La nueva política HTTP añade S01–S08 con doce casos. Rechaza parámetros repetidos después de decodificar, claves adicionales, entradas demasiado largas y codificación inválida; conserva búsqueda y disponibilidad.
+
+La base conserva FALLIDO exactamente en S02.a/S02.b/S02.c, S03, S04.a/S04.b, S05.a/S05.b y S06; son exigencias nuevas ausentes en la base, no regresiones históricas. La propuesta convierte pares a dict demasiado pronto y falla exclusivamente S02.a/S02.b/S02.c. La solución debe aprobar los 74 casos. Nunca aceptes un error de ejecución como un fallo didáctico.
+
+El recolector y sus ocho pruebas permanecen sin cambios. Las nuevas pruebas focales del evaluador se contabilizan separadas de los contratos funcionales. No reutilices la cifra histórica de huellas como constante: comprueba todas las declaradas en cada ejecución. Mantén también los intentos bloqueados y su posterior resolución.

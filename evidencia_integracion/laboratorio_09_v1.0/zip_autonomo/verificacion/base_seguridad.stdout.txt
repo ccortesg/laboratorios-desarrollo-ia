@@ -1,0 +1,19 @@
+S01: APROBADO
+S02.a: FALLIDO
+  AssertionError: 400 != 200
+S02.b: FALLIDO
+  AssertionError: 400 != 200
+S02.c: FALLIDO
+  AssertionError: 400 != 200
+S03: FALLIDO
+  AssertionError: 400 != 200
+S04.a: FALLIDO
+  AssertionError: 400 != 200
+S04.b: FALLIDO
+  AssertionError: 414 != 200
+S05.a: FALLIDO
+  AssertionError: 400 != 200
+S05.b: FALLIDO
+  AssertionError: 400 != 200
+S07: APROBADO
+S08: APROBADO

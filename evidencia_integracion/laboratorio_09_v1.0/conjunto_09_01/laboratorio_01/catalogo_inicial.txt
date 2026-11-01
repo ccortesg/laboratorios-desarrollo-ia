@@ -1,0 +1,3 @@
+Version: inicial
+Almacen seleccionado: ALFA
+Articulos: A01, A04

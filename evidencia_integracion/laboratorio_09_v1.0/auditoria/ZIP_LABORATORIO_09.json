@@ -1,0 +1,1178 @@
+{
+  "estado": "APROBADO",
+  "archivo": "LABORATORIO_09_v1.0.zip",
+  "sha256": "6010765d31beab92b35447439864e5af0b321c99962b7bc692a0dacf66ecc17a",
+  "bytes": 317853,
+  "archivos": 292,
+  "criterio": "Archivos del laboratorio congelado; excluye cachés, node_modules y trabajo.",
+  "entradas": [
+    {
+      "archivo": "AGENTS.md",
+      "sha256": "275ebe68be65d64cf8dd4a24d65e7d72472d6e8bf055029589c09930440210e6"
+    },
+    {
+      "archivo": "PROCEDENCIA.json",
+      "sha256": "5d5081f8cf803c847466ac39b9d7cff03ee6e07039d531b2e69906cdf1c3a4fd"
+    },
+    {
+      "archivo": "README.md",
+      "sha256": "79dbd91b1e4e46e9a5fee2f191d967ecb3bd5af8c8e99d6206fbbc892d0a07ec"
+    },
+    {
+      "archivo": "contexto/ARQUITECTURA.md",
+      "sha256": "195bfce7673de954d3414ced5eeb122578fd13a533e6375419e7c2b942a598b8"
+    },
+    {
+      "archivo": "contexto/CONTEXTO.md",
+      "sha256": "f7ee9cfff748e0491101a9863b9c3bef9c3cb593b258a37659d4c7a76dd6ecaf"
+    },
+    {
+      "archivo": "contexto/CONTINUIDAD.md",
+      "sha256": "650cd4b466186fcc8b9d9ea78f81467b1cfa1de18faa4c60fc987b01cb047d34"
+    },
+    {
+      "archivo": "contexto/CONTRATO_DEPURACION.md",
+      "sha256": "9ae26d615d4d74a65de841b77cfb913f62f738eda5fdb21d683e78e03776063d"
+    },
+    {
+      "archivo": "contexto/CONTRATO_INTEGRACION.md",
+      "sha256": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd"
+    },
+    {
+      "archivo": "contexto/CONTRATO_SEGURIDAD.md",
+      "sha256": "b45561a198876c5ecf45b3bab687cbd0d66871df57b0fd7d8e457fde3d1ef5b2"
+    },
+    {
+      "archivo": "contexto/DECISIONES.md",
+      "sha256": "db85450a0a48c8f51729d2027e16a6ac8c153e1fadaa2601f230c029f89283a7"
+    },
+    {
+      "archivo": "contexto/FUENTES.md",
+      "sha256": "e3cfcdb7341ddb521880b566ce5dccabd46a28ad069f836fcc3492b661302a16"
+    },
+    {
+      "archivo": "contexto/TRAZABILIDAD.md",
+      "sha256": "d1bc309651c3d7ca7f0312d0259227db91f7cf873aba465fc98b00347e2ce7e7"
+    },
+    {
+      "archivo": "datos/actualizacion_valida.csv",
+      "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+    },
+    {
+      "archivo": "datos/error_tardio.csv",
+      "sha256": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42"
+    },
+    {
+      "archivo": "datos/par_duplicado.csv",
+      "sha256": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6"
+    },
+    {
+      "archivo": "diferencias/01_base_a_propuesta.diff",
+      "sha256": "c31cdec7ecc62ad6711b3b2cb1322a10a0fd13142ba3534d1aebd082bbec1b99"
+    },
+    {
+      "archivo": "diferencias/02_propuesta_a_solucion.diff",
+      "sha256": "420fea7762fb9835e3d34dc87ba4e02926c0a4afc20d85afa43d166f4aac1afa"
+    },
+    {
+      "archivo": "estados/base/catalogo.py",
+      "sha256": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+    },
+    {
+      "archivo": "estados/base/datos/ejemplos.sql",
+      "sha256": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+    },
+    {
+      "archivo": "estados/base/datos/esquema.sql",
+      "sha256": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+    },
+    {
+      "archivo": "estados/base/detalle.py",
+      "sha256": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+    },
+    {
+      "archivo": "estados/base/importacion.py",
+      "sha256": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+    },
+    {
+      "archivo": "estados/base/laboratorio.py",
+      "sha256": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3"
+    },
+    {
+      "archivo": "estados/base/origen.py",
+      "sha256": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5"
+    },
+    {
+      "archivo": "estados/base/persistencia.py",
+      "sha256": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3"
+    },
+    {
+      "archivo": "estados/base/pruebas.py",
+      "sha256": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+    },
+    {
+      "archivo": "estados/base/pruebas_detalle.py",
+      "sha256": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+    },
+    {
+      "archivo": "estados/base/resumen.py",
+      "sha256": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+    },
+    {
+      "archivo": "estados/base/servidor.py",
+      "sha256": "0da6dea6df664a1ebc9aab86550137f76642030c3dff4bd3957580f8ecf2cf99"
+    },
+    {
+      "archivo": "estados/base/solucion/consulta.sql",
+      "sha256": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+    },
+    {
+      "archivo": "estados/base/web/app.js",
+      "sha256": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+    },
+    {
+      "archivo": "estados/base/web/estilos.css",
+      "sha256": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+    },
+    {
+      "archivo": "estados/base/web/index.html",
+      "sha256": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+    },
+    {
+      "archivo": "estados/propuesta/catalogo.py",
+      "sha256": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+    },
+    {
+      "archivo": "estados/propuesta/datos/ejemplos.sql",
+      "sha256": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+    },
+    {
+      "archivo": "estados/propuesta/datos/esquema.sql",
+      "sha256": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+    },
+    {
+      "archivo": "estados/propuesta/detalle.py",
+      "sha256": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+    },
+    {
+      "archivo": "estados/propuesta/importacion.py",
+      "sha256": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+    },
+    {
+      "archivo": "estados/propuesta/laboratorio.py",
+      "sha256": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3"
+    },
+    {
+      "archivo": "estados/propuesta/origen.py",
+      "sha256": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5"
+    },
+    {
+      "archivo": "estados/propuesta/persistencia.py",
+      "sha256": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3"
+    },
+    {
+      "archivo": "estados/propuesta/politica_consulta.py",
+      "sha256": "a8cee14efc4a9934963f503dd051d091f9a60700bf8242f2190542063c00563e"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas.py",
+      "sha256": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas_detalle.py",
+      "sha256": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+    },
+    {
+      "archivo": "estados/propuesta/resumen.py",
+      "sha256": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+    },
+    {
+      "archivo": "estados/propuesta/servidor.py",
+      "sha256": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf"
+    },
+    {
+      "archivo": "estados/propuesta/solucion/consulta.sql",
+      "sha256": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+    },
+    {
+      "archivo": "estados/propuesta/web/app.js",
+      "sha256": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+    },
+    {
+      "archivo": "estados/propuesta/web/estilos.css",
+      "sha256": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+    },
+    {
+      "archivo": "estados/propuesta/web/index.html",
+      "sha256": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+    },
+    {
+      "archivo": "estados/solucion/catalogo.py",
+      "sha256": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+    },
+    {
+      "archivo": "estados/solucion/datos/ejemplos.sql",
+      "sha256": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+    },
+    {
+      "archivo": "estados/solucion/datos/esquema.sql",
+      "sha256": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+    },
+    {
+      "archivo": "estados/solucion/detalle.py",
+      "sha256": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+    },
+    {
+      "archivo": "estados/solucion/importacion.py",
+      "sha256": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+    },
+    {
+      "archivo": "estados/solucion/laboratorio.py",
+      "sha256": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3"
+    },
+    {
+      "archivo": "estados/solucion/origen.py",
+      "sha256": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5"
+    },
+    {
+      "archivo": "estados/solucion/persistencia.py",
+      "sha256": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3"
+    },
+    {
+      "archivo": "estados/solucion/politica_consulta.py",
+      "sha256": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3"
+    },
+    {
+      "archivo": "estados/solucion/pruebas.py",
+      "sha256": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+    },
+    {
+      "archivo": "estados/solucion/pruebas_detalle.py",
+      "sha256": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+    },
+    {
+      "archivo": "estados/solucion/resumen.py",
+      "sha256": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+    },
+    {
+      "archivo": "estados/solucion/servidor.py",
+      "sha256": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf"
+    },
+    {
+      "archivo": "estados/solucion/solucion/consulta.sql",
+      "sha256": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+    },
+    {
+      "archivo": "estados/solucion/web/app.js",
+      "sha256": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+    },
+    {
+      "archivo": "estados/solucion/web/estilos.css",
+      "sha256": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+    },
+    {
+      "archivo": "estados/solucion/web/index.html",
+      "sha256": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+    },
+    {
+      "archivo": "evidencia/INDICE.md",
+      "sha256": "3bdfd171494521a0d1b57e5d047bbd2a2dcf20d2697fc9f5b69f24955237ee16"
+    },
+    {
+      "archivo": "evidencia/MANIFIESTO_EVIDENCIA.json",
+      "sha256": "3e530c67b5929497d65d7c8978ace6f1858d6ece8cc906ab8740baa8547c2881"
+    },
+    {
+      "archivo": "evidencia/NAVEGADOR_151_FUENTE.json",
+      "sha256": "5dab18c32357c8b19bebe90ad23069773a9aabca8a49c3a8973a61b2b7239e11"
+    },
+    {
+      "archivo": "evidencia/NAVEGADOR_FUENTE.json",
+      "sha256": "8734c8ba742c608c56745b7adcf18f242840b0e948230d3b6e6f3dc3efaef493"
+    },
+    {
+      "archivo": "evidencia/REVISION_HUELLAS_EVIDENCIA.json",
+      "sha256": "f8c63d20c30ca6c212e6ed0edb316f58d60387245c097db23f639ce09b9b722c"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_depuracion.json",
+      "sha256": "d7173a0b68acbd527208bbd0bcca20fdc669d1b831b67bd1a4a463c5ed90cac8"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_depuracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_depuracion.stdout.txt",
+      "sha256": "666ee21013f2973e70881e8abfd014caec810826fd7219709f0756c00ddc72bb"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_depuracion_navegador.json",
+      "sha256": "5a70cc7505300cb3e684864ade23e14f8bed053152e9798cdf4119dbac8a9e9e"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_depuracion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_depuracion_navegador.stdout.txt",
+      "sha256": "60c8e587201a427d2babdffb15f5a054caf015a91e1b398c086ffacbeb26cbc0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_heredados.json",
+      "sha256": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_heredados.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_heredados.stdout.txt",
+      "sha256": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_http.json",
+      "sha256": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_http.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_http.stdout.txt",
+      "sha256": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_integracion.json",
+      "sha256": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_integracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_integracion.stdout.txt",
+      "sha256": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_navegador.json",
+      "sha256": "2a905babb99676cd3894bab2f3422eaa69cfab9fa9677215f09a927308571a1e"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_navegador.stdout.txt",
+      "sha256": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_resumen.json",
+      "sha256": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_resumen.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_resumen.stdout.txt",
+      "sha256": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_seguridad.json",
+      "sha256": "4393b2bb4f21a4a1ad78fcc1b5ee0a6acf784715548829bd02463d6987be828a"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_seguridad.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_seguridad.stdout.txt",
+      "sha256": "399ba689cfca340672482ee57355ea07ae2fe6909c46f0937b815f66820884e0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_seguridad_navegador.json",
+      "sha256": "dae5a6137d504f93022f4483cd5f5817b4d6d96388576ff446260b26c4ca084d"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_seguridad_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/base_seguridad_navegador.stdout.txt",
+      "sha256": "5f0342772dc7276c5f03924f14709a2684a720a5e3c7daf4084d3b1180112286"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/captura_proceso/COMANDO_AUTONOMO_01.json",
+      "sha256": "11912caf121c45b451f0430cc925c0d33a66cdecb58df94a2bad1b6f2c556376"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/captura_proceso/autonomo_01.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/captura_proceso/autonomo_01.stdout.txt",
+      "sha256": "78d8e775885af14d4e0244476c761ccf8e9ed25c945cb8f2939dd5ef35bfe691"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/captura_proceso/comandos.json",
+      "sha256": "a34646c4cc9e0b9423987ec9a89a6a258ff57f4899841fce2b6f107477f32c9f"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/comandos.json",
+      "sha256": "765f46bd91a318b6149570913ff10701d01491d9f2dc1e6915684970141045be"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/conservacion_heredados.json",
+      "sha256": "c29555c5240cf07cbb86e145ebdd1f8bed8d34a8b709c0f8be567c3c6c713f2e"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/entorno.json",
+      "sha256": "ca17411b8c43f6b0ea301d69766a806224b45ce3290eed97595172ce5d4619ab"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/huellas_salidas.json",
+      "sha256": "669d1e7ba70f177da0955a2754da668759b6f81952b634b458b0a4573944bdc5"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_depuracion.json",
+      "sha256": "11d115b94da7f67ef08729d5982ba024cdbe52a1ede2eb27456bfbf996ea6b44"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_depuracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_depuracion.stdout.txt",
+      "sha256": "666ee21013f2973e70881e8abfd014caec810826fd7219709f0756c00ddc72bb"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_depuracion_navegador.json",
+      "sha256": "d84aed6b75ac9624baf2966f8a5b8b649b714b45e72e59381e51279a59c32e26"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_depuracion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_depuracion_navegador.stdout.txt",
+      "sha256": "60c8e587201a427d2babdffb15f5a054caf015a91e1b398c086ffacbeb26cbc0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_heredados.json",
+      "sha256": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_heredados.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_heredados.stdout.txt",
+      "sha256": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_http.json",
+      "sha256": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_http.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_http.stdout.txt",
+      "sha256": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_integracion.json",
+      "sha256": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_integracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_integracion.stdout.txt",
+      "sha256": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_navegador.json",
+      "sha256": "8d4669781b99c0f7a9d19ec80007990958776c7f34371e3265519a29f054e642"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_navegador.stdout.txt",
+      "sha256": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_resumen.json",
+      "sha256": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_resumen.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_resumen.stdout.txt",
+      "sha256": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_seguridad.json",
+      "sha256": "ddfbf05c9c008d08ab5745b754fa8ead09e619b0ac2b443c4033f4662cd8fe76"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_seguridad.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_seguridad.stdout.txt",
+      "sha256": "7905fa155e13d0aeb5351d1c2c1aebfca53d3707732b80fd9f1813cf450cb6d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_seguridad_navegador.json",
+      "sha256": "9e75e980f10647c329d3804288124f4b79f40a170b54394d42c8b6d06b8525df"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_seguridad_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/propuesta_seguridad_navegador.stdout.txt",
+      "sha256": "5f0342772dc7276c5f03924f14709a2684a720a5e3c7daf4084d3b1180112286"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/resumen.json",
+      "sha256": "01d704a84dd619dcaa9540cd81ded03af154ea98425d6ece1f5e2c7b05a77b64"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/sha256_fuentes.json",
+      "sha256": "8b9fc6de24c7616956cd9f8eab7ff54cc49e85dcf9da728896e4e76cd75ee91b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_depuracion.json",
+      "sha256": "e216190265d6dd8f2656d4028a222011059635cf3755471004eef7a20e7ac813"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_depuracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_depuracion.stdout.txt",
+      "sha256": "666ee21013f2973e70881e8abfd014caec810826fd7219709f0756c00ddc72bb"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_depuracion_navegador.json",
+      "sha256": "dd1a2beef73fe10ed929e38bb3c87c3269d00467ad63f1c1cd15f3449b63f347"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_depuracion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_depuracion_navegador.stdout.txt",
+      "sha256": "60c8e587201a427d2babdffb15f5a054caf015a91e1b398c086ffacbeb26cbc0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_heredados.json",
+      "sha256": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_heredados.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_heredados.stdout.txt",
+      "sha256": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_http.json",
+      "sha256": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_http.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_http.stdout.txt",
+      "sha256": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_integracion.json",
+      "sha256": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_integracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_integracion.stdout.txt",
+      "sha256": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_navegador.json",
+      "sha256": "3fb88efe44049797a87e9094b24bce17cc4fce6398bd15807d2f8c0ac311218d"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_navegador.stdout.txt",
+      "sha256": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_resumen.json",
+      "sha256": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_resumen.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_resumen.stdout.txt",
+      "sha256": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_seguridad.json",
+      "sha256": "9b0c65adeb23964f161f7dc278c753ce534d16d5bd54490689430569d29d0ec1"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_seguridad.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_seguridad.stdout.txt",
+      "sha256": "722fe7da874d3f0ccb22fc074eea39db6ff933acacad09729cde3b8308137ca8"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_seguridad_navegador.json",
+      "sha256": "f6e9f71fa0f735fcc44b9087e73aba5b8cd0b46940b8229ce1afd6caaf9a46ce"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_seguridad_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_01_fallido/solucion_seguridad_navegador.stdout.txt",
+      "sha256": "5f0342772dc7276c5f03924f14709a2684a720a5e3c7daf4084d3b1180112286"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_depuracion.json",
+      "sha256": "187fe9eeda3d590d25cc3879c1b8e0bba6944a486106c7a09259ff400e7ff43f"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_depuracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_depuracion.stdout.txt",
+      "sha256": "666ee21013f2973e70881e8abfd014caec810826fd7219709f0756c00ddc72bb"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_depuracion_navegador.json",
+      "sha256": "c6489660f9d5585947aa607268063ece13478215c4c0aa273ff149d5cce92c99"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_depuracion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_depuracion_navegador.stdout.txt",
+      "sha256": "60c8e587201a427d2babdffb15f5a054caf015a91e1b398c086ffacbeb26cbc0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_heredados.json",
+      "sha256": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_heredados.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_heredados.stdout.txt",
+      "sha256": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_http.json",
+      "sha256": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_http.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_http.stdout.txt",
+      "sha256": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_integracion.json",
+      "sha256": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_integracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_integracion.stdout.txt",
+      "sha256": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_navegador.json",
+      "sha256": "720d32bdec20cc07b18b7dcba5dcc15aa4ff1ac2f27f3e76083749e825c8491a"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_navegador.stdout.txt",
+      "sha256": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_resumen.json",
+      "sha256": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_resumen.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_resumen.stdout.txt",
+      "sha256": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_seguridad.json",
+      "sha256": "f3089979dd57f45965b9917120409662afdbc1f9db7c1a0c81abc174c53a10f2"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_seguridad.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_seguridad.stdout.txt",
+      "sha256": "399ba689cfca340672482ee57355ea07ae2fe6909c46f0937b815f66820884e0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_seguridad_navegador.json",
+      "sha256": "2a176a4e3fd247af9c9e021803657702c4fb601001de7225ec810947d48d2b18"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_seguridad_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/base_seguridad_navegador.stdout.txt",
+      "sha256": "5f0342772dc7276c5f03924f14709a2684a720a5e3c7daf4084d3b1180112286"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/captura_proceso/COMANDO_AUTONOMO_02.json",
+      "sha256": "793c371d58bb9ede73122c1af0253c5c871384b6903a9df1269c02a3193aa636"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/captura_proceso/autonomo_02.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/captura_proceso/autonomo_02.stdout.txt",
+      "sha256": "dee76826ed6f92764194ad56d5df82a352aa66d17a8a77c5822a23321dc2a88b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/captura_proceso/comandos.json",
+      "sha256": "bb688f7d0c3e088c3bd71780e0f8c1d3cc7587ce4ad32cb49172a4f257b0302d"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/comandos.json",
+      "sha256": "5e1df8f76671cff2e90dc15ca2658597ee052ed11164e167910d9323616b219e"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/conservacion_heredados.json",
+      "sha256": "c29555c5240cf07cbb86e145ebdd1f8bed8d34a8b709c0f8be567c3c6c713f2e"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/entorno.json",
+      "sha256": "b7c3078c8fb9b012ceda3c3c4ad394181f7a83319e83dcf9eb8570582e8cac0b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/huellas_salidas.json",
+      "sha256": "669d1e7ba70f177da0955a2754da668759b6f81952b634b458b0a4573944bdc5"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_depuracion.json",
+      "sha256": "06a4a27248bc3f0d17b26e50217a3db91b956b27050623e0e069f8a6cd319e87"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_depuracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_depuracion.stdout.txt",
+      "sha256": "666ee21013f2973e70881e8abfd014caec810826fd7219709f0756c00ddc72bb"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_depuracion_navegador.json",
+      "sha256": "ee6073148e5f2c59dadea67081fdbc1dded9784df0c18b142df86654d4fc4004"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_depuracion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_depuracion_navegador.stdout.txt",
+      "sha256": "60c8e587201a427d2babdffb15f5a054caf015a91e1b398c086ffacbeb26cbc0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_heredados.json",
+      "sha256": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_heredados.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_heredados.stdout.txt",
+      "sha256": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_http.json",
+      "sha256": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_http.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_http.stdout.txt",
+      "sha256": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_integracion.json",
+      "sha256": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_integracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_integracion.stdout.txt",
+      "sha256": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_navegador.json",
+      "sha256": "3d492b391c39972f5684ef0ab73cae9e27419ec913cc45d2226ec2cf534ff67d"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_navegador.stdout.txt",
+      "sha256": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_resumen.json",
+      "sha256": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_resumen.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_resumen.stdout.txt",
+      "sha256": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_seguridad.json",
+      "sha256": "22ac10b680862e8d80855d8d513e278edb55454a22d1f7cdf510f9596fe19f63"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_seguridad.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_seguridad.stdout.txt",
+      "sha256": "7905fa155e13d0aeb5351d1c2c1aebfca53d3707732b80fd9f1813cf450cb6d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_seguridad_navegador.json",
+      "sha256": "0b1df6e52d53ee1b5850e351a190523c267c4bfa09e8e467ab26b76f58af6296"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_seguridad_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/propuesta_seguridad_navegador.stdout.txt",
+      "sha256": "f498fa59f65a4364b651a13c8e9e5015fbe7c4204d8dd216dd4f3a64f6b44386"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/resumen.json",
+      "sha256": "bb1e0582bf18a776e53ae8b32c93273d9ef9ab8443a7e242a05b3511e8988198"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/sha256_fuentes.json",
+      "sha256": "c4d3f51b22e4465cad3a5a9cd31bd5fea5d73a461e0f2caaaaaf209c8ab2e6c4"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_depuracion.json",
+      "sha256": "aec7af8ff202c18688c9ff515819b76cb19a606efe1ed4546d0684ef70b795a5"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_depuracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_depuracion.stdout.txt",
+      "sha256": "666ee21013f2973e70881e8abfd014caec810826fd7219709f0756c00ddc72bb"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_depuracion_navegador.json",
+      "sha256": "65cc7cd6d5d1987efbbbfe6c3ca295fabe86510cf5439ac6fbce6fe513b96d37"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_depuracion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_depuracion_navegador.stdout.txt",
+      "sha256": "60c8e587201a427d2babdffb15f5a054caf015a91e1b398c086ffacbeb26cbc0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_heredados.json",
+      "sha256": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_heredados.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_heredados.stdout.txt",
+      "sha256": "50d96058e090821abd893a0888ca206e0b61ba3b3a6684337a7ede92e55d8ea0"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_http.json",
+      "sha256": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_http.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_http.stdout.txt",
+      "sha256": "e85cf2001bae685b9d27f8c2599b816861eef74cba3fa539ea08dc5979f83a86"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_integracion.json",
+      "sha256": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_integracion.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_integracion.stdout.txt",
+      "sha256": "2ae30cb5672d432e7dff269cf98163038a484bf620c9af0b2a48c4c14db6e945"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_navegador.json",
+      "sha256": "ff0053f211943753fc3285dbe12b6d6862dd9aca596fda92b4a9a751558bcd18"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_navegador.stdout.txt",
+      "sha256": "20a3c590000d94f4ff943345bd4e0400489900c43065b10715a17734f33c2371"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_resumen.json",
+      "sha256": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_resumen.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_resumen.stdout.txt",
+      "sha256": "26f0562293641344bf577b0e4b908871d11ab0ad9b636e44ccb8693830eb101e"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_seguridad.json",
+      "sha256": "7672bd240cb54876db8bec6aba60e1c189c7d10deb7e93b2d6ae47e3daf87b39"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_seguridad.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_seguridad.stdout.txt",
+      "sha256": "722fe7da874d3f0ccb22fc074eea39db6ff933acacad09729cde3b8308137ca8"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_seguridad_navegador.json",
+      "sha256": "8d962ef9cef14015de2c2cd04a3ca92e4854764247c3140de1d2720242897df9"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_seguridad_navegador.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/autonomo_02_aprobado/solucion_seguridad_navegador.stdout.txt",
+      "sha256": "f498fa59f65a4364b651a13c8e9e5015fbe7c4204d8dd216dd4f3a64f6b44386"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome151/comando.json",
+      "sha256": "0e16040df2f78977ffc458a48296402c87cc371d83b82050d4e94e4b6b86f793"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome151/comandos.json",
+      "sha256": "7e1d84609eab151cd2894c7ced0fb597a6aa1f786e10a88f195be1ef1ce50957"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome151/resultado.json",
+      "sha256": "717b58b9cedce744939e49de0425b2098ca946b581c83b3be7066fc46e9457de"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome151/stderr.txt",
+      "sha256": "c8dd6dbbb25bcf5be0fe7384a7600863e39376a434036f27ad6eaa616b63805f"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome151/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome156/comando.json",
+      "sha256": "61052039834cb0c64331440e067d01cfb0b21221ef743d20ad76325cfff0124e"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome156/comandos.json",
+      "sha256": "2626eb7082bd75b97ea5814477bbaa3a552c3db10bed6d7270c4fcef60e2aa62"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome156/resultado.json",
+      "sha256": "9167c3021af35b82ec087db6c6be3aff9fec302e5130ec2228241dbc4aa946f8"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome156/stderr.txt",
+      "sha256": "dfe30659b9fb4762c5de893f3c03b521eeb2c18132f3ee920217274c8dfdaa69"
+    },
+    {
+      "archivo": "evidencia/diagnostico_s06_chrome156/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "evidencia/http_preparatorio/http_solucion_01.json",
+      "sha256": "fca11d46196d7e3ac258b9f1c6f6229530973998fbc0f7626bae4f8ff6a6eccc"
+    },
+    {
+      "archivo": "evidencia/http_preparatorio/http_solucion_02.json",
+      "sha256": "90957762c67465f06dada15030813bd7d4a64a37a417414db56f5f76b3a87780"
+    },
+    {
+      "archivo": "evidencia/instrumentacion_s06/DECISION_INSTRUMENTACION_S06.json",
+      "sha256": "e4859181a6be4b79307feb7161ab1dc7aaec4756ca4692d92ee8d95c5a5e9756"
+    },
+    {
+      "archivo": "evidencia/instrumentacion_s06/correccion_instrumentacion_s06.diff",
+      "sha256": "bfbe083cb3f3b348442565b1a51f42a0033578c541b4d15f14982056c3613503"
+    },
+    {
+      "archivo": "evidencia/instrumentacion_s06/pruebas_seguridad_navegador_antes.cjs",
+      "sha256": "ecbb5fa12fe6ff6757b527ccb1b3e63d052b7e06a32a9726f51ac58540fe32c2"
+    },
+    {
+      "archivo": "evidencia/recursos_01/RECURSOS_01.json",
+      "sha256": "98fea86d948da9037c09c714ea09d910d2b73dc9beb26c5e70eaf31b0765889e"
+    },
+    {
+      "archivo": "evidencia/recursos_01/comandos.json",
+      "sha256": "00ad002ecbc4e2b946025b7e86f90b0596a88c110c4575e25e00c4664c8dc845"
+    },
+    {
+      "archivo": "evidencia/recursos_01/recursos_01.stderr.txt",
+      "sha256": "ad5c0b061e429f995e66074e10da97ceccdc3cde8489ad02dd8dbf6de83feea8"
+    },
+    {
+      "archivo": "evidencia/recursos_01/recursos_01.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archivo": "package.json",
+      "sha256": "8e80d1c273d896519835a538b2db176c0ab4f4b85780ab81b64d3c32c754efed"
+    },
+    {
+      "archivo": "prompts/01_ENCARGO_INSUFICIENTE.md",
+      "sha256": "ec652ec7afd0ea23acecd091b026dac153f499fff6054abff7a1616b6bf934b3"
+    },
+    {
+      "archivo": "prompts/02_ENCARGO_CLARO.md",
+      "sha256": "656cc0c5db554c72041f160cb3913f1e5e04097f180a5569fcd258423a8ea950"
+    },
+    {
+      "archivo": "prompts/03_REVISION_CON_EVIDENCIA.md",
+      "sha256": "366dba6192dd0817a44b55aa4370fb62bc12f5da602cd9739fa3dfa7c8057a7d"
+    },
+    {
+      "archivo": "pruebas_depuracion.py",
+      "sha256": "b57358409a53e391dec92796311132fdbf734cc61a7d000961ec6f524f69ce26"
+    },
+    {
+      "archivo": "pruebas_http.py",
+      "sha256": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93"
+    },
+    {
+      "archivo": "pruebas_integracion.py",
+      "sha256": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d"
+    },
+    {
+      "archivo": "pruebas_navegador.cjs",
+      "sha256": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca"
+    },
+    {
+      "archivo": "pruebas_recorrido.cjs",
+      "sha256": "9699b25f7f2d36aac49191b68ca39dff679a435ddf33cc2b33f95fbfdb18d02a"
+    },
+    {
+      "archivo": "pruebas_recorrido.py",
+      "sha256": "7d309752a6b076e38afff39df22f5b589634ab2f228d7b8ce20e2e41a6c6769a"
+    },
+    {
+      "archivo": "pruebas_recursos.py",
+      "sha256": "c16d1495d5d3e7603d486ff6f161c95a8484bbe8413ed5aadd52d65eacba301f"
+    },
+    {
+      "archivo": "pruebas_resumen.py",
+      "sha256": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf"
+    },
+    {
+      "archivo": "pruebas_seguridad.py",
+      "sha256": "d09f4959690862d0c991165f359a0ecf549e113bb161a21506a9ac167bdad640"
+    },
+    {
+      "archivo": "pruebas_seguridad_navegador.cjs",
+      "sha256": "77db77240865b117e18249d47a5f69bc5a96c16f6bc194a3dd4684f6d2b8e3ec"
+    },
+    {
+      "archivo": "pruebas_seguridad_navegador.py",
+      "sha256": "79db1cf23c48b1fe12223150a31e4dd0e30e0b95e0fec1d210df70d74876471c"
+    },
+    {
+      "archivo": "soporte/huellas_evidencia.py",
+      "sha256": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd"
+    },
+    {
+      "archivo": "soporte_procesos.py",
+      "sha256": "f77a30b6e808d8b5a263c8a4befadd3b5548b4e80f880b8215c6f2b49fda8f9f"
+    },
+    {
+      "archivo": "soporte_web.py",
+      "sha256": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c"
+    },
+    {
+      "archivo": "verificar.py",
+      "sha256": "fbdae0a234f79c80348041b4f2d273af57347be915f4258262d33ed4f56d14d7"
+    }
+  ]
+}

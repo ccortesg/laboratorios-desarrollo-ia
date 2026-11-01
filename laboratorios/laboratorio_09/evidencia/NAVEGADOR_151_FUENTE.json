@@ -1,0 +1,9 @@
+{
+  "fuente": "https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.34/linux64/chrome-linux64.zip",
+  "fecha_consulta_utc": "2026-11-01T21:37:01.317210+00:00",
+  "version": "151.0.7922.34",
+  "plataforma": "linux64",
+  "sha256_zip": "ae8736ac28bc69278551500f219fc749575648263c43ec5990749eff43b9fcf8",
+  "bytes_zip": 193282658,
+  "motivo": "Versión exacta prevista por Playwright1.62.1; descarga desde el origen oficial alternativo al CDN que no entregó el ZIP."
+}

@@ -22,3 +22,11 @@ evidencia_integracion/laboratorio_08_v1.0/**/*.diff -whitespace
 docs/estados/ESTADO_DEL_LIBRO_v1.6.2.md -text whitespace=-blank-at-eol
 docs/estados/ESTADO_REPOSITORIO_v1.5.2.md -text whitespace=-blank-at-eol
 evidencia_integracion/cierre_laboratorio_07_confirmado/**/*.md whitespace=-blank-at-eol
+
+# Diferencias didácticas y copias documentales del cierre anterior.
+laboratorios/laboratorio_09/diferencias/*.diff -whitespace
+docs/estados/ESTADO_DEL_LIBRO_v1.7.4.md -text
+docs/estados/ESTADO_REPOSITORIO_v1.6.4.md -text
+evidencia_integracion/cierre_laboratorio_08_confirmado/**/*.md whitespace=-blank-at-eol
+evidencia_integracion/laboratorio_09_v1.0/**/*.diff -whitespace
+evidencia_integracion/laboratorio_09_v1.0/**/*.md whitespace=-blank-at-eol

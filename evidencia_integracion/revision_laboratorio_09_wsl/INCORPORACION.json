@@ -1,0 +1,111 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-01T23:14:47.470400+00:00",
+  "arbol_funcional_auditado": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+  "revision_original": {
+    "archivo": "REVISION_LABORATORIO_09_WSL_v1.0.zip",
+    "sha256": "3309df01455ce38f8c0e29ced072ea63fa33c788ef1d240f24336714bce64eaf",
+    "archivos": 16,
+    "crc": "APROBADO",
+    "extraccion_identica": "APROBADO"
+  },
+  "evidencia_original": {
+    "archivo": "EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+    "sha256": "6aaeb6ce9e0cf781239499fae2f57bb147b5b2b07b7a20d5cfbd5d61a4ffb239",
+    "archivos": 453,
+    "crc": "APROBADO",
+    "extraccion_identica": "APROBADO"
+  },
+  "archivos_revision": [
+    {
+      "archivo": "ESTADO_DEL_LIBRO_v1.8.1.md",
+      "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+      "bytes": 4177
+    },
+    {
+      "archivo": "ESTADO_REPOSITORIO_v1.7.1.md",
+      "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+      "bytes": 5283
+    },
+    {
+      "archivo": "LEEME.md",
+      "sha256": "c25179ebf18a9a2e14e01f53fee9f2d3bc92dfb059c98ee8ec0e3cec7d977ca8",
+      "bytes": 1895
+    },
+    {
+      "archivo": "PROMPT_CIERRE_LABORATORIO_09_v1.0.md",
+      "sha256": "1fdd627ad04398cb9fb4b325911d7d09f8ef87ffd26ed47d58282ab944e8c625",
+      "bytes": 10530
+    },
+    {
+      "archivo": "REVISION_LABORATORIO_09_WSL_v1.0.md",
+      "sha256": "403d910cba86868777d3178cdc71a02920832a5dcff994969f0b5e3e728f6115",
+      "bytes": 11072
+    },
+    {
+      "archivo": "SHA256SUMS",
+      "sha256": "57369dee4999b9daf4f55b7f7486dcbe72f349e376619190296f6c3059ada37d",
+      "bytes": 1496
+    },
+    {
+      "archivo": "VERIFICAR_PAQUETE.py",
+      "sha256": "eb8838dc6afde9c2d7bca774ea309ea97910afdf871069e8017cc45769713a94",
+      "bytes": 1746
+    },
+    {
+      "archivo": "antecedentes/ESTADO_DEL_LIBRO_v1.8.md",
+      "sha256": "9f6350d4e2c5acb43bd6a89e4e257854a2b529625e92769fd91920f22ecc3e68",
+      "bytes": 6309
+    },
+    {
+      "archivo": "antecedentes/ESTADO_REPOSITORIO_v1.7.md",
+      "sha256": "0471319eb4dbfc403a7905219bbaa9e630b0c82991b5abac2e938d0cb8f871bc",
+      "bytes": 7680
+    },
+    {
+      "archivo": "auditoria/FUNCIONAL_INDEPENDIENTE.json",
+      "sha256": "44dfcd7879b96bbfece187fb6229b2b46845b8c35b7f87c9059f7b0aa68cadc2",
+      "bytes": 446801
+    },
+    {
+      "archivo": "auditoria/GIT_Y_CONSERVACION.json",
+      "sha256": "7057af0e23d2a58f450c1b12ddddfd661fa16b7c5153faeb31952235fc96fe83",
+      "bytes": 1372
+    },
+    {
+      "archivo": "auditoria/INTEGRIDAD_INDEPENDIENTE.json",
+      "sha256": "249c1a73f6aabc2ddf1a100cdcbf6d96876631fbdcab24ec383828a39a98d240",
+      "bytes": 345390
+    },
+    {
+      "archivo": "auditoria/RECEPCION.json",
+      "sha256": "cee51361e1946744ac774cf68cda3bf9b77fa16c66bf087c2ac3264ad92c261a",
+      "bytes": 348
+    },
+    {
+      "archivo": "auditoria/REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+      "sha256": "0cb631d43a9482855b4bc841b996601dd9e89b99c7e76e5069dc9c23f5e6f189",
+      "bytes": 2240
+    },
+    {
+      "archivo": "auditoria/RESULTADO_AUDITORIA.json",
+      "sha256": "24c628d639ee22f2ad4afa38d9ab7a71d043dab42a2a0ccf68db2151373f767f",
+      "bytes": 3365
+    },
+    {
+      "archivo": "recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+      "sha256": "6aaeb6ce9e0cf781239499fae2f57bb147b5b2b07b7a20d5cfbd5d61a4ffb239",
+      "bytes": 412572
+    }
+  ],
+  "estados_recibidos_exactos": [
+    "docs/estados/ESTADO_DEL_LIBRO_v1.8.1.md",
+    "docs/estados/ESTADO_REPOSITORIO_v1.7.1.md"
+  ],
+  "estados_preparacion": [
+    "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+    "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md"
+  ],
+  "publicacion": "Pendiente en este documento previo; comprobar después fuera del commit.",
+  "alcance": "Incorporación documental autorizada. Sin nueva ejecución de las 805 pruebas ni modificación funcional."
+}

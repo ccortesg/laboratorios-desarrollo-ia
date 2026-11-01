@@ -1,0 +1,20 @@
+{
+  "registros": [
+    {
+      "id": "ocho_pruebas_recolector_09",
+      "comando": "python -B -m unittest discover -s herramientas/pruebas -p test_huellas_evidencia.py -v",
+      "inicio_utc": "2026-11-01T21:30:50.426819+00:00",
+      "fin_utc": "2026-11-01T21:30:50.505669+00:00",
+      "codigo_salida": 0,
+      "alcance": "Ocho pruebas de infraestructura del recolector; no forman parte de las baterías funcionales.",
+      "stdout": "stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "stderr.txt",
+      "sha256_stderr": "3a3a5e3b5eb74105ce57fdaf697c6ae050bc4ecade057cc3ef7354feb483a386",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "3a3a5e3b5eb74105ce57fdaf697c6ae050bc4ecade057cc3ef7354feb483a386"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

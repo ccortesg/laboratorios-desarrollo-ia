@@ -1,0 +1,46 @@
+{
+  "registros": [
+    {
+      "id": "conjunto",
+      "inicio_utc": "2026-11-01T21:42:50.523037+00:00",
+      "fin_utc": "2026-11-01T21:44:04.998326+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "herramientas/verificar_todo.py",
+        "--navegador",
+        "--salida",
+        "SALIDA_CONJUNTO"
+      ],
+      "cwd": "REPOSITORIO",
+      "codigo_salida": 0,
+      "stdout": "conjunto.stdout.txt",
+      "sha256_stdout": "8e07fa70cf37ddf141a743a09390b5af228921e23e998eb144808871c4723776",
+      "stderr": "conjunto.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "8e07fa70cf37ddf141a743a09390b5af228921e23e998eb144808871c4723776",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "huellas",
+      "inicio_utc": "2026-11-01T21:44:04.998561+00:00",
+      "fin_utc": "2026-11-01T21:44:05.035537+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "herramientas/huellas_evidencia.py",
+        "SALIDA_CONJUNTO"
+      ],
+      "cwd": "REPOSITORIO",
+      "codigo_salida": 0,
+      "stdout": "huellas.stdout.txt",
+      "sha256_stdout": "d165d2f265bb5f4214fc16f541a814cf40abbe15b0640bce3c5b027d2ba10272",
+      "stderr": "huellas.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "d165d2f265bb5f4214fc16f541a814cf40abbe15b0640bce3c5b027d2ba10272",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

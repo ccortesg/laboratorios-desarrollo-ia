@@ -1,0 +1,12 @@
+{
+  "fecha_consulta": "2026-11-01",
+  "tipo": "Fuentes primarias; referencias junto a las afirmaciones en el manuscrito",
+  "urls": [
+    "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+    "https://docs.python.org/3.11/library/urllib.parse.html",
+    "https://www.rfc-editor.org/rfc/rfc3986.html#section-2.1",
+    "https://www.rfc-editor.org/rfc/rfc9110.html#name-414-uri-too-long",
+    "https://docs.python.org/3.11/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries",
+    "https://docs.python.org/3.11/library/http.server.html"
+  ]
+}

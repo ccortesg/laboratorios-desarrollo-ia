@@ -1,0 +1,11 @@
+{
+  "fuente": "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json",
+  "fecha_consulta_utc": "2026-11-01T21:26:53.395195+00:00",
+  "timestamp_fuente": "2026-11-01T21:09:51.406Z",
+  "version": "156.0.8078.80",
+  "plataforma": "linux64",
+  "descarga": "https://storage.googleapis.com/chrome-for-testing-public/156.0.8078.80/linux64/chrome-linux64.zip",
+  "sha256_zip": "b711c720f774be355197f32edf37e0651418ba036d92446ee2da19ac017540a7",
+  "bytes_zip": 201329937,
+  "motivo": "Chromium previsto por Playwright no se pudo descargar; Chrome compatible se verificara con las pruebas."
+}

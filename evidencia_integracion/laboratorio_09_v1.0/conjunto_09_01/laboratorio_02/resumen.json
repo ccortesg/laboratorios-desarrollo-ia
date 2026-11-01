@@ -1,0 +1,38 @@
+{
+  "fecha_hora_utc": "2026-11-01T21:42:50+00:00",
+  "estado": "APROBADO",
+  "criterio": "La solucion devuelve A01 en ALFA y satisface C01 a C04.",
+  "demostracion": {
+    "estado": "APROBADO",
+    "comando": "python laboratorio.py --version solucion --almacen ALFA",
+    "codigo_salida": 0,
+    "articulos_esperados": [
+      "A01"
+    ],
+    "articulos_observados": [
+      "A01"
+    ]
+  },
+  "pruebas": {
+    "estado": "APROBADO",
+    "comando": "python pruebas.py --version solucion",
+    "codigo_salida": 0,
+    "total": 4,
+    "aprobados": 4,
+    "fallidos": 0,
+    "bloqueados": 0,
+    "no_ejecutados": 0,
+    "detalle": "pruebas_solucion.json",
+    "registro_legible": true
+  },
+  "revision_documental_automatica": {
+    "estado": "NO EJECUTADO",
+    "motivo": "El script no evalua semanticamente el contexto; la revision se registra aparte."
+  },
+  "herramientas_comerciales": {
+    "Codex": "NO EJECUTADO",
+    "GitHub Copilot": "NO EJECUTADO",
+    "Grok Build": "NO EJECUTADO"
+  },
+  "limite": "Ejecucion local de cuatro escenarios sinteticos; no acredita validacion productiva."
+}

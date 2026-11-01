@@ -1,0 +1,107 @@
+2026-11-01T21:35:54.616Z pw:api => browserType.launch started
+2026-11-01T21:35:54.712Z pw:api <= browserType.launch succeeded
+2026-11-01T21:35:54.713Z pw:api => browser.newPage started
+2026-11-01T21:35:54.809Z pw:api <= browser.newPage succeeded
+2026-11-01T21:35:54.809Z pw:api => page.goto started
+2026-11-01T21:35:54.814Z pw:api navigating to "<URL_LOCAL>/", waiting until "networkidle"
+2026-11-01T21:35:54.828Z pw:api   "commit" event fired
+2026-11-01T21:35:54.829Z pw:api   navigated to "<URL_LOCAL>/"
+2026-11-01T21:35:54.841Z pw:api   "domcontentloaded" event fired
+2026-11-01T21:35:54.853Z pw:api   "load" event fired
+2026-11-01T21:35:55.339Z pw:api   "networkidle" event fired
+2026-11-01T21:35:55.340Z pw:api <= page.goto succeeded
+2026-11-01T21:35:55.341Z pw:api => locator.selectOption started
+2026-11-01T21:35:55.343Z pw:api waiting for locator('#almacen')
+2026-11-01T21:35:55.367Z pw:api   locator resolved to <select required="" id="almacen" name="almacen">…</select>
+2026-11-01T21:35:55.368Z pw:api attempting select option action
+2026-11-01T21:35:55.368Z pw:api   waiting for element to be visible and enabled
+2026-11-01T21:35:55.370Z pw:api   selected specified option(s)
+2026-11-01T21:35:55.370Z pw:api <= locator.selectOption succeeded
+2026-11-01T21:35:55.370Z pw:api => locator.fill started
+2026-11-01T21:35:55.371Z pw:api waiting for locator('#nombre')
+2026-11-01T21:35:55.373Z pw:api   locator resolved to <input id="nombre" name="nombre" type="search" autocomplete="off" aria-describedby="ayuda-nombre" placeholder="Por ejemplo, local"/>
+2026-11-01T21:35:55.374Z pw:api   fill("")
+2026-11-01T21:35:55.374Z pw:api attempting fill action
+2026-11-01T21:35:55.374Z pw:api   waiting for element to be visible, enabled and editable
+2026-11-01T21:35:55.381Z pw:api <= locator.fill succeeded
+2026-11-01T21:35:55.382Z pw:api => locator.click started
+2026-11-01T21:35:55.383Z pw:api waiting for locator('#consultar')
+2026-11-01T21:35:55.385Z pw:api   locator resolved to <button type="submit" id="consultar">Consultar catálogo</button>
+2026-11-01T21:35:55.386Z pw:api attempting click action
+2026-11-01T21:35:55.386Z pw:api   waiting for element to be visible, enabled and stable
+2026-11-01T21:35:55.409Z pw:api   element is visible, enabled and stable
+2026-11-01T21:35:55.409Z pw:api   scrolling into view if needed
+2026-11-01T21:35:55.410Z pw:api   done scrolling
+2026-11-01T21:35:55.413Z pw:api   performing click action
+2026-11-01T21:35:55.417Z pw:api   click action done
+2026-11-01T21:35:55.417Z pw:api   waiting for scheduled navigations to finish
+2026-11-01T21:35:55.418Z pw:api   navigations have finished
+2026-11-01T21:35:55.418Z pw:api <= locator.click succeeded
+2026-11-01T21:35:55.428Z pw:api <= page.waitForResponse succeeded
+2026-11-01T21:35:55.429Z pw:api => page.waitForFunction started
+2026-11-01T21:35:55.455Z pw:api <= page.waitForFunction succeeded
+2026-11-01T21:35:55.455Z pw:api => response.json started
+2026-11-01T21:35:55.456Z pw:api <= response.json succeeded
+2026-11-01T21:35:55.457Z pw:api => locator.getAttribute started
+2026-11-01T21:35:55.458Z pw:api waiting for locator('#mensaje')
+2026-11-01T21:35:55.460Z pw:api   locator resolved to <p id="mensaje" role="status" aria-live="polite" data-estado="exito">Consulta completada.</p>
+2026-11-01T21:35:55.460Z pw:api <= locator.getAttribute succeeded
+2026-11-01T21:35:55.460Z pw:api => locator.allTextContents started
+2026-11-01T21:35:55.464Z pw:api <= locator.allTextContents succeeded
+2026-11-01T21:35:55.465Z pw:api => locator.isHidden started
+2026-11-01T21:35:55.465Z pw:api   checking visibility of locator('#resultado')
+2026-11-01T21:35:55.467Z pw:api <= locator.isHidden succeeded
+2026-11-01T21:35:55.468Z pw:api => locator.isVisible started
+2026-11-01T21:35:55.468Z pw:api   checking visibility of locator('#error')
+2026-11-01T21:35:55.469Z pw:api <= locator.isVisible succeeded
+2026-11-01T21:35:55.469Z pw:api => locator.textContent started
+2026-11-01T21:35:55.470Z pw:api waiting for locator('#error')
+2026-11-01T21:35:55.471Z pw:api   locator resolved to <p hidden="" id="error" role="alert"></p>
+2026-11-01T21:35:55.471Z pw:api <= locator.textContent succeeded
+2026-11-01T21:35:55.471Z pw:api => locator.isEnabled started
+2026-11-01T21:35:55.472Z pw:api waiting for locator('#consultar')
+2026-11-01T21:35:55.475Z pw:api   locator resolved to <button type="submit" id="consultar">Consultar catálogo</button>
+2026-11-01T21:35:55.475Z pw:api <= locator.isEnabled succeeded
+2026-11-01T21:35:55.476Z pw:api => locator.isEnabled started
+2026-11-01T21:35:55.476Z pw:api waiting for locator('#almacen')
+2026-11-01T21:35:55.477Z pw:api   locator resolved to <select required="" id="almacen" name="almacen">…</select>
+2026-11-01T21:35:55.477Z pw:api <= locator.isEnabled succeeded
+2026-11-01T21:35:55.477Z pw:api => locator.isEnabled started
+2026-11-01T21:35:55.478Z pw:api waiting for locator('#nombre')
+2026-11-01T21:35:55.479Z pw:api   locator resolved to <input id="nombre" name="nombre" type="search" autocomplete="off" aria-describedby="ayuda-nombre" placeholder="Por ejemplo, local"/>
+2026-11-01T21:35:55.479Z pw:api <= locator.isEnabled succeeded
+2026-11-01T21:35:55.479Z pw:api => locator.getAttribute started
+2026-11-01T21:35:55.479Z pw:api waiting for locator('#panel-resultados')
+2026-11-01T21:35:55.481Z pw:api   locator resolved to <section aria-busy="false" id="panel-resultados" class="panel resultados" aria-labelledby="titulo-resultados">…</section>
+2026-11-01T21:35:55.481Z pw:api <= locator.getAttribute succeeded
+2026-11-01T21:35:55.481Z pw:api => locator.selectOption started
+2026-11-01T21:35:55.481Z pw:api waiting for locator('#almacen')
+2026-11-01T21:35:55.483Z pw:api   locator resolved to <select required="" id="almacen" name="almacen">…</select>
+2026-11-01T21:35:55.483Z pw:api attempting select option action
+2026-11-01T21:35:55.484Z pw:api   waiting for element to be visible and enabled
+2026-11-01T21:35:55.485Z pw:api   selected specified option(s)
+2026-11-01T21:35:55.485Z pw:api <= locator.selectOption succeeded
+2026-11-01T21:35:55.486Z pw:api => locator.fill started
+2026-11-01T21:35:55.486Z pw:api waiting for locator('#nombre')
+2026-11-01T21:35:55.490Z pw:api   locator resolved to <input id="nombre" name="nombre" type="search" autocomplete="off" aria-describedby="ayuda-nombre" placeholder="Por ejemplo, local"/>
+2026-11-01T21:35:55.491Z pw:api   fill("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+2026-11-01T21:35:55.491Z pw:api attempting fill action
+2026-11-01T21:35:55.491Z pw:api   waiting for element to be visible, enabled and editable
+2026-11-01T21:35:55.497Z pw:api <= locator.fill succeeded
+2026-11-01T21:35:55.497Z pw:api => locator.click started
+2026-11-01T21:35:55.497Z pw:api waiting for locator('#consultar')
+2026-11-01T21:35:55.499Z pw:api   locator resolved to <button type="submit" id="consultar">Consultar catálogo</button>
+2026-11-01T21:35:55.500Z pw:api attempting click action
+2026-11-01T21:35:55.500Z pw:api   waiting for element to be visible, enabled and stable
+2026-11-01T21:35:55.526Z pw:api   element is visible, enabled and stable
+2026-11-01T21:35:55.526Z pw:api   scrolling into view if needed
+2026-11-01T21:35:55.528Z pw:api   done scrolling
+2026-11-01T21:35:55.530Z pw:api   performing click action
+2026-11-01T21:35:55.533Z pw:api   click action done
+2026-11-01T21:35:55.533Z pw:api   waiting for scheduled navigations to finish
+2026-11-01T21:35:55.534Z pw:api   navigations have finished
+2026-11-01T21:35:55.534Z pw:api <= locator.click succeeded
+2026-11-01T21:35:55.548Z pw:api <= page.waitForResponse succeeded
+2026-11-01T21:35:55.548Z pw:api => page.waitForFunction started
+2026-11-01T21:35:55.553Z pw:api <= page.waitForFunction succeeded
+2026-11-01T21:35:55.553Z pw:api => response.json started

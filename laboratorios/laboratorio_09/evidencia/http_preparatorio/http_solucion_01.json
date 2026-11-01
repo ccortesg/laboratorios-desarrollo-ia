@@ -1,0 +1,796 @@
+{
+  "bateria": "seguridad",
+  "estado_codigo": "solucion",
+  "casos_registrados": 11,
+  "criterios_distintos": 7,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 11,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "S01",
+      "prueba": "test_s01_consulta_valida_y_borde",
+      "criterio": "S01: consultar datos importados conserva búsqueda y acepta 80 puntos de código.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:03.393916+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:03.447781+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:03.487169+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S02.a",
+      "prueba": "test_s02a_dos_almacenes",
+      "criterio": "S02.a: dos valores de almacén se rechazan sin elegir uno.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:03.540316+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:03.584992+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:03.623039+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S02.b",
+      "prueba": "test_s02b_nombre_igual_repetido",
+      "criterio": "S02.b: repetir nombre se rechaza incluso con valores iguales.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:03.673134+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:03.716719+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:03.756743+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S02.c",
+      "prueba": "test_s02c_clave_codificada_equivalente",
+      "criterio": "S02.c: las claves equivalentes tras decodificar se reconocen como repetidas.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:03.813165+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:03.856720+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:03.898911+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S03",
+      "prueba": "test_s03_clave_adicional",
+      "criterio": "S03: una clave adicional no se ignora silenciosamente.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:03.953856+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:03.998130+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.038075+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S04.a",
+      "prueba": "test_s04a_nombre_largo_antes_de_strip",
+      "criterio": "S04.a: 81 puntos de código, también espacios, exceden el límite.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:04.090990+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:04.139976+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.183847+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S04.b",
+      "prueba": "test_s04b_query_larga_y_recuperacion",
+      "criterio": "S04.b: 2048 bytes son el borde; 2049 se rechazan y la siguiente consulta funciona.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:04.239958+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:04.285134+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.321744+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S05.a",
+      "prueba": "test_s05a_percent_invalido",
+      "criterio": "S05.a: percent-encoding mal formado se rechaza, no se convierte en texto válido.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:04.376285+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:04.422280+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.465897+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S05.b",
+      "prueba": "test_s05b_utf8_invalido",
+      "criterio": "S05.b: bytes UTF-8 inválidos se rechazan sin carácter de sustitución.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:04.520436+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:04.564277+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.602216+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S07",
+      "prueba": "test_s07_texto_parecido_a_sql",
+      "criterio": "S07: una cadena parecida a SQL sigue siendo un valor de búsqueda.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:04.651449+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:04.691762+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.729274+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S08",
+      "prueba": "test_s08_error_interno_generico_y_recuperacion",
+      "criterio": "S08: una base temporalmente ausente produce un error genérico y se recupera.",
+      "estado": "BLOQUEADO",
+      "detalle": "No se pudo iniciar el servidor local en este entorno.",
+      "tipo_error": "BloqueoEntorno",
+      "entrada": null,
+      "esperado": null,
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-01T21:29:04.779682+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-01T21:29:04.827846+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-01T21:29:04.865285+00:00",
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": ""
+          }
+        ],
+        "peticiones": []
+      },
+      "comando_terminal": null
+    }
+  ]
+}

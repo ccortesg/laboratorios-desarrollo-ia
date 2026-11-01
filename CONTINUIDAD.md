@@ -1,3 +1,37 @@
+# Continuidad vigente · cierre del laboratorio 9 preparado
+
+**Fecha:** 1 de noviembre de 2026. Estados vigentes de preparación: [libro 1.8.2](docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md) y [repositorio 1.7.2](docs/estados/ESTADO_REPOSITORIO_v1.7.2.md). Incorporan como antecedente exacto la revisión 1.8.1/1.7.1. Maestro editorial 1.0 sin cambios; capítulos 1–9 pendientes de revisión del autor.
+
+La ejecución funcional WSL fue auditada y aprobada sobre `251105483bc5bef040c57dc3a036d5bc3a7e0da0`. El cierre preserva íntegro ese contenido e incorpora [la revisión recibida](evidencia_integracion/revision_laboratorio_09_wsl/README.md). Las 805 ejecuciones y las pruebas 8/9/4 pertenecen a esa sesión anterior. En este cierre se comprobaron los 2.273 archivos de ese árbol, las 210 huellas declaradas y ocho pruebas nuevas del recolector con el runtime aislado; todas aprobaron.
+
+**Operación autorizada vigente:** el autor invocó `PROMPT_CIERRE_LABORATORIO_09_v1.0.md` y autorizó commit, integración en main conservando avances y push atómico de main con únicamente `lab-09-v1.0` y `repositorio-v1.5`. Las restricciones de las preparaciones anteriores describen su momento y no cancelan este encargo expreso. La publicación sigue pendiente en este documento previo; commit, árbol documental y consultas posteriores se registran fuera del commit que acreditan, en `trabajo/cierre_lab09_wsl_20261101T231144Z/`.
+
+No reaplicar el parche, forzar referencias, mover etiquetas históricas ni modificar código, pruebas, datos, distribuciones o evidencias anteriores. Los estados posteriores 1.8.3/1.7.3 y el comprobante confirmado sólo se emitirán según el resultado real. No redactar el capítulo 10.
+
+## Antecedentes íntegros de preparación
+
+El texto siguiente conserva las observaciones y restricciones de sus sesiones; la continuidad vigente es la que encabeza este documento.
+
+# Continuidad vigente · laboratorio 9 preparado para revisión
+
+**Fecha:** 1 de noviembre de 2026. Estados vigentes: [libro 1.8](docs/estados/ESTADO_DEL_LIBRO_v1.8.md) y [repositorio 1.7](docs/estados/ESTADO_REPOSITORIO_v1.7.md). El maestro editorial 1.0 sigue sin cambios y los capítulos 1–9 están pendientes de revisión del autor.
+
+La base utilizada es `9212ee99b88f70f0b289837b88d6bbf34da91a52`, árbol `d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0`. La reconsulta de GitHub a las 21:50:33 UTC del 1 de noviembre conservó main y las etiquetas lab-08-v1.0/repositorio-v1.4 en ese commit; las trece etiquetas siguen intactas. El cierre del 8 ya está confirmado. Se añaden sus estados posteriores 1.7.4/1.6.4 y la revisión externa exacta en `evidencia_integracion/cierre_laboratorio_08_confirmado/`.
+
+El laboratorio 9 preserva la solución corregida del 8, sus 62 casos y el recorrido persistente real. Añade ocho criterios S con doce casos para validar la query HTTP y comprobar rechazo y recuperación. La propuesta pierde repeticiones antes de validarlas. La base falla nueve exigencias nuevas; la propuesta falla tres casos S02; la solución satisface 74/74. El alcance no incluye usuarios, permisos, exposición pública ni una auditoría productiva.
+
+El autónomo final registró 27 baterías, 222 ejecuciones, 210 APROBADO, 12 FALLIDO didácticos y 54/54 huellas. El conjunto nuevo registró 92 baterías, 805 ejecuciones, 781 APROBADO, 24 FALLIDO previstos, 0 bloqueos, 48 NO EJECUTADO en baterías y diez ausentes aparte; 156/156 huellas. Las pruebas 8/9/4 de infraestructura se cuentan separadamente. El ZIP nuevo descomprimido reprodujo 222/210/12, conservando sus 292 archivos. Todo ello se ejecutó en Linux.
+
+Los dos TimeoutExpired del primer autónomo se conservan como problemas reales del instrumento, no como fallos didácticos. La corrección S06 mantiene HTTP, DOM, controles y recuperación; S04.a verifica el cuerpo JSON. Los diagnósticos y la diferencia están incluidos. La causa interna completa de la espera no se atribuye a una versión del navegador.
+
+La evidencia histórica de 583 ejecuciones Windows y el cierre posterior WSL del laboratorio 8 siguen separados. Las nuevas ejecuciones no autorizan una aprobación editorial ni acreditan sesiones comerciales. El recolector y sus ocho pruebas permanecen idénticos a la base; ninguna evidencia histórica se reescribe.
+
+**Siguiente operación:** usar el paquete de integración y su prompt para Codex para aplicar y verificar localmente, conservando avances de main. Terminar con evidencia nueva para revisión. No crear commit, no integrar main, no crear ni mover etiquetas y no hacer push. `lab-09-v1.0` y `repositorio-v1.5` son únicamente nombres previstos. No redactar todavía el capítulo 10.
+
+## Antecedentes conservados
+
+Los textos siguientes mantienen sus fechas y estados originales. Sus pendientes de publicación del laboratorio 8 ya quedaron cerrados; no describen el estado vigente que encabeza este documento.
+
 # Continuidad vigente · cierre del laboratorio 8
 
 Estados de preparación: [libro 1.7.3](docs/estados/ESTADO_DEL_LIBRO_v1.7.3.md) y [repositorio 1.6.3](docs/estados/ESTADO_REPOSITORIO_v1.6.3.md). La ejecución corregida del autor en Windows es **APROBADO** y su [revisión completa](evidencia_integracion/cierre_laboratorio_08_windows/revision_recibida/REVISION_LABORATORIO_08_WINDOWS_v1.0.md) ya está incorporada. Los estados 1.7.2/1.6.2 se conservan como antecedentes de esa revisión.

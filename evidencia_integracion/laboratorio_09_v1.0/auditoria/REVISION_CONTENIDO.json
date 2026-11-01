@@ -1,0 +1,18 @@
+{
+  "estado": "APROBADO",
+  "capitulo": "CAPITULO_09_v1.0.md",
+  "sha256": "db4d633ee597b747161bc24a94aa99edf8060238fd1f457286846a6f86701dca",
+  "palabras": 4236,
+  "cronica_palabras": 523,
+  "secciones": 10,
+  "fuentes_primarias": 6,
+  "revision": [
+    "Contrato previo a implementación y casos negativos coherentes con el código.",
+    "Conteos observados, históricos y ejemplos separados.",
+    "Crónica sintética y prompts didácticos rotulados.",
+    "Códigos, rutas del laboratorio y comandos revisados contra la implementación.",
+    "Datos sintéticos, sin referencias del repositorio en el manuscrito ni metadatos personales.",
+    "Corrección de puntuación/imperativo, precisión del navegador y bibliografía reunida."
+  ],
+  "limite": "Revisión técnica y editorial de preparación; no aprobación del autor ni auditoría general de seguridad."
+}

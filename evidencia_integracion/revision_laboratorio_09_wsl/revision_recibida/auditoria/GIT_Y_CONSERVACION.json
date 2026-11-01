@@ -1,0 +1,32 @@
+{
+  "estado": "APROBADO",
+  "fecha_auditoria_utc": "2026-11-01T22:39:53.780184+00:00",
+  "comprobaciones": {
+    "base_head_main": true,
+    "arbol_base": true,
+    "arbol_preparado": true,
+    "rutas_preparadas": true,
+    "sin_cambios_fuera_indice": true,
+    "trece_etiquetas_locales_conservadas": true,
+    "remoto_recibido_coincide_reconsulta": true,
+    "sin_etiquetas_previstas": true,
+    "parche": true,
+    "cobertura_1502_protegidos": true,
+    "huellas_protegidos_vs_base_conocida": true
+  },
+  "base": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+  "arbol_base": "d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0",
+  "arbol_preparado": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+  "rama_aportada": "codex/integracion-laboratorio-09",
+  "archivos_protegidos_comparados": 1502,
+  "divergencias_protegidas": [],
+  "rutas_preparadas": 771,
+  "etiquetas_locales_aportadas": 13,
+  "etiquetas_remotas_reconsultadas": 13,
+  "fecha_reconsulta_utc": "2026-11-01 22:37:39 UTC",
+  "limites": [
+    "El estado local del autor se coteja mediante registros aportados; no se accedió a su disco WSL.",
+    "La comparación de los 1502 hashes recibidos usa la base conocida y preservada en esta sesión. El resultado de su cotejo final local pertenece a la ejecución aportada.",
+    "La consulta GitHub es nueva y de sólo lectura; no acredita cambios posteriores a su fecha."
+  ]
+}

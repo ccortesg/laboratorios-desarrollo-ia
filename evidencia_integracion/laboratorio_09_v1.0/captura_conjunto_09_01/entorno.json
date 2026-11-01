@@ -1,0 +1,9 @@
+{
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "modalidad": "Ejecucion local en Linux; no acredita una nueva ejecucion Windows.",
+  "navegador": "Ejecutable local seleccionado mediante LAB06_CHROMIUM.",
+  "dependencias_node": "Instalacion local seleccionada mediante NODE_PATH.",
+  "red": "Solo HTTP local de los laboratorios durante estas comprobaciones."
+}

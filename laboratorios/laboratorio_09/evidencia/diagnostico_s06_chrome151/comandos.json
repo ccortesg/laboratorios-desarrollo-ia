@@ -1,0 +1,29 @@
+{
+  "convenciones": "Captura de diagnóstico saneada; *_capturado identifica la captura previa a las sustituciones. No representa una aprobación funcional.",
+  "registros": [
+    {
+      "inicio_utc": "2026-11-01T21:37:47.737585+00:00",
+      "comando": [
+        "node",
+        "pruebas_seguridad_navegador.cjs",
+        "--url",
+        "<URL_LOCAL>",
+        "--json",
+        "<TRABAJO>/navegador.json"
+      ],
+      "instrumentacion": "DEBUG=pw:api; controlador y CJS originales sin modificación",
+      "timeout_segundos": 70,
+      "codigo_salida": null,
+      "estado": "FALLIDO",
+      "tipo_error": "TimeoutExpired",
+      "fin_utc": "2026-11-01T21:38:57.813086+00:00",
+      "stdout": "stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "stderr.txt",
+      "sha256_stderr": "c8dd6dbbb25bcf5be0fe7384a7600863e39376a434036f27ad6eaa616b63805f",
+      "id": "diagnostico_s06_chrome151",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "55a61a5f0c767bfa82e7f4bff71b3ad237fc416186c42fe6b1b35bab8f4353f7"
+    }
+  ]
+}

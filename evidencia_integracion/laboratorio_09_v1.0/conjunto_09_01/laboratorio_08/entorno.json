@@ -1,0 +1,11 @@
+{
+  "fecha_hora_utc": "2026-11-01T21:43:12.233907+00:00",
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "navegador_solicitado": true,
+  "dependencias_aplicacion": "Python estándar; recursos web locales.",
+  "dependencias_navegador": "Node y Playwright para W05–W06 y el recorrido persistente D04.",
+  "atribucion": "Ejecución local; no acredita uso de una herramienta comercial.",
+  "saneamiento": "Se omiten identidad, rutas del equipo y variables de entorno."
+}

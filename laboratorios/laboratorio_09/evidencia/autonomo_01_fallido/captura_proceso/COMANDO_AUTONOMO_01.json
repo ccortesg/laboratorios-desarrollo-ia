@@ -1,0 +1,19 @@
+{
+  "inicio_utc": "2026-11-01T21:32:37.530045+00:00",
+  "comando": [
+    "python",
+    "-B",
+    "verificar.py",
+    "--navegador",
+    "--salida",
+    "<SALIDA>"
+  ],
+  "directorio": "LABORATORIO_09",
+  "dependencia_navegador": "Chrome for Testing 156.0.8078.80 (ejecutable oficial indicado con LAB06_CHROMIUM); Playwright 1.62.1",
+  "fin_utc": "2026-11-01T21:35:26.913390+00:00",
+  "codigo_salida": 1,
+  "stdout": "autonomo_01.stdout.txt",
+  "sha256_stdout": "78d8e775885af14d4e0244476c761ccf8e9ed25c945cb8f2939dd5ef35bfe691",
+  "stderr": "autonomo_01.stderr.txt",
+  "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

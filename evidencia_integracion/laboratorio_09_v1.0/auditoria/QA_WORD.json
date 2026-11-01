@@ -1,0 +1,107 @@
+{
+  "estado_estructural": "APROBADO",
+  "estado_visual": "APROBADO",
+  "parrafos_contenido": 141,
+  "tablas": 1,
+  "secciones": 10,
+  "bloques_codigo": 11,
+  "hipervinculos_unicos": 6,
+  "equivalencia_texto_en_orden": true,
+  "equivalencia_codigo": true,
+  "equivalencia_urls": true,
+  "metadatos_personales_vacios": true,
+  "sin_comentarios_ni_revisiones": true,
+  "sha256_markdown": "db4d633ee597b747161bc24a94aa99edf8060238fd1f457286846a6f86701dca",
+  "sha256_docx": "bbe37f183612530d065a143969c209904eafc812d5adb00d23330efc23c1ee59",
+  "palabras_markdown_por_espacios": 4236,
+  "fuente_presentacion": "CAPITULO_08_v1.0.docx",
+  "paginas": 11,
+  "paginas_inspeccionadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "fallos_pendientes": [],
+  "palabras_cronica_por_espacios": 523,
+  "metodo_inspeccion": [
+    {
+      "pagina": 1,
+      "sha256_png": "3c2649c3d0722591dbb28b0f5d22681b538c731ed64b4de9e125d9121703711b",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 2,
+      "sha256_png": "c5cd141540109080bccdea42d41c859598277d83653ef1aaee10eccc4d10577d",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 3,
+      "sha256_png": "ae58ea3b1223c3f18cb5b8041cdbc8b674506f4c4eb533df05c74bc2dcd0b66c",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 4,
+      "sha256_png": "4e40aec2ca735fc2e4139fb4b22813893d8101c8f73bc6b146c97bfe2af7bfec",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 5,
+      "sha256_png": "07d37134860fb29c8a78733b2e195996ad4e6fb3b12752cc1dc7e4e861e641bd",
+      "inspeccion": "visual del PNG final",
+      "identico_anterior": false
+    },
+    {
+      "pagina": 6,
+      "sha256_png": "5ae56e894dd8dc44c6caedb38d45eb5578ee104a20e15b1e54a9650f9b69cf26",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 7,
+      "sha256_png": "579af1daaca52a31d9d6c173abb6778c5ca5d1f15ffd2162f8c15c3a575828b4",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 8,
+      "sha256_png": "d196efee653a8ac7646104c9e3e340612b5f4b03574d02832a6a7b708a4ca6f8",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 9,
+      "sha256_png": "1261a87c643db7e4c5d809fba5795f57ba2e4f8de2e270e1a5cda29c6619afa6",
+      "inspeccion": "visual del PNG anterior idéntico byte a byte al render final",
+      "identico_anterior": true
+    },
+    {
+      "pagina": 10,
+      "sha256_png": "a7007d730227deb58e87645b16ae207994d235b298c9f02bf6564b53045bc422",
+      "inspeccion": "visual del PNG final",
+      "identico_anterior": false
+    },
+    {
+      "pagina": 11,
+      "sha256_png": "194b78348f6afe50ada1ccace34d1567498231b2b72a790c5e1d5af1866d4e6d",
+      "inspeccion": "visual del PNG final",
+      "identico_anterior": false
+    }
+  ],
+  "ajustes_visuales": [
+    "Se evitó puntuación aislada al describir la búsqueda con espacios.",
+    "Se reunió la bibliografía en una página."
+  ],
+  "alcance": "Renderizado LibreOffice y revisión visual de todas las páginas; texto/código/URLs equivalentes al Markdown y metadatos de autor vacíos."
+}
