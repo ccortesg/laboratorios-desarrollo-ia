@@ -1,4 +1,58 @@
-# Continuidad vigente · Integración 1.3 preparada
+# Continuidad vigente · cierre del laboratorio 8
+
+Estados de preparación: [libro 1.7.3](docs/estados/ESTADO_DEL_LIBRO_v1.7.3.md) y [repositorio 1.6.3](docs/estados/ESTADO_REPOSITORIO_v1.6.3.md). La ejecución corregida del autor en Windows es **APROBADO** y su [revisión completa](evidencia_integracion/cierre_laboratorio_08_windows/revision_recibida/REVISION_LABORATORIO_08_WINDOWS_v1.0.md) ya está incorporada. Los estados 1.7.2/1.6.2 se conservan como antecedentes de esa revisión.
+
+El árbol Windows verificado es `9ea6109fe8e89a2785bdce255252ffaabea1d122`, sobre HEAD `46f389bc4acf3e231a8eb1a1bb3972db0fe7e622`. Este incremento sólo añade documentación y evidencia y actualiza referencias operativas; conserva el código, distribuciones y evidencia histórica. El árbol documental nuevo se registra en el paquete de cierre.
+
+Se acreditan 65 baterías, 583 ejecuciones, 571 aprobaciones y doce fallos didácticos; cero bloqueos, 48 NO EJECUTADO y diez ausentes aparte. Huellas: 102/102 conjunto y 10/10 auxiliares. Las pruebas 8/4/9 se cuentan separadamente. Los resultados anteriores FALLIDO y BLOQUEADO siguen siendo antecedentes con su estado original.
+
+El autor autorizó el commit, integración main y publicación de main con sólo `lab-08-v1.0` y `repositorio-v1.4`, sin forzar referencias. La primera etiqueta corresponde a la publicación inicial del laboratorio 8 con distribución técnica 1.0.1. La publicación continúa pendiente hasta verificar las referencias reales. Después se generarán los estados 1.7.4/1.6.4 observados en el ZIP de cierre; no se insertan anticipadamente en el commit que acreditan.
+
+Si main avanza, conservarlo y revisar los cambios. Si cambia código, la evidencia funcional anterior por sí sola no acredita ese código nuevo. Los manuscritos 1–8 siguen pendientes de revisión editorial. El maestro permanece en 1.0 y el capítulo 9 queda fuera del cierre.
+
+## Antecedentes conservados
+
+Los textos siguientes conservan sus estados y fechas históricos. Sus pendientes de ejecución Windows del laboratorio 8 quedaron resueltos por la revisión incorporada arriba; no describen la continuidad vigente.
+
+# Continuidad vigente · corrección SQLite del laboratorio 8
+
+Estados vigentes: [libro 1.7.1](docs/estados/ESTADO_DEL_LIBRO_v1.7.1.md) y [repositorio 1.6.1](docs/estados/ESTADO_REPOSITORIO_v1.6.1.md). La ejecución Windows original del laboratorio 8 resultó FALLIDO por conexiones de prueba sin cerrar; su auditoría y captura se conservan. La distribución 1.0.1 corrige ese soporte y añade cuatro regresiones, sin cambiar contratos ni estados de aplicación. La nueva ejecución Windows sigue pendiente.
+
+La integración continúa en una rama local con cambios preparados, sin commit, main, etiquetas nuevas ni push. Usa el paquete correctivo sobre el árbol preparado 2ea01dea2aa0c8907eba54ef65efcb44d547b9d7; los resultados y el árbol posterior están en su BASE_CORRECCION.json y evidencia. Maestro editorial 1.0 y manuscritos sin cambios; revisión del autor pendiente.
+
+## Antecedentes conservados de preparación v1.0
+
+# Continuidad vigente · Integración 1.4 preparada para revisión
+
+**Fecha:** 1 de noviembre de 2026, UTC. Estados vigentes: [libro 1.7](docs/estados/ESTADO_DEL_LIBRO_v1.7.md) y [repositorio 1.6](docs/estados/ESTADO_REPOSITORIO_v1.6.md). Maestro editorial 1.0 sin cambios. Los capítulos 1–8 siguen pendientes de revisión del autor.
+
+## Cierre del laboratorio 7 conservado
+
+La ejecución Windows del autor y la publicación del laboratorio 7 están confirmadas. Los estados 1.6.2 y 1.5.2, recuperados de la entrega separada, prevalecen sobre pendientes históricos. Su cierre se incorpora bajo `evidencia_integracion/cierre_laboratorio_07_confirmado/`, sin modificar sus archivos.
+
+GitHub se consultó el 31 de octubre de 2026 a las 23:47:03 UTC: main, lab-07-v1.0 y repositorio-v1.3 apuntaban a `46f389bc4acf3e231a8eb1a1bb3972db0fe7e622`, árbol `b123b5969e8077ba0cb3c4eedc9b348f94294652`. Se conservaron las once etiquetas. Esa base contiene la corrección del recolector.
+
+## Incremento nuevo y evidencia
+
+El laboratorio 8 añade persistencia explícita y el recorrido CSV→importador CLI→SQLite en archivo→HTTP→navegador. Conserva 51 casos anteriores; ocho criterios D añaden once casos. La propuesta omite transmitir la conexión y falla exactamente D03, D04, D05 y D08.a. La solución aprueba 62/62. El diagnóstico del origen efectivo existe en ambos estados y se comprueba por separado de la corrección funcional.
+
+El laboratorio se ejecutó con navegador: 21 baterías, 175 ejecuciones, 171 aprobaciones, cuatro fallos didácticos, cero bloqueos y once NO EJECUTADO de base; 38/38 huellas finales. El pase desde un ZIP nuevo descomprimido reprodujo el resultado y conservó sus 142 archivos.
+
+El conjunto nuevo de ocho laboratorios registró APROBADO: 65 baterías, 583 ejecuciones, 571 aprobaciones, doce fallos didácticos, cero bloqueos, 48 NO EJECUTADO en baterías y diez criterios ausentes aparte. Coincidieron 102/102 huellas finales. Las ocho pruebas del recolector y nueve pruebas focales del evaluador se contabilizan por separado. La evidencia está en `evidencia_integracion/laboratorio_08_v1.0/`; no sustituye los registros históricos.
+
+La producción y la prueba del parche son Linux. Windows del laboratorio 8, herramientas comerciales, Actions, producción, concurrencia, carga y el reto comparador están NO EJECUTADO. Cambiar el directorio de trabajo no equivale a cambiar de sistema operativo.
+
+## Siguiente operación autorizada en esta preparación
+
+El paquete `INTEGRACION_LABORATORIO_08_v1.0.zip` permite verificar, aplicar y probar sobre una rama local de Windows. Su `BASE_INTEGRACION.json` registra el árbol preparado y la huella del parche; las instrucciones conservan avances posteriores de main y terminan con evidencia nueva para revisión.
+
+No se creó commit, no se integró main, no se crearon ni movieron etiquetas y no se hizo push en esta producción. `lab-08-v1.0` y `repositorio-v1.4` son sólo nombres previstos. La siguiente tarea es revisar la aplicación y ejecución Windows antes del cierre. El capítulo 9 permanece fuera de alcance.
+
+## Antecedentes íntegros
+
+El texto siguiente conserva los estados tal como se documentaron. Sus pendientes de Windows y publicación del laboratorio 7 ya quedaron cerrados por los estados vigentes indicados arriba.
+
+# Continuidad histórica · Integración 1.3 preparada
 
 **Fecha:** 31 de octubre de 2026. El maestro editorial v1.0 sigue vigente. Los estados actuales son [ESTADO_DEL_LIBRO_v1.6.md](docs/estados/ESTADO_DEL_LIBRO_v1.6.md) y [ESTADO_REPOSITORIO_v1.5.md](docs/estados/ESTADO_REPOSITORIO_v1.5.md). Los capítulos 1–7 permanecen pendientes de revisión editorial del autor.
 

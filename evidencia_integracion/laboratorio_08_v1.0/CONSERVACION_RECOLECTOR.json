@@ -1,0 +1,15 @@
+{
+  "estado": "APROBADO",
+  "archivos": {
+    "herramientas/huellas_evidencia.py": {
+      "sha256_base": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+      "sha256_actual": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+      "sin_cambios": true
+    },
+    "herramientas/pruebas/test_huellas_evidencia.py": {
+      "sha256_base": "49c1892607cb5609aec93a8f5f15b614bdd869cd7242181d8b196fec12069c9d",
+      "sha256_actual": "49c1892607cb5609aec93a8f5f15b614bdd869cd7242181d8b196fec12069c9d",
+      "sin_cambios": true
+    }
+  }
+}

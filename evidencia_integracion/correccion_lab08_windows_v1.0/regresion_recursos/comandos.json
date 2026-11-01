@@ -1,0 +1,50 @@
+{
+  "registros": [
+    {
+      "id": "original",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_recursos.py"
+      ],
+      "codigo_salida": 1,
+      "inicio_utc": "2026-11-01T01:51:05.015179+00:00",
+      "fin_utc": "2026-11-01T01:51:05.413414+00:00",
+      "fuentes": {
+        "soporte_procesos.py": "5b3afad34aea74b1cf649ef095186bbc9e7951cea8c7e759021751d08f08ea4d",
+        "pruebas_depuracion.py": "3f84f47d57da3b4949f44b68a3b1df2e2ef4293d94edcd4f7831d6c1d5cfcd00",
+        "pruebas_recursos.py": "c16d1495d5d3e7603d486ff6f161c95a8484bbe8413ed5aadd52d65eacba301f"
+      },
+      "stdout": "original.stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "original.stderr.txt",
+      "sha256_stderr": "bf13a8a75b11c1fdfa943b1c281279d16b100171ffc313baab5bd09fc804a21f",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "49ba42b8383f36e2f931cba60a14aa561bf539f30af875b47e9dd4f028ea527b"
+    },
+    {
+      "id": "corregido",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_recursos.py"
+      ],
+      "codigo_salida": 0,
+      "inicio_utc": "2026-11-01T01:51:21.377010+00:00",
+      "fin_utc": "2026-11-01T01:51:21.767007+00:00",
+      "fuentes": {
+        "soporte_procesos.py": "f77a30b6e808d8b5a263c8a4befadd3b5548b4e80f880b8215c6f2b49fda8f9f",
+        "pruebas_depuracion.py": "b57358409a53e391dec92796311132fdbf734cc61a7d000961ec6f524f69ce26",
+        "pruebas_recursos.py": "c16d1495d5d3e7603d486ff6f161c95a8484bbe8413ed5aadd52d65eacba301f"
+      },
+      "stdout": "corregido.stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "corregido.stderr.txt",
+      "sha256_stderr": "5fb769cc92339883a65bf0b65ad423ca8691f9f1fc93eafb0d94b906a3af78e3",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "5fb769cc92339883a65bf0b65ad423ca8691f9f1fc93eafb0d94b906a3af78e3"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

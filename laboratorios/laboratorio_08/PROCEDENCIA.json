@@ -1,0 +1,28 @@
+{
+  "origen": "Solución del laboratorio 7 v1.0 y sus comprobaciones heredadas",
+  "archivos_heredados": {
+    "datos/actualizacion_valida.csv": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+    "datos/error_tardio.csv": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+    "datos/par_duplicado.csv": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6",
+    "estados/base/catalogo.py": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+    "estados/base/datos/ejemplos.sql": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+    "estados/base/datos/esquema.sql": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+    "estados/base/detalle.py": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+    "estados/base/importacion.py": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+    "estados/base/laboratorio.py": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93",
+    "estados/base/pruebas.py": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+    "estados/base/pruebas_detalle.py": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+    "estados/base/resumen.py": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+    "estados/base/servidor.py": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+    "estados/base/solucion/consulta.sql": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+    "estados/base/web/app.js": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+    "estados/base/web/estilos.css": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+    "estados/base/web/index.html": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+    "pruebas_http.py": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93",
+    "pruebas_integracion.py": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d",
+    "pruebas_navegador.cjs": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca",
+    "pruebas_resumen.py": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+    "soporte/huellas_evidencia.py": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+    "soporte_web.py": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c"
+  }
+}

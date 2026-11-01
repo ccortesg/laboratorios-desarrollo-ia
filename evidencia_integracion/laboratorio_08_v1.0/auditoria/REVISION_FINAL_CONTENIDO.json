@@ -1,0 +1,34 @@
+{
+  "estado": "APROBADO",
+  "editorial": {
+    "capitulo_palabras": 4394,
+    "cronica_palabras": 524,
+    "secciones": 10,
+    "voz_y_progresion": "Revisadas; conceptos preceden a comandos, ejemplos didácticos rotulados, crónica sintética.",
+    "revision_autor": "Pendiente"
+  },
+  "tecnica": {
+    "contratos_heredados": 51,
+    "casos_solucion": 62,
+    "defecto": "Omisión única de conexión en el resumen HTTP de propuesta",
+    "recorrido_csv_pantalla": "APROBADO con servidor vivo y procesos separados",
+    "instrumentacion": "Origen efectivo observado dentro de la consulta; protege colisión con base.",
+    "coherencia": "Código, contratos, pruebas y capítulo cotejados."
+  },
+  "pedagogica": {
+    "encargo_insuficiente_y_claro": true,
+    "hipotesis_discriminadas": true,
+    "reto": "Comparador de informes de sólo lectura, NO EJECUTADO"
+  },
+  "confidencialidad": {
+    "alcance": "Texto nuevo, código, datos, evidencia y metadatos Word; revisión de patrones de rutas y nombres privados, más lectura editorial.",
+    "hallazgos_pendientes": [],
+    "fuentes": "Documentación pública oficial; URL del repositorio reservada a materiales operativos."
+  },
+  "presentacion_word": "Once páginas renderizadas e inspeccionadas; QA_WORD.json conserva equivalencia y hashes.",
+  "limites": [
+    "No es una aprobación editorial del autor.",
+    "No es una evaluación de seguridad productiva.",
+    "Ejecución local Linux, no Windows del autor."
+  ]
+}

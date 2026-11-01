@@ -1,0 +1,8 @@
+{
+  "fecha_hora_utc": "2026-10-31T23:52:26.738945+00:00",
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "tipo": "Cinco pruebas del evaluador con registros sintéticos; no son casos funcionales ni las ocho pruebas del recolector",
+  "sha256_verificador": "550cdb078ffaf18e26e7c8daa950612b63d9392e6e2056a5c545a1e9bed0fee5",
+  "sha256_pruebas": "f1ecdd8a08d5aec69907c7dc06569241cd110db130e4b43caddbd6ac070f5191"
+}

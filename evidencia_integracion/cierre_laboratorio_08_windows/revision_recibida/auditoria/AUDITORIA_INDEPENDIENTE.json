@@ -1,0 +1,918 @@
+{
+  "zip": "EVIDENCIA_CORRECCION_LAB08_WINDOWS_02.zip",
+  "sha256_zip": "2e8503f199f85184ef55de2c8808cda7b358e4dd75554a03371be51b4d7b1445",
+  "entradas_zip": {
+    "cantidad": 254,
+    "archivos": 254,
+    "duplicadas": 0,
+    "inseguras": []
+  },
+  "manifiesto": {
+    "declaradas": 253,
+    "coincidentes": 253,
+    "cobertura_completa": true,
+    "fallos": []
+  },
+  "huellas_salidas": {
+    "cantidad_por_ambito": {
+      "auxiliares": 10,
+      "conjunto": 102
+    },
+    "fallos": [],
+    "campos_capturados": 112,
+    "capturas_distintas_de_finales": 0
+  },
+  "identidad_git": {
+    "inicial": {
+      "rama": "integracion/laboratorio-08",
+      "head": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "arbol_indice": "9ea6109fe8e89a2785bdce255252ffaabea1d122",
+      "sin_preparar": [],
+      "etiquetas": [
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-01-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-02-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-03-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-04-v1.1",
+        "67edef7b44524f5f621e9b060c6b9c523c1b05a8\trefs/tags/lab-05-v1.0",
+        "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd\trefs/tags/lab-06-v1.0",
+        "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622\trefs/tags/lab-07-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/repositorio-v1.0",
+        "67edef7b44524f5f621e9b060c6b9c523c1b05a8\trefs/tags/repositorio-v1.1",
+        "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd\trefs/tags/repositorio-v1.2",
+        "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622\trefs/tags/repositorio-v1.3"
+      ]
+    },
+    "final": {
+      "rama": "integracion/laboratorio-08",
+      "head": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "arbol_indice": "9ea6109fe8e89a2785bdce255252ffaabea1d122",
+      "sin_preparar": [],
+      "etiquetas": [
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-01-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-02-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-03-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/lab-04-v1.1",
+        "67edef7b44524f5f621e9b060c6b9c523c1b05a8\trefs/tags/lab-05-v1.0",
+        "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd\trefs/tags/lab-06-v1.0",
+        "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622\trefs/tags/lab-07-v1.0",
+        "52875ff15c6648f9a042a15a94da812e37effa40\trefs/tags/repositorio-v1.0",
+        "67edef7b44524f5f621e9b060c6b9c523c1b05a8\trefs/tags/repositorio-v1.1",
+        "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd\trefs/tags/repositorio-v1.2",
+        "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622\trefs/tags/repositorio-v1.3"
+      ]
+    },
+    "identicas": true,
+    "conservacion_declarada": {
+      "identidad_git": true,
+      "evidencia_anterior": true,
+      "revision_indice": true
+    }
+  },
+  "antecedente": {
+    "archivos_anterior": 244,
+    "declarados_actual": 244,
+    "coincidencias": 244,
+    "diferencias": []
+  },
+  "evaluacion_cruda": {
+    "baterias": 65,
+    "casos_incluyendo_no_ejecutados": 631,
+    "ejecutados": 583,
+    "estados": {
+      "APROBADO": 571,
+      "FALLIDO": 12,
+      "NO EJECUTADO": 48
+    },
+    "problemas": [],
+    "fallos_didacticos": {
+      "laboratorio_01/inicial": [
+        "C04"
+      ],
+      "laboratorio_03/defecto": [
+        "B05",
+        "B06"
+      ],
+      "laboratorio_05/propuesta_resumen": [
+        "P04",
+        "P05"
+      ],
+      "laboratorio_06/propuesta_navegador": [
+        "W05"
+      ],
+      "laboratorio_07/propuesta_integracion": [
+        "I01",
+        "I07"
+      ],
+      "laboratorio_08/propuesta_depuracion": [
+        "D03",
+        "D05",
+        "D08.a"
+      ],
+      "laboratorio_08/propuesta_depuracion_navegador": [
+        "D04"
+      ]
+    },
+    "baterias_detalle": [
+      {
+        "bateria": "laboratorio_01/inicial",
+        "archivo": "conjunto/laboratorio_01/pruebas_inicial.json",
+        "casos": 4,
+        "estados": {
+          "APROBADO": 3,
+          "FALLIDO": 1
+        },
+        "fallos": [
+          "C04"
+        ]
+      },
+      {
+        "bateria": "laboratorio_01/solucion",
+        "archivo": "conjunto/laboratorio_01/pruebas_solucion.json",
+        "casos": 4,
+        "estados": {
+          "APROBADO": 4
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_02/solucion",
+        "archivo": "conjunto/laboratorio_02/pruebas_solucion.json",
+        "casos": 4,
+        "estados": {
+          "APROBADO": 4
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_03/base",
+        "archivo": "conjunto/laboratorio_03/pruebas_base.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 4,
+          "NO EJECUTADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_03/generado",
+        "archivo": "conjunto/laboratorio_03/pruebas_generado.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 10
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_03/refactorizado",
+        "archivo": "conjunto/laboratorio_03/pruebas_refactorizado.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 10
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_03/defecto",
+        "archivo": "conjunto/laboratorio_03/pruebas_defecto.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 8,
+          "FALLIDO": 2
+        },
+        "fallos": [
+          "B05",
+          "B06"
+        ]
+      },
+      {
+        "bateria": "laboratorio_03/corregido",
+        "archivo": "conjunto/laboratorio_03/pruebas_corregido.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 10
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_04/inicio",
+        "archivo": "conjunto/laboratorio_04/pruebas_inicio.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 10
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_04/solucion",
+        "archivo": "conjunto/laboratorio_04/pruebas_solucion.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_04/arbol_actual",
+        "archivo": "conjunto/laboratorio_04/pruebas_arbol_actual.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_05/base_heredados",
+        "archivo": "conjunto/laboratorio_05/base_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_05/base_resumen",
+        "archivo": "conjunto/laboratorio_05/base_resumen.json",
+        "casos": 6,
+        "estados": {
+          "NO EJECUTADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_05/propuesta_heredados",
+        "archivo": "conjunto/laboratorio_05/propuesta_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_05/propuesta_resumen",
+        "archivo": "conjunto/laboratorio_05/propuesta_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 4,
+          "FALLIDO": 2
+        },
+        "fallos": [
+          "P04",
+          "P05"
+        ]
+      },
+      {
+        "bateria": "laboratorio_05/solucion_heredados",
+        "archivo": "conjunto/laboratorio_05/solucion_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_05/solucion_resumen",
+        "archivo": "conjunto/laboratorio_05/solucion_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/base_heredados",
+        "archivo": "conjunto/laboratorio_06/base_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/base_resumen",
+        "archivo": "conjunto/laboratorio_06/base_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/base_http",
+        "archivo": "conjunto/laboratorio_06/base_http.json",
+        "casos": 5,
+        "estados": {
+          "NO EJECUTADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/base_navegador",
+        "archivo": "conjunto/laboratorio_06/base_navegador.json",
+        "casos": 3,
+        "estados": {
+          "NO EJECUTADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/propuesta_heredados",
+        "archivo": "conjunto/laboratorio_06/propuesta_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/propuesta_resumen",
+        "archivo": "conjunto/laboratorio_06/propuesta_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/propuesta_http",
+        "archivo": "conjunto/laboratorio_06/propuesta_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/propuesta_navegador",
+        "archivo": "conjunto/laboratorio_06/propuesta_navegador.json",
+        "casos": 3,
+        "estados": {
+          "FALLIDO": 1,
+          "APROBADO": 2
+        },
+        "fallos": [
+          "W05"
+        ]
+      },
+      {
+        "bateria": "laboratorio_06/solucion_heredados",
+        "archivo": "conjunto/laboratorio_06/solucion_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/solucion_resumen",
+        "archivo": "conjunto/laboratorio_06/solucion_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/solucion_http",
+        "archivo": "conjunto/laboratorio_06/solucion_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_06/solucion_navegador",
+        "archivo": "conjunto/laboratorio_06/solucion_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/base_heredados",
+        "archivo": "conjunto/laboratorio_07/base_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/base_resumen",
+        "archivo": "conjunto/laboratorio_07/base_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/base_http",
+        "archivo": "conjunto/laboratorio_07/base_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/base_navegador",
+        "archivo": "conjunto/laboratorio_07/base_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/base_integracion",
+        "archivo": "conjunto/laboratorio_07/base_integracion.json",
+        "casos": 17,
+        "estados": {
+          "NO EJECUTADO": 17
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/propuesta_heredados",
+        "archivo": "conjunto/laboratorio_07/propuesta_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/propuesta_resumen",
+        "archivo": "conjunto/laboratorio_07/propuesta_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/propuesta_http",
+        "archivo": "conjunto/laboratorio_07/propuesta_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/propuesta_navegador",
+        "archivo": "conjunto/laboratorio_07/propuesta_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/propuesta_integracion",
+        "archivo": "conjunto/laboratorio_07/propuesta_integracion.json",
+        "casos": 17,
+        "estados": {
+          "FALLIDO": 2,
+          "APROBADO": 15
+        },
+        "fallos": [
+          "I01",
+          "I07"
+        ]
+      },
+      {
+        "bateria": "laboratorio_07/solucion_heredados",
+        "archivo": "conjunto/laboratorio_07/solucion_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/solucion_resumen",
+        "archivo": "conjunto/laboratorio_07/solucion_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/solucion_http",
+        "archivo": "conjunto/laboratorio_07/solucion_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/solucion_navegador",
+        "archivo": "conjunto/laboratorio_07/solucion_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_07/solucion_integracion",
+        "archivo": "conjunto/laboratorio_07/solucion_integracion.json",
+        "casos": 17,
+        "estados": {
+          "APROBADO": 17
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_heredados",
+        "archivo": "conjunto/laboratorio_08/base_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_resumen",
+        "archivo": "conjunto/laboratorio_08/base_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_http",
+        "archivo": "conjunto/laboratorio_08/base_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_navegador",
+        "archivo": "conjunto/laboratorio_08/base_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_integracion",
+        "archivo": "conjunto/laboratorio_08/base_integracion.json",
+        "casos": 17,
+        "estados": {
+          "APROBADO": 17
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_depuracion",
+        "archivo": "conjunto/laboratorio_08/base_depuracion.json",
+        "casos": 10,
+        "estados": {
+          "NO EJECUTADO": 10
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/base_depuracion_navegador",
+        "archivo": "conjunto/laboratorio_08/base_depuracion_navegador.json",
+        "casos": 1,
+        "estados": {
+          "NO EJECUTADO": 1
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_heredados",
+        "archivo": "conjunto/laboratorio_08/propuesta_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_resumen",
+        "archivo": "conjunto/laboratorio_08/propuesta_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_http",
+        "archivo": "conjunto/laboratorio_08/propuesta_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_navegador",
+        "archivo": "conjunto/laboratorio_08/propuesta_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_integracion",
+        "archivo": "conjunto/laboratorio_08/propuesta_integracion.json",
+        "casos": 17,
+        "estados": {
+          "APROBADO": 17
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_depuracion",
+        "archivo": "conjunto/laboratorio_08/propuesta_depuracion.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 7,
+          "FALLIDO": 3
+        },
+        "fallos": [
+          "D03",
+          "D05",
+          "D08.a"
+        ]
+      },
+      {
+        "bateria": "laboratorio_08/propuesta_depuracion_navegador",
+        "archivo": "conjunto/laboratorio_08/propuesta_depuracion_navegador.json",
+        "casos": 1,
+        "estados": {
+          "FALLIDO": 1
+        },
+        "fallos": [
+          "D04"
+        ]
+      },
+      {
+        "bateria": "laboratorio_08/solucion_heredados",
+        "archivo": "conjunto/laboratorio_08/solucion_heredados.json",
+        "casos": 20,
+        "estados": {
+          "APROBADO": 20
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/solucion_resumen",
+        "archivo": "conjunto/laboratorio_08/solucion_resumen.json",
+        "casos": 6,
+        "estados": {
+          "APROBADO": 6
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/solucion_http",
+        "archivo": "conjunto/laboratorio_08/solucion_http.json",
+        "casos": 5,
+        "estados": {
+          "APROBADO": 5
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/solucion_navegador",
+        "archivo": "conjunto/laboratorio_08/solucion_navegador.json",
+        "casos": 3,
+        "estados": {
+          "APROBADO": 3
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/solucion_integracion",
+        "archivo": "conjunto/laboratorio_08/solucion_integracion.json",
+        "casos": 17,
+        "estados": {
+          "APROBADO": 17
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/solucion_depuracion",
+        "archivo": "conjunto/laboratorio_08/solucion_depuracion.json",
+        "casos": 10,
+        "estados": {
+          "APROBADO": 10
+        },
+        "fallos": []
+      },
+      {
+        "bateria": "laboratorio_08/solucion_depuracion_navegador",
+        "archivo": "conjunto/laboratorio_08/solucion_depuracion_navegador.json",
+        "casos": 1,
+        "estados": {
+          "APROBADO": 1
+        },
+        "fallos": []
+      }
+    ]
+  },
+  "auxiliares": [
+    {
+      "nombre": "recolector",
+      "pruebas": 8,
+      "aprobado": true,
+      "codigo_salida": 0
+    },
+    {
+      "nombre": "recursos",
+      "pruebas": 4,
+      "aprobado": true,
+      "codigo_salida": 0
+    },
+    {
+      "nombre": "evaluador",
+      "pruebas": 9,
+      "aprobado": true,
+      "codigo_salida": 0
+    }
+  ],
+  "fuentes_comparadas_con_copia_corregida": {
+    "declaraciones": 301,
+    "coincidencias": 301,
+    "discrepancias": [],
+    "por_laboratorio": {
+      "laboratorio_01": 8,
+      "laboratorio_02": 13,
+      "laboratorio_03": 26,
+      "laboratorio_05": 44,
+      "laboratorio_06": 60,
+      "laboratorio_07": 73,
+      "laboratorio_08": 77
+    }
+  },
+  "entorno": {
+    "fecha_hora_utc": "2026-11-01T05:47:21+00:00",
+    "sistema": "Windows",
+    "python": "3.11.9",
+    "implementacion_python": "CPython",
+    "sqlite": "3.45.1",
+    "git": "git version 2.45.1.windows.1",
+    "dependencias": "Python estándar y Git; Node, Playwright y Chromium si se solicita navegador",
+    "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 a 8",
+    "navegador_solicitado": true,
+    "modalidad": "Comprobaciones locales ejecutadas en copias temporales"
+  },
+  "navegador": {
+    "node": "v20.20.0",
+    "playwright": "1.62.1",
+    "navegador": "Chromium",
+    "version_navegador": "151.0.7922.34"
+  },
+  "recorrido_D04": {
+    "id": "D04",
+    "entrada": {
+      "archivo": "datos/actualizacion_valida.csv",
+      "base": "principal",
+      "secuencia": [
+        "servidor vivo",
+        "consulta inicial",
+        "importacion CLI",
+        "consulta posterior"
+      ]
+    },
+    "esperado": {
+      "antes": {
+        "almacen": "ALFA",
+        "total": "1",
+        "codigos": [
+          "A01"
+        ],
+        "estado": "exito"
+      },
+      "despues": {
+        "almacen": "ALFA",
+        "total": "2",
+        "codigos": [
+          "A01",
+          "A03"
+        ],
+        "estado": "exito"
+      },
+      "beta": {
+        "almacen": "BETA",
+        "total": "0",
+        "codigos": [],
+        "estado": "vacio"
+      },
+      "busqueda": {
+        "almacen": "ALFA",
+        "total": "1",
+        "codigos": [
+          "A03"
+        ],
+        "estado": "exito"
+      }
+    },
+    "observado": {
+      "antes": {
+        "almacen": "ALFA",
+        "total": "1",
+        "codigos": [
+          "A01"
+        ],
+        "estado": "exito"
+      },
+      "importacion": {
+        "proceso": "CLI separado del servidor y del navegador",
+        "comando": [
+          "python",
+          "-B",
+          "<CODIGO>/persistencia.py",
+          "importar",
+          "--base",
+          "<BASE_PERSISTENTE>",
+          "--archivo",
+          "datos/actualizacion_valida.csv"
+        ],
+        "codigo_salida": 0,
+        "informe": {
+          "estado": "APLICADO",
+          "sha256_fuente": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+          "filas_leidas": 4,
+          "filas_validadas": 4,
+          "filas_aplicadas": 4,
+          "filas_sin_cambio": 0,
+          "errores": []
+        }
+      },
+      "despues": {
+        "almacen": "ALFA",
+        "total": "2",
+        "codigos": [
+          "A01",
+          "A03"
+        ],
+        "estado": "exito"
+      },
+      "beta": {
+        "almacen": "BETA",
+        "total": "0",
+        "codigos": [],
+        "estado": "vacio"
+      },
+      "busqueda": {
+        "almacen": "ALFA",
+        "total": "1",
+        "codigos": [
+          "A03"
+        ],
+        "estado": "exito"
+      },
+      "mismo_servidor": true
+    },
+    "estado": "APROBADO",
+    "tipo_error": null,
+    "detalle": ""
+  },
+  "problemas_limpieza_nuevos": {
+    "PermissionError": [],
+    "WinError 32": [],
+    "Criterio duplicado": []
+  },
+  "totales_declarados": {
+    "laboratorios": 8,
+    "baterias": 65,
+    "ejecutados": 583,
+    "aprobados": 571,
+    "fallidos": 12,
+    "bloqueados": 0,
+    "no_ejecutados_en_baterias": 48,
+    "no_ejecutados_fuera_de_baterias": 10
+  },
+  "estado_declarado": "APROBADO",
+  "fin_utc": "2026-11-01T05:48:21.061312+00:00",
+  "hallazgos": [],
+  "dictamen": "APROBADO",
+  "etiquetas_contra_antecedente": {
+    "cantidad": 11,
+    "identicas": true,
+    "main_conservada": true
+  },
+  "revision_identificadores": {
+    "archivos_texto": 254,
+    "coincidencias": [],
+    "alcance": "Búsqueda de rutas Windows identificables, rutas del ejecutor y nombres del entorno presentes en la terminal histórica; no equivale a escaneo universal de secretos."
+  }
+}

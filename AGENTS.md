@@ -4,7 +4,7 @@
 
 Este repositorio reúne ejercicios sintéticos del libro «Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro». El principio rector es definir bien el trabajo y reconocer con evidencia cuándo está terminado.
 
-Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–7 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
+Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–8 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
 
 ## Trabajo autorizado
 
@@ -26,9 +26,11 @@ P01–P06: resumen de artículos disponibles por almacén y nombre; almacén, to
 
 W01–W06: resumen HTTP real por almacén y nombre, 400 sin almacén, transición ALFA→BETA y distinción entre vacío y error en navegador. Lee ALCANCE.md del laboratorio 6. Sus 26 contratos anteriores siguen intactos; W04 y W06 tienen subcasos.
 
-No implementes cantidades, reservas, aplicación completa ni capítulos posteriores sin el encargo correspondiente.
+Las existencias absolutas forman parte de I01–I08. No implementes cantidades solicitadas, reservas, aplicación completa ni capítulos posteriores sin el encargo correspondiente.
 
 I01–I08: importación CSV de existencias absolutas, validación del archivo completo, identificadores exactos, rechazo sin cambios parciales, repetición idempotente e informe trazable. Lee `laboratorios/laboratorio_07/contexto/CONTRATO_INTEGRACION.md`. Los 17 casos nuevos se suman a los 34 casos heredados de la solución. La propuesta suma por error y conserva FALLIDO en I01/I07.
+
+D01–D08: persistencia explícita en SQLite, procesos CLI/HTTP separados, diagnóstico de la conexión efectiva, recorrido CSV→pantalla, reinicio, rechazo de configuración inválida, atomicidad/idempotencia entre procesos e independencia de bases. Lee `laboratorios/laboratorio_08/contexto/CONTRATO_DEPURACION.md`. Son once casos además de los 51 heredados. Propuesta y solución tienen el mismo diagnóstico; sólo difieren en propagar la conexión al resumen. El diagnóstico no puede sobrescribir la base y sus alias conservan las diferencias útiles entre orígenes.
 
 ## Método CLARO
 
@@ -40,11 +42,13 @@ I01–I08: importación CSV de existencias absolutas, validación del archivo co
 
 ## Verificación y evidencia
 
-`python herramientas/verificar_todo.py --navegador --salida trabajo/otra_verificacion` ejecuta el recorrido completo en copias temporales y requiere una carpeta nueva. Python 3.10+, Git y dependencias opcionales de navegador instaladas según el README. Las pruebas usan HTTP local; no descargan herramientas. Sin `--navegador`, el alcance dominio/HTTP puede aprobar, pero el global queda NO EJECUTADO, aunque la salida sea 0.
+`python herramientas/verificar_todo.py --navegador --salida trabajo/otra_verificacion` ejecuta el recorrido completo en copias temporales y requiere una carpeta nueva. Python 3.11+, Git y dependencias de navegador instaladas según el README. Las pruebas usan HTTP local; no descargan herramientas. Sin `--navegador`, el alcance dominio/HTTP puede aprobar, pero el global queda NO EJECUTADO, aunque la salida sea 0.
 
 Conserva el patrón exacto de fallos esperados: C04 en el inicial del laboratorio 1; B05 y B06 en el defecto del laboratorio 3; P04 y P05 en la propuesta del laboratorio 5; W05 en propuesta del laboratorio 6 al ejecutar navegador; I01/I07 en propuesta del laboratorio 7. Un fallo diferente es un problema pendiente. B01–B06 en la base del laboratorio 3 y P01–P06 en la base del laboratorio 5 permanecen NO EJECUTADO. Los ocho casos web de base 6 también quedan NO EJECUTADO porque allí no existe la web. En base 7 sí existe la web; sus 17 casos de importación permanecen NO EJECUTADO.
 
 En el laboratorio 4, comprueba tanto las etiquetas como el árbol de trabajo cuando haya modificaciones. El verificador histórico por sí solo no acredita el código editado.
+
+En el laboratorio 8, los fallos didácticos admitidos son exclusivamente D03, D04, D05 y D08.a en propuesta; los once D de base permanecen NO EJECUTADO. D02 debe aprobar incluso en propuesta porque su diagnóstico expone fielmente el origen equivocado. Un error de infraestructura no equivale al defecto esperado. Ejecuta también las ocho pruebas de `herramientas/pruebas/test_huellas_evidencia.py` y registra sus resultados por separado. El comprobador de huellas debe verificar todas las salidas declaradas, sin fijar el recuento histórico como constante.
 
 Clasifica cada comprobación como APROBADO, FALLIDO, BLOQUEADO o NO EJECUTADO. Distingue ejecución local, informe aportado, ejemplo didáctico y uso real de una herramienta comercial. No inventes métricas, conversaciones, aprobaciones ni resultados. Conserva huellas originales y registra nuevas huellas cuando un saneamiento cambie bytes.
 
@@ -52,4 +56,10 @@ Clasifica cada comprobación como APROBADO, FALLIDO, BLOQUEADO o NO EJECUTADO. D
 
 Revisa texto, código, datos, rutas, resultados, metadatos e historial. Omite personas, clientes, marcas laborales, direcciones identificables, secretos y combinaciones que reconozcan sistemas reales. Las tecnologías públicas necesarias para enseñar pueden nombrarse. Para afirmaciones actuales sobre productos, utiliza fuentes oficiales y registra la fecha de consulta.
 
-Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial vigente es ESTADO_DEL_LIBRO_v1.6.md y el operativo es ESTADO_REPOSITORIO_v1.5.md. La producción del capítulo 7 conserva los ocho tests y la corrección H01 del recolector. Las huellas finales corresponden a bytes guardados; los históricos nunca se reparan retroactivamente. La única modificación al auxiliar de huellas en esta etapa aclara el texto de ayuda de --esperadas, sin alterar sus funciones.
+Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial de esta preparación es ESTADO_DEL_LIBRO_v1.7.3.md y el operativo es ESTADO_REPOSITORIO_v1.6.3.md. Los estados posteriores del cierre confirmado se generan con las referencias observadas después de publicar. El cierre Windows y remoto del laboratorio 7 está confirmado por los estados 1.6.2 y 1.5.2, conservados como antecedentes. La producción del capítulo 8 conserva sin cambios el auxiliar de huellas y sus ocho pruebas. Las huellas finales corresponden a bytes guardados; los históricos nunca se reparan retroactivamente.
+
+La producción del capítulo 8 terminó preparada para revisión. La ejecución Windows posterior ya está auditada y APROBADO. En el encargo de cierre vigente, el autor autoriza expresamente crear el commit, integrar main y publicar únicamente las etiquetas nuevas lab-08-v1.0 y repositorio-v1.4 junto con main. Conservar los avances y etiquetas históricas; no forzar referencias. Esa autorización no acredita que las operaciones hayan ocurrido: el comprobante se genera después de verificar las referencias remotas. No redactar el capítulo 9.
+
+## Corrección de recursos del laboratorio 8
+
+La ejecución Windows v1.0 resultó FALLIDO por limpieza de bases abiertas y está auditada. La distribución 1.0.1 corrige los auxiliares y añade cuatro pruebas de recursos. No confundir las nuevas regresiones con criterios funcionales. Conservar captura Windows fallida, distribuciones anteriores y pruebas del recolector. La ejecución corregida Windows del autor está APROBADO y conservada en evidencia_integracion/cierre_laboratorio_08_windows/. El cierre añade documentación y evidencia, conservando el código probado. No reaplicar la corrección ni reutilizar su auxiliar sobre un árbol documental distinto.

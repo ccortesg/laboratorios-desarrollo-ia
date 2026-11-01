@@ -1,0 +1,134 @@
+{
+  "bateria": "navegador",
+  "estado_codigo": "solucion",
+  "casos_registrados": 3,
+  "criterios_distintos": 2,
+  "ejecutados": 3,
+  "aprobados": 3,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "entorno": {
+    "node": "v24.22.1",
+    "playwright": "1.62.1",
+    "navegador": "Chromium",
+    "version_navegador": "156.0.8078.80"
+  },
+  "pruebas": [
+    {
+      "id": "W05",
+      "entrada": {
+        "consultas": [
+          {
+            "almacen": "ALFA",
+            "nombre": ""
+          },
+          {
+            "almacen": "BETA",
+            "nombre": ""
+          }
+        ]
+      },
+      "esperado": {
+        "primera": {
+          "almacen": "ALFA",
+          "total": "1",
+          "codigos": [
+            "A01"
+          ]
+        },
+        "segunda": {
+          "almacen": "BETA",
+          "total": "1",
+          "codigos": [
+            "A04"
+          ]
+        }
+      },
+      "observado": {
+        "primera": {
+          "estado": "exito",
+          "almacen": "ALFA",
+          "total": "1",
+          "codigos": [
+            "A01"
+          ],
+          "resultado_visible": true,
+          "error_visible": false,
+          "mensaje": "Consulta completada.",
+          "error": ""
+        },
+        "segunda": {
+          "estado": "exito",
+          "almacen": "BETA",
+          "total": "1",
+          "codigos": [
+            "A04"
+          ],
+          "resultado_visible": true,
+          "error_visible": false,
+          "mensaje": "Consulta completada.",
+          "error": ""
+        }
+      },
+      "estado": "APROBADO",
+      "tipo_error": null,
+      "detalle": ""
+    },
+    {
+      "id": "W06.a",
+      "entrada": {
+        "almacen": "ALFA",
+        "nombre": "inexistente"
+      },
+      "esperado": {
+        "estado": "vacio",
+        "total": "0",
+        "codigos": [],
+        "error_visible": false
+      },
+      "observado": {
+        "estado": "vacio",
+        "almacen": "ALFA",
+        "total": "0",
+        "codigos": [],
+        "resultado_visible": true,
+        "error_visible": false,
+        "mensaje": "No hay artículos disponibles que coincidan con la búsqueda.",
+        "error": ""
+      },
+      "estado": "APROBADO",
+      "tipo_error": null,
+      "detalle": ""
+    },
+    {
+      "id": "W06.b",
+      "entrada": {
+        "consulta_inicial": "ALFA",
+        "fallo_controlado": "route.abort('failed') en /api/resumen"
+      },
+      "esperado": {
+        "estado": "error",
+        "resultado_visible": false,
+        "error_visible": true,
+        "codigos": []
+      },
+      "observado": {
+        "estado": "error",
+        "almacen": "ALFA",
+        "total": "1",
+        "codigos": [],
+        "resultado_visible": false,
+        "error_visible": true,
+        "mensaje": "La consulta no se completó.",
+        "error": "No fue posible consultar el catálogo. Inténtalo de nuevo."
+      },
+      "estado": "APROBADO",
+      "tipo_error": null,
+      "detalle": ""
+    }
+  ],
+  "alcance": "Navegador real contra servidor local; W06.b interrumpe la petición con route.abort('failed')."
+}

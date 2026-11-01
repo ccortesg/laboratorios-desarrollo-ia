@@ -1,0 +1,166 @@
+{
+  "conclusion": "Registros íntegros y coherentes con el cierre esperado; sin discrepancias detectadas.",
+  "limitacion": "Auditoría de los archivos recibidos y lectura estática del auxiliar; sin nuevas pruebas funcionales ni acceso directo a Windows. La consulta independiente de GitHub se registra en REFERENCIAS_REMOTAS_CONFIRMADAS.json.",
+  "discrepancias": [],
+  "zip": {
+    "ruta": "recibido/EVIDENCIA_CIERRE_LABORATORIO_07_v1.0.zip",
+    "sha256": "17fc950689f9e4c9853017174caac64f9171e6629c12405ad8ae9715575d2ee5",
+    "crc_correcto": true,
+    "archivos": [
+      {
+        "nombre": "codigo_push.txt",
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "fecha_zip_sin_zona": "2026-10-31T16:01:14"
+      },
+      {
+        "nombre": "commit.txt",
+        "bytes": 41,
+        "sha256": "73264e28dc8492b0c0ff0793482ec12d8064c9297fcc717738c133894e5b623b",
+        "fecha_zip_sin_zona": "2026-10-31T16:01:10"
+      },
+      {
+        "nombre": "previo/RESULTADO_CIERRE_07.json",
+        "bytes": 10108,
+        "sha256": "602345bfd1fef16d4ecd8cb34976cae387c384aeee3c29d2223ce48e52870257",
+        "fecha_zip_sin_zona": "2026-10-31T16:01:10"
+      },
+      {
+        "nombre": "publicado/RESULTADO_CIERRE_07.json",
+        "bytes": 11704,
+        "sha256": "7f70f3448e0271d7abc08a2ba2f3b4c7e401ca2e5aaae588412067ef8132b106",
+        "fecha_zip_sin_zona": "2026-10-31T16:01:16"
+      }
+    ]
+  },
+  "auxiliar_entregado": {
+    "ruta": "COMPROBAR_CIERRE_07.py (paquete de revisión previamente entregado)",
+    "sha256": "a89aab01f879d325699fcee379a6b5663fa06f5e6224e3df7f99dbcd86a2396b",
+    "secuencia_registrada_compatible": true,
+    "ejecutado_en_auditoria": false
+  },
+  "fases_segun_registros": {
+    "previo": {
+      "inicio_utc": "2026-10-31T23:01:09.534654+00:00",
+      "fin_utc": "2026-10-31T23:01:11.246856+00:00",
+      "duracion_segundos": 1.712202,
+      "comandos": 21,
+      "codigos_todos_cero": true,
+      "stderr_vacio_todos": true,
+      "observado": {
+        "rama": "integracion/laboratorio-07",
+        "head": "6382e05846e149a9a72f7fdc56da48c37a873833",
+        "main": "6382e05846e149a9a72f7fdc56da48c37a873833",
+        "origin_main": "6382e05846e149a9a72f7fdc56da48c37a873833",
+        "arbol_head": "680fa6135ed0aae40e962ec3f893d72ece1389c1",
+        "arbol_indice": "b123b5969e8077ba0cb3c4eedc9b348f94294652",
+        "etiquetas_locales": {
+          "refs/tags/lab-01-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-02-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-03-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-04-v1.1": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-05-v1.0": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/lab-06-v1.0": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+          "refs/tags/repositorio-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/repositorio-v1.1": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/repositorio-v1.2": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd"
+        },
+        "referencias_remotas": {
+          "refs/heads/main": "6382e05846e149a9a72f7fdc56da48c37a873833",
+          "refs/tags/lab-01-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-02-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-03-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-04-v1.1": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-05-v1.0": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/lab-06-v1.0": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+          "refs/tags/repositorio-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/repositorio-v1.1": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/repositorio-v1.2": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd"
+        }
+      },
+      "evidencia_recibida": {
+        "archivos": 172,
+        "coincidentes": 172,
+        "diferencias": []
+      },
+      "entorno_declarado": {
+        "sistema": "Windows",
+        "python": "3.11.9",
+        "git": "git version 2.45.1.windows.1"
+      }
+    },
+    "publicado": {
+      "inicio_utc": "2026-10-31T23:01:16.078232+00:00",
+      "fin_utc": "2026-10-31T23:01:17.772933+00:00",
+      "duracion_segundos": 1.694701,
+      "comandos": 24,
+      "codigos_todos_cero": true,
+      "stderr_vacio_todos": true,
+      "observado": {
+        "rama": "main",
+        "head": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+        "main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+        "origin_main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+        "arbol_head": "b123b5969e8077ba0cb3c4eedc9b348f94294652",
+        "arbol_indice": "b123b5969e8077ba0cb3c4eedc9b348f94294652",
+        "etiquetas_locales": {
+          "refs/tags/lab-01-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-02-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-03-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-04-v1.1": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-05-v1.0": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/lab-06-v1.0": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+          "refs/tags/lab-07-v1.0": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+          "refs/tags/repositorio-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/repositorio-v1.1": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/repositorio-v1.2": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+          "refs/tags/repositorio-v1.3": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622"
+        },
+        "referencias_remotas": {
+          "refs/heads/main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+          "refs/tags/lab-01-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-02-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-03-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-04-v1.1": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/lab-05-v1.0": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/lab-06-v1.0": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+          "refs/tags/lab-07-v1.0": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+          "refs/tags/repositorio-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+          "refs/tags/repositorio-v1.1": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+          "refs/tags/repositorio-v1.2": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+          "refs/tags/repositorio-v1.3": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622"
+        }
+      },
+      "evidencia_recibida": {
+        "archivos": 172,
+        "coincidentes": 172,
+        "diferencias": []
+      },
+      "entorno_declarado": {
+        "sistema": "Windows",
+        "python": "3.11.9",
+        "git": "git version 2.45.1.windows.1"
+      }
+    }
+  },
+  "huellas_recalculadas_directamente": {
+    "archivos": 172,
+    "coincidentes": 172,
+    "diferencias": [],
+    "zip_original": "recibido/EVIDENCIA_LABORATORIO_07_WINDOWS_v1.0.zip",
+    "sha256_zip_original": "d68836097e31a980850451c0e8836173056986d77b1534385f1f455ffcc1b777",
+    "manifiesto": "auditoria/HUELLAS_ARCHIVOS_RECIBIDOS.json",
+    "sha256_manifiesto": "35d51a9d88d4bcd57a8f87b68dc65b784a32a124e2deefeb61b899dd36a0a5ca",
+    "alcance": "Comparación directa de los bytes recibidos en el ZIP original con el manifiesto entregado; no acceso al equipo Windows."
+  },
+  "interpretacion": {
+    "limpieza_previo": "Sin cambios no preparados, conflictos ni no rastreados no ignorados; hay integración preparada, con árbol de índice aprobado distinto al de HEAD base.",
+    "limpieza_publicado": "Según registros, sin cambios preparados ni no preparados, conflictos ni no rastreados no ignorados; árbol de índice igual al de HEAD aprobado. No significa ausencia de archivos ignorados.",
+    "historia": "rev-list --parents -n 1 HEAD registra un único padre, igual a la base esperada; verifica un único commit nuevo desde esa base.",
+    "etiquetas": "Los mapas locales y remotos de ambas fases conservan exactamente las 9 históricas; publicado añade exactamente las 2 nuevas con el mismo destino del commit publicado.",
+    "fechas": "Inicio y fin UTC de ambas fases son crecientes y previo termina antes de publicado. Las marcas ZIP son horas sin zona y resolución DOS de 2 segundos; 16:01 es compatible con UTC−07:00 pero no acredita esa zona.",
+    "push": "codigo_push.txt contiene 0. No hay transcripción del comando ni del servidor, por lo que este archivo por sí solo no acredita --atomic, sus refspecs o la secuencia concreta de publicación. Los registros ls-remote sí representan el resultado observado en cada fase, sujeto a corroboración independiente.",
+    "campos_omitidos": "Rutas, URLs y ls-files -v están redactados. Las garantías correspondientes proceden del estado APROBADO y las condiciones del auxiliar entregado; no pueden reconstruirse íntegramente a partir de las salidas. Los JSON no incluyen una huella del script ejecutado ni firma.",
+    "evidencia_windows": "Cada fase registra 172/172 coincidencias de los archivos de trabajo de Windows; la auditoría directa adicional solo comprueba las 172 huellas de los bytes recibidos en el ZIP original."
+  }
+}

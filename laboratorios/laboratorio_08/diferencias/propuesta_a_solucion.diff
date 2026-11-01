@@ -1,0 +1,11 @@
+--- propuesta/servidor.py
++++ solucion/servidor.py
+@@ -63,7 +63,7 @@
+                     try:
+                         with registrar_origen(self.server.base_persistente,
+                                               self.server.alias, self.server.diagnostico):
+-                            datos = resumir_catalogo(almacen, nombre)
++                            datos = resumir_catalogo(almacen, nombre, conexion=conexion)
+                     finally:
+                         conexion.close()
+             except Exception:

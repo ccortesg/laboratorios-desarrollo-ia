@@ -1,0 +1,70 @@
+{
+  "fecha_consulta_utc": "2026-10-31T23:47:03Z",
+  "repositorio": "https://github.com/ccortesg/laboratorios-desarrollo-ia",
+  "main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+  "arbol": "b123b5969e8077ba0cb3c4eedc9b348f94294652",
+  "padres": [
+    "6382e05846e149a9a72f7fdc56da48c37a873833"
+  ],
+  "etiquetas": [
+    {
+      "ref": "refs/tags/lab-01-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-02-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-03-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-04-v1.1",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-05-v1.0",
+      "sha": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-06-v1.0",
+      "sha": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/lab-07-v1.0",
+      "sha": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.0",
+      "sha": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.1",
+      "sha": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.2",
+      "sha": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+      "tipo": "commit"
+    },
+    {
+      "ref": "refs/tags/repositorio-v1.3",
+      "sha": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "tipo": "commit"
+    }
+  ],
+  "metodo_remoto": "GET mediante conector GitHub; sin escrituras.",
+  "copia_local": "Objetos conservados de la entrega anterior y objeto commit existente recuperado desde los metadatos autorizados; coincidencia SHA de commit y árbol verificada. Git por HTTPS no tuvo autenticación en este entorno.",
+  "rama": "produccion/capitulo-08",
+  "cierre_laboratorio_07": "Confirmado; no reabierto."
+}

@@ -1,0 +1,9 @@
+{
+  "comando": "python3 auditar_fuentes_declaradas.py --repositorio REPOSITORIO --evidencia conjunto_01 --salida COTEJO_FUENTES_DECLARADAS.json",
+  "codigo_salida": 0,
+  "sha256_script": "e140ee073d09080e151f76ad49f87a97765530e0b3f147ab75129cf02828e746",
+  "sha256_informe": "60df4d28523516dde7aa46e199cd0114b03d400cb66ef6641be67682014fc142",
+  "declaraciones_verificadas": 573,
+  "resultado": "APROBADO",
+  "lectura_sin_modificar_originales_ni_evidencia": true
+}

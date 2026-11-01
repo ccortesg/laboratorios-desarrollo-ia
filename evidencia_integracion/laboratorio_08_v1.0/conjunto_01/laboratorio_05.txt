@@ -1,0 +1,8 @@
+base_heredados: patrón APROBADO
+base_resumen: patrón APROBADO
+propuesta_heredados: patrón APROBADO
+propuesta_resumen: patrón APROBADO
+solucion_heredados: patrón APROBADO
+solucion_resumen: patrón APROBADO
+Verificación: APROBADO
+{"ejecutados": 72, "aprobados": 70, "fallidos": 2, "no_ejecutados": 6, "errores_de_ejecucion": 0}

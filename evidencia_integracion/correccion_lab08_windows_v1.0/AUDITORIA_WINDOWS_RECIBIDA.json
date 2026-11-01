@@ -1,0 +1,1818 @@
+{
+  "version": "1.0",
+  "fecha_auditoria_utc": "2026-11-01T01:51:44.845057+00:00",
+  "tipo": "Auditoría local de evidencia Windows aportada; no constituye una nueva ejecución Windows",
+  "estado_auditoria": "APROBADO",
+  "estado_funcional_recibido": "FALLIDO",
+  "adjunto": {
+    "nombre": "DIAGNOSTICO_LABORATORIO_08_WINDOWS_v1.0.zip",
+    "sha256_esperado": "d89be25eac2cc6915bde22d3bef6bc4a9ee7052fe821542012c6698e352906b6",
+    "sha256_observado": "d89be25eac2cc6915bde22d3bef6bc4a9ee7052fe821542012c6698e352906b6",
+    "archivos": 244,
+    "entradas_duplicadas": 0,
+    "archivos_extraidos_coincidentes": 244,
+    "bytes_descomprimidos": 819967,
+    "original_conservado": true,
+    "raw_no_incluido_en_material_publicable": true
+  },
+  "identidad_registrada": {
+    "head": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+    "arbol_head": "b123b5969e8077ba0cb3c4eedc9b348f94294652",
+    "arbol_preparado": "2ea01dea2aa0c8907eba54ef65efcb44d547b9d7",
+    "rama": "integracion/laboratorio-08",
+    "main_conservada_segun_preparado": true,
+    "cambios_sin_preparar_segun_preparado": [],
+    "etiquetas_locales_al_inicio": 11,
+    "fecha_preparado_utc": "2026-11-01T01:25:48.061681+00:00",
+    "sha256_parche_original": "bb80fdf7764f2f8de701a052453747e479cdeda5e30ec96fb59552ffeb055be7",
+    "sha256_manifiesto_original": "6f43b9a199c66fa631a3e4e32199aba8a210efb197c32046ff0c530b88c8f888",
+    "alcance": "Registros aportados; no consulta remota nueva ni inspección directa del equipo Windows."
+  },
+  "entorno_windows": {
+    "fecha_hora_utc": "2026-11-01T01:32:13+00:00",
+    "sistema": "Windows",
+    "python": "3.11.9",
+    "sqlite": "3.45.1",
+    "git": "git version 2.45.1.windows.1",
+    "navegador_solicitado": true
+  },
+  "entorno_navegador": {
+    "node": "v20.20.0",
+    "playwright": "1.62.1",
+    "navegador": "Chromium",
+    "version_navegador": "151.0.7922.34"
+  },
+  "integridad_salidas": {
+    "conjunto": {
+      "estado": "APROBADO",
+      "comprobadas": 102,
+      "coincidentes": 102,
+      "codigo_salida": 0,
+      "comando": "python herramientas/huellas_evidencia.py CAPTURA/conjunto"
+    },
+    "recolector": {
+      "estado": "APROBADO",
+      "comprobadas": 2,
+      "coincidentes": 2,
+      "codigo_salida": 0,
+      "comando": "python herramientas/huellas_evidencia.py CAPTURA/recolector"
+    },
+    "modalidad": "Herramienta original de sólo lectura, ejecutada durante esta auditoría; no reescribe evidencia ni huellas."
+  },
+  "pruebas_recolector_recibidas": {
+    "estado": "APROBADO",
+    "cantidad": 8,
+    "codigo_salida": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "ef567b859aa0ba3dba10253df754efde9b11bf82eab32971bbdb38f0ce1b6a3c",
+    "atribucion": "Ejecución Windows aportada y salida OK observada en captura; no reejecución de pruebas por esta auditoría."
+  },
+  "cotejo_fuentes": {
+    "estado": "APROBADO",
+    "archivos_comparados_directamente": 299,
+    "fuentes_laboratorio08": 75,
+    "herramientas_laboratorio04_comparadas_directamente": [
+      {
+        "archivo": "laboratorios/laboratorio_04/README.md",
+        "sha256": "480a585524e74c5a6983c4bbc4bb43d53e5626956c812e516f9742c056ae306a",
+        "coincide": true
+      },
+      {
+        "archivo": "laboratorios/laboratorio_04/verificar.py",
+        "sha256": "366381685c9aa7cdb7dd58f89d687a412c084e3117600be7f6267f5afbcd06e9",
+        "coincide": true
+      }
+    ],
+    "referencias_laboratorio04": {
+      "archivos": 32,
+      "estado": "APROBADO",
+      "tipo_cotejo": "Declaraciones Windows idénticas a la captura Linux original; no se reconstruyó el Git del laboratorio 4 en esta auditoría."
+    },
+    "registros": [
+      {
+        "laboratorio": "laboratorio_01",
+        "estado": "APROBADO",
+        "archivos": 8,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "475ad4428abaaaf535fb7d69498b9993c9fad8087d47ca482e5d99d2648bc03b",
+            "sha256_observado": "475ad4428abaaaf535fb7d69498b9993c9fad8087d47ca482e5d99d2648bc03b"
+          },
+          {
+            "archivo": "laboratorio.py",
+            "sha256_declarado": "5775343d8c5bdd39463bdf7d7d3500189d12d9693fa83a886cf3876d7eac65ea",
+            "sha256_observado": "5775343d8c5bdd39463bdf7d7d3500189d12d9693fa83a886cf3876d7eac65ea"
+          },
+          {
+            "archivo": "pruebas.py",
+            "sha256_declarado": "1d5bd5ebdf999ffea9a16b2c39f5efcd266ec373195f19778e8fdb4f6a0a5640",
+            "sha256_observado": "1d5bd5ebdf999ffea9a16b2c39f5efcd266ec373195f19778e8fdb4f6a0a5640"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "39961393ad7056505366b3748a47d7e5d39e22e49530f10debfd07c04be7e238",
+            "sha256_observado": "39961393ad7056505366b3748a47d7e5d39e22e49530f10debfd07c04be7e238"
+          },
+          {
+            "archivo": "datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "inicial/consulta.sql",
+            "sha256_declarado": "c48aa3dbc7678d26302bbf2dfd3f537bf7904afe8e866fe99fcc99c90c1d4959",
+            "sha256_observado": "c48aa3dbc7678d26302bbf2dfd3f537bf7904afe8e866fe99fcc99c90c1d4959"
+          },
+          {
+            "archivo": "solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          }
+        ]
+      },
+      {
+        "laboratorio": "laboratorio_02",
+        "estado": "APROBADO",
+        "archivos": 13,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "ef0ae761ed584e376c4fc46100a63802bdf575c72b68035982520263dd24fe54",
+            "sha256_observado": "ef0ae761ed584e376c4fc46100a63802bdf575c72b68035982520263dd24fe54"
+          },
+          {
+            "archivo": "laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "pruebas.py",
+            "sha256_declarado": "a1157edb670dce7e048ccfd0a4dbae8c94e070e2db0d2de812f49ae076398f10",
+            "sha256_observado": "a1157edb670dce7e048ccfd0a4dbae8c94e070e2db0d2de812f49ae076398f10"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "9ce8181ed905026dcf47c5f71d4fe9b7a9cbd1455cf2bca1143f7a15fba61172",
+            "sha256_observado": "9ce8181ed905026dcf47c5f71d4fe9b7a9cbd1455cf2bca1143f7a15fba61172"
+          },
+          {
+            "archivo": "datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "contexto/ENCARGO_INSUFICIENTE.md",
+            "sha256_declarado": "99f35dd73f37771bca9fb5a06c98d7a647e3d00d8d65dd416a0de7bf8a3d34ca",
+            "sha256_observado": "99f35dd73f37771bca9fb5a06c98d7a647e3d00d8d65dd416a0de7bf8a3d34ca"
+          },
+          {
+            "archivo": "contexto/CONTEXTO.md",
+            "sha256_declarado": "75f5ba519ec25c1fb484e353be48a57e4f96ea8fe38da55732f0743a5b2bc90b",
+            "sha256_observado": "75f5ba519ec25c1fb484e353be48a57e4f96ea8fe38da55732f0743a5b2bc90b"
+          },
+          {
+            "archivo": "contexto/ARQUITECTURA.md",
+            "sha256_declarado": "e2b306e6adc9b11bf2fd031870358e672a3775601696c1e47227728b52342e32",
+            "sha256_observado": "e2b306e6adc9b11bf2fd031870358e672a3775601696c1e47227728b52342e32"
+          },
+          {
+            "archivo": "contexto/DECISIONES.md",
+            "sha256_declarado": "7f7d66c4f8535405c3c6190e8fa2d788cf326c445120176e6b36ebcea3078de6",
+            "sha256_observado": "7f7d66c4f8535405c3c6190e8fa2d788cf326c445120176e6b36ebcea3078de6"
+          },
+          {
+            "archivo": "contexto/CONTINUIDAD.md",
+            "sha256_declarado": "af3449979ca6b6d748467422df96985cbf79b171a107f176000757b09a9093a8",
+            "sha256_observado": "af3449979ca6b6d748467422df96985cbf79b171a107f176000757b09a9093a8"
+          },
+          {
+            "archivo": "contexto/ENCARGO_CLARO.md",
+            "sha256_declarado": "c6e0107f9f7b4bb152c8cd0eb42c0d85cd39433f95f700d6e2d0e28c1ca20f39",
+            "sha256_observado": "c6e0107f9f7b4bb152c8cd0eb42c0d85cd39433f95f700d6e2d0e28c1ca20f39"
+          }
+        ]
+      },
+      {
+        "laboratorio": "laboratorio_03",
+        "estado": "APROBADO",
+        "archivos": 26,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "7a9794ace42d725512d9e18c16a2af61e16a03da7948ea7b3bd1c6c9277fab3a",
+            "sha256_observado": "7a9794ace42d725512d9e18c16a2af61e16a03da7948ea7b3bd1c6c9277fab3a"
+          },
+          {
+            "archivo": "ALCANCE.md",
+            "sha256_declarado": "cd0a8d7cc02667292b1a2d0357c22fc5e3fd234466e44d6641381d40c38e27c0",
+            "sha256_observado": "cd0a8d7cc02667292b1a2d0357c22fc5e3fd234466e44d6641381d40c38e27c0"
+          },
+          {
+            "archivo": "laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "recorrido.py",
+            "sha256_declarado": "485e127a67b71ae00370a817f81ae6db4ed7ba167682a655f5c2cbb1a84c15b8",
+            "sha256_observado": "485e127a67b71ae00370a817f81ae6db4ed7ba167682a655f5c2cbb1a84c15b8"
+          },
+          {
+            "archivo": "comparar.py",
+            "sha256_declarado": "f7eb3fc50d240365b04bfcc0d8759bc81c57a6b2e999055c8a885fdfd1e3517f",
+            "sha256_observado": "f7eb3fc50d240365b04bfcc0d8759bc81c57a6b2e999055c8a885fdfd1e3517f"
+          },
+          {
+            "archivo": "pruebas.py",
+            "sha256_declarado": "4f567678eec55edc70b6197446bf009154fc615b604a721b48f2d76ea229fd83",
+            "sha256_observado": "4f567678eec55edc70b6197446bf009154fc615b604a721b48f2d76ea229fd83"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "54441d7b177bfbefc618376f064637c3035d6c9c368634a139f9cf2df590447a",
+            "sha256_observado": "54441d7b177bfbefc618376f064637c3035d6c9c368634a139f9cf2df590447a"
+          },
+          {
+            "archivo": "datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/__init__.py",
+            "sha256_declarado": "8193e78e931cd7fe65c91dfd86db2deaa37ccd94bd400c904640d61f26cd9451",
+            "sha256_observado": "8193e78e931cd7fe65c91dfd86db2deaa37ccd94bd400c904640d61f26cd9451"
+          },
+          {
+            "archivo": "estados/generado.py",
+            "sha256_declarado": "0f2d1d4db222842656455ab089f5b72135d161c1f21fa1f4500c1d298731edf7",
+            "sha256_observado": "0f2d1d4db222842656455ab089f5b72135d161c1f21fa1f4500c1d298731edf7"
+          },
+          {
+            "archivo": "estados/refactorizado.py",
+            "sha256_declarado": "3ee4079d23b7c02ee065e7c8643e752bde9c17b546027c302f65a9f30154ce4e",
+            "sha256_observado": "3ee4079d23b7c02ee065e7c8643e752bde9c17b546027c302f65a9f30154ce4e"
+          },
+          {
+            "archivo": "estados/defecto.py",
+            "sha256_declarado": "c6051873f2c69dff1aa6018f8bc1798f1dcd336b87f0f64ec7465c7f9e35fb55",
+            "sha256_observado": "c6051873f2c69dff1aa6018f8bc1798f1dcd336b87f0f64ec7465c7f9e35fb55"
+          },
+          {
+            "archivo": "estados/corregido.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "contexto/CONTEXTO.md",
+            "sha256_declarado": "e8ba2a7de0a8bfcc9e4ea77d48c9ced7496abfd00dc34a44934ae71e065b094f",
+            "sha256_observado": "e8ba2a7de0a8bfcc9e4ea77d48c9ced7496abfd00dc34a44934ae71e065b094f"
+          },
+          {
+            "archivo": "contexto/ARQUITECTURA.md",
+            "sha256_declarado": "d6ed8677fc6e68211fdf85348664cb75ce3186626fdcd1873caba8699a425c47",
+            "sha256_observado": "d6ed8677fc6e68211fdf85348664cb75ce3186626fdcd1873caba8699a425c47"
+          },
+          {
+            "archivo": "contexto/DECISIONES.md",
+            "sha256_declarado": "e9fa2e2df4760455f071bb29c56a1409ee669f22b6c1cba06d2aed5d33c9ca4b",
+            "sha256_observado": "e9fa2e2df4760455f071bb29c56a1409ee669f22b6c1cba06d2aed5d33c9ca4b"
+          },
+          {
+            "archivo": "contexto/CONTINUIDAD.md",
+            "sha256_declarado": "508eae17b8eb73de3deb062701b887a4ddebcea53dccb32038275907bc59b1e4",
+            "sha256_observado": "508eae17b8eb73de3deb062701b887a4ddebcea53dccb32038275907bc59b1e4"
+          },
+          {
+            "archivo": "prompts/01_generar.md",
+            "sha256_declarado": "6c8f2390a5e26ba13bb7b4b20d896dbd035adc76edf75985e0ea36df2d4b0ac2",
+            "sha256_observado": "6c8f2390a5e26ba13bb7b4b20d896dbd035adc76edf75985e0ea36df2d4b0ac2"
+          },
+          {
+            "archivo": "prompts/02_refactorizar.md",
+            "sha256_declarado": "a66035300f21cd574309da2d8412d873987a21f330d46f25ccf16d9949d9dd3b",
+            "sha256_observado": "a66035300f21cd574309da2d8412d873987a21f330d46f25ccf16d9949d9dd3b"
+          },
+          {
+            "archivo": "prompts/03_depurar.md",
+            "sha256_declarado": "f67a229d76c54d5d7f9ca9fefa4e8bfc9e5870742029d2a374020e93c6524109",
+            "sha256_observado": "f67a229d76c54d5d7f9ca9fefa4e8bfc9e5870742029d2a374020e93c6524109"
+          },
+          {
+            "archivo": "diferencias/01_generar.diff",
+            "sha256_declarado": "92dcec02d8c8e024fe22fa3e979266904c2c5adbf4c38d6f6d4f233f0d0fd6cb",
+            "sha256_observado": "92dcec02d8c8e024fe22fa3e979266904c2c5adbf4c38d6f6d4f233f0d0fd6cb"
+          },
+          {
+            "archivo": "diferencias/02_refactorizar.diff",
+            "sha256_declarado": "e65e3a3ffb3b0b5a45e6aef13fab548c9fff3b7000bc8c77a13e009237aa1bd8",
+            "sha256_observado": "e65e3a3ffb3b0b5a45e6aef13fab548c9fff3b7000bc8c77a13e009237aa1bd8"
+          },
+          {
+            "archivo": "diferencias/03_introducir_defecto.diff",
+            "sha256_declarado": "f28576aeb49e3c4fa534b111eefc998d4fe9a615fa7763e2f016cdf2a811c7fd",
+            "sha256_observado": "f28576aeb49e3c4fa534b111eefc998d4fe9a615fa7763e2f016cdf2a811c7fd"
+          },
+          {
+            "archivo": "diferencias/04_corregir.diff",
+            "sha256_declarado": "82818060a188816de8fb4653eb1fb3757071adb7b63e46e7f2c414489c91efe3",
+            "sha256_observado": "82818060a188816de8fb4653eb1fb3757071adb7b63e46e7f2c414489c91efe3"
+          }
+        ]
+      },
+      {
+        "laboratorio": "laboratorio_05",
+        "estado": "APROBADO",
+        "archivos": 44,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": "AGENTS.md",
+            "sha256_declarado": "da486d80f3ddf19f7195f9623261f57f9054a92c08d535a7bf9a7d8e84e6634d",
+            "sha256_observado": "da486d80f3ddf19f7195f9623261f57f9054a92c08d535a7bf9a7d8e84e6634d"
+          },
+          {
+            "archivo": "ALCANCE.md",
+            "sha256_declarado": "43ad8ff461b989a249404af11af886d9df059f832699d135d6d8698171270858",
+            "sha256_observado": "43ad8ff461b989a249404af11af886d9df059f832699d135d6d8698171270858"
+          },
+          {
+            "archivo": "comparar.py",
+            "sha256_declarado": "92d0e6f18134ea0fba83dbfc0c65a82c299614c2b799b5eae5739724478690d2",
+            "sha256_observado": "92d0e6f18134ea0fba83dbfc0c65a82c299614c2b799b5eae5739724478690d2"
+          },
+          {
+            "archivo": "contexto/ARQUITECTURA.md",
+            "sha256_declarado": "d02dce71a780426e46bb5499d45b0b6b7dad1a6c0c0a449e9ad62ca07e665400",
+            "sha256_observado": "d02dce71a780426e46bb5499d45b0b6b7dad1a6c0c0a449e9ad62ca07e665400"
+          },
+          {
+            "archivo": "contexto/CONTEXTO.md",
+            "sha256_declarado": "72dd4092b322bf89901bd9b435ae5ed1f09c0a9622c2ada3ccaf0d001806227e",
+            "sha256_observado": "72dd4092b322bf89901bd9b435ae5ed1f09c0a9622c2ada3ccaf0d001806227e"
+          },
+          {
+            "archivo": "contexto/CONTINUIDAD.md",
+            "sha256_declarado": "38338c87adceffd569e1580af7f3485d1d439bca76adb6d22484a535351b5235",
+            "sha256_observado": "38338c87adceffd569e1580af7f3485d1d439bca76adb6d22484a535351b5235"
+          },
+          {
+            "archivo": "contexto/DECISIONES.md",
+            "sha256_declarado": "90f1833a31860f0c40ac64d09e9f2fc52f2352f12943583b3f91a3e1857fb04c",
+            "sha256_observado": "90f1833a31860f0c40ac64d09e9f2fc52f2352f12943583b3f91a3e1857fb04c"
+          },
+          {
+            "archivo": "diferencias/01_base_propuesta.diff",
+            "sha256_declarado": "b8044c09da550ddbb6478fa3b34006836d18b3baea6ac7dc47f06f0817b19011",
+            "sha256_observado": "b8044c09da550ddbb6478fa3b34006836d18b3baea6ac7dc47f06f0817b19011"
+          },
+          {
+            "archivo": "diferencias/02_propuesta_solucion.diff",
+            "sha256_declarado": "280f3c59c2abebe1fc403d3680e170736820d3a8d82c81d11f36fd279e159f9a",
+            "sha256_observado": "280f3c59c2abebe1fc403d3680e170736820d3a8d82c81d11f36fd279e159f9a"
+          },
+          {
+            "archivo": "diferencias/03_base_solucion.diff",
+            "sha256_declarado": "c2d939b1637f5c0914eda25d416e1e36cf770069c7b180f493fe39129bab8572",
+            "sha256_observado": "c2d939b1637f5c0914eda25d416e1e36cf770069c7b180f493fe39129bab8572"
+          },
+          {
+            "archivo": "estados/base/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/base/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/base/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/base/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/base/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/base/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/base/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/base/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/propuesta/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/propuesta/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/propuesta/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/propuesta/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/propuesta/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/propuesta/resumen.py",
+            "sha256_declarado": "246d2cf6327aac8169b958cd04a1e7845e8324710873570e25a6e114417517de",
+            "sha256_observado": "246d2cf6327aac8169b958cd04a1e7845e8324710873570e25a6e114417517de"
+          },
+          {
+            "archivo": "estados/propuesta/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/solucion/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/solucion/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/solucion/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/solucion/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/solucion/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/solucion/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/solucion/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/solucion/resumen.py",
+            "sha256_declarado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+            "sha256_observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b"
+          },
+          {
+            "archivo": "estados/solucion/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "MANIFIESTO_SHA256.json",
+            "sha256_declarado": "85c86e285ae12cf14d238271d69c2b1167c787b58eb36973dc29428e6b5783aa",
+            "sha256_observado": "85c86e285ae12cf14d238271d69c2b1167c787b58eb36973dc29428e6b5783aa"
+          },
+          {
+            "archivo": "PROCEDENCIA.json",
+            "sha256_declarado": "42c5dd0c7325fd9b1451eac8c7a52c479745ce3f3c2cf78d895c9b00fda7f031",
+            "sha256_observado": "42c5dd0c7325fd9b1451eac8c7a52c479745ce3f3c2cf78d895c9b00fda7f031"
+          },
+          {
+            "archivo": "prompts/01_insuficiente.md",
+            "sha256_declarado": "13ef36873619156fcb188c31d01433aea1230fee2144611044a535e21dcde678",
+            "sha256_observado": "13ef36873619156fcb188c31d01433aea1230fee2144611044a535e21dcde678"
+          },
+          {
+            "archivo": "prompts/02_puntual.md",
+            "sha256_declarado": "47b5a1b05fc5a540975b4bb0219ffae820c52804e8519e2638c63a8a3c8e6582",
+            "sha256_observado": "47b5a1b05fc5a540975b4bb0219ffae820c52804e8519e2638c63a8a3c8e6582"
+          },
+          {
+            "archivo": "prompts/03_delegado.md",
+            "sha256_declarado": "35ea0f22f02a4c28e0ca62b21a6c577f97b10d0de20b2fa23a09c517cbb191d4",
+            "sha256_observado": "35ea0f22f02a4c28e0ca62b21a6c577f97b10d0de20b2fa23a09c517cbb191d4"
+          },
+          {
+            "archivo": "pruebas_resumen.py",
+            "sha256_declarado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+            "sha256_observado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf"
+          },
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "70aa2e8d5504eaa2aefcfcdc1447f768931b194afefa9d5afd2eb8c21bc07674",
+            "sha256_observado": "70aa2e8d5504eaa2aefcfcdc1447f768931b194afefa9d5afd2eb8c21bc07674"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "a3694dcb9a752d74219c8430e0376282382de2afda176dfe77e36fd6c2c20f96",
+            "sha256_observado": "a3694dcb9a752d74219c8430e0376282382de2afda176dfe77e36fd6c2c20f96"
+          }
+        ]
+      },
+      {
+        "laboratorio": "laboratorio_06",
+        "estado": "APROBADO",
+        "archivos": 60,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": ".gitignore",
+            "sha256_declarado": "21360fb9b33f8e724ba63a60d146f44987980d979af4005eeea5099e2078c5fb",
+            "sha256_observado": "21360fb9b33f8e724ba63a60d146f44987980d979af4005eeea5099e2078c5fb"
+          },
+          {
+            "archivo": "AGENTS.md",
+            "sha256_declarado": "ede1bc9b3f3d510406a22cc57e0380396b818aaed224a6d4c37d87931b971dcd",
+            "sha256_observado": "ede1bc9b3f3d510406a22cc57e0380396b818aaed224a6d4c37d87931b971dcd"
+          },
+          {
+            "archivo": "ALCANCE.md",
+            "sha256_declarado": "20d17cd628b19000425fed2b607a78425c5a0ee8c7d3b54336c1bedf079fb36d",
+            "sha256_observado": "20d17cd628b19000425fed2b607a78425c5a0ee8c7d3b54336c1bedf079fb36d"
+          },
+          {
+            "archivo": "comparar.py",
+            "sha256_declarado": "2ba5de71c59152d6975982f33c10745d9b1c026c8b9f7d9037419b455b1829c7",
+            "sha256_observado": "2ba5de71c59152d6975982f33c10745d9b1c026c8b9f7d9037419b455b1829c7"
+          },
+          {
+            "archivo": "contexto/ARQUITECTURA.md",
+            "sha256_declarado": "a2e90a5082591c6c3cbe54957e43a63ed48582a5a4ba91f64109f365aa001926",
+            "sha256_observado": "a2e90a5082591c6c3cbe54957e43a63ed48582a5a4ba91f64109f365aa001926"
+          },
+          {
+            "archivo": "contexto/CONTEXTO.md",
+            "sha256_declarado": "1a971be4e95c1c42fba562649bf3ce5c4c1b8ace6c95a157ad716b213a1fb1b7",
+            "sha256_observado": "1a971be4e95c1c42fba562649bf3ce5c4c1b8ace6c95a157ad716b213a1fb1b7"
+          },
+          {
+            "archivo": "contexto/CONTINUIDAD.md",
+            "sha256_declarado": "4246fffc03fc72b9210f4c208f5c039e4a2479f5490b67270f9c13ad2e11f03c",
+            "sha256_observado": "4246fffc03fc72b9210f4c208f5c039e4a2479f5490b67270f9c13ad2e11f03c"
+          },
+          {
+            "archivo": "contexto/DECISIONES.md",
+            "sha256_declarado": "637f5cf4ba1ee34ed9ff1486b375fdf5e93e18d7f43b780e2f7d95d554494c37",
+            "sha256_observado": "637f5cf4ba1ee34ed9ff1486b375fdf5e93e18d7f43b780e2f7d95d554494c37"
+          },
+          {
+            "archivo": "diferencias/base_a_propuesta.diff",
+            "sha256_declarado": "6c206c66cc77bc2d7d4e1c78d0abbe95a82e5dffaa13950bd5177ed26d872479",
+            "sha256_observado": "6c206c66cc77bc2d7d4e1c78d0abbe95a82e5dffaa13950bd5177ed26d872479"
+          },
+          {
+            "archivo": "diferencias/base_a_solucion.diff",
+            "sha256_declarado": "c07757d1498b1e8153329842284b8bb14529d5b22ea854b76ffe9c96c0bc6769",
+            "sha256_observado": "c07757d1498b1e8153329842284b8bb14529d5b22ea854b76ffe9c96c0bc6769"
+          },
+          {
+            "archivo": "diferencias/propuesta_a_solucion.diff",
+            "sha256_declarado": "3b9b61ec04f879c62f45cec59f2386d3365ae5c00c58d2f965a3c290102b11fa",
+            "sha256_observado": "3b9b61ec04f879c62f45cec59f2386d3365ae5c00c58d2f965a3c290102b11fa"
+          },
+          {
+            "archivo": "docs/FUENTES_GROK.md",
+            "sha256_declarado": "d102fff490df3d705c1fe35903992e15c5ca416d2ecf767ba3194b363eee615b",
+            "sha256_observado": "d102fff490df3d705c1fe35903992e15c5ca416d2ecf767ba3194b363eee615b"
+          },
+          {
+            "archivo": "estados/base/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/base/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/base/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/base/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/base/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/base/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/base/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/base/resumen.py",
+            "sha256_declarado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+            "sha256_observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b"
+          },
+          {
+            "archivo": "estados/base/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/propuesta/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/propuesta/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/propuesta/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/propuesta/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/propuesta/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/propuesta/resumen.py",
+            "sha256_declarado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+            "sha256_observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b"
+          },
+          {
+            "archivo": "estados/propuesta/servidor.py",
+            "sha256_declarado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+            "sha256_observado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f"
+          },
+          {
+            "archivo": "estados/propuesta/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/propuesta/web/app.js",
+            "sha256_declarado": "fad1c8b6490f4566957f14261168dba19db49d3603b5d129b5d660c2328719c6",
+            "sha256_observado": "fad1c8b6490f4566957f14261168dba19db49d3603b5d129b5d660c2328719c6"
+          },
+          {
+            "archivo": "estados/propuesta/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/propuesta/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "estados/solucion/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/solucion/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/solucion/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/solucion/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/solucion/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/solucion/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/solucion/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/solucion/resumen.py",
+            "sha256_declarado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+            "sha256_observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b"
+          },
+          {
+            "archivo": "estados/solucion/servidor.py",
+            "sha256_declarado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+            "sha256_observado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f"
+          },
+          {
+            "archivo": "estados/solucion/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/solucion/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/solucion/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/solucion/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "MANIFIESTO_SHA256.json",
+            "sha256_declarado": "4ca54aa109b3e4a670e0d5a8a9715bebef78c3bc5d6851e7c45881b8880c805e",
+            "sha256_observado": "4ca54aa109b3e4a670e0d5a8a9715bebef78c3bc5d6851e7c45881b8880c805e"
+          },
+          {
+            "archivo": "package.json",
+            "sha256_declarado": "478a0f4ba5a354528b99005d1ebd5a63b0465b5dfb5216682a343831be14ebb7",
+            "sha256_observado": "478a0f4ba5a354528b99005d1ebd5a63b0465b5dfb5216682a343831be14ebb7"
+          },
+          {
+            "archivo": "PROCEDENCIA.json",
+            "sha256_declarado": "65748f042e94d296af4e7b92a453d43f0f806f85f6258caf14836e07e9924c7a",
+            "sha256_observado": "65748f042e94d296af4e7b92a453d43f0f806f85f6258caf14836e07e9924c7a"
+          },
+          {
+            "archivo": "prompts/01_insuficiente.md",
+            "sha256_declarado": "9d0c1cc7f16d76d1d4798717d97a50185bdc8d3c5a1aafd2e306e4faee3ef858",
+            "sha256_observado": "9d0c1cc7f16d76d1d4798717d97a50185bdc8d3c5a1aafd2e306e4faee3ef858"
+          },
+          {
+            "archivo": "prompts/02_planificar.md",
+            "sha256_declarado": "c85c3f36a551db1c3ffb2e123d952cbe7baf45b15800f60cb9c3b817b05c39ad",
+            "sha256_observado": "c85c3f36a551db1c3ffb2e123d952cbe7baf45b15800f60cb9c3b817b05c39ad"
+          },
+          {
+            "archivo": "prompts/03_implementar.md",
+            "sha256_declarado": "beea19e9e19b1aed24b8e50b5b83217617d43e796c39ce03342f16e5db2fb70c",
+            "sha256_observado": "beea19e9e19b1aed24b8e50b5b83217617d43e796c39ce03342f16e5db2fb70c"
+          },
+          {
+            "archivo": "prompts/04_revisar.md",
+            "sha256_declarado": "800b9473caacb9968f6528e5c9bd1900ec283c49a3eaf5929ab6fb91045e6d41",
+            "sha256_observado": "800b9473caacb9968f6528e5c9bd1900ec283c49a3eaf5929ab6fb91045e6d41"
+          },
+          {
+            "archivo": "pruebas_http.py",
+            "sha256_declarado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93",
+            "sha256_observado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93"
+          },
+          {
+            "archivo": "pruebas_navegador.cjs",
+            "sha256_declarado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca",
+            "sha256_observado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca"
+          },
+          {
+            "archivo": "pruebas_resumen.py",
+            "sha256_declarado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+            "sha256_observado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf"
+          },
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "bf72a5c0a0d8cdcf623109348b45e2a18cc5c82346198a06a5f4c6b9e34d2b53",
+            "sha256_observado": "bf72a5c0a0d8cdcf623109348b45e2a18cc5c82346198a06a5f4c6b9e34d2b53"
+          },
+          {
+            "archivo": "soporte_web.py",
+            "sha256_declarado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c",
+            "sha256_observado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "0acf4f0313f9080b6f9283276482ee4b62c31bd3697b6f04dd99f53a24762b40",
+            "sha256_observado": "0acf4f0313f9080b6f9283276482ee4b62c31bd3697b6f04dd99f53a24762b40"
+          }
+        ]
+      },
+      {
+        "laboratorio": "laboratorio_07",
+        "estado": "APROBADO",
+        "archivos": 73,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": "AGENTS.md",
+            "sha256_declarado": "451dcf16be8c843d8b53d4ddc574908f61b5342516e08c141a4c7c25863a5513",
+            "sha256_observado": "451dcf16be8c843d8b53d4ddc574908f61b5342516e08c141a4c7c25863a5513"
+          },
+          {
+            "archivo": "ALCANCE.md",
+            "sha256_declarado": "a607e5a459ec235d6baa9da1a35f75d816e194d6dd6551e7320eeedcdfba4f98",
+            "sha256_observado": "a607e5a459ec235d6baa9da1a35f75d816e194d6dd6551e7320eeedcdfba4f98"
+          },
+          {
+            "archivo": "comparar.py",
+            "sha256_declarado": "0abeab47e3ae43730879f490a37378c8036f08bdc3dbfb78b64c5a0332d16086",
+            "sha256_observado": "0abeab47e3ae43730879f490a37378c8036f08bdc3dbfb78b64c5a0332d16086"
+          },
+          {
+            "archivo": "contexto/ACLARACION_TRANSACCION.md",
+            "sha256_declarado": "94af5ec8504687adb9f86a1faf0d499e8f57781aa54cca9c1207247c6a3a399f",
+            "sha256_observado": "94af5ec8504687adb9f86a1faf0d499e8f57781aa54cca9c1207247c6a3a399f"
+          },
+          {
+            "archivo": "contexto/ARQUITECTURA.md",
+            "sha256_declarado": "186fd16f57fa73fe6745db353dc7c3cc029fa730d0ebe723fbc021a6da96d821",
+            "sha256_observado": "186fd16f57fa73fe6745db353dc7c3cc029fa730d0ebe723fbc021a6da96d821"
+          },
+          {
+            "archivo": "contexto/CONTEXTO.md",
+            "sha256_declarado": "556e68367603dce99cbfaef926cf1614a44265933c4cf3dd2a32f9ce235ad023",
+            "sha256_observado": "556e68367603dce99cbfaef926cf1614a44265933c4cf3dd2a32f9ce235ad023"
+          },
+          {
+            "archivo": "contexto/CONTINUIDAD.md",
+            "sha256_declarado": "78ff9e2ac5d916ac09c495c9ca10c8228356fa962aae1bb08e8560242dba8460",
+            "sha256_observado": "78ff9e2ac5d916ac09c495c9ca10c8228356fa962aae1bb08e8560242dba8460"
+          },
+          {
+            "archivo": "contexto/CONTRATO_INTEGRACION.md",
+            "sha256_declarado": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd",
+            "sha256_observado": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd"
+          },
+          {
+            "archivo": "contexto/DECISIONES.md",
+            "sha256_declarado": "eab84957c6fc3e4d540ee553ee6bc56c413645a8eb5fce2eed61008aa3b15b75",
+            "sha256_observado": "eab84957c6fc3e4d540ee553ee6bc56c413645a8eb5fce2eed61008aa3b15b75"
+          },
+          {
+            "archivo": "contexto/TRAZABILIDAD.md",
+            "sha256_declarado": "c0ee7c2fafd88ddd459d7c44584b7ce35e8724d185fddc327dda95cb18149a20",
+            "sha256_observado": "c0ee7c2fafd88ddd459d7c44584b7ce35e8724d185fddc327dda95cb18149a20"
+          },
+          {
+            "archivo": "datos/actualizacion_valida.csv",
+            "sha256_declarado": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+            "sha256_observado": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+          },
+          {
+            "archivo": "datos/error_tardio.csv",
+            "sha256_declarado": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+            "sha256_observado": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42"
+          },
+          {
+            "archivo": "datos/par_duplicado.csv",
+            "sha256_declarado": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6",
+            "sha256_observado": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6"
+          },
+          {
+            "archivo": "demostrar.py",
+            "sha256_declarado": "5d9302f41773ac058e9b589b8e34cb27123761a9e1a5b334009a482a45715071",
+            "sha256_observado": "5d9302f41773ac058e9b589b8e34cb27123761a9e1a5b334009a482a45715071"
+          },
+          {
+            "archivo": "diferencias/base_a_propuesta.diff",
+            "sha256_declarado": "4dcb3bfa6dc5599678ec8cfd802b6fcab1868bf2d8cd6133630e092e83556690",
+            "sha256_observado": "4dcb3bfa6dc5599678ec8cfd802b6fcab1868bf2d8cd6133630e092e83556690"
+          },
+          {
+            "archivo": "diferencias/base_a_solucion.diff",
+            "sha256_declarado": "31325c504ce84c9cb0ba9fdd0edb8ae9a463b2510833c0d010e9c15e6d7f9fd1",
+            "sha256_observado": "31325c504ce84c9cb0ba9fdd0edb8ae9a463b2510833c0d010e9c15e6d7f9fd1"
+          },
+          {
+            "archivo": "diferencias/propuesta_a_solucion.diff",
+            "sha256_declarado": "3fe405ba1e5ec411ca22f3a57f3bdba5f2798653297fc7cc0e78cbb4f6a261b4",
+            "sha256_observado": "3fe405ba1e5ec411ca22f3a57f3bdba5f2798653297fc7cc0e78cbb4f6a261b4"
+          },
+          {
+            "archivo": "docs/FUENTES.md",
+            "sha256_declarado": "5beb8eb854f9d4ba14785fa5931e847dc4dc518f408bebf7768487df9fe3741d",
+            "sha256_observado": "5beb8eb854f9d4ba14785fa5931e847dc4dc518f408bebf7768487df9fe3741d"
+          },
+          {
+            "archivo": "estados/base/catalogo.py",
+            "sha256_declarado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777",
+            "sha256_observado": "1078dd63788343bd5c9e6bfc8bff02bea803ff93dd201fd0a704cfdc1c613777"
+          },
+          {
+            "archivo": "estados/base/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/base/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/base/detalle.py",
+            "sha256_declarado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906",
+            "sha256_observado": "6d9785f7ecbd37af47700c14c38ac4ec23b44d9ddb87fa0b2d53327e4db5f906"
+          },
+          {
+            "archivo": "estados/base/laboratorio.py",
+            "sha256_declarado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2",
+            "sha256_observado": "b5be91c96bcfe53728c1091757384195b83606057877f89c0f054b0815f942c2"
+          },
+          {
+            "archivo": "estados/base/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/base/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/base/resumen.py",
+            "sha256_declarado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b",
+            "sha256_observado": "fd62f055ec3181e150fd25edf47bfd537d31125f64be09e9bbadff2a5107f40b"
+          },
+          {
+            "archivo": "estados/base/servidor.py",
+            "sha256_declarado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+            "sha256_observado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f"
+          },
+          {
+            "archivo": "estados/base/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/base/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/base/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/base/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "estados/propuesta/catalogo.py",
+            "sha256_declarado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+            "sha256_observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+          },
+          {
+            "archivo": "estados/propuesta/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/propuesta/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/propuesta/detalle.py",
+            "sha256_declarado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+            "sha256_observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+          },
+          {
+            "archivo": "estados/propuesta/importacion.py",
+            "sha256_declarado": "9658a751febfefdc714ee0f03c4212ed3421da556a699fc3b01f430667a58c0b",
+            "sha256_observado": "9658a751febfefdc714ee0f03c4212ed3421da556a699fc3b01f430667a58c0b"
+          },
+          {
+            "archivo": "estados/propuesta/laboratorio.py",
+            "sha256_declarado": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93",
+            "sha256_observado": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/propuesta/resumen.py",
+            "sha256_declarado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+            "sha256_observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+          },
+          {
+            "archivo": "estados/propuesta/servidor.py",
+            "sha256_declarado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+            "sha256_observado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f"
+          },
+          {
+            "archivo": "estados/propuesta/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/propuesta/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/propuesta/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/propuesta/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "estados/solucion/catalogo.py",
+            "sha256_declarado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+            "sha256_observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+          },
+          {
+            "archivo": "estados/solucion/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/solucion/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/solucion/detalle.py",
+            "sha256_declarado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+            "sha256_observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+          },
+          {
+            "archivo": "estados/solucion/importacion.py",
+            "sha256_declarado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+            "sha256_observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+          },
+          {
+            "archivo": "estados/solucion/laboratorio.py",
+            "sha256_declarado": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93",
+            "sha256_observado": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93"
+          },
+          {
+            "archivo": "estados/solucion/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/solucion/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/solucion/resumen.py",
+            "sha256_declarado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+            "sha256_observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+          },
+          {
+            "archivo": "estados/solucion/servidor.py",
+            "sha256_declarado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+            "sha256_observado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f"
+          },
+          {
+            "archivo": "estados/solucion/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/solucion/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/solucion/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/solucion/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "MANIFIESTO_SHA256.json",
+            "sha256_declarado": "272859a5a74beda0c3be33c4d41d27a2cf4f3c9a6eb2ce94e9d0f083a9fd4bd6",
+            "sha256_observado": "272859a5a74beda0c3be33c4d41d27a2cf4f3c9a6eb2ce94e9d0f083a9fd4bd6"
+          },
+          {
+            "archivo": "package.json",
+            "sha256_declarado": "853c170465bc8133dcb73029cff7ebc861974e9d0db6eef19da3cc827341d65f",
+            "sha256_observado": "853c170465bc8133dcb73029cff7ebc861974e9d0db6eef19da3cc827341d65f"
+          },
+          {
+            "archivo": "PROCEDENCIA.json",
+            "sha256_declarado": "4090b03d7b18974e8eb1947eff0ce4621c46a9c2e8fd9d06e2595177aad206a9",
+            "sha256_observado": "4090b03d7b18974e8eb1947eff0ce4621c46a9c2e8fd9d06e2595177aad206a9"
+          },
+          {
+            "archivo": "prompts/01_insuficiente.md",
+            "sha256_declarado": "b2b928b73bf3b14356f615e7ba5906c2031a22b3fccc5fbea7a940ba6445a9fd",
+            "sha256_observado": "b2b928b73bf3b14356f615e7ba5906c2031a22b3fccc5fbea7a940ba6445a9fd"
+          },
+          {
+            "archivo": "prompts/02_encargo_claro.md",
+            "sha256_declarado": "6c84de4d8bcc0e934f0dd1269202845c4eac6a80b06c23f4418440b6ee0a3d9b",
+            "sha256_observado": "6c84de4d8bcc0e934f0dd1269202845c4eac6a80b06c23f4418440b6ee0a3d9b"
+          },
+          {
+            "archivo": "prompts/03_revisar.md",
+            "sha256_declarado": "7ec392730d62ef7a8d7eeecae26b0895a9708ba690bcfa8f1b4b6149419fbd69",
+            "sha256_observado": "7ec392730d62ef7a8d7eeecae26b0895a9708ba690bcfa8f1b4b6149419fbd69"
+          },
+          {
+            "archivo": "pruebas_http.py",
+            "sha256_declarado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93",
+            "sha256_observado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93"
+          },
+          {
+            "archivo": "pruebas_integracion.py",
+            "sha256_declarado": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d",
+            "sha256_observado": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d"
+          },
+          {
+            "archivo": "pruebas_navegador.cjs",
+            "sha256_declarado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca",
+            "sha256_observado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca"
+          },
+          {
+            "archivo": "pruebas_resumen.py",
+            "sha256_declarado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+            "sha256_observado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf"
+          },
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "d26b23e82e230a8c1754a3c1250892b22c080d21e4abe59cb5cf73ed56ab08d5",
+            "sha256_observado": "d26b23e82e230a8c1754a3c1250892b22c080d21e4abe59cb5cf73ed56ab08d5"
+          },
+          {
+            "archivo": "soporte/huellas_evidencia.py",
+            "sha256_declarado": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+            "sha256_observado": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd"
+          },
+          {
+            "archivo": "soporte_web.py",
+            "sha256_declarado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c",
+            "sha256_observado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "6102d828c432c19d454d51aed3283094e75674193496757dd12fb4911b316fac",
+            "sha256_observado": "6102d828c432c19d454d51aed3283094e75674193496757dd12fb4911b316fac"
+          }
+        ]
+      },
+      {
+        "laboratorio": "laboratorio_08",
+        "estado": "APROBADO",
+        "archivos": 75,
+        "tipo_cotejo": "Bytes de los archivos locales originales del paquete",
+        "registros": [
+          {
+            "archivo": "AGENTS.md",
+            "sha256_declarado": "f2be9612bb1635f470ebe950999b78acf4253a299a29935f55a711c8b82beed3",
+            "sha256_observado": "f2be9612bb1635f470ebe950999b78acf4253a299a29935f55a711c8b82beed3"
+          },
+          {
+            "archivo": "contexto/ARQUITECTURA.md",
+            "sha256_declarado": "118fff5f781e41d091356d62f812a19f02789cb9f24e42e7d528d34b8ebb83eb",
+            "sha256_observado": "118fff5f781e41d091356d62f812a19f02789cb9f24e42e7d528d34b8ebb83eb"
+          },
+          {
+            "archivo": "contexto/CONTEXTO.md",
+            "sha256_declarado": "9a36142914db1e530d3e4f899b074469f683e89027ca3c073b2610200339f341",
+            "sha256_observado": "9a36142914db1e530d3e4f899b074469f683e89027ca3c073b2610200339f341"
+          },
+          {
+            "archivo": "contexto/CONTINUIDAD.md",
+            "sha256_declarado": "6192c1a31453cd5b93d7791d41be7c06529a2935a3d3a4b867e2f5628c580430",
+            "sha256_observado": "6192c1a31453cd5b93d7791d41be7c06529a2935a3d3a4b867e2f5628c580430"
+          },
+          {
+            "archivo": "contexto/CONTRATO_DEPURACION.md",
+            "sha256_declarado": "9ae26d615d4d74a65de841b77cfb913f62f738eda5fdb21d683e78e03776063d",
+            "sha256_observado": "9ae26d615d4d74a65de841b77cfb913f62f738eda5fdb21d683e78e03776063d"
+          },
+          {
+            "archivo": "contexto/CONTRATO_INTEGRACION.md",
+            "sha256_declarado": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd",
+            "sha256_observado": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd"
+          },
+          {
+            "archivo": "contexto/DECISIONES.md",
+            "sha256_declarado": "8a41e5e616de215534d04214f9622d1a6e37903630b2930b5a7c44bec4b0696b",
+            "sha256_observado": "8a41e5e616de215534d04214f9622d1a6e37903630b2930b5a7c44bec4b0696b"
+          },
+          {
+            "archivo": "contexto/TRAZABILIDAD.md",
+            "sha256_declarado": "6586cbd3003feca21830da3463122f72ab86760e3f5824478dc60d6b50c050fe",
+            "sha256_observado": "6586cbd3003feca21830da3463122f72ab86760e3f5824478dc60d6b50c050fe"
+          },
+          {
+            "archivo": "datos/actualizacion_valida.csv",
+            "sha256_declarado": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+            "sha256_observado": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+          },
+          {
+            "archivo": "datos/error_tardio.csv",
+            "sha256_declarado": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+            "sha256_observado": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42"
+          },
+          {
+            "archivo": "datos/par_duplicado.csv",
+            "sha256_declarado": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6",
+            "sha256_observado": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6"
+          },
+          {
+            "archivo": "diferencias/propuesta_a_solucion.diff",
+            "sha256_declarado": "59ea5be0617fa7923121f241e3b5113f4f092248341863bce00a4aaa1427a2de",
+            "sha256_observado": "59ea5be0617fa7923121f241e3b5113f4f092248341863bce00a4aaa1427a2de"
+          },
+          {
+            "archivo": "estados/base/catalogo.py",
+            "sha256_declarado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+            "sha256_observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+          },
+          {
+            "archivo": "estados/base/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/base/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/base/detalle.py",
+            "sha256_declarado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+            "sha256_observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+          },
+          {
+            "archivo": "estados/base/importacion.py",
+            "sha256_declarado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+            "sha256_observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+          },
+          {
+            "archivo": "estados/base/laboratorio.py",
+            "sha256_declarado": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93",
+            "sha256_observado": "56944f9da792d809a91b2da92b9754aa970cd4e9fb94ffd85188e5c2a97d7f93"
+          },
+          {
+            "archivo": "estados/base/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/base/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/base/resumen.py",
+            "sha256_declarado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+            "sha256_observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+          },
+          {
+            "archivo": "estados/base/servidor.py",
+            "sha256_declarado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f",
+            "sha256_observado": "29c8d4662a666b546c90ad3477486350b588a75ed4a54a1c426955fb56dc648f"
+          },
+          {
+            "archivo": "estados/base/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/base/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/base/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/base/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "estados/propuesta/catalogo.py",
+            "sha256_declarado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+            "sha256_observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+          },
+          {
+            "archivo": "estados/propuesta/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/propuesta/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/propuesta/detalle.py",
+            "sha256_declarado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+            "sha256_observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+          },
+          {
+            "archivo": "estados/propuesta/importacion.py",
+            "sha256_declarado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+            "sha256_observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+          },
+          {
+            "archivo": "estados/propuesta/laboratorio.py",
+            "sha256_declarado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+            "sha256_observado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3"
+          },
+          {
+            "archivo": "estados/propuesta/origen.py",
+            "sha256_declarado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+            "sha256_observado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5"
+          },
+          {
+            "archivo": "estados/propuesta/persistencia.py",
+            "sha256_declarado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+            "sha256_observado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/propuesta/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/propuesta/resumen.py",
+            "sha256_declarado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+            "sha256_observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+          },
+          {
+            "archivo": "estados/propuesta/servidor.py",
+            "sha256_declarado": "53a3bf2a324beca86973858f7de10712e175301a6c42fbcf38ff32b9bc8799fa",
+            "sha256_observado": "53a3bf2a324beca86973858f7de10712e175301a6c42fbcf38ff32b9bc8799fa"
+          },
+          {
+            "archivo": "estados/propuesta/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/propuesta/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/propuesta/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/propuesta/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "estados/solucion/catalogo.py",
+            "sha256_declarado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+            "sha256_observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961"
+          },
+          {
+            "archivo": "estados/solucion/datos/ejemplos.sql",
+            "sha256_declarado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+            "sha256_observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c"
+          },
+          {
+            "archivo": "estados/solucion/datos/esquema.sql",
+            "sha256_declarado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+            "sha256_observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166"
+          },
+          {
+            "archivo": "estados/solucion/detalle.py",
+            "sha256_declarado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+            "sha256_observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee"
+          },
+          {
+            "archivo": "estados/solucion/importacion.py",
+            "sha256_declarado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+            "sha256_observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890"
+          },
+          {
+            "archivo": "estados/solucion/laboratorio.py",
+            "sha256_declarado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+            "sha256_observado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3"
+          },
+          {
+            "archivo": "estados/solucion/origen.py",
+            "sha256_declarado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+            "sha256_observado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5"
+          },
+          {
+            "archivo": "estados/solucion/persistencia.py",
+            "sha256_declarado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+            "sha256_observado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3"
+          },
+          {
+            "archivo": "estados/solucion/pruebas.py",
+            "sha256_declarado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+            "sha256_observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a"
+          },
+          {
+            "archivo": "estados/solucion/pruebas_detalle.py",
+            "sha256_declarado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+            "sha256_observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858"
+          },
+          {
+            "archivo": "estados/solucion/resumen.py",
+            "sha256_declarado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+            "sha256_observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837"
+          },
+          {
+            "archivo": "estados/solucion/servidor.py",
+            "sha256_declarado": "0da6dea6df664a1ebc9aab86550137f76642030c3dff4bd3957580f8ecf2cf99",
+            "sha256_observado": "0da6dea6df664a1ebc9aab86550137f76642030c3dff4bd3957580f8ecf2cf99"
+          },
+          {
+            "archivo": "estados/solucion/solucion/consulta.sql",
+            "sha256_declarado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+            "sha256_observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9"
+          },
+          {
+            "archivo": "estados/solucion/web/app.js",
+            "sha256_declarado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+            "sha256_observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9"
+          },
+          {
+            "archivo": "estados/solucion/web/estilos.css",
+            "sha256_declarado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+            "sha256_observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c"
+          },
+          {
+            "archivo": "estados/solucion/web/index.html",
+            "sha256_declarado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+            "sha256_observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498"
+          },
+          {
+            "archivo": "package.json",
+            "sha256_declarado": "c8a9eb7a67b327bfbec7b3fa9f564fdf5fb2841d0a157c8d512f1106bfc60744",
+            "sha256_observado": "c8a9eb7a67b327bfbec7b3fa9f564fdf5fb2841d0a157c8d512f1106bfc60744"
+          },
+          {
+            "archivo": "PROCEDENCIA.json",
+            "sha256_declarado": "ea7bf181ed371f7e51421cb3860b902b930611f9af5402035184dc5a6f54ec01",
+            "sha256_observado": "ea7bf181ed371f7e51421cb3860b902b930611f9af5402035184dc5a6f54ec01"
+          },
+          {
+            "archivo": "prompts/01_insuficiente.md",
+            "sha256_declarado": "5961f2a8185014d3da75239bdc17eded732a3e4ce26539a2af0918b53842f51b",
+            "sha256_observado": "5961f2a8185014d3da75239bdc17eded732a3e4ce26539a2af0918b53842f51b"
+          },
+          {
+            "archivo": "prompts/02_investigar_claro.md",
+            "sha256_declarado": "c1e0768e41d159ecab920de10d74658b13cfa6c137358aed5ba675964f64f3c5",
+            "sha256_observado": "c1e0768e41d159ecab920de10d74658b13cfa6c137358aed5ba675964f64f3c5"
+          },
+          {
+            "archivo": "prompts/03_corregir_y_cerrar.md",
+            "sha256_declarado": "1f9a4b51cf4c915f33b9eef6435ded9798139c8bb2d89565314c9771d1f5d289",
+            "sha256_observado": "1f9a4b51cf4c915f33b9eef6435ded9798139c8bb2d89565314c9771d1f5d289"
+          },
+          {
+            "archivo": "pruebas_depuracion.py",
+            "sha256_declarado": "3f84f47d57da3b4949f44b68a3b1df2e2ef4293d94edcd4f7831d6c1d5cfcd00",
+            "sha256_observado": "3f84f47d57da3b4949f44b68a3b1df2e2ef4293d94edcd4f7831d6c1d5cfcd00"
+          },
+          {
+            "archivo": "pruebas_http.py",
+            "sha256_declarado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93",
+            "sha256_observado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93"
+          },
+          {
+            "archivo": "pruebas_integracion.py",
+            "sha256_declarado": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d",
+            "sha256_observado": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d"
+          },
+          {
+            "archivo": "pruebas_navegador.cjs",
+            "sha256_declarado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca",
+            "sha256_observado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca"
+          },
+          {
+            "archivo": "pruebas_recorrido.cjs",
+            "sha256_declarado": "9699b25f7f2d36aac49191b68ca39dff679a435ddf33cc2b33f95fbfdb18d02a",
+            "sha256_observado": "9699b25f7f2d36aac49191b68ca39dff679a435ddf33cc2b33f95fbfdb18d02a"
+          },
+          {
+            "archivo": "pruebas_recorrido.py",
+            "sha256_declarado": "7d309752a6b076e38afff39df22f5b589634ab2f228d7b8ce20e2e41a6c6769a",
+            "sha256_observado": "7d309752a6b076e38afff39df22f5b589634ab2f228d7b8ce20e2e41a6c6769a"
+          },
+          {
+            "archivo": "pruebas_resumen.py",
+            "sha256_declarado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+            "sha256_observado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf"
+          },
+          {
+            "archivo": "README.md",
+            "sha256_declarado": "e83caa6ee0ca198b50b22eaf0a01b60c5ed1113f44e897da58dda465752cad3f",
+            "sha256_observado": "e83caa6ee0ca198b50b22eaf0a01b60c5ed1113f44e897da58dda465752cad3f"
+          },
+          {
+            "archivo": "soporte/huellas_evidencia.py",
+            "sha256_declarado": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+            "sha256_observado": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd"
+          },
+          {
+            "archivo": "soporte_procesos.py",
+            "sha256_declarado": "5b3afad34aea74b1cf649ef095186bbc9e7951cea8c7e759021751d08f08ea4d",
+            "sha256_observado": "5b3afad34aea74b1cf649ef095186bbc9e7951cea8c7e759021751d08f08ea4d"
+          },
+          {
+            "archivo": "soporte_web.py",
+            "sha256_declarado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c",
+            "sha256_observado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c"
+          },
+          {
+            "archivo": "verificar.py",
+            "sha256_declarado": "f2a06db1820eb31787f2e0e8926e11550b1abc2a684fabb501e0c44596bff7b8",
+            "sha256_observado": "f2a06db1820eb31787f2e0e8926e11550b1abc2a684fabb501e0c44596bff7b8"
+          }
+        ]
+      }
+    ],
+    "limite_infraestructura": "La captura no incluye hashes específicos de verificar_todo.py ni del módulo de huellas común. La identidad del índice está registrada; sus bytes ejecutados no se certifican separadamente."
+  },
+  "conjunto_recibido": {
+    "estado": "FALLIDO",
+    "codigo_salida_guardado": 1,
+    "totales_subconjunto_agregado": {
+      "laboratorios": 8,
+      "baterias": 44,
+      "ejecutados": 408,
+      "aprobados": 400,
+      "fallidos": 8,
+      "bloqueados": 0,
+      "no_ejecutados_en_baterias": 37,
+      "no_ejecutados_fuera_de_baterias": 10
+    },
+    "laboratorio08": {
+      "laboratorio": "laboratorio_08",
+      "estado": "FALLIDO",
+      "motivo": "No se completó o no se pudo validar el recorrido web.",
+      "tipo_error": "ValueError"
+    },
+    "interpretacion": "Las 44 baterías y 408 ejecuciones agregadas corresponden a laboratorios 1–7. La excepción al evaluar laboratorio 8 impidió incorporar sus baterías."
+  },
+  "laboratorio08": {
+    "estado": "FALLIDO",
+    "heredados_aprobados": 153,
+    "heredados_baterias": 15,
+    "conservacion_heredados": "APROBADO",
+    "totales_declarados_no_validados": {
+      "ejecutados": 175,
+      "aprobados": 156,
+      "fallidos": 19,
+      "bloqueados": 0,
+      "no_ejecutados": 11,
+      "errores_de_ejecucion": 18
+    },
+    "motivo_no_validacion": "Propuesta D contiene 12 registros para 10 identificadores; faltan los dos JSON D04. Los dos registros duplicados y los dos resultados faltantes pueden ocultarse tras el mismo total nominal de 175. No es cobertura validada.",
+    "anomalias_terminal": [
+      {
+        "archivo": "conjunto/laboratorio_08/propuesta_depuracion.json",
+        "sha256": "d15f79a1afc2c516c783f1d30498c4c159f1007a38ea9867eda146ae956d534d",
+        "casos_unicos": 10,
+        "registros": 12,
+        "duplicados": {
+          "D05": 2,
+          "D08.a": 2
+        },
+        "errores_permission_error": [
+          "D01",
+          "D02",
+          "D05",
+          "D06.b",
+          "D07.a",
+          "D07.b",
+          "D08.a",
+          "D08.b"
+        ],
+        "aserciones_fallidas": [
+          "D03",
+          "D05",
+          "D08.a"
+        ],
+        "aprobados": [
+          "D06.a"
+        ],
+        "nota": "Los errores terminales se registran por tipo, sin traza completa de cada caso."
+      },
+      {
+        "archivo": "conjunto/laboratorio_08/solucion_depuracion.json",
+        "sha256": "04bc1fe280ec8788ccfe8bdfcb9ac33925b8ead1d06c8310e1e866dbef91eaa4",
+        "casos_unicos": 10,
+        "registros": 10,
+        "duplicados": {},
+        "errores_permission_error": [
+          "D01",
+          "D02",
+          "D05",
+          "D06.b",
+          "D07.a",
+          "D07.b",
+          "D08.a",
+          "D08.b"
+        ],
+        "aserciones_fallidas": [],
+        "aprobados": [
+          "D03",
+          "D06.a"
+        ],
+        "nota": "Los errores terminales se registran por tipo, sin traza completa de cada caso."
+      }
+    ],
+    "trazas_navegador": [
+      {
+        "archivo": "conjunto/laboratorio_08/propuesta_depuracion_navegador.stderr.txt",
+        "sha256": "0770fcc2b4da2ccc91f1e976c7f6e37239d393d15a37696d7c78cdb61a030d95",
+        "tipo_error": "PermissionError",
+        "codigo_windows": 32,
+        "archivo_sintetico_afectado": "principal.sqlite",
+        "fase": "Salida de TemporaryDirectory y cleanup",
+        "funciones_observadas": [
+          "_rmtree_unsafe",
+          "<module>",
+          "main",
+          "__exit__",
+          "cleanup",
+          "_rmtree",
+          "rmtree",
+          "_rmtree_unsafe",
+          "onerror"
+        ],
+        "json_de_resultado": "conjunto/laboratorio_08/propuesta_depuracion_navegador.json",
+        "json_presente": false,
+        "diagnostico_saneado": "Windows rechaza eliminar principal.sqlite porque el archivo permanece abierto; la excepción ocurre al limpiar el directorio temporal, antes de escribir el JSON de D04."
+      },
+      {
+        "archivo": "conjunto/laboratorio_08/solucion_depuracion_navegador.stderr.txt",
+        "sha256": "ed0e9e6eab7dcad587921e6bd4d40da3a76dcc0e0402777b10bf756fe2318df6",
+        "tipo_error": "PermissionError",
+        "codigo_windows": 32,
+        "archivo_sintetico_afectado": "principal.sqlite",
+        "fase": "Salida de TemporaryDirectory y cleanup",
+        "funciones_observadas": [
+          "_rmtree_unsafe",
+          "<module>",
+          "main",
+          "__exit__",
+          "cleanup",
+          "_rmtree",
+          "rmtree",
+          "_rmtree_unsafe",
+          "onerror"
+        ],
+        "json_de_resultado": "conjunto/laboratorio_08/solucion_depuracion_navegador.json",
+        "json_presente": false,
+        "diagnostico_saneado": "Windows rechaza eliminar principal.sqlite porque el archivo permanece abierto; la excepción ocurre al limpiar el directorio temporal, antes de escribir el JSON de D04."
+      }
+    ]
+  },
+  "conclusion": {
+    "causa_confirmada_en_d04": "La limpieza del directorio temporal falla con PermissionError/WinError 32 sobre principal.sqlite; el JSON de D04 no llega a escribirse.",
+    "causa_en_codigo": "snapshot() usa el contexto transaccional de sqlite3 sin cierre explícito; la preparación del caso D06.b presenta el mismo patrón.",
+    "alcance_inferencia": "Los dieciséis PermissionError terminales y las observaciones completas son compatibles con errores de limpieza. Las trazas completas aportadas acreditan cleanup en ambos D04; no hay una traza completa por cada error terminal.",
+    "rechazo_evaluador": "D05 y D08.a aparecen dos veces en propuesta. Se reejecutó únicamente el evaluador original sobre la captura Windows y reprodujo exactamente ValueError: Criterio duplicado; no se ejecutaron los casos funcionales.",
+    "correccion_requerida": "Cerrar explícitamente las conexiones en soporte de pruebas y preparación D06.b. Mantener contratos, patrón didáctico y los controles del evaluador."
+  },
+  "conservacion": {
+    "zip_y_244_archivos": "Sin cambios",
+    "huellas_historicas": "No recalculadas ni reparadas",
+    "main_etiquetas_remoto": "Sin operaciones Git sobre el repositorio del autor",
+    "manuscritos": "Sin cambios; revisión editorial pendiente"
+  },
+  "pendientes": [
+    "Aplicar corrección revisada sobre el árbol preparado.",
+    "Repetir pruebas en una carpeta nueva y conservar esta ejecución FALLIDA.",
+    "Acreditar nueva ejecución Windows antes del cierre de integración."
+  ],
+  "fuentes_tecnicas": [
+    {
+      "url": "https://docs.python.org/3.11/library/sqlite3.html#how-to-use-the-connection-context-manager",
+      "hecho": "El contexto de Connection gestiona transacciones y no cierra la conexión."
+    },
+    {
+      "url": "https://docs.python.org/3.11/library/tempfile.html#tempfile.TemporaryDirectory",
+      "hecho": "La limpieza puede lanzar PermissionError al borrar archivos abiertos en Windows."
+    }
+  ],
+  "reproduccion_evaluador_sobre_captura": {
+    "estado": "APROBADO",
+    "modalidad": "Reevaluación local sólo lectura de los JSON Windows recibidos; no ejecuta los casos funcionales.",
+    "funcion": "evaluar_laboratorio_web(evidencia, True, 8)",
+    "tipo_error_observado": "ValueError",
+    "mensaje_observado": "Criterio duplicado",
+    "archivos_modificados": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fecha_hora_utc": "2026-11-01T05:51:30+00:00",
+  "comando": [
+    "git",
+    "ls-remote",
+    "--refs",
+    "https://github.com/ccortesg/laboratorios-desarrollo-ia.git",
+    "refs/heads/main",
+    "refs/tags/*"
+  ],
+  "codigo_salida": 128,
+  "estado": "BLOQUEADO",
+  "referencias": {},
+  "operacion": "Consulta remota de solo lectura; sin fetch, commit, push ni cambio de referencias locales."
+}

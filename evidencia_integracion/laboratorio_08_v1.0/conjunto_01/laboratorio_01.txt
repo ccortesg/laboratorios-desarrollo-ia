@@ -1,0 +1,4 @@
+Recorrido didactico: APROBADO
+inicial: FALLIDO | 3 aprobados, 1 fallidos | codigo 1
+solucion: APROBADO | 4 aprobados, 0 fallidos | codigo 0
+Evidencia guardada en el directorio de salida indicado.

@@ -1,8 +1,8 @@
-"""Ejecuta los siete recorridos en copias temporales y conserva evidencia nueva.
+"""Ejecuta los ocho recorridos en copias temporales y conserva evidencia nueva.
 
 Los fallos didácticos esperados se evalúan por identificador y tipo de error.
 La evidencia histórica distribuida nunca se sobrescribe. Requiere Python 3.10+
-y Git. Los laboratorios 6 y 7 usan HTTP local; --navegador requiere Node, Playwright
+y Git. Los laboratorios 6 a 8 usan HTTP local; --navegador requiere Node, Playwright
 y Chromium instalados. No descarga dependencias ni contacta servicios externos.
 """
 
@@ -37,6 +37,8 @@ W_NAVEGADOR = ["W05", "W06.a", "W06.b"]
 I = (["I01"] + ["I02." + c for c in "abcde"]
      + ["I03." + c for c in "abc"] + ["I04." + c for c in "abcd"]
      + ["I05", "I06", "I07", "I08"])
+D = ["D01", "D02", "D03", "D05", "D06.a", "D06.b", "D07.a", "D07.b", "D08.a", "D08.b"]
+D_NAVEGADOR = ["D04"]
 
 
 def leer_json(ruta):
@@ -69,7 +71,7 @@ def ejecutar(argumentos, carpeta, raiz, salida, temporal, registro, entorno_extr
 
 
 def evaluar_bateria(registro, identificador, ids, codigo, fallos=(), no_ejecutados=(),
-                     permitir_bloqueo=False):
+                     permitir_bloqueo=False, bloqueos_parciales=()):
     """Evalúa un contrato observable; un error ajeno nunca cuenta como fallo esperado."""
     fallos, no_ejecutados = set(fallos), set(no_ejecutados)
     esperado = {i: ("FALLIDO" if i in fallos else
@@ -82,19 +84,24 @@ def evaluar_bateria(registro, identificador, ids, codigo, fallos=(), no_ejecutad
         if clave in observados:
             raise ValueError("Criterio duplicado")
         observados[clave] = caso["estado"]
-    bloqueados = permitir_bloqueo and observados == {i: "BLOQUEADO" for i in ids}
+    bloqueo_total = permitir_bloqueo and observados == {i: "BLOQUEADO" for i in ids}
+    ids_bloqueados = {i for i, estado in observados.items() if estado == "BLOQUEADO"}
+    bloqueo_parcial = (permitir_bloqueo and bool(ids_bloqueados)
+                       and ids_bloqueados <= set(bloqueos_parciales))
+    bloqueados = bloqueo_total or bloqueo_parcial
     if bloqueados:
-        fallos, no_ejecutados = set(), set()
-        esperado = {i: "BLOQUEADO" for i in ids}
-    ejecutados = 0 if bloqueados else len(ids) - len(no_ejecutados)
+        fallos -= ids_bloqueados
+        no_ejecutados -= ids_bloqueados
+        esperado.update({i: "BLOQUEADO" for i in ids_bloqueados})
+    ejecutados = len(ids) - len(no_ejecutados) - (len(ids_bloqueados) if bloqueados else 0)
     conteos = {
         "aprobados": ejecutados - len(fallos), "fallidos": len(fallos),
         "fallos_de_asercion": len(fallos), "errores_de_ejecucion": 0,
-        "bloqueados": len(ids) if bloqueados else 0, "no_ejecutados": len(no_ejecutados),
+        "bloqueados": len(ids_bloqueados) if bloqueados else 0, "no_ejecutados": len(no_ejecutados),
     }
     correcto = (
         (codigo == (2 if bloqueados else 1 if fallos else 0)
-         or (codigo is None and (bloqueados or no_ejecutados == set(ids))))
+         or (codigo is None and (bloqueo_total or no_ejecutados == set(ids))))
         and len(casos) == len(ids) and observados == esperado
         and all(registro[k] == valor for k, valor in conteos.items())
         and registro.get("total", registro.get("criterios_registrados",
@@ -209,8 +216,11 @@ def evaluar_laboratorio_web(evidencia, navegador, numero=6):
     codigos = {comando["id"]: comando["codigo_salida"] for comando in comandos}
     grupos = {"heredados": C + B + N, "resumen": P,
               "http": W_HTTP, "navegador": W_NAVEGADOR}
-    if numero == 7:
+    if numero in {7, 8}:
         grupos["integracion"] = I
+    if numero == 8:
+        grupos["depuracion"] = D
+        grupos["depuracion_navegador"] = D_NAVEGADOR
     estados = ["base", "propuesta", "solucion"]
     ids_comandos = {estado + "_" + grupo for estado in estados for grupo in grupos}
     pares = {(estado, grupo) for estado in estados for grupo in grupos}
@@ -219,8 +229,9 @@ def evaluar_laboratorio_web(evidencia, navegador, numero=6):
                   and {(b["estado_codigo"], b["bateria"])
                        for b in resumen["baterias"]} == pares
                   and resumen["conservacion_heredados"] == "APROBADO"
-                  and resumen["base_sin_incremento_web" if numero == 6
-                              else "base_sin_incremento_integracion"] == "APROBADO"
+                  and resumen[{6: "base_sin_incremento_web",
+                               7: "base_sin_incremento_integracion",
+                               8: "base_sin_incremento_depuracion"}[numero]] == "APROBADO"
                   and resumen["navegador_solicitado"] == navegador)
     baterias = []
     declaradas = {(b["estado_codigo"], b["bateria"]): b for b in resumen["baterias"]}
@@ -229,17 +240,25 @@ def evaluar_laboratorio_web(evidencia, navegador, numero=6):
             nombre = estado + "_" + grupo
             sin_incremento = (estado == "base" and (
                 (numero == 6 and grupo in {"http", "navegador"})
-                or (numero == 7 and grupo == "integracion")))
-            no_ejecutados = ids if sin_incremento or (grupo == "navegador" and not navegador) else []
+                or (numero == 7 and grupo == "integracion")
+                or (numero == 8 and grupo in {"depuracion", "depuracion_navegador"})))
+            no_ejecutados = ids if sin_incremento or (
+                grupo in {"navegador", "depuracion_navegador"} and not navegador) else []
             fallos = (["W05"] if numero == 6 and estado == "propuesta"
                       and grupo == "navegador" and navegador else
                       ["I01", "I07"] if numero == 7 and estado == "propuesta"
-                      and grupo == "integracion" else [])
+                      and grupo == "integracion" else
+                      ["D03", "D05", "D08.a"] if numero == 8 and estado == "propuesta"
+                      and grupo == "depuracion" else
+                      ["D04"] if numero == 8 and estado == "propuesta"
+                      and grupo == "depuracion_navegador" and navegador else [])
             baterias.append(evaluar_bateria(
                 leer_json(evidencia / (nombre + ".json")), "laboratorio_%02d/" % numero + nombre,
                 ids, codigos[nombre],
                 fallos=fallos, no_ejecutados=no_ejecutados,
                 permitir_bloqueo=not no_ejecutados,
+                bloqueos_parciales={"D02", "D03", "D05", "D08.a"}
+                if numero == 8 and grupo == "depuracion" else (),
             ))
             declarada = declaradas[(estado, grupo)]
             observada = baterias[-1]
@@ -282,7 +301,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
         "implementacion_python": platform.python_implementation(),
         "sqlite": sqlite3.sqlite_version, "git": version_git.stdout.strip(),
         "dependencias": "Python estándar y Git; Node, Playwright y Chromium si se solicita navegador",
-        "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 y 7",
+        "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 a 8",
         "navegador_solicitado": navegador,
         "modalidad": "Comprobaciones locales ejecutadas en copias temporales",
     })
@@ -393,7 +412,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                                "motivo": "No se completó o no se pudo validar el registro del recorrido.",
                                "tipo_error": type(error).__name__})
 
-        for numero in [6, 7]:
+        for numero in [6, 7, 8]:
             nombre = "laboratorio_%02d" % numero
             fuente, copia = raiz / "laboratorios" / nombre, temporal / nombre
             evidencia = salida / nombre
@@ -410,7 +429,8 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                 # laboratorio original y, en segundo lugar, el NODE_PATH ya configurado.
                 rutas_node = [str(fuente / "node_modules"),
                               str(raiz / "laboratorios" / "laboratorio_06" / "node_modules"),
-                              str(raiz / "laboratorios" / "laboratorio_07" / "node_modules")]
+                              str(raiz / "laboratorios" / "laboratorio_07" / "node_modules"),
+                              str(raiz / "laboratorios" / "laboratorio_08" / "node_modules")]
                 if os.environ.get("NODE_PATH"):
                     rutas_node.append(os.environ["NODE_PATH"])
                 codigo = ejecutar(argumentos, copia, raiz, salida, temporal,
@@ -455,12 +475,14 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
     resumen_general = {
         "estado": estado_final,
         "fecha_hora_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "objeto": "Integración local de los siete laboratorios distribuidos",
+        "objeto": "Integración local de los ocho laboratorios distribuidos",
         "alcance_ejecutado": "APROBADO" if estado_final == "NO EJECUTADO" else estado_final,
         "extremo_a_extremo_laboratorio_06": next(
             (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_06"), "NO EJECUTADO"),
         "extremo_a_extremo_laboratorio_07": next(
             (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_07"), "NO EJECUTADO"),
+        "extremo_a_extremo_laboratorio_08": next(
+            (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_08"), "NO EJECUTADO"),
         "criterio": "Patrones exactos de resultados, reconstrucción Git y conservación de referencias.",
         "laboratorios": resultados, "baterias": baterias,
         "totales": {
@@ -477,7 +499,9 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                                   "laboratorio_03/defecto": ["B05", "B06"],
                                   "laboratorio_05/propuesta_resumen": ["P04", "P05"],
                                   "laboratorio_06/propuesta_navegador": ["W05"],
-                                  "laboratorio_07/propuesta_integracion": ["I01", "I07"]},
+                                  "laboratorio_07/propuesta_integracion": ["I01", "I07"],
+                                  "laboratorio_08/propuesta_depuracion": ["D03", "D05", "D08.a"],
+                                  "laboratorio_08/propuesta_depuracion_navegador": ["D04"]},
         "interpretacion": "Un recorrido APROBADO conserva FALLIDO en sus criterios defectuosos esperados; no tolera otros errores. "
         "Sin --navegador, salida 0 aprueba únicamente el alcance ejecutado y el estado global es NO EJECUTADO.",
         "evidencia_historica": "Conservada en cada laboratorio; estos archivos describen una ejecución nueva.",
@@ -498,7 +522,7 @@ def main():
     parser.add_argument("--salida", type=Path, default=RAIZ / "trabajo" / "verificacion",
                         help="Carpeta nueva; por defecto trabajo/verificacion en este repositorio.")
     parser.add_argument("--navegador", action="store_true",
-                        help="Ejecuta Chromium real para W05/W06; necesario para APROBADO global.")
+                        help="Ejecuta Chromium real para W05/W06 y D04; necesario para APROBADO global.")
     parser.add_argument("--node", default="node", help="Ejecutable Node para las pruebas de navegador.")
     opciones = parser.parse_args()
     try:
@@ -513,6 +537,7 @@ def main():
     print("Alcance ejecutado: " + registro["alcance_ejecutado"] + ".")
     print("Extremo a extremo del laboratorio 6: " + registro["extremo_a_extremo_laboratorio_06"] + ".")
     print("Extremo a extremo del laboratorio 7: " + registro["extremo_a_extremo_laboratorio_07"] + ".")
+    print("Extremo a extremo del laboratorio 8: " + registro["extremo_a_extremo_laboratorio_08"] + ".")
     print("Huellas de salidas: {estado}; {coincidentes}/{comprobadas} coinciden con los bytes finales."
           .format(**registro["huellas_salidas"]))
     for bateria in registro["baterias"]:
@@ -524,7 +549,8 @@ def main():
     print("Fallos intencionales admitidos exclusivamente: C04 en inicial del laboratorio 1; "
           "B05 y B06 en defecto del laboratorio 3; P04 y P05 en propuesta del laboratorio 5; "
           "W05 en propuesta del laboratorio 6, únicamente al ejecutar navegador; "
-          "I01 e I07 en propuesta del laboratorio 7.")
+          "I01 e I07 en propuesta del laboratorio 7; "
+          "D03, D05 y D08.a en propuesta del laboratorio 8, y D04 únicamente al ejecutar navegador.")
     print("Evidencia nueva guardada en la carpeta indicada; evidencia histórica conservada.")
     return {"APROBADO": 0, "NO EJECUTADO": 0, "FALLIDO": 1, "BLOQUEADO": 2}[registro["estado"]]
 

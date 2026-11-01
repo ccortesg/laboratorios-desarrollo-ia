@@ -1,0 +1,25 @@
+{
+  "estado": "APROBADO",
+  "sistema": "Linux",
+  "archivo": "LABORATORIO_08_v1.0.1.zip",
+  "sha256": "8e445b1ecb195e96999f9ab7123e4bbeb93ce43a056a0fefbb91e3379f617cea",
+  "archivos": 151,
+  "archivos_conservados_despues": 151,
+  "codigo_salida": 0,
+  "totales": {
+    "ejecutados": 175,
+    "aprobados": 171,
+    "fallidos": 4,
+    "bloqueados": 0,
+    "no_ejecutados": 11,
+    "errores_de_ejecucion": 0
+  },
+  "huellas": {
+    "estado": "APROBADO",
+    "comprobadas": 38,
+    "coincidentes": 38,
+    "discrepancias": []
+  },
+  "evidencia": "evidencia/zip_autonomo_02/",
+  "limite": "No acredita Windows corregido."
+}

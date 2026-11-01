@@ -1,0 +1,17 @@
+{
+  "estado": "APROBADO",
+  "procedencia": "Producción local Linux de capítulo 8; registros nuevos, distintos del cierre Windows del autor",
+  "codigo_salida_conjunto": 0,
+  "resultado_conjunto": "conjunto_01/resumen.json",
+  "huellas_finales": "REVISION_CONJUNTO_01.json",
+  "fuentes": "COTEJO_FUENTES_DECLARADAS.json",
+  "recolector": "recolector_01/comandos.json",
+  "evaluador": "evaluador_02/comandos.json",
+  "zip_autonomo": "auditoria/ZIP_AUTONOMO.json",
+  "conservacion": "auditoria/CONSERVACION_HISTORICA.json",
+  "limites": [
+    "La prueba final del parche se incluye fuera del árbol, en evidencia/prueba_parche/ del paquete de integración.",
+    "No acredita Windows del laboratorio 8 ni una sesión comercial.",
+    "No crea commits, integra main, modifica etiquetas ni publica."
+  ]
+}

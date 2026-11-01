@@ -1,4 +1,46 @@
-# Versiones vigentes · Integración 1.3 preparada
+# Versiones vigentes · cierre de la integración 1.4
+
+La distribución de trabajo del laboratorio 8 es `LABORATORIO_08_v1.0.1.zip`, aprobada en Windows por el autor y auditada. Su ZIP 1.0 permanece como antecedente. Los estados documentales de esta preparación son libro 1.7.3 y repositorio 1.6.3; la revisión Windows previa está en 1.7.2/1.6.2.
+
+| Referencia prevista para el cierre | Contenido |
+| --- | --- |
+| `lab-08-v1.0` | Primera publicación del laboratorio 8, incluyendo la revisión técnica corregida 1.0.1 y conservando la distribución original. |
+| `repositorio-v1.4` | Integración de los ocho laboratorios y su evidencia de Windows. |
+
+Los nombres previstos no se consideran creados ni publicados hasta comprobar las referencias remotas. No se mueven las once etiquetas históricas. El cierre genera su comprobante después del push, fuera del commit que acredita. La revisión editorial de los capítulos 1–8 permanece pendiente.
+
+## Antecedentes conservados
+
+Los textos siguientes son históricos; los pendientes de la ejecución Windows del 8 quedaron cerrados por la revisión incorporada en esta preparación.
+
+# Versiones vigentes · corrección de laboratorio 8
+
+La distribución visible del laboratorio 8 es [LABORATORIO_08_v1.0.1.zip](distribuciones/LABORATORIO_08_v1.0.1.zip). La v1.0 se conserva como antecedente. Estados documentales vigentes: libro 1.7.1 y repositorio 1.6.1. La integración técnica 1.4 permanece preparada para revisión; no se han creado etiquetas nuevas. La evidencia Windows original es FALLIDO; la corrección requiere una ejecución Windows nueva.
+
+## Antecedentes
+
+# Versiones vigentes · Integración 1.4 preparada
+
+**Fecha:** 1 de noviembre de 2026, UTC. Versión documental operativa [1.6](docs/estados/ESTADO_REPOSITORIO_v1.6.md), estado editorial [1.7](docs/estados/ESTADO_DEL_LIBRO_v1.7.md), maestro 1.0 sin cambios. Estas numeraciones no sustituyen las versiones técnicas.
+
+| Entrega | Situación |
+| --- | --- |
+| Laboratorios 1–6 e integración 1.2 | Publicados anteriormente; etiquetas y evidencia conservadas. |
+| Corrección del recolector | Integrada en 6382e05846e149a9a72f7fdc56da48c37a873833 y presente en la base actual; sin nueva modificación del auxiliar ni de sus ocho pruebas. |
+| Laboratorio 7 v1.0 e integración 1.3 | Cierre Windows y publicación confirmados. main, lab-07-v1.0 y repositorio-v1.3 coincidían en 46f389bc4acf3e231a8eb1a1bb3972db0fe7e622 al consultar GitHub el 31/10/2026 a las 23:47:03 UTC. |
+| Laboratorio 8 v1.0 e integración 1.4 | Preparados localmente para revisión; lab-08-v1.0 y repositorio-v1.4 son nombres previstos, no creados. |
+
+El árbol de la base es b123b5969e8077ba0cb3c4eedc9b348f94294652. El árbol preparado y la huella del parche están en BASE_INTEGRACION.json del paquete nuevo. No se creó un commit nuevo ni se modificaron main o las once etiquetas existentes.
+
+La distribución 8 añade 142 archivos al inventario visible, que queda en 592. Los siete paquetes y sus entradas anteriores permanecen intactos. El manifiesto añade exclusivamente la huella de LABORATORIO_08_v1.0.zip. La conservación histórica se comprueba separadamente sobre 954 archivos de la base.
+
+Los resultados Linux nuevos, el recorrido persistente y el procedimiento de revisión Windows se describen en el estado vigente. Los capítulos 1–8 continúan pendientes de revisión editorial del autor.
+
+## Antecedentes conservados
+
+Los textos siguientes son históricos. Sus pendientes ya cerrados para el laboratorio 7 no describen la situación vigente.
+
+# Versiones históricas · Integración 1.3 preparada
 
 **Fecha:** 31 de octubre de 2026. La versión técnica preparada es 1.3; el estado operativo es [1.5](docs/estados/ESTADO_REPOSITORIO_v1.5.md) y el estado del libro es [1.6](docs/estados/ESTADO_DEL_LIBRO_v1.6.md). El maestro editorial permanece en 1.0.
 

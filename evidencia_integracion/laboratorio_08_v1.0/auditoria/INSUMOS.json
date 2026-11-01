@@ -1,0 +1,54 @@
+{
+  "estado": "APROBADO",
+  "insumos": [
+    {
+      "nombre": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md",
+      "bytes": 10048,
+      "sha256": "2f57a9c3304b56c6c662a39afaaf8e893934725811cf5d46c518572b0b776357",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "CAPITULO_07_v1.0.md",
+      "bytes": 33278,
+      "sha256": "ad96f66e0f98d0f29143ced0ef5bbd4ed810f779bb9e789e0d9695ad4cbb311f",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "CAPITULO_07_v1.0.docx",
+      "bytes": 51963,
+      "sha256": "e5963c840201ec47ffa37518f05c9dd0199da203cfbbd64b80c02b002a200e7d",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "LABORATORIO_07_v1.0.zip",
+      "bytes": 135320,
+      "sha256": "2f579f87eb3a907e67ab195acb285543ee5997a805ff1add2e422dc7bc9b0b85",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "CIERRE_LABORATORIO_07_CONFIRMADO_v1.0.md",
+      "bytes": 6927,
+      "sha256": "4c0b680802e0000116d388e3dee523cbb0d26d3ff07b6448c3d00831c4b16835",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "CIERRE_LABORATORIO_07_CONFIRMADO_v1.0.zip",
+      "bytes": 97729,
+      "sha256": "4bfcfd5fca9f80741ccc7f8c639c441edd59e39c2c0d4b3a4af92359f701edcf",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "ESTADO_DEL_LIBRO_v1.6.2.md",
+      "bytes": 6068,
+      "sha256": "b19cd0265a151244362c5d0b3d27a2c5743725156491242e23af99a8e637d193",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    },
+    {
+      "nombre": "ESTADO_REPOSITORIO_v1.5.2.md",
+      "bytes": 6473,
+      "sha256": "1e1e58c685f6cc7807063693f3fd98f2c80b00ebd293c2dbb3c7e7507ec083a6",
+      "procedencia": "Entrega previa conservada; identidades y contenido de estados recuperados de sus archivos vigentes."
+    }
+  ],
+  "zip_crc": "APROBADO"
+}

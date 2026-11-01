@@ -1,0 +1,21 @@
+{
+  "inicio_utc": "2026-11-01T00:01:38.223845+00:00",
+  "fin_utc": "2026-11-01T00:02:43.118390+00:00",
+  "comando": [
+    "python",
+    "herramientas/verificar_todo.py",
+    "--navegador",
+    "--salida",
+    "SALIDA/conjunto_01"
+  ],
+  "codigo_salida": 0,
+  "entorno_seleccionado": {
+    "NODE_PATH": "modulos del runtime disponible",
+    "LAB06_CHROMIUM": "binario local documentado por la producción"
+  },
+  "stdout": "conjunto_01.stdout.txt",
+  "stderr": "conjunto_01.stderr.txt",
+  "sha256_stdout": "a51d96befdfe26268589ca8abf3ecbf6cb39af3f4b471b7f4136982e83486ca9",
+  "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sha256_verificador": "85cff3155a8074fc6ecfde0e81d847c749a3f30b7a566448afc30f7e17bfc9ef"
+}

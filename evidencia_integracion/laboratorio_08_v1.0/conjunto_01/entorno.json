@@ -1,0 +1,12 @@
+{
+  "fecha_hora_utc": "2026-11-01T00:01:38+00:00",
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "implementacion_python": "CPython",
+  "sqlite": "3.53.1",
+  "git": "git version 2.51.1",
+  "dependencias": "Python estándar y Git; Node, Playwright y Chromium si se solicita navegador",
+  "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 a 8",
+  "navegador_solicitado": true,
+  "modalidad": "Comprobaciones locales ejecutadas en copias temporales"
+}

@@ -1,0 +1,32 @@
+{
+  "bateria": "navegador",
+  "estado_codigo": "base",
+  "casos_registrados": 3,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 3,
+  "pruebas": [
+    {
+      "id": "W05",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base no tiene el incremento web.",
+      "tipo_error": null
+    },
+    {
+      "id": "W06.a",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base no tiene el incremento web.",
+      "tipo_error": null
+    },
+    {
+      "id": "W06.b",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base no tiene el incremento web.",
+      "tipo_error": null
+    }
+  ]
+}

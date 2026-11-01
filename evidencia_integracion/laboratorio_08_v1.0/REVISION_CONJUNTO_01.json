@@ -1,0 +1,29 @@
+{
+  "estado": "APROBADO",
+  "fecha_hora_utc": "2026-11-01T00:03:04.181850+00:00",
+  "subconjunto_1_7": {
+    "baterias": 44,
+    "ejecutados": 408,
+    "aprobados": 400,
+    "fallidos": 8,
+    "bloqueados": 0,
+    "no_ejecutados": 37
+  },
+  "totales_nuevos": {
+    "laboratorios": 8,
+    "baterias": 65,
+    "ejecutados": 583,
+    "aprobados": 571,
+    "fallidos": 12,
+    "bloqueados": 0,
+    "no_ejecutados_en_baterias": 48,
+    "no_ejecutados_fuera_de_baterias": 10
+  },
+  "huellas_declaradas_calculadas": 102,
+  "codigo_comprobador": 0,
+  "salida_comprobador": "APROBADO: 102/102 huellas stdout/stderr coinciden con los bytes finales.\nComprobación de sólo lectura; no se modificó la evidencia.\n",
+  "conservacion_laboratorios_1_7_y_recolector": "APROBADO; git diff HEAD sin diferencias en las rutas indicadas",
+  "codigo_conservacion": 0,
+  "sha256_verificador": "85cff3155a8074fc6ecfde0e81d847c749a3f30b7a566448afc30f7e17bfc9ef",
+  "modulos_fuente_conservados": true
+}

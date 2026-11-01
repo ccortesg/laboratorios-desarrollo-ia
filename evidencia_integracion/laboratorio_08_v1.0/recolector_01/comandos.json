@@ -1,0 +1,23 @@
+{
+  "registros": [
+    {
+      "id": "recolector_ocho_pruebas",
+      "comando": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "herramientas/pruebas",
+        "-p",
+        "test_huellas_evidencia.py",
+        "-v"
+      ],
+      "codigo_salida": 0,
+      "stdout": "pruebas.stdout.txt",
+      "stderr": "pruebas.stderr.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr": "3520db0e78d5bdab4eb6e60c5db383c6b654d0f104b6db43352ff2c1ca083f03"
+    }
+  ]
+}

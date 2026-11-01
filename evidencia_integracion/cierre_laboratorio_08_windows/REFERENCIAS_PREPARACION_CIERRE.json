@@ -1,0 +1,29 @@
+{
+  "fecha_hora_utc": "2026-11-01T06:05:54.850Z",
+  "metodo": "GET mediante la conexión de GitHub; sólo lectura.",
+  "estado": "APROBADO",
+  "repositorio": "https://github.com/ccortesg/laboratorios-desarrollo-ia",
+  "main": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+  "etiquetas": {
+    "refs/tags/lab-01-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+    "refs/tags/lab-02-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+    "refs/tags/lab-03-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+    "refs/tags/lab-04-v1.1": "52875ff15c6648f9a042a15a94da812e37effa40",
+    "refs/tags/lab-05-v1.0": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+    "refs/tags/lab-06-v1.0": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+    "refs/tags/lab-07-v1.0": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+    "refs/tags/repositorio-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+    "refs/tags/repositorio-v1.1": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+    "refs/tags/repositorio-v1.2": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+    "refs/tags/repositorio-v1.3": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622"
+  },
+  "etiquetas_previstas_ausentes": [
+    "lab-08-v1.0",
+    "repositorio-v1.4"
+  ],
+  "consultas": [
+    "https://api.github.com/repos/ccortesg/laboratorios-desarrollo-ia/git/ref/heads/main",
+    "https://api.github.com/repos/ccortesg/laboratorios-desarrollo-ia/git/matching-refs/tags/"
+  ],
+  "limite": "Observación anterior al cierre; repetir inmediatamente antes de publicar y después."
+}

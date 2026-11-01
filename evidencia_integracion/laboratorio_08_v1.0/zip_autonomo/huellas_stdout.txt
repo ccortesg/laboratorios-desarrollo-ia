@@ -1,0 +1,2 @@
+APROBADO: 38/38 huellas stdout/stderr coinciden con los bytes finales.
+Comprobación de sólo lectura; no se modificó la evidencia.

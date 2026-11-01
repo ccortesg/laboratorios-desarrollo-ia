@@ -1,0 +1,15 @@
+{
+  "comando": [
+    "python",
+    "verificar.py",
+    "--navegador",
+    "--salida",
+    "trabajo/verificacion_zip_01"
+  ],
+  "directorio": "ZIP descomprimido/laboratorio_08",
+  "inicio_utc": "2026-11-01T00:01:58.519500+00:00",
+  "fin_utc": "2026-11-01T00:02:29.361587+00:00",
+  "codigo_salida": 0,
+  "plataforma": "linux",
+  "ejecucion": "local Linux; no Windows; sin uso comercial acreditado"
+}

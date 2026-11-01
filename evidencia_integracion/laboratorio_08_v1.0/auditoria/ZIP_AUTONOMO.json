@@ -1,0 +1,57 @@
+{
+  "estado": "APROBADO",
+  "fecha_consulta_utc": "2026-11-01T00:02:42.290028+00:00",
+  "archivo": "LABORATORIO_08_v1.0.zip",
+  "archivos": 142,
+  "bytes": 155177,
+  "sha256": "888274670d4fb6f6cc6ac5e81dc3093a771ef36054df85ad5bbf46103ed84d45",
+  "crc": "APROBADO",
+  "extraccion": "qa_zip_autonomo/laboratorio_08",
+  "ejecucion": "APROBADO",
+  "comando": [
+    "python",
+    "verificar.py",
+    "--navegador",
+    "--salida",
+    "trabajo/verificacion_zip_01"
+  ],
+  "inicio_utc": "2026-11-01T00:01:58.519500+00:00",
+  "fin_utc": "2026-11-01T00:02:29.361587+00:00",
+  "codigo_salida": 0,
+  "sistema": "Linux",
+  "alcance_ejecutado": "APROBADO",
+  "extremo_a_extremo": "APROBADO",
+  "baterias": 21,
+  "totales": {
+    "ejecutados": 175,
+    "aprobados": 171,
+    "fallidos": 4,
+    "bloqueados": 0,
+    "no_ejecutados": 11,
+    "errores_de_ejecucion": 0
+  },
+  "huellas_salidas": {
+    "estado": "APROBADO",
+    "comprobadas": 38,
+    "coincidentes": 38,
+    "discrepancias": []
+  },
+  "comprobador_huellas_codigo": 0,
+  "cotejo_posterior": {
+    "estado": "APROBADO",
+    "archivos_comparados": 142,
+    "coincidentes": 142,
+    "adicionales": [],
+    "ausentes": [],
+    "exclusiones": [
+      "trabajo/",
+      "__pycache__/"
+    ]
+  },
+  "evidencia": "auditoria/ejecucion_zip_autonomo/",
+  "limites": [
+    "Ejecución local Linux, no Windows.",
+    "No acredita uso de herramientas comerciales.",
+    "No integra en main, no crea etiquetas ni publica."
+  ]
+}

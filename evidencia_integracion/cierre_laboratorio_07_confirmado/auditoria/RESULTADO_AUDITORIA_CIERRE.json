@@ -1,0 +1,27 @@
+{
+  "estado": "APROBADO",
+  "comprobaciones": {
+    "zip_identifica_commit": true,
+    "push_registrado_cero": true,
+    "previo_aprobado": true,
+    "publicado_aprobado": true,
+    "main_remoto_coincide": true,
+    "commit_consultado_coincide": true,
+    "arbol_exacto": true,
+    "padre_unico": true,
+    "nueve_etiquetas_conservadas": true,
+    "solo_dos_etiquetas_agregadas": true,
+    "dos_etiquetas_en_commit": true,
+    "datos_git_publicado_coinciden": true,
+    "evidencia_pre_y_post_conservada": true
+  },
+  "privacidad_patrones_sin_hallazgos": true,
+  "huellas_recibidos": {
+    "commit.txt": "73264e28dc8492b0c0ff0793482ec12d8064c9297fcc717738c133894e5b623b",
+    "codigo_push.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "publicado/RESULTADO_CIERRE_07.json": "7f70f3448e0271d7abc08a2ba2f3b4c7e401ca2e5aaae588412067ef8132b106",
+    "previo/RESULTADO_CIERRE_07.json": "602345bfd1fef16d4ecd8cb34976cae387c384aeee3c29d2223ce48e52870257"
+  },
+  "alcance": "Auditoría de comprobantes aportados y consulta nueva de GitHub; no ejecución de pruebas funcionales ni operaciones Git del autor.",
+  "referencias_remotas": "REFERENCIAS_REMOTAS_CONFIRMADAS.json"
+}

@@ -10,3 +10,6 @@ venv/
 
 # Dependencias locales opcionales de las pruebas de navegador.
 node_modules/
+
+# Las ejecuciones nuevas del laboratorio 8 no forman parte de la distribución.
+/laboratorios/laboratorio_08/trabajo/

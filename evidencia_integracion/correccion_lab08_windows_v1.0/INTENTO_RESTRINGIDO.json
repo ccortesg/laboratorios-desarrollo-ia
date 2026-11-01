@@ -1,0 +1,15 @@
+{
+  "estado": "BLOQUEADO",
+  "sistema": "Linux",
+  "causa_observada": "El entorno restringido rechaza la creación de sockets: PermissionError errno 1.",
+  "totales_declarados": {
+    "ejecutados": 141,
+    "aprobados": 141,
+    "fallidos": 0,
+    "bloqueados": 34,
+    "no_ejecutados": 11,
+    "errores_de_ejecucion": 0
+  },
+  "evidencia": "evidencia/zip_autonomo/",
+  "reintento": "zip_autonomo_02, con permiso de loopback; evidencia separada."
+}

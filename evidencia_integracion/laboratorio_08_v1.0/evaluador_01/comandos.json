@@ -1,0 +1,16 @@
+{
+  "registros": [
+    {
+      "id": "evaluador_casos_adversos",
+      "comando": [
+        "python",
+        "test_evaluador_08.py"
+      ],
+      "codigo_salida": 0,
+      "stdout": "pruebas.stdout.txt",
+      "stderr": "pruebas.stderr.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr": "a4629aa638229ad0990eec8341075937385a488d6502d6348836b127535be8e1"
+    }
+  ]
+}

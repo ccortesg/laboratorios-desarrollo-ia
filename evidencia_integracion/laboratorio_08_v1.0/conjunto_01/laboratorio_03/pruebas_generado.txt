@@ -1,0 +1,12 @@
+Estado de codigo: generado
+C01: APROBADO
+C02: APROBADO
+C03: APROBADO
+C04: APROBADO
+B01: APROBADO
+B02: APROBADO
+B03: APROBADO
+B04: APROBADO
+B05: APROBADO
+B06: APROBADO
+Ejecutados: 10; aprobados: 10; fallidos: 0; no ejecutados: 0.

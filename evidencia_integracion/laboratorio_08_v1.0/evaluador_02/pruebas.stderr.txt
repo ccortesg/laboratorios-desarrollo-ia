@@ -1,0 +1,14 @@
+test_bloqueo_parcial_autorizado_no_aprueba_recorrido_completo (__main__.EvaluadorOchoTests.test_bloqueo_parcial_autorizado_no_aprueba_recorrido_completo) ... ok
+test_bloqueo_parcial_fuera_de_casos_permitidos_se_rechaza (__main__.EvaluadorOchoTests.test_bloqueo_parcial_fuera_de_casos_permitidos_se_rechaza) ... ok
+test_bloqueo_parcial_no_altera_politica_heredada (__main__.EvaluadorOchoTests.test_bloqueo_parcial_no_altera_politica_heredada) ... ok
+test_bloqueo_parcial_no_oculta_fallo_adicional (__main__.EvaluadorOchoTests.test_bloqueo_parcial_no_oculta_fallo_adicional) ... ok
+test_caso_ausente_no_se_admite_con_totales_coherentes (__main__.EvaluadorOchoTests.test_caso_ausente_no_se_admite_con_totales_coherentes) ... ok
+test_caso_duplicado_se_rechaza (__main__.EvaluadorOchoTests.test_caso_duplicado_se_rechaza) ... ok
+test_excepcion_ajena_no_se_acepta_como_defecto_didactico (__main__.EvaluadorOchoTests.test_excepcion_ajena_no_se_acepta_como_defecto_didactico) ... ok
+test_fallo_adicional_no_se_admite_con_totales_coherentes (__main__.EvaluadorOchoTests.test_fallo_adicional_no_se_admite_con_totales_coherentes) ... ok
+test_patron_exacto_conserva_fallidos_individuales (__main__.EvaluadorOchoTests.test_patron_exacto_conserva_fallidos_individuales) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

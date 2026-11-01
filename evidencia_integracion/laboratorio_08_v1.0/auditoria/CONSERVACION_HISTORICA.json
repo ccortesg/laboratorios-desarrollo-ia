@@ -1,0 +1,11 @@
+{
+  "estado": "APROBADO",
+  "base": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+  "historicos_comprobados": 954,
+  "coincidentes": 954,
+  "discrepancias": [],
+  "entradas_previas_distribuciones_conservadas": 7,
+  "procedencia_previa_conservada": true,
+  "recolector_y_pruebas_sin_cambios": true,
+  "excepcion": "distribuciones/SHA256SUMS se ampliará para añadir el paquete nuevo, conservando entradas anteriores."
+}

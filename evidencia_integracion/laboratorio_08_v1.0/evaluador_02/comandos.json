@@ -1,0 +1,16 @@
+{
+  "registros": [
+    {
+      "id": "evaluador_casos_adversos_y_bloqueo_parcial",
+      "comando": [
+        "python",
+        "test_evaluador_08.py"
+      ],
+      "codigo_salida": 0,
+      "stdout": "pruebas.stdout.txt",
+      "stderr": "pruebas.stderr.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr": "39e32dc9dfdf329e817ae492af359075ced23074340ba1114eaca7bc7911d58d"
+    }
+  ]
+}

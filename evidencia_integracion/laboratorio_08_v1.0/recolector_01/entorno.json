@@ -1,0 +1,7 @@
+{
+  "fecha_hora_utc": "2026-10-31T23:49:56.349979+00:00",
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "tipo": "Pruebas específicas del recolector; no se suman al total funcional"
+}

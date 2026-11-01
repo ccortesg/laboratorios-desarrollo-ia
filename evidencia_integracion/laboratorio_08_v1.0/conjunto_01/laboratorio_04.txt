@@ -1,0 +1,4 @@
+APROBADO: referencias Git verificadas.
+inicio: 10/10 aprobados; salida 0.
+solucion: 20/20 aprobados; salida 0.
+Las pruebas anteriores no evalúan modificaciones actuales sin commit.

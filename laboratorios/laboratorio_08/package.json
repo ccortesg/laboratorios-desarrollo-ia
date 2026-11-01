@@ -1,0 +1,12 @@
+{
+  "name": "laboratorio-08-depuracion-local",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Dependencia opcional para comprobar el navegador del laboratorio sintético",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

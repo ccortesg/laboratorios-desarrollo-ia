@@ -1,0 +1,74 @@
+{
+  "bateria": "depuracion",
+  "estado_codigo": "base",
+  "casos_registrados": 10,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 10,
+  "pruebas": [
+    {
+      "id": "D01",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D02",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D03",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D05",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D06.a",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D06.b",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D07.a",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D07.b",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D08.a",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    },
+    {
+      "id": "D08.b",
+      "estado": "NO EJECUTADO",
+      "detalle": "La base conserva el alcance en memoria del laboratorio 7.",
+      "tipo_error": null
+    }
+  ]
+}

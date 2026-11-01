@@ -16,3 +16,9 @@ evidencia_integracion/laboratorio_07_v1.0/**/*.diff -whitespace
 # These separately delivered historical Markdown files retain their exact bytes.
 docs/estados/ESTADO_DEL_LIBRO_v1.5.2.md -text whitespace=-blank-at-eol
 docs/estados/ESTADO_REPOSITORIO_v1.4.1.md -text whitespace=-blank-at-eol
+# Lab 8: new recorded diff and separately delivered historical closure.
+laboratorios/laboratorio_08/diferencias/*.diff -whitespace
+evidencia_integracion/laboratorio_08_v1.0/**/*.diff -whitespace
+docs/estados/ESTADO_DEL_LIBRO_v1.6.2.md -text whitespace=-blank-at-eol
+docs/estados/ESTADO_REPOSITORIO_v1.5.2.md -text whitespace=-blank-at-eol
+evidencia_integracion/cierre_laboratorio_07_confirmado/**/*.md whitespace=-blank-at-eol

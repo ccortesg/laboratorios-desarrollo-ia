@@ -1,0 +1,37 @@
+{
+  "estado": "APROBADO",
+  "objeto": "Regresion del cierre explicito de recursos SQLite; independiente de criterios funcionales.",
+  "original": {
+    "estado": "FALLIDO",
+    "pruebas": 4,
+    "aprobadas": 0,
+    "fallidas": 4,
+    "errores": 0,
+    "codigo_salida": 1,
+    "interpretacion": "Los cuatro fallos son detecciones del defecto de recursos; no son fallos didacticos del catalogo."
+  },
+  "corregido": {
+    "estado": "APROBADO",
+    "pruebas": 4,
+    "aprobadas": 4,
+    "codigo_salida": 0
+  },
+  "casos": {
+    "R01": "snapshot retorna datos exactos sin modificar bytes, cierra su conexion retenida y permite borrar el archivo.",
+    "R02": "snapshot propaga error SQL, conserva bytes, cierra la conexion aun al fallar y permite borrar el archivo.",
+    "R03": "D06.b conserva rechazo CLI/servidor, confirma el dato sintetico y deja la conexion cerrada.",
+    "R04": "Una excepcion controlada tras escritura SQLite real revierte el dato, propaga el error y cierra la conexion."
+  },
+  "metodo": "Se retienen conexiones SQLite reales durante la asercion. Una conexion cerrada rechaza SELECT 1. No se inspeccionan llamadas a close ni el texto de la implementacion. Limpieza de emergencia posterior evita dejar archivos abiertos si la regresion detecta el defecto.",
+  "huellas_salidas": {
+    "estado": "APROBADO",
+    "comprobadas": 4,
+    "coincidentes": 4,
+    "discrepancias": []
+  },
+  "limites": [
+    "Ejecucion Linux, no Windows.",
+    "La inyeccion de error de R04 es una prueba controlada; no se atribuye a la sesion Windows.",
+    "No se ejecutaron aqui el navegador ni la verificacion conjunta."
+  ]
+}
