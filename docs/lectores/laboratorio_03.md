@@ -1,8 +1,6 @@
-# Laboratorio 03 · Generar, refactorizar y depurar
+# Laboratorio 03 · Ingeniería de prompts para generar, refactorizar y depurar
 
 Capítulo 3. **Versión recomendada: 1.0.**
-
-**Título del capítulo:** se usa la denominación técnica disponible; su título editorial completo requiere cotejo con el índice entregado por separado.
 
 Distinguir generación, refactorización y depuración de una búsqueda por nombre que conserva el almacén.
 

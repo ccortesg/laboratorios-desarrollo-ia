@@ -2,7 +2,7 @@
 
 Recursos para la siguiente revisión editorial de **Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro**. Estos recuadros no se han insertado en los diez capítulos ni en el Word consolidado. Maestro editorial 1.0 sin cambios; capítulos 1–10 pendientes de revisión. El capítulo 1 conserva su título original.
 
-Fuente única: [mapa de laboratorios](../lectores/mapa_laboratorios.json). Los títulos completos de 2–5 requieren cotejo editorial; las denominaciones técnicas existentes permiten preparar sus recursos sin inventar manuscritos. Cada QR abre una guía bajo main; el autor se compromete a conservar esa ruta durante el acompañamiento del libro. El contenido de la guía es mantenible, mientras la descarga está fijada a un commit existente.
+Fuente única: [mapa de laboratorios](../lectores/mapa_laboratorios.json). Los diez títulos se cotejaron con el índice del maestro editorial 1.0 y los capítulos 2–5 facilitados por el autor, leídos sin modificarlos ni incorporarlos al repositorio. Cada QR abre una guía bajo main; el autor se compromete a conservar esa ruta durante el acompañamiento del libro. El contenido de la guía es mantenible, mientras la descarga está fijada a un commit existente.
 
 Ubicación propuesta: sección **Preparación del laboratorio** de cada capítulo. Colocar el QR a **42 × 42 mm**, incluyendo sus cuatro módulos de margen blanco, sin recortar, deformar ni superponer elementos. Preferir SVG para maquetación; conservar el PNG como alternativa. Los módulos son negros y el fondo blanco opaco. El QR es complementario: conservar ambos enlaces de texto en papel y enlaces activos en la edición digital.
 

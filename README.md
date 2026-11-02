@@ -30,10 +30,10 @@ Cada ficha indica objetivo, descarga versionada, requisitos, carpeta de ejecuci�
 | Capítulo | Recorrido | Versión recomendada |
 | --- | --- | --- |
 | [01](docs/lectores/laboratorio_01.md) | El nuevo oficio del desarrollador: del código al resultado | 1.0 |
-| [02](docs/lectores/laboratorio_02.md) | Contexto y arquitectura | 1.0 |
-| [03](docs/lectores/laboratorio_03.md) | Generar, refactorizar y depurar | 1.0 |
-| [04](docs/lectores/laboratorio_04.md) | Revisión sobre un repositorio | 1.1 |
-| [05](docs/lectores/laboratorio_05.md) | De la sugerencia al trabajo delegado | 1.0 |
+| [02](docs/lectores/laboratorio_02.md) | Contexto y arquitectura: preparar el terreno para la IA | 1.0 |
+| [03](docs/lectores/laboratorio_03.md) | Ingeniería de prompts para generar, refactorizar y depurar | 1.0 |
+| [04](docs/lectores/laboratorio_04.md) | Codex en acción: trabajar sobre un repositorio real | 1.1 |
+| [05](docs/lectores/laboratorio_05.md) | GitHub Copilot: de la sugerencia al trabajo delegado | 1.0 |
 | [06](docs/lectores/laboratorio_06.md) | Grok Build: de la idea a una aplicación de extremo a extremo | 1.0 |
 | [07](docs/lectores/laboratorio_07.md) | Datos e integraciones: cuando los sistemas deben ponerse de acuerdo | 1.0 |
 | [08](docs/lectores/laboratorio_08.md) | Depuración con evidencia: investigar errores entre entornos y servicios | 1.0.1 |

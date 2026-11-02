@@ -67,9 +67,9 @@
     },
     {
       "numero": 2,
-      "titulo_capitulo": "Contexto y arquitectura",
-      "estado_titulo": "Denominación técnica del material; título editorial completo pendiente de cotejo con índice externo",
-      "fuente_titulo": "laboratorios/laboratorio_02/README.md",
+      "titulo_capitulo": "Contexto y arquitectura: preparar el terreno para la IA",
+      "estado_titulo": "APROBADO: cotejado con el encabezado del capítulo y el índice del maestro editorial 1.0, consultados con acceso autorizado el 2026-11-02",
+      "fuente_titulo": "CAPITULO_02_v1.0.md y DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md (entrega editorial externa; no se incorporan manuscritos al repositorio)",
       "version": "1.0",
       "objetivo": "Preparar un encargo CLARO, un mapa de responsabilidades y una continuidad verificable sin alterar el catálogo.",
       "requisitos": "Python con sqlite3 y unittest; referencia técnica Python 3.12. Editor y terminal. Sin paquetes adicionales.",
@@ -114,9 +114,9 @@
     },
     {
       "numero": 3,
-      "titulo_capitulo": "Generar, refactorizar y depurar",
-      "estado_titulo": "Denominación técnica del material; título editorial completo pendiente de cotejo con índice externo",
-      "fuente_titulo": "laboratorios/laboratorio_03/README.md",
+      "titulo_capitulo": "Ingeniería de prompts para generar, refactorizar y depurar",
+      "estado_titulo": "APROBADO: cotejado con el encabezado del capítulo y el índice del maestro editorial 1.0, consultados con acceso autorizado el 2026-11-02",
+      "fuente_titulo": "CAPITULO_03_v1.0.md y DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md (entrega editorial externa; no se incorporan manuscritos al repositorio)",
       "version": "1.0",
       "objetivo": "Distinguir generación, refactorización y depuración de una búsqueda por nombre que conserva el almacén.",
       "requisitos": "Python 3 con sqlite3 y unittest; referencia técnica Python 3.12. Sólo biblioteca estándar.",
@@ -161,9 +161,9 @@
     },
     {
       "numero": 4,
-      "titulo_capitulo": "Revisión sobre un repositorio",
-      "estado_titulo": "Denominación técnica del material; título editorial completo pendiente de cotejo con índice externo",
-      "fuente_titulo": "laboratorios/laboratorio_04/README.md",
+      "titulo_capitulo": "Codex en acción: trabajar sobre un repositorio real",
+      "estado_titulo": "APROBADO: cotejado con el encabezado del capítulo y el índice del maestro editorial 1.0, consultados con acceso autorizado el 2026-11-02",
+      "fuente_titulo": "CAPITULO_04_v1.1.md y DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md (entrega editorial externa; no se incorporan manuscritos al repositorio)",
       "version": "1.1",
       "objetivo": "Revisar referencias y el árbol de trabajo de un repositorio sintético; añadir consulta exacta por código.",
       "requisitos": "Git y Python con sqlite3 y unittest. Para el preparador, una copia completa de este repositorio, incluido historiales/laboratorio_04.bundle.",
@@ -211,9 +211,9 @@
     },
     {
       "numero": 5,
-      "titulo_capitulo": "De la sugerencia al trabajo delegado",
-      "estado_titulo": "Denominación técnica del material; título editorial completo pendiente de cotejo con índice externo",
-      "fuente_titulo": "laboratorios/laboratorio_05/README.md",
+      "titulo_capitulo": "GitHub Copilot: de la sugerencia al trabajo delegado",
+      "estado_titulo": "APROBADO: cotejado con el encabezado del capítulo y el índice del maestro editorial 1.0, consultados con acceso autorizado el 2026-11-02",
+      "fuente_titulo": "CAPITULO_05_v1.0.md y DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md (entrega editorial externa; no se incorporan manuscritos al repositorio)",
       "version": "1.0",
       "objetivo": "Revisar un resumen y su terminal JSON; conservar tanto el almacén como el filtro por nombre.",
       "requisitos": "Python 3.10 o posterior con SQLite y biblioteca estándar. Sin paquetes adicionales ni servicios.",
@@ -494,5 +494,11 @@
       "qr_svg_sha256": "d22da6ba87bd9b03c7f75771436f04e48f154dd25dea6ec1ae2399dcbb091e2f"
     }
   ],
-  "estado_instantanea": "Antes del commit: la verificación de main autenticada posterior al push se acredita únicamente en el comprobante externo de la entrega."
+  "estado_instantanea": "Antes del commit: la verificación de main autenticada posterior al push se acredita únicamente en el comprobante externo de la entrega.",
+  "cotejo_indice_editorial": {
+    "estado": "APROBADO",
+    "fuente": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md y capítulos 2–5 facilitados por el autor; consulta externa de lectura, sin incorporar ni modificar manuscritos",
+    "fecha_utc": "2026-11-02T20:17:07.637612+00:00",
+    "capitulos": 10
+  }
 }

@@ -1,8 +1,6 @@
-# Laboratorio 05 · De la sugerencia al trabajo delegado
+# Laboratorio 05 · GitHub Copilot: de la sugerencia al trabajo delegado
 
 Capítulo 5. **Versión recomendada: 1.0.**
-
-**Título del capítulo:** se usa la denominación técnica disponible; su título editorial completo requiere cotejo con el índice entregado por separado.
 
 Revisar un resumen y su terminal JSON; conservar tanto el almacén como el filtro por nombre.
 

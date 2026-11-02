@@ -1,8 +1,6 @@
-# Laboratorio 02 · Contexto y arquitectura
+# Laboratorio 02 · Contexto y arquitectura: preparar el terreno para la IA
 
 Capítulo 2. **Versión recomendada: 1.0.**
-
-**Título del capítulo:** se usa la denominación técnica disponible; su título editorial completo requiere cotejo con el índice entregado por separado.
 
 Preparar un encargo CLARO, un mapa de responsabilidades y una continuidad verificable sin alterar el catálogo.
 
@@ -41,7 +39,7 @@ APROBADO indica un criterio satisfecho; FALLIDO, una discrepancia; BLOQUEADO, un
 
 ## Límites y continuación
 
-Contexto y arquitectura sobre comportamiento existente. No hay web, persistencia, reservas ni medición de productividad.
+Contexto y arquitectura: preparar el terreno para la IA sobre comportamiento existente. No hay web, persistencia, reservas ni medición de productividad.
 
 Para ampliar o automatizar el recorrido, sigue el [README técnico](../../laboratorios/laboratorio_02/README.md) y lee su contexto antes de editar tu copia. En los laboratorios web, un verificador sin --navegador puede devolver 0 mientras el global permanece NO EJECUTADO. La instalación opcional de Node/Playwright/Chromium se describe en cada README técnico.
 

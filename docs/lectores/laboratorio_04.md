@@ -1,8 +1,6 @@
-# Laboratorio 04 · Revisión sobre un repositorio
+# Laboratorio 04 · Codex en acción: trabajar sobre un repositorio real
 
 Capítulo 4. **Versión recomendada: 1.1.**
-
-**Título del capítulo:** se usa la denominación técnica disponible; su título editorial completo requiere cotejo con el índice entregado por separado.
 
 Revisar referencias y el árbol de trabajo de un repositorio sintético; añadir consulta exacta por código.
 
