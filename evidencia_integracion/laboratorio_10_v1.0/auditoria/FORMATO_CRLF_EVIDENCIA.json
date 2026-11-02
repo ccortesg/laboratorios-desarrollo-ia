@@ -1,0 +1,6 @@
+{
+  "estado": "APROBADO",
+  "observacion_previa": "git diff --cached --check señaló ocho archivos marca.txt con CRLF, conservados deliberadamente por T05.",
+  "resolucion": "Atributo whitespace=cr-at-eol acotado a marca.txt en evidencia10; -text mantiene exactamente sus bytes. No se reescribieron archivos ni huellas.",
+  "alcance": "Ajuste de revisión Git; no cambia comportamiento ni criterios."
+}

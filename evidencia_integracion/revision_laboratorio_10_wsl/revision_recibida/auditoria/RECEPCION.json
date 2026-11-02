@@ -1,0 +1,12 @@
+{
+  "fecha_utc": "2026-11-02T01:42:43.870136+00:00",
+  "zip": "EVIDENCIA_LABORATORIO_10_WSL_v1.0.zip",
+  "sha256_zip": "3a2dd4825f83056ce77cb9d2ef4a0cf5b2da205b68d2298438fd2811c4637818",
+  "bytes_zip": 1046784,
+  "archivos_zip": 666,
+  "crc": "APROBADO",
+  "rutas_seguras": "APROBADO",
+  "informe_exterior_sha256": "075f27aa74abb2d69c657a1034b7cbf9744bd5e481a7f7af83a1d833d31971da",
+  "informe_interior_igual": true,
+  "originales_recibidos": "Conservados sin modificaciones."
+}

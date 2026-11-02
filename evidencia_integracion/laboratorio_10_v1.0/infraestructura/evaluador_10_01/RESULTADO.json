@@ -1,0 +1,17 @@
+{
+  "naturaleza": "Pruebas focales de infraestructura con registros sintéticos; no ejecución funcional del catálogo.",
+  "estado": "APROBADO",
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "huellas": {
+    "estado": "APROBADO",
+    "comprobadas": 4,
+    "coincidentes": 4,
+    "discrepancias": []
+  },
+  "sha256_fuentes": {
+    "herramientas/verificar_todo.py": "45faa3a122526fbae64e54e95004d1629364bf8da2878ce5aaa0cf0cfe0f23bb",
+    "herramientas/pruebas/test_evaluador_laboratorio_09.py": "ba24f2c6ca79d18fb53f0b5efc8cd1ae9261e6f37a75bc415b96788050e6b2ae",
+    "herramientas/pruebas/test_evaluador_laboratorio_10.py": "2626c9409527286020676446dfe7534a46b8e6b7d14ac105fa96770d37fac32e"
+  }
+}

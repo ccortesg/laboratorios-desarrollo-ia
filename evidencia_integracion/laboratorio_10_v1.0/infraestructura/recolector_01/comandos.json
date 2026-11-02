@@ -1,0 +1,33 @@
+{
+  "registros": [
+    {
+      "id": "ocho_pruebas_recolector",
+      "comando": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "herramientas/pruebas",
+        "-p",
+        "test_huellas_evidencia.py",
+        "-v"
+      ],
+      "cwd": "DIRECTORIO_DE_EJECUCION",
+      "inicio_utc": "2026-11-02T00:04:42.067444+00:00",
+      "fin_utc": "2026-11-02T00:04:42.139756+00:00",
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "timeout": false,
+      "stdout": "stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "stderr.txt",
+      "sha256_stderr": "6157dbd04262d225ccb24690a7f1ef948ec2b5ecb438df2a773d82e830b1d6bc",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "6157dbd04262d225ccb24690a7f1ef948ec2b5ecb438df2a773d82e830b1d6bc"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

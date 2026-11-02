@@ -1,0 +1,168 @@
+{
+  "fecha_utc": "2026-11-02T00:20:09.035578+00:00",
+  "estado": "APROBADO",
+  "alcance": "Revisión separada de la implementación del operador; lectura de contrato, código, pruebas, documentos y resultados existentes. Sin nueva ejecución funcional ni cambios al laboratorio.",
+  "hallazgos_funcionales_materiales_pendientes": 0,
+  "observaciones_documentales": [
+    {
+      "id": "DOC-01",
+      "estado": "APROBADO",
+      "situacion": "RESUELTA por el coordinador y revalidada por lectura",
+      "archivo": "README.md",
+      "sha256_revalidado": "5f12febf92509cf868043ddfe4baa0bac56ba2600cda260d405fa2a631b84603",
+      "detalle": "La sección de cierre9 quedó rotulada como antecedente y la fila de PROCEDENCIA identifica laboratorio10."
+    }
+  ],
+  "contrato_previo": {
+    "estado": "APROBADO",
+    "sha256": "18eb14f8251d1179a009f008793023b61268db63faa44c4a713357fe25cc86fe",
+    "coincide_con_documento_publicable": true
+  },
+  "herencia": [
+    {
+      "estado_codigo": "base",
+      "archivos_heredados": 17,
+      "extras": [],
+      "estado": "APROBADO",
+      "diferencias_heredadas": []
+    },
+    {
+      "estado_codigo": "propuesta",
+      "archivos_heredados": 17,
+      "extras": [
+        "operar.py"
+      ],
+      "estado": "APROBADO",
+      "diferencias_heredadas": []
+    },
+    {
+      "estado_codigo": "solucion",
+      "archivos_heredados": 17,
+      "extras": [
+        "operar.py"
+      ],
+      "estado": "APROBADO",
+      "diferencias_heredadas": []
+    }
+  ],
+  "fuentes_ejecutadas": [
+    {
+      "ejecucion": "autonomo_01",
+      "archivos_ejecutables_datos_y_web": 75,
+      "estado": "APROBADO",
+      "diferencias": []
+    },
+    {
+      "ejecucion": "conjunto_01",
+      "archivos_ejecutables_datos_y_web": 75,
+      "estado": "APROBADO",
+      "diferencias": []
+    }
+  ],
+  "casos_recontados": [
+    {
+      "ejecucion": "autonomo_01",
+      "estado": "APROBADO",
+      "baterias": 33,
+      "casos_distintos_solucion": 82,
+      "conteos_observados": {
+        "APROBADO": 237,
+        "NO EJECUTADO": 8,
+        "FALLIDO": 1
+      },
+      "por_estado": {
+        "base": {
+          "APROBADO": 74,
+          "NO EJECUTADO": 8
+        },
+        "propuesta": {
+          "APROBADO": 81,
+          "FALLIDO": 1
+        },
+        "solucion": {
+          "APROBADO": 82
+        }
+      },
+      "discrepancias": []
+    },
+    {
+      "ejecucion": "conjunto_01/laboratorio_10",
+      "estado": "APROBADO",
+      "baterias": 33,
+      "casos_distintos_solucion": 82,
+      "conteos_observados": {
+        "APROBADO": 237,
+        "NO EJECUTADO": 8,
+        "FALLIDO": 1
+      },
+      "por_estado": {
+        "base": {
+          "APROBADO": 74,
+          "NO EJECUTADO": 8
+        },
+        "propuesta": {
+          "APROBADO": 81,
+          "FALLIDO": 1
+        },
+        "solucion": {
+          "APROBADO": 82
+        }
+      },
+      "discrepancias": []
+    }
+  ],
+  "procedencia_heredada": {
+    "estado": "APROBADO",
+    "archivos": 71,
+    "diferencias": []
+  },
+  "huellas_finales": {
+    "autonomo_01": {
+      "estado": "APROBADO",
+      "huellas_finales_comprobadas": 116,
+      "campos_de_huella_capturada": 116,
+      "registros_sin_capturas": 3,
+      "discrepancias": []
+    },
+    "conjunto_01": {
+      "estado": "APROBADO",
+      "huellas_finales_comprobadas": 272,
+      "campos_de_huella_capturada": 272,
+      "registros_sin_capturas": 6,
+      "discrepancias": []
+    }
+  },
+  "infraestructura_ro01": {
+    "estado": "APROBADO",
+    "metodos": 1,
+    "estados_como_subcasos": 2,
+    "codigo_salida": 0,
+    "huellas": 2,
+    "naturaleza": "OSError inyectado; no incidente real ni criterio T."
+  },
+  "anonimizacion": {
+    "estado": "APROBADO",
+    "coincidencias_por_revisar": [],
+    "limite": "Búsqueda acotada de rutas identificables; no demuestra ausencia universal de información identificable."
+  },
+  "no_ejecutado_en_esta_auditoria": [
+    "Nueva batería funcional",
+    "Timeout inducido",
+    "Concurrencia o interrupción física",
+    "Ejecución Windows",
+    "Pruebas de servicios externos",
+    "Auditoría del manuscrito y presentación Word",
+    "Operaciones de publicación"
+  ],
+  "limites": [
+    "No se promete atomicidad global entre importador y consulta.",
+    "Importación no confirmada tras interrupción no demuestra base intacta.",
+    "No se realizó fuzzing ni prueba exhaustiva de mutaciones.",
+    "Integración mediante ZIP/parche y auxiliares finales se acreditan por separado."
+  ],
+  "fuentes_auditoria": {
+    "DATOS_REVISION_INDEPENDIENTE_LAB10.json": "1a6bebdd4990b7181390daa89e71cfd4022b450299c78d9a69b3388b5f21d8fc",
+    "RECUENTO_INDEPENDIENTE_LAB10.json": "76475e7bac647b1e0bc5c08d7721ecd50e50b55bbc2f0a74d50be3721c28c51b",
+    "REVISION_INDEPENDIENTE_LAB10.md": "70589165455c6748bf1f0a06a5a0577f58f788f09ef8d06db823cb66e6749a2f"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T01:45:03.094073+00:00",
+  "fecha_hora_hermosillo": "2026-11-01T18:45:03.094073-07:00",
+  "alcance": "Auditoria independiente de lectura; inventarios recibidos cotejados contra objetos Git y distribucion confiables de la produccion previa. Sin acceso directo a la copia WSL del autor, sin ejecutar scripts recibidos ni pruebas funcionales.",
+  "base": {
+    "commit": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+    "arbol": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+    "archivos": 2297
+  },
+  "preparado": {
+    "arbol_informado": "78b136a253cb3cb79143a0c81ee09f7892efa40f",
+    "arbol_reconstruido_independiente": "78b136a253cb3cb79143a0c81ee09f7892efa40f",
+    "archivos_y_hashes_cotejados": 3660,
+    "rutas_parche": 1372,
+    "adiciones": 1363,
+    "modificaciones_existentes": 9,
+    "eliminaciones": 0,
+    "rama": "codex/integracion-laboratorio-10"
+  },
+  "conservacion": {
+    "inventario_base_sha256_contra_blobs": 2297,
+    "versionados_protegidos": 2288,
+    "protegidos_produccion": 2285,
+    "protegidos_adicionales_wsl": [
+      "docs/CORRECCION_RECOLECTOR_v1.0.md",
+      "herramientas/preparar_laboratorio_04.py",
+      "herramientas/pruebas/test_evaluador_laboratorio_09.py"
+    ],
+    "existentes_modificados": [
+      ".gitattributes",
+      ".gitignore",
+      "AGENTS.md",
+      "CONTINUIDAD.md",
+      "PROCEDENCIA.json",
+      "README.md",
+      "VERSIONES.md",
+      "distribuciones/SHA256SUMS",
+      "herramientas/verificar_todo.py"
+    ],
+    "evidencia_preexistente_en_trabajo": {
+      "entradas": 3156,
+      "coherencia_de_inventarios": "APROBADO",
+      "bytes_historicos_individuales_incluidos_en_zip": false,
+      "verificacion_directa_actual_de_esos_bytes": "NO EJECUTADO: solo se recibieron sus inventarios y los cotejos de la sesion WSL."
+    }
+  },
+  "referencias": {
+    "etiquetas_historicas": 15,
+    "main_y_head_conservados_en_registros": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+    "rama_nueva_unica": [
+      "refs/heads/codex/integracion-laboratorio-10"
+    ],
+    "etiquetas_previstas_ausentes": [
+      "lab-10-v1.0",
+      "repositorio-v1.6"
+    ],
+    "reconsulta_remota_de_esta_auditoria": {
+      "estado": "APROBADO",
+      "responsable": "Agente principal; resultado cotejado en esta revisión",
+      "fecha_hora_autor": "2026-11-01 18:43:25 America/Hermosillo (UTC-07:00)",
+      "fuente_evidencia": "REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+      "avance_posterior": false,
+      "etiquetas_nuevas_ausentes": true
+    },
+    "limite_referencias_locales": "El ZIP aporta las referencias iniciales y del inventario, y al cierre main/HEAD/rama/etiquetas junto a un control afirmativo de todas las referencias. No es acceso en vivo al repositorio WSL."
+  },
+  "operaciones": {
+    "registros": 28,
+    "codigos_cero": 28,
+    "commit_push_tag_reset_clean_merge_en_comandos_recibidos": []
+  },
+  "distribucion": {
+    "sha256": "5e39d5fb92e2408684003809d65f753b16929c7ad649e70f1c8eec0e26eb54f3",
+    "archivos": 450,
+    "comparacion_zip_inventario_objetos_git": "APROBADO",
+    "ejecucion_autonoma_nueva": "NO EJECUTADO; esto es un cotejo de bytes."
+  },
+  "parche_sha256": "60a0f636ebb254fb5e1a98724127780069209ee9d0f690966566dd8f80e2a808",
+  "precision_temporal": "El informe declara que el inventario leyó contenido antes de aplicar y completó después los metadatos Git. El cotejo independiente confirma que los 2297 hashes corresponden a los bytes de HEAD, pero no verifica el instante de cada lectura ni convierte el inventario en una captura atómica.",
+  "fallos": [],
+  "limite_modos": "Se cotejan los modos registrados en objetos Git. La conservación de modos del sistema de archivos WSL figura en controles de la sesión; no se accedió directamente a ese sistema de archivos."
+}

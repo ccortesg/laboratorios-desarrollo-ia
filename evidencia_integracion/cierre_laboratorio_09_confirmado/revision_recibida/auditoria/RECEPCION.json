@@ -1,0 +1,11 @@
+{
+  "fecha_recepcion_utc": "2026-11-01T23:34:14.620583+00:00",
+  "archivo": "EVIDENCIA_CIERRE_LABORATORIO_09_WSL_v1.0.zip",
+  "sha256": "d43d7559dc53df91fbc44524d40508c77813f29637bc5ce1aac33a214bd70757",
+  "bytes": 1131278,
+  "entradas": 675,
+  "bytes_extraidos": 4309250,
+  "estado_crc": "APROBADO",
+  "estado_rutas": "APROBADO",
+  "original_conservado": true
+}

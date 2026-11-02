@@ -1,0 +1,22 @@
+Bateria: resumen; estado: propuesta
+P01: APROBADO
+P02: APROBADO
+P03: APROBADO
+P04: FALLIDO
+{'almacen': 'ALFA', 'total': 0, 'codigos': []} != {'almacen': 'ALFA', 'total': 1, 'codigos': ['A01']}
+- {'almacen': 'ALFA', 'codigos': [], 'total': 0}
+?                                             ^
+
++ {'almacen': 'ALFA', 'codigos': ['A01'], 'total': 1}
+?                                 +++++            ^
+
+P05: FALLIDO
+{'almacen': 'BETA', 'total': 0, 'codigos': []} != {'almacen': 'BETA', 'total': 1, 'codigos': ['A04']}
+- {'almacen': 'BETA', 'codigos': [], 'total': 0}
+?                                             ^
+
++ {'almacen': 'BETA', 'codigos': ['A04'], 'total': 1}
+?                                 +++++            ^
+
+P06: APROBADO
+Ejecutados: 6; aprobados: 4; fallidos: 2; no ejecutados: 0.

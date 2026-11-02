@@ -1,0 +1,71 @@
+{
+  "insumos": [
+    {
+      "nombre": "PROMPT_CAPITULO_10_v1.0.md",
+      "bytes": 7770,
+      "sha256": "f64b6b9dcef98f6c8a4c47d3f25a4f3fd4c292358c6618e0fe22a037f0fd0a7c",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": true
+    },
+    {
+      "nombre": "ESTADO_DEL_LIBRO_v1.8.3.md",
+      "bytes": 3237,
+      "sha256": "088acf4a7fa4095da438892f452f7618f0d297d425e87d754faff03a36dd81ed",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": true
+    },
+    {
+      "nombre": "ESTADO_REPOSITORIO_v1.7.3.md",
+      "bytes": 3249,
+      "sha256": "2e7e19a1b5c3bc8f6d03822ac669e478973f1427c7f059a44b9f2d8cac51391c",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": true
+    },
+    {
+      "nombre": "CIERRE_LABORATORIO_09_CONFIRMADO_v1.0.md",
+      "bytes": 3568,
+      "sha256": "7acacb2d55fdd9fd8e8e1856f1ae8d485f5717c7a41a43034de8830aa8d78dd8",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": true
+    },
+    {
+      "nombre": "REVISION_CIERRE_LABORATORIO_09_WSL_v1.0.zip",
+      "bytes": 1087142,
+      "sha256": "042a4f2440bc4a8162bb52fc8e3b98d584cc2d8ea23496a2e9f10da958232a62",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": false
+    },
+    {
+      "nombre": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md",
+      "bytes": 10048,
+      "sha256": "2f57a9c3304b56c6c662a39afaaf8e893934725811cf5d46c518572b0b776357",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": true
+    },
+    {
+      "nombre": "CAPITULO_09_v1.0.md",
+      "bytes": 30095,
+      "sha256": "db4d633ee597b747161bc24a94aa99edf8060238fd1f457286846a6f86701dca",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": true
+    },
+    {
+      "nombre": "CAPITULO_09_v1.0.docx",
+      "bytes": 51023,
+      "sha256": "bbe37f183612530d065a143969c209904eafc812d5adb00d23330efc23c1ee59",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": false
+    },
+    {
+      "nombre": "LABORATORIO_09_v1.0.zip",
+      "bytes": 317853,
+      "sha256": "6010765d31beab92b35447439864e5af0b321c99962b7bc692a0dacf66ecc17a",
+      "origen": "Entrega anterior disponible, copia exacta",
+      "contenido_leido": false
+    }
+  ],
+  "maestro_modificado": false,
+  "observaciones_editoriales_nuevas": [],
+  "revision_editorial": "Capítulos 1–9 pendientes del autor",
+  "revision_cierre_09": "Paquete de revisión leído y manifiesto comprobado; sus ejecuciones son antecedentes"
+}

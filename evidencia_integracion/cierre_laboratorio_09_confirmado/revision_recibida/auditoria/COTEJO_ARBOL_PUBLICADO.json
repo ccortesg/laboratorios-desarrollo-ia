@@ -1,0 +1,54 @@
+{
+  "estado": "APROBADO",
+  "fecha_consulta_utc": "2026-11-01 23:35:34 UTC",
+  "commit": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+  "arbol_publicado": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+  "padres": [
+    "9212ee99b88f70f0b289837b88d6bbf34da91a52"
+  ],
+  "arbol_funcional_auditado": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+  "archivos_previos": 2273,
+  "archivos_publicados": 2297,
+  "archivos_previos_conservados": 2268,
+  "rutas_modificadas": [
+    "AGENTS.md",
+    "CONTINUIDAD.md",
+    "PROCEDENCIA.json",
+    "README.md",
+    "VERSIONES.md"
+  ],
+  "rutas_agregadas": [
+    "docs/estados/ESTADO_DEL_LIBRO_v1.8.1.md",
+    "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+    "docs/estados/ESTADO_REPOSITORIO_v1.7.1.md",
+    "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/INCORPORACION.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/README.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/REVISION_LABORATORIO_09_WSL_v1.0.zip",
+    "evidencia_integracion/revision_laboratorio_09_wsl/SHA256SUMS",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_DEL_LIBRO_v1.8.1.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_REPOSITORIO_v1.7.1.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/LEEME.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/PROMPT_CIERRE_LABORATORIO_09_v1.0.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/REVISION_LABORATORIO_09_WSL_v1.0.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/SHA256SUMS",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/VERIFICAR_PAQUETE.py",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_DEL_LIBRO_v1.8.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_REPOSITORIO_v1.7.md",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/FUNCIONAL_INDEPENDIENTE.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/GIT_Y_CONSERVACION.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/INTEGRIDAD_INDEPENDIENTE.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RECEPCION.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RESULTADO_AUDITORIA.json",
+    "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip"
+  ],
+  "rutas_retiradas": [],
+  "etiquetas_historicas_conservadas": 13,
+  "etiquetas_actuales": 15,
+  "referencias_coinciden_con_evidencia": true,
+  "limites": [
+    "Comparación de modos, tipos y objetos Git desde la fuente remota y el árbol local auditado.",
+    "Esta auditoría no ejecuta otra batería funcional ni accede al disco WSL del autor."
+  ]
+}

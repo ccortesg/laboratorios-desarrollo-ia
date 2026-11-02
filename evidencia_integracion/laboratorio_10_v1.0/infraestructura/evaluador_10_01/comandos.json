@@ -1,0 +1,32 @@
+{
+  "registros": [
+    {
+      "id": "evaluador_09_conservado",
+      "comando": "python -B -m unittest discover -s herramientas/pruebas -p test_evaluador_laboratorio_09.py -v",
+      "inicio_utc": "2026-11-02T00:06:25.623074+00:00",
+      "fin_utc": "2026-11-02T00:06:25.717885+00:00",
+      "codigo_salida": 0,
+      "stdout": "evaluador_09_conservado.stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "evaluador_09_conservado.stderr.txt",
+      "sha256_stderr": "0c1c182ffe0a8e37f67337452bc6c7c8d3fe2821155ef029c6c51823a9a80144",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "0c1c182ffe0a8e37f67337452bc6c7c8d3fe2821155ef029c6c51823a9a80144"
+    },
+    {
+      "id": "evaluador_10_nuevo",
+      "comando": "python -B -m unittest discover -s herramientas/pruebas -p test_evaluador_laboratorio_10.py -v",
+      "inicio_utc": "2026-11-02T00:06:25.718276+00:00",
+      "fin_utc": "2026-11-02T00:06:25.852579+00:00",
+      "codigo_salida": 0,
+      "stdout": "evaluador_10_nuevo.stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "evaluador_10_nuevo.stderr.txt",
+      "sha256_stderr": "7a85d88496ea5a997593305e5cc21966bb209181848b8e978cae77e6bcd8ab93",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "7a85d88496ea5a997593305e5cc21966bb209181848b8e978cae77e6bcd8ab93"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

@@ -1,0 +1,20 @@
+{
+  "bateria": "automatizacion_navegador",
+  "estado_codigo": "base",
+  "casos_registrados": 1,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 1,
+  "pruebas": [
+    {
+      "id": "T08",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    }
+  ]
+}

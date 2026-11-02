@@ -1,0 +1,1 @@
+{"estado": "RECHAZADO", "sha256_fuente": "359019da6c7e778ebc3a7a9271b20988921109943c9d041f5ac48bc66c80220c", "filas_leidas": 2, "filas_validadas": 1, "filas_aplicadas": 0, "filas_sin_cambio": 0, "errores": [{"fila": 3, "campo": "existencias", "codigo": "CANTIDAD_INVALIDA", "mensaje": "Se requiere un entero entre 0 y 2147483647."}]}

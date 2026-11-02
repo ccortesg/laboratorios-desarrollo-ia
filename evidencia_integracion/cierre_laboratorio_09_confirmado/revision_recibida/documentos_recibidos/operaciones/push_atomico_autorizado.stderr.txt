@@ -1,0 +1,4 @@
+To https://github.com/ccortesg/laboratorios-desarrollo-ia.git
+   9212ee9..6a5fdaf  main -> main
+ * [new tag]         lab-09-v1.0 -> lab-09-v1.0
+ * [new tag]         repositorio-v1.5 -> repositorio-v1.5

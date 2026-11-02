@@ -1,0 +1,21 @@
+{
+  "bateria": "automatizacion_navegador",
+  "estado_codigo": "base",
+  "casos_registrados": 1,
+  "criterios_distintos": 1,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 1,
+  "pruebas": [
+    {
+      "id": "T08",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base todavía no implementa el operador.",
+      "tipo_error": null
+    }
+  ]
+}

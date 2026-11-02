@@ -1,0 +1,33 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T00:21:50.165629+00:00",
+  "bloques_bash_ejecutados": 5,
+  "sha256_markdown": "594774a2db632833019d757a391f9f696dbd10bc5f6233431d2d05c7d2099956",
+  "operacion_valida": {
+    "codigo": 0,
+    "codigos": [
+      "A01",
+      "A03"
+    ]
+  },
+  "operacion_negativa_propuesta": {
+    "codigo": 0,
+    "importacion_confirmada": false,
+    "codigos": [
+      "A01"
+    ]
+  },
+  "operacion_negativa_solucion": {
+    "codigo": 1,
+    "consulta": "NO EJECUTADO"
+  },
+  "pruebas_cli_propuesta": "6 APROBADO, T02 FALLIDO",
+  "pruebas_cli_solucion": "7 APROBADO",
+  "huellas": {
+    "estado": "APROBADO",
+    "comprobadas": 20,
+    "coincidentes": 20,
+    "discrepancias": []
+  },
+  "limite": "Revisión de instrucciones; no se suma al conjunto de criterios funcionales. Bash/Linux, no Git Bash de Windows."
+}

@@ -1,0 +1,1001 @@
+{
+  "estado": "APROBADO",
+  "fecha_auditoria_utc": "2026-11-01T23:40:44.898416+00:00",
+  "objeto": "Auditoría independiente de cierre, continuidad documental, capturas operativas y conservación del laboratorio 9.",
+  "alcance": {
+    "ejecucion": "Lectura de bytes, JSON, archivos de texto y miembros ZIP; cálculo independiente de hashes y objetos Git; lectura de objetos del repositorio conocido. No se ejecutaron scripts adjuntos, pruebas funcionales ni recolector.",
+    "escrituras": "Sólo este informe de auditoría. No se modificaron repositorio, índice, referencias, evidencias recibidas ni documentos del productor.",
+    "red": "Este auditor no realizó consultas de red ni APIs. La reconsulta remota de /root se utiliza como evidencia coordinada, expresamente atribuida.",
+    "exclusion": "No se redacta capítulo 10. La revisión editorial de capítulos 1–9 sigue pendiente del autor."
+  },
+  "identidades": {
+    "base": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+    "arbol_base": "d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0",
+    "arbol_funcional_conocido": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+    "commit_cierre": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+    "arbol_documental_cierre": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+    "padre_unico_confirmado_por_consulta_coordinada": [
+      "9212ee99b88f70f0b289837b88d6bbf34da91a52"
+    ]
+  },
+  "arbol_y_conservacion": {
+    "estado": "APROBADO",
+    "fuentes": [
+      "operaciones/inventario_arbol_funcional.stdout.txt",
+      "operaciones/inventario_documental_precommit.stdout.txt",
+      "identidad_funcional_inicial.json",
+      "evidencia_recibida/protegidos_antes.json",
+      "RUTAS_DOCUMENTALES_FINALES.json"
+    ],
+    "inventario_inicial_identico_byte_a_byte_a_git_conocido": true,
+    "sha256_captura_inventario_inicial": "68a1ca992d4bdc6d807bc8a98d6cada03eedc0e8693d5c900ba3cc0dd3bae4ff",
+    "sha256_captura_inventario_final": "44b381cba806525bac9c059d1546bc21b0f4c609f86d282b4ecba720781eeb91",
+    "arboles_recalculados_en_memoria": {
+      "inicial": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+      "final": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f"
+    },
+    "metodo": "Se reconstruyó el objeto tree recursivamente desde nombres, modos y OID, aplicando ordenación Git y encabezados de objeto, sin escribir objetos ni índice.",
+    "archivos_iniciales_verificados_con_bytes_git": 2273,
+    "campos_verificados_por_archivo": [
+      "ruta",
+      "modo",
+      "blob",
+      "sha256",
+      "bytes"
+    ],
+    "errores_inventario_inicial": [],
+    "archivos_finales": 2297,
+    "archivos_anteriores_identicos": 2268,
+    "rutas_modificadas": [
+      "AGENTS.md",
+      "CONTINUIDAD.md",
+      "PROCEDENCIA.json",
+      "README.md",
+      "VERSIONES.md"
+    ],
+    "rutas_agregadas": [
+      "docs/estados/ESTADO_DEL_LIBRO_v1.8.1.md",
+      "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+      "docs/estados/ESTADO_REPOSITORIO_v1.7.1.md",
+      "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/INCORPORACION.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/README.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/REVISION_LABORATORIO_09_WSL_v1.0.zip",
+      "evidencia_integracion/revision_laboratorio_09_wsl/SHA256SUMS",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_DEL_LIBRO_v1.8.1.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_REPOSITORIO_v1.7.1.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/LEEME.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/PROMPT_CIERRE_LABORATORIO_09_v1.0.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/REVISION_LABORATORIO_09_WSL_v1.0.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/SHA256SUMS",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/VERIFICAR_PAQUETE.py",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_DEL_LIBRO_v1.8.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_REPOSITORIO_v1.7.md",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/FUNCIONAL_INDEPENDIENTE.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/GIT_Y_CONSERVACION.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/INTEGRIDAD_INDEPENDIENTE.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RECEPCION.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RESULTADO_AUDITORIA.json",
+      "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip"
+    ],
+    "rutas_retiradas": [],
+    "delta_coincide_lista_documental_final": true,
+    "retirada_adicion_indice_evidencia": "AJUSTE_DOCUMENTAL.json retira únicamente la adición propia a evidencia_integracion/README.md antes de preparar Git; el objeto final de ese archivo permanece igual al conocido.",
+    "protegidos_con_hashes_comprobados": 1502,
+    "protegidos_iguales_en_base_funcional_y_final": true,
+    "errores_protegidos": [],
+    "captura_final_identica_a_2297_blobs_del_arbol_remoto_coordinado": true,
+    "consulta_remota_no_truncada": true,
+    "delta_frente_base_git": {
+      "archivos_base": 1511,
+      "modificados": 9,
+      "agregados": 786,
+      "retirados": 0,
+      "total_rutas": 795
+    },
+    "precision_contadores": "29 es el cambio documental respecto del árbol funcional ya auditado; 795 es el cambio total respecto del commit base, que incluye las 771 rutas de integración previamente preparadas."
+  },
+  "contenido_documental": {
+    "estado": "APROBADO",
+    "rutas_declaradas": 29,
+    "rutas_con_bytes_recalculados_en_este_informe": 29,
+    "cotejos": [
+      {
+        "ruta": "AGENTS.md",
+        "fuente": "Reconstrucción sólo en memoria desde árbol funcional conocido y diff_documentacion.stdout.txt; sin aplicar parche al repositorio.",
+        "blob_git": "1291a733c78211b9e487e84daf98abe3e1bc3320",
+        "sha256": "2512425956186fa55592681999df693c8211b47d97988cbfde73d683f0eb359d",
+        "bytes": 10279,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true,
+        "cotejo_adicional_descarga_remota_coordinada": true
+      },
+      {
+        "ruta": "CONTINUIDAD.md",
+        "fuente": "Reconstrucción sólo en memoria desde árbol funcional conocido y diff_documentacion.stdout.txt; sin aplicar parche al repositorio.",
+        "blob_git": "b986d39562f3108e4749f9cbbf460f6ddcfef6db",
+        "sha256": "00163ce6f261355de14ec7a7cf2e972d48510f88b4559c6d8ebbdec798767194",
+        "bytes": 24138,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true,
+        "cotejo_adicional_descarga_remota_coordinada": true
+      },
+      {
+        "ruta": "PROCEDENCIA.json",
+        "fuente": "Reconstrucción sólo en memoria desde árbol funcional conocido y diff_documentacion.stdout.txt; sin aplicar parche al repositorio.",
+        "blob_git": "d9e8dca5d747fe4acc73888f471adda8f7bf87fc",
+        "sha256": "c2e12ddcf66d200d830920786af527942070e5604c21866774dfa1529d8bdbca",
+        "bytes": 143905,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true,
+        "cotejo_adicional_descarga_remota_coordinada": true
+      },
+      {
+        "ruta": "README.md",
+        "fuente": "Reconstrucción sólo en memoria desde árbol funcional conocido y diff_documentacion.stdout.txt; sin aplicar parche al repositorio.",
+        "blob_git": "b96ec45b57d4c2556ce4a8ced1319c9c971d6366",
+        "sha256": "c7be7d1b9100bc92c203ee0eb9b8b14c982d25760e729831bdf871d20dd39264",
+        "bytes": 18815,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true,
+        "cotejo_adicional_descarga_remota_coordinada": true
+      },
+      {
+        "ruta": "VERSIONES.md",
+        "fuente": "Reconstrucción sólo en memoria desde árbol funcional conocido y diff_documentacion.stdout.txt; sin aplicar parche al repositorio.",
+        "blob_git": "6ca2375365f7076a2ec58c4cd6037f4f8d9b52c5",
+        "sha256": "49ec922cd3ed8db9ef8d704d0374b074155f75960289cfc9706644797e3408e5",
+        "bytes": 10539,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true,
+        "cotejo_adicional_descarga_remota_coordinada": true
+      },
+      {
+        "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.1.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "e8154a9f147a46cd88fdfdd709d27c2d8d3c52f9",
+        "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+        "bytes": 4177,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "0817572ed2b4c2fddb5479a6f228f2b48e86478d",
+        "sha256": "4416819fd0fbb717a87732f7e19b546d405eab51d484e591f93e9224008c0a9d",
+        "bytes": 2411,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.1.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "a1d0013f463fd8fdde32627e833f1032f29e8ffd",
+        "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+        "bytes": 5283,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "57ee2c9138686acff1a2c8ad21c82b8411dc6888",
+        "sha256": "1eb7e2d275f8fbcfad80b7194511a0319be709bf239d6dfa1944f10610fd807d",
+        "bytes": 2427,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/INCORPORACION.json",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "e6beae6bd47bc6f8b81bea0ad05c7bd8b1dd706b",
+        "sha256": "e2edc36eb686a1402c93f1ded06e60e16b5810e38d10493e17b303a4f043f545",
+        "bytes": 3871,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/README.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "9f313e4c92635a3d0e61298497d91fcc44fc7143",
+        "sha256": "81fc4d8a984dbfde9a1bad46f60b956b948ed58b706d55a070f3826c5aa58930",
+        "bytes": 1671,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/REVISION_LABORATORIO_09_WSL_v1.0.zip",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "8d2b35996572b3b189796bab4472e92c079f98ea",
+        "sha256": "3309df01455ce38f8c0e29ced072ea63fa33c788ef1d240f24336714bce64eaf",
+        "bytes": 357759,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/SHA256SUMS",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "586aae40dc753119304b9518b44308223835d883",
+        "sha256": "224905a8b3c0a093eb6422696b7936c8dfbdcd343df78823cbb307940f61f362",
+        "bytes": 2125,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_DEL_LIBRO_v1.8.1.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "e8154a9f147a46cd88fdfdd709d27c2d8d3c52f9",
+        "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+        "bytes": 4177,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_REPOSITORIO_v1.7.1.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "a1d0013f463fd8fdde32627e833f1032f29e8ffd",
+        "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+        "bytes": 5283,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/LEEME.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "b372aaa06b6860f0e2bf26c45cea9af0426ba7f5",
+        "sha256": "c25179ebf18a9a2e14e01f53fee9f2d3bc92dfb059c98ee8ec0e3cec7d977ca8",
+        "bytes": 1895,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/PROMPT_CIERRE_LABORATORIO_09_v1.0.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "8b50ad9731bb121bf0fa298142630928cdb2ce8a",
+        "sha256": "1fdd627ad04398cb9fb4b325911d7d09f8ef87ffd26ed47d58282ab944e8c625",
+        "bytes": 10530,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/REVISION_LABORATORIO_09_WSL_v1.0.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "2b0a74929190e5270f48d9f0a6351f2f05c2fa99",
+        "sha256": "403d910cba86868777d3178cdc71a02920832a5dcff994969f0b5e3e728f6115",
+        "bytes": 11072,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/SHA256SUMS",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "c6d63077555ed8d4cba922f01017a87c3cf707e6",
+        "sha256": "57369dee4999b9daf4f55b7f7486dcbe72f349e376619190296f6c3059ada37d",
+        "bytes": 1496,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/VERIFICAR_PAQUETE.py",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "163d22956b561d925fb047614d9108c262f37771",
+        "sha256": "eb8838dc6afde9c2d7bca774ea309ea97910afdf871069e8017cc45769713a94",
+        "bytes": 1746,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_DEL_LIBRO_v1.8.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "9da348972af1cd719f036203d8d5886bf5bf9d10",
+        "sha256": "9f6350d4e2c5acb43bd6a89e4e257854a2b529625e92769fd91920f22ecc3e68",
+        "bytes": 6309,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_REPOSITORIO_v1.7.md",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "bf734f2669252e673161553802c95e7ffc370771",
+        "sha256": "0471319eb4dbfc403a7905219bbaa9e630b0c82991b5abac2e938d0cb8f871bc",
+        "bytes": 7680,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/FUNCIONAL_INDEPENDIENTE.json",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "cec96ce782784f25f8c977f6589876e8da284b9d",
+        "sha256": "44dfcd7879b96bbfece187fb6229b2b46845b8c35b7f87c9059f7b0aa68cadc2",
+        "bytes": 446801,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/GIT_Y_CONSERVACION.json",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "7ea38a16d272157111ed0ecd63ce0a9db51fedb0",
+        "sha256": "7057af0e23d2a58f450c1b12ddddfd661fa16b7c5153faeb31952235fc96fe83",
+        "bytes": 1372,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/INTEGRIDAD_INDEPENDIENTE.json",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "ee90a815375353e8e7cfb17ea6c2233abec4113b",
+        "sha256": "249c1a73f6aabc2ddf1a100cdcbf6d96876631fbdcab24ec383828a39a98d240",
+        "bytes": 345390,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RECEPCION.json",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "19ae74fb0ea513ff03ded97cb285626625d645ec",
+        "sha256": "cee51361e1946744ac774cf68cda3bf9b77fa16c66bf087c2ac3264ad92c261a",
+        "bytes": 348,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "c632fcf3f6132f601296289446f42e4c5dfef791",
+        "sha256": "0cb631d43a9482855b4bc841b996601dd9e89b99c7e76e5069dc9c23f5e6f189",
+        "bytes": 2240,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RESULTADO_AUDITORIA.json",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "3e36c43fdc324dccb6eb7035bae448f270487a78",
+        "sha256": "24c628d639ee22f2ad4afa38d9ab7a71d043dab42a2a0ccf68db2151373f767f",
+        "bytes": 3365,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+        "fuente": "Bytes del ZIP de revisión recibido o de sus miembros, leídos sin ejecutar código.",
+        "blob_git": "6be38f32f3087e83943804e7f525eb260d167e18",
+        "sha256": "6aaeb6ce9e0cf781239499fae2f57bb147b5b2b07b7a20d5cfbd5d61a4ffb239",
+        "bytes": 412572,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      }
+    ],
+    "lectura_diff_raiz": "Las cinco modificaciones son documentales y describen la preparación previa; conservan antecedentes, autorización limitada, separación de pruebas e integridad de evidencia. La publicación final no se anticipa en el commit.",
+    "discrepancias": [],
+    "descargas_coordinadas_cotejadas": [
+      {
+        "ruta": "AGENTS.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "1291a733c78211b9e487e84daf98abe3e1bc3320",
+        "sha256": "2512425956186fa55592681999df693c8211b47d97988cbfde73d683f0eb359d",
+        "bytes": 10279,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "CONTINUIDAD.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "b986d39562f3108e4749f9cbbf460f6ddcfef6db",
+        "sha256": "00163ce6f261355de14ec7a7cf2e972d48510f88b4559c6d8ebbdec798767194",
+        "bytes": 24138,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "PROCEDENCIA.json",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "d9e8dca5d747fe4acc73888f471adda8f7bf87fc",
+        "sha256": "c2e12ddcf66d200d830920786af527942070e5604c21866774dfa1529d8bdbca",
+        "bytes": 143905,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "README.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "b96ec45b57d4c2556ce4a8ced1319c9c971d6366",
+        "sha256": "c7be7d1b9100bc92c203ee0eb9b8b14c982d25760e729831bdf871d20dd39264",
+        "bytes": 18815,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "VERSIONES.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "6ca2375365f7076a2ec58c4cd6037f4f8d9b52c5",
+        "sha256": "49ec922cd3ed8db9ef8d704d0374b074155f75960289cfc9706644797e3408e5",
+        "bytes": 10539,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "0817572ed2b4c2fddb5479a6f228f2b48e86478d",
+        "sha256": "4416819fd0fbb717a87732f7e19b546d405eab51d484e591f93e9224008c0a9d",
+        "bytes": 2411,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "57ee2c9138686acff1a2c8ad21c82b8411dc6888",
+        "sha256": "1eb7e2d275f8fbcfad80b7194511a0319be709bf239d6dfa1944f10610fd807d",
+        "bytes": 2427,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/INCORPORACION.json",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "e6beae6bd47bc6f8b81bea0ad05c7bd8b1dd706b",
+        "sha256": "e2edc36eb686a1402c93f1ded06e60e16b5810e38d10493e17b303a4f043f545",
+        "bytes": 3871,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/README.md",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "9f313e4c92635a3d0e61298497d91fcc44fc7143",
+        "sha256": "81fc4d8a984dbfde9a1bad46f60b956b948ed58b706d55a070f3826c5aa58930",
+        "bytes": 1671,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      },
+      {
+        "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/SHA256SUMS",
+        "fuente": "Bytes descargados por /root desde GitHub y leídos localmente por este auditor en auditoria/documentos_remotos/.",
+        "blob_git": "586aae40dc753119304b9518b44308223835d883",
+        "sha256": "224905a8b3c0a093eb6422696b7936c8dfbdcd343df78823cbb307940f61f362",
+        "bytes": 2125,
+        "coincide_objeto_remoto_y_captura": true,
+        "coincide_sha256_y_tamano_declarados": true
+      }
+    ],
+    "incorporacion_y_manifiesto": {
+      "estado": "APROBADO",
+      "archivos_revision_verificados": 16,
+      "entradas_manifiesto_incorporacion": 19,
+      "huellas_manifiesto_coincidentes": 19,
+      "cobertura_exacta_excluye_solo_propio_manifiesto": true,
+      "enlaces_readme_resueltos_en_arbol_publicado": [
+        "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/LEEME.md",
+        "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+        "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+        "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md"
+      ],
+      "estados_preparados_leidos": [
+        "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+        "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md"
+      ],
+      "lectura_semantica": "Los dos estados y el README describen publicación pendiente, conservan auditoría WSL anterior y sus límites y remiten a comprobantes finales externos. INCORPORACION.json y SHA256SUMS identifican exactamente los bytes incorporados."
+    }
+  },
+  "operaciones": {
+    "estado": "APROBADO como consistencia documental y de capturas aportadas",
+    "registros_nuevos": 64,
+    "json_individuales_coherentes_con_indice": 64,
+    "codigos_salida_cero": 64,
+    "capturas_finales_verificadas": 128,
+    "capturas_con_sha256_original_igual_final": 128,
+    "capturas_nuevas_saneadas": 0,
+    "discrepancias": [],
+    "indice_previo": {
+      "registros": 62,
+      "coinciden_con_definitivo": true,
+      "adiciones_posteriores": [
+        "generar_documentos_finales",
+        "validacion_posterior"
+      ],
+      "observacion": "La tabla del informe y el índice previo son de 62; el propio informe remite al registro definitivo que incluye 64. No hay omisión encubierta de las dos operaciones posteriores."
+    },
+    "secuencia_critica": [
+      {
+        "id": "rama_inicial",
+        "comando": [
+          "git",
+          "branch",
+          "--show-current"
+        ],
+        "inicio_utc": "2026-11-01T23:11:51.276966+00:00",
+        "fin_utc": "2026-11-01T23:11:51.308908+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "identidad_inicial",
+        "comando": [
+          "git",
+          "rev-parse",
+          "HEAD",
+          "HEAD^{tree}",
+          "main",
+          "origin/main"
+        ],
+        "inicio_utc": "2026-11-01T23:11:51.567217+00:00",
+        "fin_utc": "2026-11-01T23:11:51.667845+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "indice_inicial",
+        "comando": [
+          "git",
+          "write-tree"
+        ],
+        "inicio_utc": "2026-11-01T23:11:51.716777+00:00",
+        "fin_utc": "2026-11-01T23:11:52.112289+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "recolector",
+        "comando": [
+          "trabajo/runtime_lab09_wsl/python/cpython-3.12.16-linux-x86_64-gnu/bin/python3.12",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "herramientas/pruebas",
+          "-p",
+          "test_huellas_evidencia.py",
+          "-v"
+        ],
+        "inicio_utc": "2026-11-01T23:12:47.271092+00:00",
+        "fin_utc": "2026-11-01T23:12:49.431310+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "arbol_documental_preparado",
+        "comando": [
+          "git",
+          "write-tree"
+        ],
+        "inicio_utc": "2026-11-01T23:15:37.665772+00:00",
+        "fin_utc": "2026-11-01T23:15:38.708644+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "arbol_documental_validado",
+        "comando": [
+          "git",
+          "write-tree"
+        ],
+        "inicio_utc": "2026-11-01T23:16:05.839798+00:00",
+        "fin_utc": "2026-11-01T23:16:06.693084+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "indice_inmediato_precommit",
+        "comando": [
+          "git",
+          "write-tree"
+        ],
+        "inicio_utc": "2026-11-01T23:16:36.291212+00:00",
+        "fin_utc": "2026-11-01T23:16:37.483933+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "commit_cierre",
+        "comando": [
+          "git",
+          "commit",
+          "-m",
+          "Integra laboratorio 9 y evidencia WSL auditada"
+        ],
+        "inicio_utc": "2026-11-01T23:16:37.554236+00:00",
+        "fin_utc": "2026-11-01T23:17:01.202806+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "identidad_commit_cierre",
+        "comando": [
+          "git",
+          "rev-parse",
+          "HEAD",
+          "HEAD^{tree}"
+        ],
+        "inicio_utc": "2026-11-01T23:17:01.270669+00:00",
+        "fin_utc": "2026-11-01T23:17:01.453741+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "cambiar_a_main",
+        "comando": [
+          "git",
+          "switch",
+          "main"
+        ],
+        "inicio_utc": "2026-11-01T23:17:41.868452+00:00",
+        "fin_utc": "2026-11-01T23:18:04.157284+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "integrar_main_avance_rapido",
+        "comando": [
+          "git",
+          "merge",
+          "--ff-only",
+          "codex/integracion-laboratorio-09"
+        ],
+        "inicio_utc": "2026-11-01T23:18:04.230122+00:00",
+        "fin_utc": "2026-11-01T23:19:05.781544+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "identidad_main_integrado",
+        "comando": [
+          "git",
+          "rev-parse",
+          "HEAD",
+          "HEAD^{tree}"
+        ],
+        "inicio_utc": "2026-11-01T23:19:05.855550+00:00",
+        "fin_utc": "2026-11-01T23:19:06.002601+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "crear_lab-09-v1_0",
+        "comando": [
+          "git",
+          "tag",
+          "lab-09-v1.0",
+          "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3"
+        ],
+        "inicio_utc": "2026-11-01T23:19:10.198414+00:00",
+        "fin_utc": "2026-11-01T23:19:10.465146+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "crear_repositorio-v1_5",
+        "comando": [
+          "git",
+          "tag",
+          "repositorio-v1.5",
+          "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3"
+        ],
+        "inicio_utc": "2026-11-01T23:19:10.758807+00:00",
+        "fin_utc": "2026-11-01T23:19:10.961730+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "push_atomico_autorizado",
+        "comando": [
+          "git",
+          "push",
+          "--atomic",
+          "--no-follow-tags",
+          "origin",
+          "refs/heads/main:refs/heads/main",
+          "refs/tags/lab-09-v1.0:refs/tags/lab-09-v1.0",
+          "refs/tags/repositorio-v1.5:refs/tags/repositorio-v1.5"
+        ],
+        "inicio_utc": "2026-11-01T23:19:11.364456+00:00",
+        "fin_utc": "2026-11-01T23:19:28.378999+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "remotas_despues_publicacion",
+        "comando": [
+          "git",
+          "ls-remote",
+          "--heads",
+          "--tags",
+          "origin"
+        ],
+        "inicio_utc": "2026-11-01T23:19:28.451514+00:00",
+        "fin_utc": "2026-11-01T23:19:29.518716+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "estado_local_final",
+        "comando": [
+          "git",
+          "status",
+          "--porcelain=v1"
+        ],
+        "inicio_utc": "2026-11-01T23:19:32.453619+00:00",
+        "fin_utc": "2026-11-01T23:19:40.295262+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "identidad_local_final",
+        "comando": [
+          "git",
+          "rev-parse",
+          "HEAD",
+          "HEAD^{tree}",
+          "main",
+          "origin/main"
+        ],
+        "inicio_utc": "2026-11-01T23:19:40.351386+00:00",
+        "fin_utc": "2026-11-01T23:19:40.590570+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "generar_documentos_finales",
+        "comando": [
+          "python3",
+          "-B",
+          "trabajo/cierre_lab09_wsl_20261101T231144Z/generar_documentos_finales.py"
+        ],
+        "inicio_utc": "2026-11-01T23:20:04.516216+00:00",
+        "fin_utc": "2026-11-01T23:20:05.465323+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      },
+      {
+        "id": "validacion_posterior",
+        "comando": [
+          "python3",
+          "-B",
+          "trabajo/cierre_lab09_wsl_20261101T231144Z/verificar_posterior.py"
+        ],
+        "inicio_utc": "2026-11-01T23:20:18.169220+00:00",
+        "fin_utc": "2026-11-01T23:20:47.572725+00:00",
+        "codigo_salida": 0,
+        "estado": "APROBADO"
+      }
+    ],
+    "commit_aportado": {
+      "captura": "operaciones/commit_cierre.stdout.txt",
+      "rama": "codex/integracion-laboratorio-09",
+      "sha_corto_observado": "6a5fdaf",
+      "mensaje": "Integra laboratorio 9 y evidencia WSL auditada",
+      "rutas_total_en_captura": 795,
+      "sha_y_arbol_completos": "operaciones/identidad_commit_cierre.stdout.txt"
+    },
+    "integracion_aportada": {
+      "comando": [
+        "git",
+        "merge",
+        "--ff-only",
+        "codex/integracion-laboratorio-09"
+      ],
+      "captura": "operaciones/integrar_main_avance_rapido.stdout.txt",
+      "salida_observada": [
+        "Updating 9212ee9..6a5fdaf",
+        "Fast-forward"
+      ],
+      "codigo_salida": 0
+    },
+    "push_aportado": {
+      "comando_exacto": [
+        "git",
+        "push",
+        "--atomic",
+        "--no-follow-tags",
+        "origin",
+        "refs/heads/main:refs/heads/main",
+        "refs/tags/lab-09-v1.0:refs/tags/lab-09-v1.0",
+        "refs/tags/repositorio-v1.5:refs/tags/repositorio-v1.5"
+      ],
+      "coincide_prompt_de_cierre_recibido": true,
+      "repositorio": "https://github.com/ccortesg/laboratorios-desarrollo-ia.git",
+      "captura": "operaciones/push_atomico_autorizado.stderr.txt",
+      "codigo_salida": 0,
+      "referencias_explicitadas": [
+        "refs/heads/main",
+        "refs/tags/lab-09-v1.0",
+        "refs/tags/repositorio-v1.5"
+      ],
+      "opciones_forzadas_o_expansiones_ausentes": true,
+      "stdout_vacio": true
+    },
+    "estado_local_final_aportado": {
+      "rama": "main",
+      "head": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+      "arbol": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+      "main": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+      "origin_main": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+      "status_porcelain_stdout_bytes": 0,
+      "fuentes": [
+        "operaciones/identidad_local_final.stdout.txt",
+        "operaciones/estado_local_final.stdout.txt",
+        "operaciones/ramas_finales.stdout.txt"
+      ]
+    },
+    "limite": "La coherencia de comandos, capturas y códigos acredita lo recibido; no autentica retrospectivamente el equipo del productor ni demuestra ausencia de comandos externos al registro. La referencia actual y el árbol reciben corroboración remota separada."
+  },
+  "referencias": {
+    "estado": "APROBADO",
+    "consultas_antes_coincidentes": [
+      "remotas_iniciales",
+      "remotas_precommit",
+      "remotas_antes_integracion",
+      "remotas_prepublicacion"
+    ],
+    "main_antes": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+    "main_despues": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+    "historicas_conservadas": {
+      "refs/tags/lab-01-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "refs/tags/lab-02-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "refs/tags/lab-03-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "refs/tags/lab-04-v1.1": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "refs/tags/lab-05-v1.0": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+      "refs/tags/lab-06-v1.0": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+      "refs/tags/lab-07-v1.0": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "refs/tags/lab-08-v1.0": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+      "refs/tags/repositorio-v1.0": "52875ff15c6648f9a042a15a94da812e37effa40",
+      "refs/tags/repositorio-v1.1": "67edef7b44524f5f621e9b060c6b9c523c1b05a8",
+      "refs/tags/repositorio-v1.2": "31aaf0615ed1be1d0b6718d57b3d6ddb974a0cbd",
+      "refs/tags/repositorio-v1.3": "46f389bc4acf3e231a8eb1a1bb3972db0fe7e622",
+      "refs/tags/repositorio-v1.4": "9212ee99b88f70f0b289837b88d6bbf34da91a52"
+    },
+    "numero_historicas": 13,
+    "nuevas": {
+      "refs/tags/lab-09-v1.0": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+      "refs/tags/repositorio-v1.5": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3"
+    },
+    "tipo_nuevas": "ligeras: los comandos git tag no contienen -a ni -f y cat-file -t devuelve commit; reconsulta coordinada coincide.",
+    "referencias_remotas_retiradas": [],
+    "otras_referencias_remotas_modificadas_en_capturas": [],
+    "declaracion_PUBLICACION_CONFIRMADA_coincide_capturas": true,
+    "consulta_coordinada": {
+      "autor": "/root",
+      "fecha_utc": "2026-11-01 23:35:34 UTC",
+      "archivo": "REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+      "arbol": "ARBOL_REMOTO.json",
+      "cotejo": "COTEJO_ARBOL_PUBLICADO.json",
+      "sha256_referencias": "69f2d500993021105a0e2e257c12a054bfeca9cba4d07ac94700ee153d0d5a25",
+      "sha256_arbol": "9a2ab3088a1adf0331d1894b3d366dda085eafe31cee11ecf78d40a47ffcad6f",
+      "limite": "Consulta puntual ajena a esta subrevisión, leída y cotejada aquí; no representa nuevos accesos de este auditor.",
+      "blobs": "BLOBS_DOCUMENTALES_VERIFICADOS.json y documentos_remotos/"
+    }
+  },
+  "pruebas_y_entorno": {
+    "recolector_nueva_ejecucion_aportada": {
+      "estado": "APROBADO",
+      "pruebas": 8,
+      "nombres": [
+        "test_comprobador_detecta_modificacion_posterior_sin_escribir",
+        "test_conserva_resultados_y_aclara_convenciones",
+        "test_huella_inicial_incorrecta_rechaza_sin_reescritura",
+        "test_no_ejecutado_sin_salidas_no_inventa_huellas",
+        "test_preserva_lf_crlf_unicode_y_salida_vacia",
+        "test_referencia_externa_se_rechaza_sin_escribir",
+        "test_registro_incompleto_no_se_omite_silenciosamente",
+        "test_saneamiento_actualiza_huella_final_y_conserva_captura"
+      ],
+      "salida_capturada": "Ran 8 tests in 0.023s; OK",
+      "codigo_salida": 0,
+      "stderr": "operaciones/recolector.stderr.txt",
+      "sha256_stderr": "829a91770f61f37ba02e59579c4834a7c8e93d31efe11f4e22809bcef265aff9",
+      "stdout_bytes": 0,
+      "nombres_coinciden_con_ocho_metodos_del_test_conocido": true,
+      "sha256_archivo_pruebas": "49c1892607cb5609aec93a8f5f15b614bdd869cd7242181d8b196fec12069c9d",
+      "fuentes_recolector_y_pruebas_iguales_en_base_funcional_y_final": true,
+      "precision": "Ocho ejecuciones nuevas de pruebas existentes; no ocho pruebas de código añadidas."
+    },
+    "funcionales_anteriores": {
+      "atribucion": "Evidencia WSL anterior incorporada exactamente en el ZIP de revisión, no batería ejecutada por el cierre ni por esta auditoría.",
+      "fuente": "insumos/REVISION_LABORATORIO_09_WSL_v1.0.zip :: auditoria/RESULTADO_AUDITORIA.json",
+      "laboratorios": 9,
+      "baterias": 92,
+      "ejecutados": 805,
+      "aprobados": 781,
+      "fallidos_didacticos": 24,
+      "bloqueados": 0,
+      "errores_de_ejecucion": 0,
+      "no_ejecutados_en_baterias": 48,
+      "criterios_ausentes_fuera_de_baterias": 10,
+      "solucion_09": {
+        "casos_registrados": 74,
+        "ejecutados": 74,
+        "aprobados": 74,
+        "fallidos": 0,
+        "fallos_de_asercion": 0,
+        "bloqueados": 0,
+        "no_ejecutados": 0,
+        "errores_de_ejecucion": 0
+      },
+      "infraestructura_historica_separada": {
+        "recolector": 8,
+        "evaluador_09": 9,
+        "recursos_sqlite": 4,
+        "estado": "APROBADO"
+      }
+    },
+    "nuevas_baterias_funcionales_en_registros_cierre": "NO EJECUTADO; no se identifica comando de repetición funcional en las 64 operaciones.",
+    "nuevas_baterias_funcionales_por_este_auditor": "NO EJECUTADO",
+    "entorno_aportado": {
+      "sistema": "Linux/WSL2",
+      "python_funcional": "3.12.16",
+      "sqlite": "3.53.1",
+      "python_preparacion": "3.10.12",
+      "fuentes": [
+        "entorno_inicial.json",
+        "operaciones/entorno_runtime.stdout.txt"
+      ],
+      "limite": "Datos de capturas del productor; no inspección directa de su equipo."
+    },
+    "windows_nativo_CI_produccion_interacciones_IA_nuevas": "NO EJECUTADO en este cierre; los documentos finales lo expresan."
+  },
+  "documentos_finales": {
+    "estado": "APROBADO",
+    "archivos": [
+      {
+        "archivo": "entrega/CIERRE_LABORATORIO_09_CONFIRMADO_v1.0.md",
+        "bytes": 3568,
+        "sha256": "7acacb2d55fdd9fd8e8e1856f1ae8d485f5717c7a41a43034de8830aa8d78dd8",
+        "manifiesto_coincidente": true,
+        "enlaces_locales_comprobados": 6,
+        "lectura_semantica": "APROBADO",
+        "naturaleza": "Comprobante posterior externo al commit; distingue la preparación incorporada y la publicación confirmada."
+      },
+      {
+        "archivo": "entrega/ESTADO_DEL_LIBRO_v1.8.3.md",
+        "bytes": 3237,
+        "sha256": "088acf4a7fa4095da438892f452f7618f0d297d425e87d754faff03a36dd81ed",
+        "manifiesto_coincidente": true,
+        "enlaces_locales_comprobados": 0,
+        "lectura_semantica": "APROBADO",
+        "naturaleza": "Comprobante posterior externo al commit; distingue la preparación incorporada y la publicación confirmada."
+      },
+      {
+        "archivo": "entrega/ESTADO_REPOSITORIO_v1.7.3.md",
+        "bytes": 3249,
+        "sha256": "2e7e19a1b5c3bc8f6d03822ac669e478973f1427c7f059a44b9f2d8cac51391c",
+        "manifiesto_coincidente": true,
+        "enlaces_locales_comprobados": 0,
+        "lectura_semantica": "APROBADO",
+        "naturaleza": "Comprobante posterior externo al commit; distingue la preparación incorporada y la publicación confirmada."
+      },
+      {
+        "archivo": "entrega/INFORME_CIERRE_LABORATORIO_09_WSL_v1.0.md",
+        "bytes": 9419,
+        "sha256": "2f1e3cab9b46e1c7c27e0fab98e7dc763deb7c3efe3931e6433a309a92f97310",
+        "manifiesto_coincidente": true,
+        "enlaces_locales_comprobados": 4,
+        "lectura_semantica": "APROBADO",
+        "naturaleza": "Comprobante posterior externo al commit; distingue la preparación incorporada y la publicación confirmada."
+      }
+    ],
+    "enlaces_locales_totales_validos": 10,
+    "coherencia": "Libro 1.8.3 y repositorio 1.7.3 enlazan conceptualmente sus antecedentes 1.8.2/1.7.2 y las revisiones exactas 1.8.1/1.7.1; el cierre confirmado y el informe utilizan el mismo commit, árbol, base y límites. Los cuatro quedan fuera del commit que acreditan y figuran en el manifiesto del cierre.",
+    "criterios_editoriales": "Maestro 1.0 y manuscritos declarados sin cambios; capítulos 1–9 pendientes de revisión editorial; capítulo 10 no redactado. El delta Git verificado es documental, sin inferir una inspección de manuscritos externos no recibidos."
+  },
+  "observaciones_no_bloqueantes": [
+    "El total final es 2273 archivos originales + 24 añadidos = 2297; entre los originales, 2268 conservan identidad y cinco documentos de raíz fueron modificados.",
+    "29 rutas documentales adicionales y 795 rutas del commit corresponden a bases diferentes, y ambas cuentas se verifican.",
+    "Las 62 operaciones de la tabla previa y 64 del registro definitivo están explicadas por generar_documentos_finales y validacion_posterior.",
+    "Las 210 huellas de evidencia anterior y las 128 capturas nuevas pertenecen a ámbitos separados; 338 es su suma declarada. Aquí se recalcularon las 128 nuevas; el cotejo exhaustivo de las 210 anteriores corresponde a la auditoría de integridad coordinada.",
+    "Los estados incorporados al commit son preparatorios; los posteriores 1.8.3/1.7.3 y el comprobante confirmado se entregan externamente para evitar autorreferencia."
+  ],
+  "discrepancias": [],
+  "limites": [
+    "Los hashes y tamaños verifican los bytes recibidos y su identidad con fuentes conocidas; no equivalen por sí solos a autenticación de procedencia, reloj o plataforma del productor.",
+    "La ejecución original de commit, merge, pruebas y push se evalúa mediante las capturas recibidas; no se repitió ni se accedió al disco WSL del autor.",
+    "La consulta remota posterior, realizada por /root y cotejada aquí, confirma commit, padre, árbol y referencias en su instante de consulta; no impide cambios legítimos posteriores.",
+    "Las dos capturas originales históricas ausentes del paquete anterior siguen sin reconstruirse; conservar un hash no permite recuperar sus bytes. Los finales entregados conservan su ámbito propio.",
+    "Las 128 capturas nuevas incluidas coinciden con ambos hashes declarados; la existencia de otra carpeta de originales fuera del ZIP es una declaración del productor no inspeccionada aquí.",
+    "La revisión editorial del autor y el estado de manuscritos fuera del repositorio no quedan certificados por esta comprobación técnica."
+  ],
+  "conclusion": "Sin discrepancias en el alcance revisado. Las identidades Git, conservación, referencias consultadas, capturas de las operaciones autorizadas y continuidad documental son coherentes y están cotejadas. Las ejecuciones del productor conservan atribución a su evidencia; no se realizaron nuevas baterías funcionales por esta auditoría."
+}

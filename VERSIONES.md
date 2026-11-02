@@ -1,3 +1,35 @@
+# Versiones vigentes · cierre técnico 1.6 preparado
+
+**Fecha:** 2026-11-01T19:11:54-07:00 · America/Hermosillo; UTC 2026-11-02T02:11:54.339921+00:00. Estados preparados: [libro 1.9.2](docs/estados/ESTADO_DEL_LIBRO_v1.9.2.md) y [repositorio 1.8.2](docs/estados/ESTADO_REPOSITORIO_v1.8.2.md). Revisión recibida 1.9.1/1.8.1 conservada exacta.
+
+La instrucción expresa del autor autoriza commit en codex/integracion-laboratorio-10, integración en main conservando avances y publicación atómica exclusivamente de main, lab-10-v1.0 y repositorio-v1.6. Este documento se escribe antes del commit y no atribuye publicación futura: commit, integración, etiquetas nuevas y push están pendientes de comprobación. Las consultas posteriores y los estados 1.9.3/1.8.3 se conservarán fuera del commit que describen, sólo según el resultado real.
+
+La sesión WSL auditada registró 125 baterías, 1.043 ejecuciones, 1.018 APROBADO y 25 FALLIDO didácticos exactos; cero bloqueos y errores. Los 56 NO EJECUTADO y diez criterios ausentes se mantienen aparte. Solución 10: 82/82; base: 74 aprobados y ocho NO EJECUTADO; propuesta: 81 aprobados y sólo T02 FALLIDO por aserción. T08 acredita navegador real. Son resultados anteriores, no reejecutados en el cierre.
+
+En este cierre documental se verifican el manifiesto recibido, todas las huellas declaradas, incluidos recibos anidados, la identidad de archivos protegidos y las diferencias del índice. Las ocho pruebas nuevas del recolector aprobaron con código 0, como infraestructura separada. Dos intentos iniciales no arrancaron por una ruta incorrecta al runtime y se conservan como BLOQUEADO; la ruta correcta resolvió el impedimento. No se repite la batería funcional porque se conserva la identidad técnica auditada.
+
+Maestro editorial 1.0 conservado. Los capítulos 1–10 siguen pendientes de revisión editorial integral del autor. No se modifican manuscritos ni se redacta contenido adicional. WSL2/Linux no acredita Windows nativo, CI remota ni una nueva interacción comercial.
+
+Consulta [la revisión incorporada](evidencia_integracion/revision_laboratorio_10_wsl/README.md). Los comprobantes de publicación y sus identidades reales se generan fuera del commit, en `trabajo/cierre_lab10_wsl_20261102T020833Z/`. Las restricciones de preparaciones anteriores describen sus encargos históricos y quedan subordinadas a esta autorización expresa.
+
+## Antecedentes íntegros conservados
+
+# Versiones vigentes · integración 1.6 preparada para revisión
+
+**Fecha:** 2 de noviembre de 2026, UTC. Libro 1.9; estado del repositorio 1.8. Maestro 1.0 conservado. Los capítulos 1–10 están pendientes de revisión editorial.
+
+| Material o referencia | Estado actual |
+| --- | --- |
+| lab-09-v1.0 y repositorio-v1.5 | Publicadas y confirmadas en 6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3. |
+| Quince etiquetas históricas | Identidades conservadas; consultas de sólo lectura. |
+| LABORATORIO_10_v1.0.zip | Distribución autónoma nueva; SHA-256 5e39d5fb92e2408684003809d65f753b16929c7ad649e70f1c8eec0e26eb54f3. |
+| lab-10-v1.0 | Nombre previsto; NO CREADO. |
+| repositorio-v1.6 | Nombre previsto; NO CREADO. |
+
+La preparación se realiza en integracion/laboratorio-10. El árbol preparado y el SHA-256 del parche están en BASE_INTEGRACION.json del paquete; no hay un commit nuevo de esta entrega. Main no se integra ni se publica. El manuscrito se entrega por separado, sin convertir la aprobación técnica en revisión editorial.
+
+## Antecedentes íntegros
+
 # Versiones vigentes · cierre 1.5 preparado, publicación pendiente
 
 **Fecha:** 1 de noviembre de 2026. Estados documentales [libro 1.8.2](docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md) y [repositorio 1.7.2](docs/estados/ESTADO_REPOSITORIO_v1.7.2.md). La revisión recibida 1.8.1/1.7.1 se conserva exacta. Maestro editorial 1.0; capítulos 1–9 pendientes de revisión editorial.

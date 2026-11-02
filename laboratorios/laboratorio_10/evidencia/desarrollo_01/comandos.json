@@ -1,0 +1,126 @@
+{
+  "registros": [
+    {
+      "id": "base_automatizacion",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_automatizacion.py",
+        "--estado",
+        "base",
+        "--json",
+        "<SALIDA>/base_automatizacion.json"
+      ],
+      "codigo_salida": 0,
+      "fecha_utc": "2026-11-02T00:08:05.356067+00:00",
+      "stdout": "base.stdout.txt",
+      "sha256_stdout": "64673e58bc0028a9a0a61d4455cd121494c80ac2a573b46bab24d9b13ba2dedd",
+      "stderr": "base.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "64673e58bc0028a9a0a61d4455cd121494c80ac2a573b46bab24d9b13ba2dedd",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_automatizacion",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_automatizacion.py",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_automatizacion.json"
+      ],
+      "codigo_salida": 1,
+      "fecha_utc": "2026-11-02T00:08:07.061450+00:00",
+      "stdout": "propuesta.stdout.txt",
+      "sha256_stdout": "e30aa6fb68bf2479fe59df7394d8e348a9e70fd6a84cab53dbe381f7b200a64c",
+      "stderr": "propuesta.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "e30aa6fb68bf2479fe59df7394d8e348a9e70fd6a84cab53dbe381f7b200a64c",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_automatizacion",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_automatizacion.py",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_automatizacion.json"
+      ],
+      "codigo_salida": 0,
+      "fecha_utc": "2026-11-02T00:08:08.492254+00:00",
+      "stdout": "solucion.stdout.txt",
+      "sha256_stdout": "492059fa95fe6f1ef97c993294ce196d884a6e142cb483fb0aab0928ca3dc8b5",
+      "stderr": "solucion.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "492059fa95fe6f1ef97c993294ce196d884a6e142cb483fb0aab0928ca3dc8b5",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "base_automatizacion_navegador",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_automatizacion_navegador.py",
+        "--estado",
+        "base",
+        "--json",
+        "<SALIDA>/base_automatizacion_navegador.json"
+      ],
+      "codigo_salida": 0,
+      "fecha_utc": "2026-11-02T00:08:35.896182+00:00",
+      "stdout": "base.navegador.stdout.txt",
+      "sha256_stdout": "c0c7c188de65b0348b6dc31867516fc9245609d57fff060f0ac06a5f6ecd4b93",
+      "stderr": "base.navegador.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "c0c7c188de65b0348b6dc31867516fc9245609d57fff060f0ac06a5f6ecd4b93",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "propuesta_automatizacion_navegador",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_automatizacion_navegador.py",
+        "--estado",
+        "propuesta",
+        "--json",
+        "<SALIDA>/propuesta_automatizacion_navegador.json"
+      ],
+      "codigo_salida": 0,
+      "fecha_utc": "2026-11-02T00:08:37.965351+00:00",
+      "stdout": "propuesta.navegador.stdout.txt",
+      "sha256_stdout": "9d6d82be5c2e62f757c39c22fb0d2556326ace7e1a37b2e65a4769337868e177",
+      "stderr": "propuesta.navegador.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "9d6d82be5c2e62f757c39c22fb0d2556326ace7e1a37b2e65a4769337868e177",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "solucion_automatizacion_navegador",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_automatizacion_navegador.py",
+        "--estado",
+        "solucion",
+        "--json",
+        "<SALIDA>/solucion_automatizacion_navegador.json"
+      ],
+      "codigo_salida": 0,
+      "fecha_utc": "2026-11-02T00:08:39.970446+00:00",
+      "stdout": "solucion.navegador.stdout.txt",
+      "sha256_stdout": "9d6d82be5c2e62f757c39c22fb0d2556326ace7e1a37b2e65a4769337868e177",
+      "stderr": "solucion.navegador.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "9d6d82be5c2e62f757c39c22fb0d2556326ace7e1a37b2e65a4769337868e177",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

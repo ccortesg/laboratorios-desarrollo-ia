@@ -1,0 +1,106 @@
+{
+  "estado": "APROBADO",
+  "fecha_auditoria_utc": "2026-11-01T23:42:37.008133+00:00",
+  "alcance": "Integridad, conservación, coherencia documental y comprobación remota del cierre recibido del laboratorio 9.",
+  "entrada": {
+    "fecha_recepcion_utc": "2026-11-01T23:34:14.620583+00:00",
+    "archivo": "EVIDENCIA_CIERRE_LABORATORIO_09_WSL_v1.0.zip",
+    "sha256": "d43d7559dc53df91fbc44524d40508c77813f29637bc5ce1aac33a214bd70757",
+    "bytes": 1131278,
+    "entradas": 675,
+    "bytes_extraidos": 4309250,
+    "estado_crc": "APROBADO",
+    "estado_rutas": "APROBADO",
+    "original_conservado": true
+  },
+  "publicacion": {
+    "commit": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+    "arbol": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+    "padre": "9212ee99b88f70f0b289837b88d6bbf34da91a52",
+    "referencias": [
+      "refs/heads/main",
+      "refs/tags/lab-09-v1.0",
+      "refs/tags/repositorio-v1.5"
+    ],
+    "fecha_consulta_remota_utc": "2026-11-01 23:35:34 UTC",
+    "historicas_conservadas": 13,
+    "etiquetas_totales": 15
+  },
+  "integridad": {
+    "archivos_zip": 675,
+    "entradas_manifiesto": 674,
+    "archivos_manifestados_coincidentes": 674,
+    "unica_exclusion_del_manifiesto": "MANIFIESTO_CIERRE.json",
+    "copias_extraidas_identicas": 675,
+    "huellas_stdout_stderr_declaradas_y_coincidentes": 338,
+    "huellas_nuevas": 128,
+    "operaciones_nuevas": 64,
+    "huellas_historicas": 210,
+    "capturas_historicas_saneadas_con_original_externo_no_disponible": 2,
+    "errores_materiales_detectados": 0,
+    "scripts_recibidos_ejecutados": false,
+    "red_utilizada": false
+  },
+  "conservacion": {
+    "arbol_funcional_auditado": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+    "archivos_previos": 2273,
+    "previos_identicos": 2268,
+    "modificados_documentales": 5,
+    "agregados_documentales": 24,
+    "retirados": 0,
+    "archivos_finales": 2297,
+    "protegidos_conservados": 1502,
+    "rutas_documentales_cotejadas_con_bytes": 29
+  },
+  "funcionales_historicas": {
+    "procedencia": "Ejecución WSL anterior recibida y auditada, sin repetición en el cierre ni en esta revisión.",
+    "baterias": 92,
+    "ejecuciones": 805,
+    "aprobado": 781,
+    "fallido_didactico": 24,
+    "bloqueado": 0,
+    "errores_ejecucion": 0,
+    "no_ejecutado_baterias": 48,
+    "criterios_ausentes_aparte": 10,
+    "solucion_09": {
+      "aprobado": 74,
+      "total": 74
+    }
+  },
+  "ejecucion_cierre_recibida": {
+    "operaciones": 64,
+    "codigos_salida_cero": 64,
+    "nueva_ejecucion_pruebas_existentes_recolector": 8,
+    "pruebas_recolector_codigo_salida": 0,
+    "repeticion_funcionales_805": "NO EJECUTADO",
+    "estado_equipo_local": "Limpio al cierre según evidencia recibida; equipo WSL no accesible en esta auditoría."
+  },
+  "huellas_finales": {
+    "nuevas_cierre": 128,
+    "historicas": 210,
+    "total": 338,
+    "coinciden": 338,
+    "originales_historicos_saneados_no_incluidos": 2
+  },
+  "continuidad_vigente": {
+    "maestro": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md",
+    "libro": "ESTADO_DEL_LIBRO_v1.8.3.md",
+    "repositorio": "ESTADO_REPOSITORIO_v1.7.3.md",
+    "cierre": "CIERRE_LABORATORIO_09_CONFIRMADO_v1.0.md",
+    "ubicacion_estados_posteriores": "Fuera del commit confirmado; copias exactas en documentos_recibidos/entrega y en el ZIP original.",
+    "revision_editorial": "Pendiente del autor para los capítulos 1–9."
+  },
+  "pendientes_cierre": [],
+  "hallazgos_materiales": [],
+  "limites": [
+    "La auditoría no repite baterías funcionales y no accede al disco WSL del autor.",
+    "Dos capturas originales históricas anteriores al saneamiento no fueron aportadas; sus bytes finales sí se verificaron.",
+    "La integridad no equivale a firma digital ni autentica por sí sola el origen de una ejecución.",
+    "La anonimización se examinó mediante patrones concretos; no constituye auditoría universal de secretos.",
+    "Las consultas remotas son puntuales; main puede avanzar legítimamente después.",
+    "Windows nativo, CI remota, producción y nuevas interacciones con herramientas comerciales no se ejecutaron en esta revisión."
+  ],
+  "siguiente_tarea": "Producción del capítulo y laboratorio 10 mediante el prompt preparado, todavía no ejecutado.",
+  "sin_cambios_remotos": true,
+  "capitulo_10_redactado": false
+}

@@ -1,0 +1,240 @@
+{
+  "estado": "APROBADO",
+  "commit": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+  "fecha_consulta_documentos_utc": "2026-11-01T23:38:48.781Z",
+  "archivos": [
+    {
+      "ruta": "AGENTS.md",
+      "git_sha1": "1291a733c78211b9e487e84daf98abe3e1bc3320",
+      "sha256": "2512425956186fa55592681999df693c8211b47d97988cbfde73d683f0eb359d",
+      "bytes": 10279,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "CONTINUIDAD.md",
+      "git_sha1": "b986d39562f3108e4749f9cbbf460f6ddcfef6db",
+      "sha256": "00163ce6f261355de14ec7a7cf2e972d48510f88b4559c6d8ebbdec798767194",
+      "bytes": 24138,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "PROCEDENCIA.json",
+      "git_sha1": "d9e8dca5d747fe4acc73888f471adda8f7bf87fc",
+      "sha256": "c2e12ddcf66d200d830920786af527942070e5604c21866774dfa1529d8bdbca",
+      "bytes": 143905,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "README.md",
+      "git_sha1": "b96ec45b57d4c2556ce4a8ced1319c9c971d6366",
+      "sha256": "c7be7d1b9100bc92c203ee0eb9b8b14c982d25760e729831bdf871d20dd39264",
+      "bytes": 18815,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "VERSIONES.md",
+      "git_sha1": "6ca2375365f7076a2ec58c4cd6037f4f8d9b52c5",
+      "sha256": "49ec922cd3ed8db9ef8d704d0374b074155f75960289cfc9706644797e3408e5",
+      "bytes": 10539,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.1.md",
+      "git_sha1": "e8154a9f147a46cd88fdfdd709d27c2d8d3c52f9",
+      "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+      "bytes": 4177,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+      "git_sha1": "0817572ed2b4c2fddb5479a6f228f2b48e86478d",
+      "sha256": "4416819fd0fbb717a87732f7e19b546d405eab51d484e591f93e9224008c0a9d",
+      "bytes": 2411,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.1.md",
+      "git_sha1": "a1d0013f463fd8fdde32627e833f1032f29e8ffd",
+      "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+      "bytes": 5283,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md",
+      "git_sha1": "57ee2c9138686acff1a2c8ad21c82b8411dc6888",
+      "sha256": "1eb7e2d275f8fbcfad80b7194511a0319be709bf239d6dfa1944f10610fd807d",
+      "bytes": 2427,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/INCORPORACION.json",
+      "git_sha1": "e6beae6bd47bc6f8b81bea0ad05c7bd8b1dd706b",
+      "sha256": "e2edc36eb686a1402c93f1ded06e60e16b5810e38d10493e17b303a4f043f545",
+      "bytes": 3871,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/README.md",
+      "git_sha1": "9f313e4c92635a3d0e61298497d91fcc44fc7143",
+      "sha256": "81fc4d8a984dbfde9a1bad46f60b956b948ed58b706d55a070f3826c5aa58930",
+      "bytes": 1671,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/REVISION_LABORATORIO_09_WSL_v1.0.zip",
+      "git_sha1": "8d2b35996572b3b189796bab4472e92c079f98ea",
+      "sha256": "3309df01455ce38f8c0e29ced072ea63fa33c788ef1d240f24336714bce64eaf",
+      "bytes": 357759,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/SHA256SUMS",
+      "git_sha1": "586aae40dc753119304b9518b44308223835d883",
+      "sha256": "224905a8b3c0a093eb6422696b7936c8dfbdcd343df78823cbb307940f61f362",
+      "bytes": 2125,
+      "coincide": true,
+      "origen_cotejo": "Blob consultado en el repositorio remoto por su SHA"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_DEL_LIBRO_v1.8.1.md",
+      "git_sha1": "e8154a9f147a46cd88fdfdd709d27c2d8d3c52f9",
+      "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+      "bytes": 4177,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_REPOSITORIO_v1.7.1.md",
+      "git_sha1": "a1d0013f463fd8fdde32627e833f1032f29e8ffd",
+      "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+      "bytes": 5283,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/LEEME.md",
+      "git_sha1": "b372aaa06b6860f0e2bf26c45cea9af0426ba7f5",
+      "sha256": "c25179ebf18a9a2e14e01f53fee9f2d3bc92dfb059c98ee8ec0e3cec7d977ca8",
+      "bytes": 1895,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/PROMPT_CIERRE_LABORATORIO_09_v1.0.md",
+      "git_sha1": "8b50ad9731bb121bf0fa298142630928cdb2ce8a",
+      "sha256": "1fdd627ad04398cb9fb4b325911d7d09f8ef87ffd26ed47d58282ab944e8c625",
+      "bytes": 10530,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/REVISION_LABORATORIO_09_WSL_v1.0.md",
+      "git_sha1": "2b0a74929190e5270f48d9f0a6351f2f05c2fa99",
+      "sha256": "403d910cba86868777d3178cdc71a02920832a5dcff994969f0b5e3e728f6115",
+      "bytes": 11072,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/SHA256SUMS",
+      "git_sha1": "c6d63077555ed8d4cba922f01017a87c3cf707e6",
+      "sha256": "57369dee4999b9daf4f55b7f7486dcbe72f349e376619190296f6c3059ada37d",
+      "bytes": 1496,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/VERIFICAR_PAQUETE.py",
+      "git_sha1": "163d22956b561d925fb047614d9108c262f37771",
+      "sha256": "eb8838dc6afde9c2d7bca774ea309ea97910afdf871069e8017cc45769713a94",
+      "bytes": 1746,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_DEL_LIBRO_v1.8.md",
+      "git_sha1": "9da348972af1cd719f036203d8d5886bf5bf9d10",
+      "sha256": "9f6350d4e2c5acb43bd6a89e4e257854a2b529625e92769fd91920f22ecc3e68",
+      "bytes": 6309,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_REPOSITORIO_v1.7.md",
+      "git_sha1": "bf734f2669252e673161553802c95e7ffc370771",
+      "sha256": "0471319eb4dbfc403a7905219bbaa9e630b0c82991b5abac2e938d0cb8f871bc",
+      "bytes": 7680,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/FUNCIONAL_INDEPENDIENTE.json",
+      "git_sha1": "cec96ce782784f25f8c977f6589876e8da284b9d",
+      "sha256": "44dfcd7879b96bbfece187fb6229b2b46845b8c35b7f87c9059f7b0aa68cadc2",
+      "bytes": 446801,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/GIT_Y_CONSERVACION.json",
+      "git_sha1": "7ea38a16d272157111ed0ecd63ce0a9db51fedb0",
+      "sha256": "7057af0e23d2a58f450c1b12ddddfd661fa16b7c5153faeb31952235fc96fe83",
+      "bytes": 1372,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/INTEGRIDAD_INDEPENDIENTE.json",
+      "git_sha1": "ee90a815375353e8e7cfb17ea6c2233abec4113b",
+      "sha256": "249c1a73f6aabc2ddf1a100cdcbf6d96876631fbdcab24ec383828a39a98d240",
+      "bytes": 345390,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RECEPCION.json",
+      "git_sha1": "19ae74fb0ea513ff03ded97cb285626625d645ec",
+      "sha256": "cee51361e1946744ac774cf68cda3bf9b77fa16c66bf087c2ac3264ad92c261a",
+      "bytes": 348,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+      "git_sha1": "c632fcf3f6132f601296289446f42e4c5dfef791",
+      "sha256": "0cb631d43a9482855b4bc841b996601dd9e89b99c7e76e5069dc9c23f5e6f189",
+      "bytes": 2240,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RESULTADO_AUDITORIA.json",
+      "git_sha1": "3e36c43fdc324dccb6eb7035bae448f270487a78",
+      "sha256": "24c628d639ee22f2ad4afa38d9ab7a71d043dab42a2a0ccf68db2151373f767f",
+      "bytes": 3365,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+      "git_sha1": "6be38f32f3087e83943804e7f525eb260d167e18",
+      "sha256": "6aaeb6ce9e0cf781239499fae2f57bb147b5b2b07b7a20d5cfbd5d61a4ffb239",
+      "bytes": 412572,
+      "coincide": true,
+      "origen_cotejo": "Revisión WSL anterior exacta y sus miembros"
+    }
+  ],
+  "limite": "Los hashes se cotejaron con bytes disponibles o recuperados. Los enlaces remotos son consultas de sólo lectura; ninguna publicación se efectuó durante esta revisión."
+}

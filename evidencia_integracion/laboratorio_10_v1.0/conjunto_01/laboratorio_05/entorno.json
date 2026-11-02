@@ -1,0 +1,11 @@
+{
+  "fecha_utc": "2026-11-02T00:10:56.546365+00:00",
+  "sistema": "Linux",
+  "implementacion_python": "CPython",
+  "version_python": "3.12.14",
+  "version_sqlite": "3.53.1",
+  "dependencias_externas": [],
+  "ejecucion": "Local",
+  "sesion_copilot": "NO EJECUTADO por este verificador",
+  "saneamiento": "Se omiten usuario, equipo, rutas absolutas y variables de entorno."
+}

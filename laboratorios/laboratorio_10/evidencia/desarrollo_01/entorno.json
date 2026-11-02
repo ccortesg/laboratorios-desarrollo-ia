@@ -1,0 +1,8 @@
+{
+  "fecha_utc": "2026-11-02T00:08:39.971173+00:00",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "sistema": "Linux",
+  "alcance": "Pruebas focales T01–T08 durante desarrollo; no conjunto heredado completo.",
+  "atribucion": "Ejecución local, no Windows ni uso comercial acreditado."
+}

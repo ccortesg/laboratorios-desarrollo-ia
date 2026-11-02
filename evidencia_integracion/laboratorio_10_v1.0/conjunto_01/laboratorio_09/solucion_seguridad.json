@@ -1,0 +1,1328 @@
+{
+  "bateria": "seguridad",
+  "estado_codigo": "copia_del_lector",
+  "casos_registrados": 11,
+  "criterios_distintos": 7,
+  "ejecutados": 11,
+  "aprobados": 11,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "S01",
+      "prueba": "test_s01_consulta_valida_y_borde",
+      "criterio": "S01: consultar datos importados conserva búsqueda y acepta 80 puntos de código.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "archivo": "datos/actualizacion_valida.csv",
+        "almacen": "ALFA",
+        "nombre_normalizado": " AGOTADO ",
+        "nombre_en_limite": "é × 80"
+      },
+      "esperado": {
+        "catalogo": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "busqueda": [
+          "A03"
+        ],
+        "nombre_80_http": 200,
+        "almacen_desconocido": []
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:05.894213+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:05.950473+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:05.989992+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "alfa",
+                "codigos_disponibles": []
+              }
+            ]
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 12,
+            "query": "almacen=ALFA",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 29,
+            "query": "almacen=ALFA&nombre=+AGOTADO+",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 1,
+              "codigos": [
+                "A03"
+              ]
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 500,
+            "query": "<CONSULTA_SINTETICA_LARGA>",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 0,
+              "codigos": []
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 12,
+            "query": "almacen=alfa",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "alfa",
+              "total": 0,
+              "codigos": []
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S02.a",
+      "prueba": "test_s02a_dos_almacenes",
+      "criterio": "S02.a: dos valores de almacén se rechazan sin elegir uno.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "almacen=ALFA&almacen=BETA",
+        "query_bytes": 25
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "PARAMETRO_REPETIDO",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.052397+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:06.096787+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:06.134780+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 25,
+            "query": "almacen=ALFA&almacen=BETA",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "PARAMETRO_REPETIDO",
+                "mensaje": "Cada parámetro debe aparecer una sola vez."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S02.b",
+      "prueba": "test_s02b_nombre_igual_repetido",
+      "criterio": "S02.b: repetir nombre se rechaza incluso con valores iguales.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "almacen=ALFA&nombre=local&nombre=local",
+        "query_bytes": 38
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "PARAMETRO_REPETIDO",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.210534+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:06.265603+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:06.308811+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 38,
+            "query": "almacen=ALFA&nombre=local&nombre=local",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "PARAMETRO_REPETIDO",
+                "mensaje": "Cada parámetro debe aparecer una sola vez."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S02.c",
+      "prueba": "test_s02c_clave_codificada_equivalente",
+      "criterio": "S02.c: las claves equivalentes tras decodificar se reconocen como repetidas.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "almacen=ALFA&%61lmacen=ALFA",
+        "query_bytes": 27
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "PARAMETRO_REPETIDO",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.364413+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:06.416015+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:06.477565+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 27,
+            "query": "almacen=ALFA&%61lmacen=ALFA",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "PARAMETRO_REPETIDO",
+                "mensaje": "Cada parámetro debe aparecer una sola vez."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S03",
+      "prueba": "test_s03_clave_adicional",
+      "criterio": "S03: una clave adicional no se ignora silenciosamente.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "almacen=ALFA&debug=1",
+        "query_bytes": 20
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "PARAMETRO_DESCONOCIDO",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.542943+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:06.595077+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:06.640783+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 20,
+            "query": "almacen=ALFA&debug=1",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "PARAMETRO_DESCONOCIDO",
+                "mensaje": "La consulta contiene un parámetro no admitido."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S04.a",
+      "prueba": "test_s04a_nombre_largo_antes_de_strip",
+      "criterio": "S04.a: 81 puntos de código, también espacios, exceden el límite.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "<CONSULTA_SINTETICA_LARGA>",
+        "query_bytes": 506
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "NOMBRE_DEMASIADO_LARGO",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.697871+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:06.738919+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:06.784499+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 101,
+            "query": "almacen=ALFA&nombre=+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "NOMBRE_DEMASIADO_LARGO",
+                "mensaje": "El nombre admite hasta 80 puntos de código Unicode."
+              }
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 506,
+            "query": "<CONSULTA_SINTETICA_LARGA>",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "NOMBRE_DEMASIADO_LARGO",
+                "mensaje": "El nombre admite hasta 80 puntos de código Unicode."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S04.b",
+      "prueba": "test_s04b_query_larga_y_recuperacion",
+      "criterio": "S04.b: 2048 bytes son el borde; 2049 se rechazan y la siguiente consulta funciona.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "<CONSULTA_SINTETICA_LARGA>",
+        "query_bytes": 2049
+      },
+      "esperado": {
+        "http": 414,
+        "codigo": "CONSULTA_DEMASIADO_LARGA",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.837460+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:06.888552+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:06.928166+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "codigos_disponibles": []
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 2048,
+            "query": "<CONSULTA_SINTETICA_LARGA>",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "total": 0,
+              "codigos": []
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 2049,
+            "query": "<CONSULTA_SINTETICA_LARGA>",
+            "http": 414,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "CONSULTA_DEMASIADO_LARGA",
+                "mensaje": "La consulta supera el tamaño permitido."
+              }
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 12,
+            "query": "almacen=ALFA",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S05.a",
+      "prueba": "test_s05a_percent_invalido",
+      "criterio": "S05.a: percent-encoding mal formado se rechaza, no se convierte en texto válido.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "almacen=ALFA&nombre=%ZZ",
+        "query_bytes": 23
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "CONSULTA_INVALIDA",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:06.983623+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:07.029900+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:07.066896+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 23,
+            "query": "almacen=ALFA&nombre=%ZZ",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "CONSULTA_INVALIDA",
+                "mensaje": "La consulta no tiene una codificación válida."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S05.b",
+      "prueba": "test_s05b_utf8_invalido",
+      "criterio": "S05.b: bytes UTF-8 inválidos se rechazan sin carácter de sustitución.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "query": "almacen=ALFA&nombre=%FF",
+        "query_bytes": 23
+      },
+      "esperado": {
+        "http": 400,
+        "codigo": "CONSULTA_INVALIDA",
+        "sin_modificar_base": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:07.127703+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:07.171414+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:07.208100+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": []
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 23,
+            "query": "almacen=ALFA&nombre=%FF",
+            "http": 400,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "CONSULTA_INVALIDA",
+                "mensaje": "La consulta no tiene una codificación válida."
+              }
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S07",
+      "prueba": "test_s07_texto_parecido_a_sql",
+      "criterio": "S07: una cadena parecida a SQL sigue siendo un valor de búsqueda.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "almacen": "ALFA",
+        "nombre": "%' OR 1=1 --"
+      },
+      "esperado": {
+        "http": 200,
+        "total": 0,
+        "codigos": [],
+        "base_sin_modificaciones": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:07.278401+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:07.322147+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:07.361357+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 38,
+            "query": "almacen=ALFA&nombre=%25%27+OR+1%3D1+--",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 0,
+              "codigos": []
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 12,
+            "query": "almacen=ALFA",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "S08",
+      "prueba": "test_s08_error_interno_generico_y_recuperacion",
+      "criterio": "S08: una base temporalmente ausente produce un error genérico y se recupera.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "fallo_controlado": "Renombrar la base aislada después de iniciar el servidor."
+      },
+      "esperado": {
+        "http": 500,
+        "codigo": "CONSULTA_FALLIDA",
+        "recuperacion": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        }
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:07.416931+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:12:07.490029+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:12:07.532775+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          }
+        ],
+        "peticiones": [
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 12,
+            "query": "almacen=ALFA",
+            "http": 500,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "error": {
+                "codigo": "CONSULTA_FALLIDA",
+                "mensaje": "No fue posible consultar el catálogo."
+              }
+            }
+          },
+          {
+            "metodo": "GET",
+            "ruta": "/api/resumen",
+            "query_bytes": 12,
+            "query": "almacen=ALFA",
+            "http": 200,
+            "content_type": "application/json; charset=utf-8",
+            "respuesta": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          }
+        ],
+        "base_sin_modificaciones": true
+      },
+      "comando_terminal": null
+    }
+  ]
+}

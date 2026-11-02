@@ -1,0 +1,13 @@
+test_r01_snapshot_conserva_datos_y_libera_archivo (__main__.RecursosSQLiteTests.test_r01_snapshot_conserva_datos_y_libera_archivo)
+R01: una lectura correcta deja la conexión cerrada y el archivo liberado. ... ok
+test_r02_snapshot_libera_archivo_al_fallar_consulta (__main__.RecursosSQLiteTests.test_r02_snapshot_libera_archivo_al_fallar_consulta)
+R02: una consulta inválida propaga el error y libera la conexión. ... ok
+test_r03_d06b_confirma_fixture_y_libera_conexion (__main__.RecursosSQLiteTests.test_r03_d06b_confirma_fixture_y_libera_conexion)
+R03: D06.b confirma su dato sintético, conserva el rechazo y cierra. ... ok
+test_r04_d06b_revierte_y_cierra_si_escritura_falla (__main__.RecursosSQLiteTests.test_r04_d06b_revierte_y_cierra_si_escritura_falla)
+R04: una escritura interrumpida revierte el dato y libera el archivo. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.184s
+
+OK

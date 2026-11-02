@@ -1,0 +1,27 @@
+{
+  "estado": "FALLIDO",
+  "codigo_salida": 1,
+  "fecha_hora_utc": "2026-11-02T00:11:21.695524+00:00",
+  "entrada": {
+    "archivo": "entrada.csv",
+    "bytes": 59,
+    "sha256": "359019da6c7e778ebc3a7a9271b20988921109943c9d041f5ac48bc66c80220c"
+  },
+  "base": "archivo:principal",
+  "almacen": "ALFA",
+  "importacion_confirmada": false,
+  "pasos": [
+    {
+      "paso": "importar",
+      "estado": "FALLIDO",
+      "codigo_salida": 1
+    },
+    {
+      "paso": "consultar",
+      "estado": "NO EJECUTADO",
+      "codigo_salida": null
+    }
+  ],
+  "resumen": null,
+  "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+}

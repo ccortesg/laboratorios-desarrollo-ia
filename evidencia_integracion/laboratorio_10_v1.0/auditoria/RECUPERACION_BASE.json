@@ -1,0 +1,28 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T00:01:37.785852+00:00",
+  "commit": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+  "arbol": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+  "rama": "integracion/laboratorio-10",
+  "archivos": 2297,
+  "documentos_cotejados": 29,
+  "fsck_connectivity_exit": 0,
+  "limpio": true,
+  "metodo": "Recuperación de objetos originales disponibles y 29 documentos cotejados con GitHub; se aceptaron sólo los SHA exactos del commit y árbol remoto. No se generó commit sustituto.",
+  "limite_historial": "Se conserva exactamente la frontera superficial de la copia previa, commit 6382e05846e149a9a72f7fdc56da48c37a873833. Los contratos del laboratorio 4 usan sus bundles conservados.",
+  "intentos_transporte_git": [
+    {
+      "estado": "BLOQUEADO",
+      "ambito": "sandbox",
+      "motivo": "Proxy de terminal inaccesible."
+    },
+    {
+      "estado": "BLOQUEADO",
+      "ambito": "red permitida",
+      "motivo": "Git CLI sin autenticación disponible; consultas por conexión GitHub autorizada funcionan."
+    }
+  ],
+  "resolucion": "Consulta de referencias y recuperación exacta por API autorizada y objetos locales comprobados.",
+  "referencias_remotas_modificadas": false,
+  "etiquetas_creadas_o_movidas": false
+}

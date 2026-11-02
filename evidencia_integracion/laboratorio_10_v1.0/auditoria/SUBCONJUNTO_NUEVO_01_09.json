@@ -1,0 +1,23 @@
+{
+  "estado": "APROBADO",
+  "sesion": "Ejecución nueva de producción capítulo10; Linux, 02nov2026UTC",
+  "subconjunto_01_09": {
+    "baterias": 92,
+    "ejecutados": 805,
+    "aprobados": 781,
+    "fallidos": 24,
+    "no_ejecutados": 48,
+    "bloqueados": 0
+  },
+  "total_01_10": {
+    "laboratorios": 10,
+    "baterias": 125,
+    "ejecutados": 1043,
+    "aprobados": 1018,
+    "fallidos": 25,
+    "bloqueados": 0,
+    "no_ejecutados_en_baterias": 56,
+    "no_ejecutados_fuera_de_baterias": 10
+  },
+  "separacion": "La coincidencia con conteos históricos no reutiliza sus resultados. Se ejecutaron otra vez los procesos locales."
+}

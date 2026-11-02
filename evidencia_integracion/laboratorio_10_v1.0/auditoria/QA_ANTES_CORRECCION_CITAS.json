@@ -1,0 +1,41 @@
+{
+  "estado_estructural": "APROBADO",
+  "estado_visual": "FALLIDO",
+  "fecha_generacion_utc": "2026-11-02T00:19:03+00:00",
+  "python": "3.12.14",
+  "runtime_primario_declarado": true,
+  "parrafos_contenido": 136,
+  "tablas": 1,
+  "secciones": 10,
+  "bloques_codigo": 9,
+  "hipervinculos_unicos": 4,
+  "equivalencia_texto_en_orden": true,
+  "equivalencia_codigo": true,
+  "equivalencia_urls": true,
+  "metadatos_personales_vacios": true,
+  "sha256_texto_visible_en_orden": "37819855c64a94ff234f2026c0782f3731bfb2fb395c3ddfcc50136b104cc919",
+  "anchos_tablas_pulgadas": [
+    [
+      2.3,
+      1.4,
+      1.5,
+      1.5
+    ]
+  ],
+  "lineas_codigo_mas_de_80_columnas": [],
+  "nota_codigo": "Las líneas se conservan exactamente; se inspeccionarán los ajustes visuales en el render.",
+  "urls_visibles_largas": [],
+  "nota_bibliografia": "Usar etiquetas descriptivas en hipervínculos conserva sus destinos y evita URLs largas visibles; inspeccionar el render completo.",
+  "sin_comentarios_ni_revisiones": true,
+  "sha256_markdown": "594774a2db632833019d757a391f9f696dbd10bc5f6233431d2d05c7d2099956",
+  "sha256_docx": "56af64d28b94b61ebfe5e43e8ac26a1b023250033daaa97e78487516f470fa30",
+  "palabras_markdown_por_espacios": 4228,
+  "fuente_presentacion": "CAPITULO_09_v1.0.docx",
+  "sha256_referencia_presentacion": "bbe37f183612530d065a143969c209904eafc812d5adb00d23330efc23c1ee59",
+  "paginas": null,
+  "paginas_inspeccionadas": [],
+  "fallos_pendientes": [
+    "Revisión visual"
+  ],
+  "hallazgo": "Marcadores vacíos de cita Markdown visibles como > en página6; corregido el parser antes de la entrega."
+}

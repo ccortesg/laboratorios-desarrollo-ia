@@ -1,0 +1,26 @@
+{
+  "registros": [
+    {
+      "id": "cuatro_pruebas_recursos",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_recursos.py"
+      ],
+      "cwd": "DIRECTORIO_DE_EJECUCION",
+      "inicio_utc": "2026-11-02T00:09:04.693502+00:00",
+      "fin_utc": "2026-11-02T00:09:04.988325+00:00",
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "timeout": false,
+      "stdout": "stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "stderr.txt",
+      "sha256_stderr": "b689f3df2af2d9abd2bb0e7b24d572e80a09d236000c25a306627eaaf141618c",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "b689f3df2af2d9abd2bb0e7b24d572e80a09d236000c25a306627eaaf141618c"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

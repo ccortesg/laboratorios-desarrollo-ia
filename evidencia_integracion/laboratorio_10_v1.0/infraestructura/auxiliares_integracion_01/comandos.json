@@ -1,0 +1,154 @@
+{
+  "registros": [
+    {
+      "id": "ejecutar_verificacion_ayuda",
+      "comando": [
+        "python",
+        "-B",
+        "EJECUTAR_VERIFICACION.py",
+        "--help"
+      ],
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "evaluacion": "APROBADO",
+      "stdout": "ejecutar_verificacion_ayuda.stdout.txt",
+      "sha256_stdout": "30febabd30c3fa820fc455159d5f671c0f20051880425f8ad85b52411ac29f56",
+      "stderr": "ejecutar_verificacion_ayuda.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "30febabd30c3fa820fc455159d5f671c0f20051880425f8ad85b52411ac29f56",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "empaquetar_evidencia_ayuda",
+      "comando": [
+        "python",
+        "-B",
+        "EMPAQUETAR_EVIDENCIA.py",
+        "--help"
+      ],
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "evaluacion": "APROBADO",
+      "stdout": "empaquetar_evidencia_ayuda.stdout.txt",
+      "sha256_stdout": "20edda1d8619c5b7417105a09bf8a5fcb730670983ef3d6e55c765e76f7e443b",
+      "stderr": "empaquetar_evidencia_ayuda.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "20edda1d8619c5b7417105a09bf8a5fcb730670983ef3d6e55c765e76f7e443b",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "registrar_estado_ayuda",
+      "comando": [
+        "python",
+        "-B",
+        "REGISTRAR_ESTADO.py",
+        "--help"
+      ],
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "evaluacion": "APROBADO",
+      "stdout": "registrar_estado_ayuda.stdout.txt",
+      "sha256_stdout": "eb8e55fd235f8250aaeb8a161aa0346e97fa3c7cc43389f44c21fc250483fbb6",
+      "stderr": "registrar_estado_ayuda.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "eb8e55fd235f8250aaeb8a161aa0346e97fa3c7cc43389f44c21fc250483fbb6",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "verificar_paquete_ayuda",
+      "comando": [
+        "python",
+        "-B",
+        "VERIFICAR_PAQUETE.py",
+        "--help"
+      ],
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "evaluacion": "APROBADO",
+      "stdout": "verificar_paquete_ayuda.stdout.txt",
+      "sha256_stdout": "23b3cc1253e8ef4fe4623dd0633eef1a73a10cf5189d9fad998b163cdb10e312",
+      "stderr": "verificar_paquete_ayuda.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "23b3cc1253e8ef4fe4623dd0633eef1a73a10cf5189d9fad998b163cdb10e312",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "manifiesto_sintetico_valido",
+      "comando": [
+        "python",
+        "-B",
+        "TEMPORAL/auxiliares_lab10_5i6mzebv/paquete_sintetico/VERIFICAR_PAQUETE.py"
+      ],
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "evaluacion": "APROBADO",
+      "stdout": "manifiesto_sintetico_valido.stdout.txt",
+      "sha256_stdout": "8f4f90a94490f21abd6409cf0c513b29759bdcc587289c661b9f7ce7e7d48bb0",
+      "stderr": "manifiesto_sintetico_valido.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "8f4f90a94490f21abd6409cf0c513b29759bdcc587289c661b9f7ce7e7d48bb0",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "manifiesto_sintetico_alterado",
+      "comando": [
+        "python",
+        "-B",
+        "TEMPORAL/auxiliares_lab10_5i6mzebv/paquete_sintetico/VERIFICAR_PAQUETE.py"
+      ],
+      "codigo_salida": 1,
+      "codigo_esperado": 1,
+      "evaluacion": "APROBADO",
+      "stdout": "manifiesto_sintetico_alterado.stdout.txt",
+      "sha256_stdout": "b222223f3356b28ce8337616a53377c761d8540c9a503e154846e93e86bcae46",
+      "stderr": "manifiesto_sintetico_alterado.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "b222223f3356b28ce8337616a53377c761d8540c9a503e154846e93e86bcae46",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "empaquetado_sintetico_nuevo",
+      "comando": [
+        "python",
+        "-B",
+        "PAQUETE/EMPAQUETAR_EVIDENCIA.py",
+        "--origen",
+        "TEMPORAL/auxiliares_lab10_5i6mzebv/evidencia_sintetica",
+        "--destino",
+        "TEMPORAL/auxiliares_lab10_5i6mzebv/envio.zip"
+      ],
+      "codigo_salida": 0,
+      "codigo_esperado": 0,
+      "evaluacion": "APROBADO",
+      "stdout": "empaquetado_sintetico_nuevo.stdout.txt",
+      "sha256_stdout": "e88d0773757a4938ac46e186679598b37fd1374ee7dea64297b5983b8b249879",
+      "stderr": "empaquetado_sintetico_nuevo.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "e88d0773757a4938ac46e186679598b37fd1374ee7dea64297b5983b8b249879",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "empaquetado_rechaza_sobrescritura",
+      "comando": [
+        "python",
+        "-B",
+        "PAQUETE/EMPAQUETAR_EVIDENCIA.py",
+        "--origen",
+        "TEMPORAL/auxiliares_lab10_5i6mzebv/evidencia_sintetica",
+        "--destino",
+        "TEMPORAL/auxiliares_lab10_5i6mzebv/envio.zip"
+      ],
+      "codigo_salida": 1,
+      "codigo_esperado": 1,
+      "evaluacion": "APROBADO",
+      "stdout": "empaquetado_rechaza_sobrescritura.stdout.txt",
+      "sha256_stdout": "6d7c656119c6fd00a862965017e5fabbee1b24a2ff7804d99db9a8a0e50ddcad",
+      "stderr": "empaquetado_rechaza_sobrescritura.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "6d7c656119c6fd00a862965017e5fabbee1b24a2ff7804d99db9a8a0e50ddcad",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

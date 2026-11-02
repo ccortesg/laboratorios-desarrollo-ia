@@ -1,0 +1,12 @@
+{
+  "name": "laboratorio-10-automatizacion-operacion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright para las comprobaciones de navegador del laboratorio sintético",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-01T23:16:10.083868+00:00",
+  "arbol_funcional_auditado": "251105483bc5bef040c57dc3a036d5bc3a7e0da0",
+  "arbol_documental": "790e875fc95495c39ea2b5ebe7621a4ae1afa30f",
+  "rutas_documentales": [
+    {
+      "ruta": "AGENTS.md",
+      "sha256": "2512425956186fa55592681999df693c8211b47d97988cbfde73d683f0eb359d",
+      "bytes": 10279
+    },
+    {
+      "ruta": "CONTINUIDAD.md",
+      "sha256": "00163ce6f261355de14ec7a7cf2e972d48510f88b4559c6d8ebbdec798767194",
+      "bytes": 24138
+    },
+    {
+      "ruta": "PROCEDENCIA.json",
+      "sha256": "c2e12ddcf66d200d830920786af527942070e5604c21866774dfa1529d8bdbca",
+      "bytes": 143905
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "c7be7d1b9100bc92c203ee0eb9b8b14c982d25760e729831bdf871d20dd39264",
+      "bytes": 18815
+    },
+    {
+      "ruta": "VERSIONES.md",
+      "sha256": "49ec922cd3ed8db9ef8d704d0374b074155f75960289cfc9706644797e3408e5",
+      "bytes": 10539
+    },
+    {
+      "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.1.md",
+      "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+      "bytes": 4177
+    },
+    {
+      "ruta": "docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md",
+      "sha256": "4416819fd0fbb717a87732f7e19b546d405eab51d484e591f93e9224008c0a9d",
+      "bytes": 2411
+    },
+    {
+      "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.1.md",
+      "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+      "bytes": 5283
+    },
+    {
+      "ruta": "docs/estados/ESTADO_REPOSITORIO_v1.7.2.md",
+      "sha256": "1eb7e2d275f8fbcfad80b7194511a0319be709bf239d6dfa1944f10610fd807d",
+      "bytes": 2427
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/INCORPORACION.json",
+      "sha256": "e2edc36eb686a1402c93f1ded06e60e16b5810e38d10493e17b303a4f043f545",
+      "bytes": 3871
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/README.md",
+      "sha256": "81fc4d8a984dbfde9a1bad46f60b956b948ed58b706d55a070f3826c5aa58930",
+      "bytes": 1671
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/REVISION_LABORATORIO_09_WSL_v1.0.zip",
+      "sha256": "3309df01455ce38f8c0e29ced072ea63fa33c788ef1d240f24336714bce64eaf",
+      "bytes": 357759
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/SHA256SUMS",
+      "sha256": "224905a8b3c0a093eb6422696b7936c8dfbdcd343df78823cbb307940f61f362",
+      "bytes": 2125
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_DEL_LIBRO_v1.8.1.md",
+      "sha256": "3b0e166b500ee9f8c5e77f0274920d5d75a030be67c58994604c8be9b62b1941",
+      "bytes": 4177
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/ESTADO_REPOSITORIO_v1.7.1.md",
+      "sha256": "178e7d5ab1244f2204db583dad7e592971cbe8932606630b7540248f66d889d7",
+      "bytes": 5283
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/LEEME.md",
+      "sha256": "c25179ebf18a9a2e14e01f53fee9f2d3bc92dfb059c98ee8ec0e3cec7d977ca8",
+      "bytes": 1895
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/PROMPT_CIERRE_LABORATORIO_09_v1.0.md",
+      "sha256": "1fdd627ad04398cb9fb4b325911d7d09f8ef87ffd26ed47d58282ab944e8c625",
+      "bytes": 10530
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/REVISION_LABORATORIO_09_WSL_v1.0.md",
+      "sha256": "403d910cba86868777d3178cdc71a02920832a5dcff994969f0b5e3e728f6115",
+      "bytes": 11072
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/SHA256SUMS",
+      "sha256": "57369dee4999b9daf4f55b7f7486dcbe72f349e376619190296f6c3059ada37d",
+      "bytes": 1496
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/VERIFICAR_PAQUETE.py",
+      "sha256": "eb8838dc6afde9c2d7bca774ea309ea97910afdf871069e8017cc45769713a94",
+      "bytes": 1746
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_DEL_LIBRO_v1.8.md",
+      "sha256": "9f6350d4e2c5acb43bd6a89e4e257854a2b529625e92769fd91920f22ecc3e68",
+      "bytes": 6309
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/antecedentes/ESTADO_REPOSITORIO_v1.7.md",
+      "sha256": "0471319eb4dbfc403a7905219bbaa9e630b0c82991b5abac2e938d0cb8f871bc",
+      "bytes": 7680
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/FUNCIONAL_INDEPENDIENTE.json",
+      "sha256": "44dfcd7879b96bbfece187fb6229b2b46845b8c35b7f87c9059f7b0aa68cadc2",
+      "bytes": 446801
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/GIT_Y_CONSERVACION.json",
+      "sha256": "7057af0e23d2a58f450c1b12ddddfd661fa16b7c5153faeb31952235fc96fe83",
+      "bytes": 1372
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/INTEGRIDAD_INDEPENDIENTE.json",
+      "sha256": "249c1a73f6aabc2ddf1a100cdcbf6d96876631fbdcab24ec383828a39a98d240",
+      "bytes": 345390
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RECEPCION.json",
+      "sha256": "cee51361e1946744ac774cf68cda3bf9b77fa16c66bf087c2ac3264ad92c261a",
+      "bytes": 348
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/REFERENCIAS_REMOTAS_RECONSULTADAS.json",
+      "sha256": "0cb631d43a9482855b4bc841b996601dd9e89b99c7e76e5069dc9c23f5e6f189",
+      "bytes": 2240
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/auditoria/RESULTADO_AUDITORIA.json",
+      "sha256": "24c628d639ee22f2ad4afa38d9ab7a71d043dab42a2a0ccf68db2151373f767f",
+      "bytes": 3365
+    },
+    {
+      "ruta": "evidencia_integracion/revision_laboratorio_09_wsl/revision_recibida/recibido/EVIDENCIA_LABORATORIO_09_WSL_v1.0.zip",
+      "sha256": "6aaeb6ce9e0cf781239499fae2f57bb147b5b2b07b7a20d5cfbd5d61a4ffb239",
+      "bytes": 412572
+    }
+  ],
+  "documentos_raiz_modificados": [
+    {
+      "ruta": "AGENTS.md",
+      "sha256_anterior": "f51b0c4a1afea90936e977b35eb1f8df6384415f3fa3feb951c7c85840df2abd",
+      "sha256_final": "2512425956186fa55592681999df693c8211b47d97988cbfde73d683f0eb359d"
+    },
+    {
+      "ruta": "CONTINUIDAD.md",
+      "sha256_anterior": "4f36602539bc4c485260b8af96a786146633538674d0b8cde4044bfabb247e68",
+      "sha256_final": "00163ce6f261355de14ec7a7cf2e972d48510f88b4559c6d8ebbdec798767194"
+    },
+    {
+      "ruta": "PROCEDENCIA.json",
+      "sha256_anterior": "9dc9432675bf0ea783764f28185e68799da3ca5d4d6a13081beb68910af3d60d",
+      "sha256_final": "c2e12ddcf66d200d830920786af527942070e5604c21866774dfa1529d8bdbca"
+    },
+    {
+      "ruta": "README.md",
+      "sha256_anterior": "a903f74717b536cb0077b37552785bd2b3aa70d24c7004413c12010206e5598f",
+      "sha256_final": "c7be7d1b9100bc92c203ee0eb9b8b14c982d25760e729831bdf871d20dd39264"
+    },
+    {
+      "ruta": "VERSIONES.md",
+      "sha256_anterior": "a7ffd9c73614f49fef2e32835087fcfd7b62126296db9d12c840f876cdf4d1de",
+      "sha256_final": "49ec922cd3ed8db9ef8d704d0374b074155f75960289cfc9706644797e3408e5"
+    }
+  ],
+  "archivos_funcionales_conservados": 2268,
+  "archivos_protegidos_coincidentes": 1502,
+  "recolector_y_pruebas": "Idénticos a base y árbol auditado",
+  "manifiesto_incorporacion": {
+    "declarados": 19,
+    "coincidentes": 19,
+    "cobertura": "APROBADO"
+  },
+  "confidencialidad": {
+    "estado": "APROBADO",
+    "hallazgos": [],
+    "alcance": "Patrones de rutas personales y secretos en documentos añadidos; paquetes originales exactos previamente revisados."
+  },
+  "funcionales_nuevas": "NO EJECUTADO: sólo documentos y evidencia; fuentes intactas",
+  "recolector_nuevo": "APROBADO: 8 pruebas, salida 0",
+  "huellas_evidencia_anterior": "APROBADO: todas las declaradas, sin fijar contador histórico"
+}

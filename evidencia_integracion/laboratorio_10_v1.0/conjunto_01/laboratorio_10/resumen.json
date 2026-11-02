@@ -1,0 +1,846 @@
+{
+  "estado": "APROBADO",
+  "alcance_ejecutado": "APROBADO",
+  "extremo_a_extremo": "APROBADO",
+  "fecha_hora_utc": "2026-11-02T00:12:51.657848+00:00",
+  "navegador_solicitado": true,
+  "interpretacion": "APROBADO global exige HTTP y navegador reales. Los ocho T de base están NO EJECUTADO porque no existe el operador; T02 en propuesta detecta la continuación indebida tras un rechazo. Conserva FALLIDO y todos los heredados deben aprobar. Sin --navegador, salida 0 solo aprueba el alcance de dominio/terminal/HTTP y no el recorrido completo.",
+  "baterias": [
+    {
+      "estado_codigo": "base",
+      "bateria": "heredados",
+      "resultado": "base_heredados.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "resumen",
+      "resultado": "base_resumen.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "http",
+      "resultado": "base_http.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "navegador",
+      "resultado": "base_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "integracion",
+      "resultado": "base_integracion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "depuracion",
+      "resultado": "base_depuracion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "depuracion_navegador",
+      "resultado": "base_depuracion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "seguridad",
+      "resultado": "base_seguridad.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "seguridad_navegador",
+      "resultado": "base_seguridad_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "automatizacion",
+      "resultado": "base_automatizacion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ]
+      },
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 7,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "automatizacion_navegador",
+      "resultado": "base_automatizacion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": [
+          "T08"
+        ]
+      },
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 1,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "heredados",
+      "resultado": "propuesta_heredados.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "resumen",
+      "resultado": "propuesta_resumen.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "http",
+      "resultado": "propuesta_http.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "navegador",
+      "resultado": "propuesta_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "integracion",
+      "resultado": "propuesta_integracion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "depuracion",
+      "resultado": "propuesta_depuracion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "depuracion_navegador",
+      "resultado": "propuesta_depuracion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "seguridad",
+      "resultado": "propuesta_seguridad.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "seguridad_navegador",
+      "resultado": "propuesta_seguridad_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "automatizacion",
+      "resultado": "propuesta_automatizacion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [
+          "T02"
+        ],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 7,
+      "aprobados": 6,
+      "fallidos": 1,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "automatizacion_navegador",
+      "resultado": "propuesta_automatizacion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "heredados",
+      "resultado": "solucion_heredados.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "resumen",
+      "resultado": "solucion_resumen.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "http",
+      "resultado": "solucion_http.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "navegador",
+      "resultado": "solucion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "integracion",
+      "resultado": "solucion_integracion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "depuracion",
+      "resultado": "solucion_depuracion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "depuracion_navegador",
+      "resultado": "solucion_depuracion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "seguridad",
+      "resultado": "solucion_seguridad.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "seguridad_navegador",
+      "resultado": "solucion_seguridad_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "automatizacion",
+      "resultado": "solucion_automatizacion.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 7,
+      "aprobados": 7,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "automatizacion_navegador",
+      "resultado": "solucion_automatizacion_navegador.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "bloqueados": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    }
+  ],
+  "totales": {
+    "ejecutados": 238,
+    "aprobados": 237,
+    "fallidos": 1,
+    "bloqueados": 0,
+    "no_ejecutados": 8,
+    "errores_de_ejecucion": 0
+  },
+  "conservacion_heredados": "APROBADO",
+  "base_sin_incremento_automatizacion": "APROBADO",
+  "huellas_salidas": {
+    "estado": "APROBADO",
+    "comprobadas": 116,
+    "coincidentes": 116,
+    "discrepancias": []
+  },
+  "criterios_solucion": 64,
+  "casos_solucion": 82,
+  "herramientas_comerciales": "NO EJECUTADO por este verificador",
+  "limites": [
+    "No demuestra una sesión comercial ni producción.",
+    "W06.b es un fallo de transporte provocado en el navegador de prueba.",
+    "I06 comprueba rechazo de entrada y escritura; no simula fallos físicos de energía.",
+    "D04 conserva el servidor vivo y ejecuta la importación CLI contra su archivo.",
+    "S06 consulta datos importados, recibe un rechazo HTTP real y recupera la pantalla.",
+    "S07 es una búsqueda sintética: no acredita ausencia general de inyección.",
+    "S08 interrumpe de forma controlada un archivo local aislado, no un sistema externo.",
+    "T08 ejecuta el operador mientras el mismo servidor consulta su base persistente.",
+    "La operación no es una transacción global: una importación confirmada no se revierte si la consulta posterior falla.",
+    "No demuestra autenticación, permisos por usuario, concurrencia ni resistencia global a denegación de servicio.",
+    "No acredita Windows, escritores concurrentes ni uso productivo."
+  ]
+}

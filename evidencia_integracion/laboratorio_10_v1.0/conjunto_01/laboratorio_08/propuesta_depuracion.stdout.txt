@@ -1,0 +1,24 @@
+D01: APROBADO
+D02: APROBADO
+D03: FALLIDO
+  AssertionError: {'alf[28 chars]al': 2, 'codigos': ['A01', 'A03']}, 'beta': {'[170 chars] []}} != {'alf[28 chars]al': 1, 'codigos': ['A01']}, 'beta': {'almacen[163 chars] []}}
+Diff is 840 characters long. Set self.maxDiff to None to see it.
+D05: FALLIDO
+  AssertionError: {'ant[38 chars]al': 2, 'codigos': ['A01', 'A03']}, 'despues_r[88 chars]True} != {'ant[38 chars]al': 1, 'codigos': ['A01']}, 'despues_reinicio[74 chars]True}
+Diff is 651 characters long. Set self.maxDiff to None to see it.
+D06.a: APROBADO
+D06.b: APROBADO
+D07.a: APROBADO
+D07.b: APROBADO
+D08.a: FALLIDO
+  AssertionError: {'pri[31 chars]al': 2, 'codigos': ['A01', 'A03']}, 'segunda':[77 chars]True} != {'pri[31 chars]al': 1, 'codigos': ['A01']}, 'segunda': {'alma[70 chars]True}
+- {'primera': {'almacen': 'ALFA', 'codigos': ['A01', 'A03'], 'total': 2},
+?                                                  -------            ^
+
++ {'primera': {'almacen': 'ALFA', 'codigos': ['A01'], 'total': 1},
+?                                                              ^
+
+   'segunda': {'almacen': 'ALFA', 'codigos': ['A01'], 'total': 1},
+   'segunda_sin_cambios': True}
+D08.b: APROBADO
+{"ejecutados": 10, "aprobados": 7, "fallidos": 3, "bloqueados": 0, "no_ejecutados": 0}

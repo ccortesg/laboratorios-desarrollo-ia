@@ -1,0 +1,14 @@
+{
+  "fecha_utc": "2026-11-02T00:13:43.336096+00:00",
+  "estado": "APROBADO",
+  "alcance": "Sintaxis de los cuatro auxiliares finales y huellas de los seis archivos del paquete.",
+  "decision_posterior_a_ensayo": "La revisión semántica de rutas adaptadas se etiqueta NO EJECUTADO; la lista se identifica como declaración, sin añadir un quinto estado de comprobación.",
+  "sha256_fuentes": {
+    "EJECUTAR_VERIFICACION.py": "d20f946d98c086a613f5dcd15ec94d01a29e8f782e01c1af64debe424b563882",
+    "EMPAQUETAR_EVIDENCIA.py": "b677e5adfe6e03611f083abee07122e0929f5d77201a6e795740f07591d9a9d8",
+    "INSTRUCCIONES_WINDOWS.md": "46b09ca959191c1e1307d899b71e883cdbffc1c3f518e2aa103e8dea183a4c5c",
+    "PROMPT_INTEGRACION_CODEX_LAB10_v1.0.md": "58c3d2edadf9c3b2a90a43f2651281fe06f2820bf067d214444960889636bc95",
+    "REGISTRAR_ESTADO.py": "ddd06f44053dd53f80c71f2ff52e2af01f259c3ea9d66971948d2ac4c15ade94",
+    "VERIFICAR_PAQUETE.py": "7c9b441ad3539eaca56923fc2295366c820e471010e2d0380b48e38c8257caf4"
+  }
+}

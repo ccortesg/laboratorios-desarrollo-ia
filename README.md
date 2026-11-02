@@ -1,16 +1,16 @@
 # Laboratorios de desarrollo de software con IA
 
-**Cierre del laboratorio 9 preparado, publicación pendiente:** revisión WSL incorporada; estados [libro 1.8.2](docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md) y [repositorio 1.7.2](docs/estados/ESTADO_REPOSITORIO_v1.7.2.md). Consulta [la revisión](evidencia_integracion/revision_laboratorio_09_wsl/README.md) y la [continuidad vigente](CONTINUIDAD.md). El encargo del autor autoriza el commit y la publicación limitada; el comprobante posterior se entrega fuera del commit que acredita.
+**Cierre del laboratorio 10 preparado:** estados [libro 1.9.2](docs/estados/ESTADO_DEL_LIBRO_v1.9.2.md) y [repositorio 1.8.2](docs/estados/ESTADO_REPOSITORIO_v1.8.2.md), con [revisión WSL auditada incorporada](evidencia_integracion/revision_laboratorio_10_wsl/README.md). El autor autorizó commit, integración en main y publicación exclusiva de main y lab-10-v1.0/repositorio-v1.6. Este documento previo no confirma esas operaciones; sus comprobantes y estados posteriores quedan fuera del commit que acreditan. Código y evidencia histórica se conservan; capítulos 1–10 pendientes de revisión editorial.
 
 **Actualización técnica del laboratorio 8:** distribución [1.0.1](distribuciones/LABORATORIO_08_v1.0.1.zip), con cierre explícito de SQLite en las pruebas. La ejecución Windows original falló y se conserva; la corrección fue ejecutada por el autor y su evidencia está auditada como APROBADO. Consulta [continuidad vigente](CONTINUIDAD.md).
 
 Material práctico de **Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro**.
 
-Nueve laboratorios locales sobre un catálogo ficticio de solicitudes e inventario. Practican una regla de negocio, la preparación de contexto, encargos de generación/refactorización/depuración, la revisión de cambios en Git, la comparación entre sugerencias y encargos delegados, el recorrido de una aplicación web local, la importación transaccional de datos externos sintéticos la investigación del origen de datos entre procesos y una política de entrada HTTP con casos negativos y recuperación. Todos los datos y escenarios se crearon para el libro.
+Diez laboratorios locales sobre un catálogo ficticio de solicitudes e inventario. Practican una regla de negocio, la preparación de contexto, encargos de generación/refactorización/depuración, la revisión de cambios en Git, la comparación entre sugerencias y encargos delegados, el recorrido de una aplicación web local, la importación transaccional de datos externos sintéticos la investigación del origen de datos entre procesos y una política de entrada HTTP con casos negativos y recuperación, y una operación repetible que se detiene ante un fallo y deja un recibo. Todos los datos y escenarios se crearon para el libro.
 
 **Promesa:** aprende a transformar problemas de software en instrucciones claras, cambios revisables y resultados comprobables, aprovechando la IA desde tu primera sesión.
 
-**Estado editorial:** los capítulos 1 a 9 siguen pendientes de revisión del autor. La integración de este repositorio no equivale a aprobación editorial. El manuscrito se conserva en las entregas editoriales del libro.
+**Estado editorial:** los capítulos 1 a 10 siguen pendientes de revisión del autor. La integración de este repositorio no equivale a aprobación editorial. El manuscrito se conserva en las entregas editoriales del libro.
 
 ## Empieza aquí
 
@@ -33,7 +33,7 @@ python herramientas/verificar_todo.py --salida trabajo/verificacion_02
 Sin `--navegador`, el comando anterior aprueba únicamente el alcance ejecutado; el global y el extremo a extremo quedan **NO EJECUTADO**. El código 0 no acredita la interfaz. Para solicitar el recorrido completo, prepara la dependencia opcional y ejecuta desde la raíz:
 
 ```bash
-cd laboratorios/laboratorio_09
+cd laboratorios/laboratorio_10
 npm install --ignore-scripts --package-lock=false
 npx --no-install playwright install chromium
 cd ../..
@@ -55,6 +55,7 @@ Un resultado global **APROBADO** exige también la interacción real del navegad
 | [07: datos e integraciones](laboratorios/laboratorio_07/README.md) | 1.0 | Contrato CSV, existencias absolutas, atomicidad, idempotencia e I01–I08. |
 | [08: depuración con evidencia](laboratorios/laboratorio_08/README.md) | 1.0.1 | Persistencia explícita, procesos separados, origen efectivo, hipótesis discriminantes y D01–D08. |
 | [09: confiabilidad y seguridad](laboratorios/laboratorio_09/README.md) | 1.0 | Política de query HTTP, límites de confianza, casos negativos, recuperación y S01–S08. |
+| [10: automatización y operación](laboratorios/laboratorio_10/README.md) | 1.0 | Dos CLI fijas, CSV realmente usado, parada ante fallo, recibos verificables y T01–T08. |
 
 **Antes de abrir las instrucciones históricas del laboratorio 4:** su carpeta visible en `laboratorios/` es una instantánea de lectura sin un Git anidado. Sus README originales describen el paquete autónomo. Para seguir el ejercicio de ramas y diferencias, prepara la copia independiente como se indica a continuación.
 
@@ -186,7 +187,7 @@ Consulta `contexto/CONTRATO_SEGURIDAD.md` dentro del laboratorio y `evidencia_in
 | `herramientas/` | Preparación y verificación común; navegador automatizado opcional con dependencias de prueba. |
 | `evidencia_integracion/2026-10-30/` | Registros históricos saneados de la primera integración. |
 | `trabajo/` | Copias de práctica y resultados personales; Git la ignora. |
-| [PROCEDENCIA.json](PROCEDENCIA.json) | Huellas por archivo y paquete; las entradas anteriores se conservan y se añade la del laboratorio 9. |
+| [PROCEDENCIA.json](PROCEDENCIA.json) | Huellas por archivo y paquete; las entradas anteriores se conservan y se añade la del laboratorio 10. |
 | [VERSIONES.md](VERSIONES.md) | Correspondencia entre versiones y etiquetas del repositorio. |
 | [CONTINUIDAD.md](CONTINUIDAD.md) | Decisiones, evidencia, pendientes y siguiente tarea. |
 
@@ -198,7 +199,9 @@ Lee [AGENTS.md](AGENTS.md) y el paquete de contexto del laboratorio correspondie
 
 Los prompts incluidos son ejemplos didácticos. Ejecutar los scripts localmente no acredita uso de Codex, GitHub Copilot ni Grok Build.
 
-## Situación remota y continuidad
+## Antecedente de preparación del cierre 9
+
+Los dos párrafos siguientes conservan la fotografía anterior a publicar el laboratorio 9. Ese pendiente ya quedó cerrado: la base vigente del laboratorio 10 es `6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3`, árbol `790e875fc95495c39ea2b5ebe7621a4ae1afa30f`. El cierre confirmado y sus estados posteriores se incorporan exactos. Para la situación actual consulta la cabecera y [CONTINUIDAD.md](CONTINUIDAD.md).
 
 Base registrada: `9212ee99b88f70f0b289837b88d6bbf34da91a52`, árbol `d7cc2ce8b1502daa6c53c14f2aa1c8fb6984aaf0`. La consulta del 1 de noviembre de 2026 a las 21:50:33 UTC confirmó main, lab-08-v1.0 y repositorio-v1.4 en ese commit y las trece etiquetas intactas. El cierre del laboratorio 8 está publicado; se incorporan sus estados posteriores 1.7.4/1.6.4 y su revisión, conservando la precisión de entorno WSL y el antecedente funcional Windows.
 
@@ -206,4 +209,12 @@ La integración técnica 1.5 está auditada en WSL sobre `251105483bc5bef040c57d
 
 ## Distribución y revisión
 
-La preparación corresponde a un repositorio privado de trabajo. No se ha elegido una licencia para distribución pública. El código del laboratorio es didáctico y no acredita preparación productiva. Para conocer qué quedó efectivamente verificado, consulta [CONTINUIDAD.md](CONTINUIDAD.md) y los registros de integración.
+Este cierre autoriza publicar exclusivamente main y las dos etiquetas nuevas previstas en el repositorio existente. La publicación se confirmará por consulta remota posterior, sin modificar su visibilidad ni publicar el libro. No se ha elegido una licencia para distribución pública. El código del laboratorio es didáctico y no acredita preparación productiva. Para conocer qué quedó efectivamente verificado, consulta [CONTINUIDAD.md](CONTINUIDAD.md) y los registros de integración.
+
+## Operar y verificar el laboratorio 10
+
+El nuevo ejercicio conserva 74 casos y añade ocho T. La solución aprueba 82/82; la propuesta conserva únicamente T02 FALLIDO porque continúa tras una importación rechazada. La base tiene ocho T NO EJECUTADO. El operador no inicia el servidor: T08 observa en un navegador real el mismo servidor antes y después de la operación.
+
+La nueva ejecución conjunta completa de producción obtuvo 125 baterías, 1.043 ejecuciones, 1.018 APROBADO, 25 FALLIDO didácticos exactos y cero bloqueos; 56 NO EJECUTADO y diez criterios ausentes aparte. Las 272/272 huellas verifican los bytes finales. Estas cifras son evidencia Linux nueva y expectativas para una reproducción; los archivos de cada ejecución determinan su resultado.
+
+Para el recorrido concreto y la lectura de recibos, consulta [README del laboratorio 10](laboratorios/laboratorio_10/README.md). Conserva sus contratos anteriores; los estados de seguridad base/propuesta9 no se trasladan al 10. La infraestructura y los ensayos desde distribución y parche se registran por separado. Un resultado APROBADO no acredita producción, seguridad integral, Windows nativo ni uso comercial.

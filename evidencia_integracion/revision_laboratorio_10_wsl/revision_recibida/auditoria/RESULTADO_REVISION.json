@@ -1,0 +1,33 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T01:48:53.445285+00:00",
+  "fecha_hora_autor": "2026-11-01 18:48:53 -0700 · America/Hermosillo",
+  "alcance": "Revisión independiente de evidencia WSL; no nueva batería funcional ni operaciones Git de escritura.",
+  "zip_recibido_sha256": "3a2dd4825f83056ce77cb9d2ef4a0cf5b2da205b68d2298438fd2811c4637818",
+  "base": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+  "arbol_preparado": "78b136a253cb3cb79143a0c81ee09f7892efa40f",
+  "funcionales_atribuidos_wsl": {
+    "baterias": 125,
+    "ejecutados": 1043,
+    "aprobados": 1018,
+    "fallidos_didacticos": 25,
+    "bloqueados": 0,
+    "errores": 0,
+    "no_ejecutados": 56,
+    "ausentes_aparte": 10
+  },
+  "huellas_no_aditivas": {
+    "sesion": 340,
+    "auxiliar": 284,
+    "conjunto": 272
+  },
+  "manifiesto": {
+    "declarados": 665,
+    "coincidentes": 665,
+    "archivos_con_manifiesto": 666
+  },
+  "problemas_materiales_pendientes": [],
+  "cierre_publicado": false,
+  "revision_editorial": "Capítulos 1–10 pendientes del autor.",
+  "proxima_tarea": "Encargo posterior de cierre Git con incorporación documental."
+}

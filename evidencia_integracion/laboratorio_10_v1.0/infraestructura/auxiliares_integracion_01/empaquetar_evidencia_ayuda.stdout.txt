@@ -1,0 +1,8 @@
+usage: EMPAQUETAR_EVIDENCIA.py [-h] --origen ORIGEN --destino DESTINO
+
+Empaqueta sólo una carpeta de evidencia nueva, sin alterar sus archivos.
+
+options:
+  -h, --help         show this help message and exit
+  --origen ORIGEN
+  --destino DESTINO

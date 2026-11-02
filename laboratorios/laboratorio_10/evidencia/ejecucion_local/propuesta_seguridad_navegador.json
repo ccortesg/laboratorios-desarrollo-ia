@@ -1,0 +1,197 @@
+{
+  "bateria": "seguridad_navegador",
+  "casos_registrados": 1,
+  "criterios_distintos": 1,
+  "ejecutados": 1,
+  "aprobados": 1,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "entorno": {
+    "node": "v24.22.1",
+    "playwright": "1.62.1",
+    "navegador": "Chromium",
+    "version_navegador": "151.0.7922.34"
+  },
+  "pruebas": [
+    {
+      "id": "S06",
+      "entrada": {
+        "almacen": "ALFA",
+        "nombre_largo_puntos_codigo": 81,
+        "secuencia": [
+          "consulta válida",
+          "consulta demasiado larga",
+          "consulta válida"
+        ]
+      },
+      "esperado": {
+        "antes": {
+          "http": 200,
+          "estado": "exito",
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "rechazo": {
+          "http": 400,
+          "estado": "error",
+          "resultado_oculto": true,
+          "error_visible": true,
+          "codigos": [],
+          "controles_habilitados": true
+        },
+        "despues": {
+          "http": 200,
+          "estado": "exito",
+          "codigos": [
+            "A03"
+          ],
+          "error_visible": false
+        }
+      },
+      "observado": {
+        "antes": {
+          "http": 200,
+          "estado": "exito",
+          "codigos": [
+            "A01",
+            "A03"
+          ],
+          "resultado_oculto": false,
+          "error_visible": false,
+          "mensaje_error": "",
+          "controles_habilitados": true,
+          "ocupado": "false"
+        },
+        "rechazo": {
+          "http": 400,
+          "estado": "error",
+          "codigos": [],
+          "resultado_oculto": true,
+          "error_visible": true,
+          "mensaje_error": "No fue posible consultar el catálogo. Inténtalo de nuevo.",
+          "controles_habilitados": true,
+          "ocupado": "false"
+        },
+        "despues": {
+          "http": 200,
+          "estado": "exito",
+          "codigos": [
+            "A03"
+          ],
+          "resultado_oculto": false,
+          "error_visible": false,
+          "mensaje_error": "",
+          "controles_habilitados": true,
+          "ocupado": "false"
+        },
+        "mismo_servidor": true
+      },
+      "estado": "APROBADO",
+      "tipo_error": null,
+      "detalle": ""
+    }
+  ],
+  "proceso_navegador": {
+    "comando": [
+      "node",
+      "<LABORATORIO>/pruebas_seguridad_navegador.cjs",
+      "--url",
+      "<URL_LOCAL>",
+      "--json",
+      "<TRABAJO>/navegador.json"
+    ],
+    "codigo_salida": 0,
+    "stdout": "S06: APROBADO\n",
+    "stderr": ""
+  },
+  "base_sin_modificaciones": true,
+  "operaciones_controlador": [
+    {
+      "proceso": "cli_1",
+      "inicio_utc": "2026-11-02T00:11:05.092216+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/persistencia.py",
+        "iniciar",
+        "--base",
+        "<TRABAJO>/principal.sqlite"
+      ],
+      "directorio": "<CODIGO>",
+      "codigo_salida": 0,
+      "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+      "stderr": ""
+    },
+    {
+      "proceso": "cli_2",
+      "inicio_utc": "2026-11-02T00:11:05.142897+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/persistencia.py",
+        "importar",
+        "--base",
+        "<TRABAJO>/principal.sqlite",
+        "--archivo",
+        "<LABORATORIO>/datos/actualizacion_valida.csv"
+      ],
+      "directorio": "<CODIGO>",
+      "codigo_salida": 0,
+      "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+      "stderr": ""
+    },
+    {
+      "proceso": "servidor_3",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/servidor.py",
+        "--puerto",
+        "0",
+        "--base",
+        "<TRABAJO>/principal.sqlite",
+        "--alias",
+        "principal",
+        "--diagnostico",
+        "<TRABAJO>/diagnostico_3.jsonl"
+      ],
+      "directorio": "<CODIGO>",
+      "inicio_utc": "2026-11-02T00:11:05.190242+00:00",
+      "disponibilidad": {
+        "servidor": "local",
+        "url": "<URL_LOCAL>"
+      },
+      "codigo_salida_al_cerrar": -15,
+      "cierre": "Proceso terminado por el controlador de la prueba.",
+      "stderr": "",
+      "diagnostico": [
+        {
+          "evento": "consulta_catalogo",
+          "origen_configurado": "archivo:principal",
+          "origen_efectivo": "archivo:principal",
+          "almacen": "ALFA",
+          "codigos_disponibles": [
+            "A01",
+            "A03"
+          ]
+        },
+        {
+          "evento": "consulta_catalogo",
+          "origen_configurado": "archivo:principal",
+          "origen_efectivo": "archivo:principal",
+          "almacen": "ALFA",
+          "codigos_disponibles": [
+            "A01",
+            "A03"
+          ]
+        }
+      ]
+    }
+  ],
+  "estado_codigo": "copia_del_lector"
+}

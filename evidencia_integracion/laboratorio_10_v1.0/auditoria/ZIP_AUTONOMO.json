@@ -1,0 +1,32 @@
+{
+  "estado": "APROBADO",
+  "operacion": "Extracción y ejecución real desde el ZIP autónomo",
+  "entorno": "Linux, Python3.12.14, SQLite3.53.1, Node24.22.1, Playwright1.62.1, Chrome151.0.7922.34",
+  "zip": {
+    "estado": "APROBADO",
+    "fase": "Preparación y extracción; ejecución funcional pendiente en este registro",
+    "archivo": "LABORATORIO_10_v1.0.zip",
+    "sha256": "5e39d5fb92e2408684003809d65f753b16929c7ad649e70f1c8eec0e26eb54f3",
+    "archivos": 450,
+    "crc": "APROBADO",
+    "bytes_extraidos": "Coinciden con los originales nuevos"
+  },
+  "codigo_salida": 0,
+  "totales": {
+    "ejecutados": 238,
+    "aprobados": 237,
+    "fallidos": 1,
+    "bloqueados": 0,
+    "no_ejecutados": 8,
+    "errores_de_ejecucion": 0
+  },
+  "huellas": {
+    "estado": "APROBADO",
+    "comprobadas": 116,
+    "coincidentes": 116,
+    "discrepancias": []
+  },
+  "baterias": 33,
+  "evidencia": "zip_01/resumen.json",
+  "limite": "No acredita Windows nativo. Es otro ensayo; no se suma como criterios distintos."
+}

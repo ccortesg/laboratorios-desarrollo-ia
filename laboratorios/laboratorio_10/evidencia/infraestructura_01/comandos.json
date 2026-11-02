@@ -1,0 +1,23 @@
+{
+  "registros": [
+    {
+      "id": "RO01",
+      "comando": [
+        "python",
+        "-B",
+        "pruebas_operador_recursos.py"
+      ],
+      "codigo_salida": 0,
+      "fecha_utc": "2026-11-02T00:09:30.205543+00:00",
+      "alcance": "Infraestructura; un método de prueba con dos estados y fallo de inicio inyectado. No se suma a T01–T08.",
+      "stdout": "stdout.txt",
+      "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "stderr.txt",
+      "sha256_stderr": "ebadc349cbf962ceffe76fd800d7bd865b3b5c723b32caf6c841c5e3f8cc6336",
+      "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stderr_capturado": "ebadc349cbf962ceffe76fd800d7bd865b3b5c723b32caf6c841c5e3f8cc6336"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

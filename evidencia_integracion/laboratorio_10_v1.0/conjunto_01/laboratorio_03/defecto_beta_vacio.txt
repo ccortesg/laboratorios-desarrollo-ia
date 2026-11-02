@@ -1,0 +1,11 @@
+{
+  "estado": "defecto",
+  "almacen": "BETA",
+  "texto": "",
+  "articulos": [
+    {
+      "codigo": "A01",
+      "nombre": "Articulo local"
+    }
+  ]
+}

@@ -1,0 +1,1616 @@
+{
+  "bateria": "depuracion",
+  "estado_codigo": "copia_del_lector",
+  "casos_registrados": 10,
+  "criterios_distintos": 7,
+  "ejecutados": 10,
+  "aprobados": 10,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "D01",
+      "prueba": "test_d01_persistencia_y_proceso_nuevo",
+      "criterio": "D01: importar y consultar en procesos separados conserva cantidades y catálogo.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "archivo": "datos/actualizacion_valida.csv",
+        "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+      },
+      "esperado": {
+        "cantidades": [
+          [
+            "A01",
+            "ALFA",
+            5
+          ],
+          [
+            "A02",
+            "ALFA",
+            8
+          ],
+          [
+            "A03",
+            "ALFA",
+            3
+          ],
+          [
+            "A04",
+            "BETA",
+            0
+          ]
+        ],
+        "resumen": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "filas_aplicadas": 4
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:13.946851+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:14.004004+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:14.046168+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "consultar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"CONSULTADO\", \"origen\": \"archivo:principal\", \"resumen\": {\"almacen\": \"ALFA\", \"total\": 2, \"codigos\": [\"A01\", \"A03\"]}, \"datos\": {\"articulos\": [[\"A01\", \"Articulo local\", 1], [\"A02\", \"Articulo deshabilitado\", 0], [\"A03\", \"Articulo agotado\", 1], [\"A04\", \"Articulo de otra ubicacion\", 1]], \"almacenes\": [[\"ALFA\"], [\"BETA\"]], \"existencias\": [[\"A01\", \"ALFA\", 5], [\"A02\", \"ALFA\", 8], [\"A03\", \"ALFA\", 3], [\"A04\", \"BETA\", 0]]}}\n",
+            "stderr": ""
+          }
+        ],
+        "consulta": {
+          "estado": "CONSULTADO",
+          "origen": "archivo:principal",
+          "resumen": {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          "datos": {
+            "articulos": [
+              [
+                "A01",
+                "Articulo local",
+                1
+              ],
+              [
+                "A02",
+                "Articulo deshabilitado",
+                0
+              ],
+              [
+                "A03",
+                "Articulo agotado",
+                1
+              ],
+              [
+                "A04",
+                "Articulo de otra ubicacion",
+                1
+              ]
+            ],
+            "almacenes": [
+              [
+                "ALFA"
+              ],
+              [
+                "BETA"
+              ]
+            ],
+            "existencias": [
+              [
+                "A01",
+                "ALFA",
+                5
+              ],
+              [
+                "A02",
+                "ALFA",
+                8
+              ],
+              [
+                "A03",
+                "ALFA",
+                3
+              ],
+              [
+                "A04",
+                "BETA",
+                0
+              ]
+            ]
+          }
+        },
+        "estado_independiente": {
+          "articulos": [
+            [
+              "A01",
+              "Articulo local",
+              1
+            ],
+            [
+              "A02",
+              "Articulo deshabilitado",
+              0
+            ],
+            [
+              "A03",
+              "Articulo agotado",
+              1
+            ],
+            [
+              "A04",
+              "Articulo de otra ubicacion",
+              1
+            ]
+          ],
+          "almacenes": [
+            [
+              "ALFA"
+            ],
+            [
+              "BETA"
+            ]
+          ],
+          "existencias": [
+            [
+              "A01",
+              "ALFA",
+              5
+            ],
+            [
+              "A02",
+              "ALFA",
+              8
+            ],
+            [
+              "A03",
+              "ALFA",
+              3
+            ],
+            [
+              "A04",
+              "BETA",
+              0
+            ]
+          ]
+        },
+        "informe": {
+          "estado": "APLICADO",
+          "sha256_fuente": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+          "filas_leidas": 4,
+          "filas_validadas": 4,
+          "filas_aplicadas": 4,
+          "filas_sin_cambio": 0,
+          "errores": []
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D02",
+      "prueba": "test_d02_origen_efectivo_fiel",
+      "criterio": "D02: el diagnóstico distingue el origen efectivo, sin alterar el estado.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "diagnostico_corresponde_al_resultado": true,
+        "estado_sin_cambios": true,
+        "sin_rutas": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:14.092109+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:14.136930+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:14.183629+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "consultar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--diagnostico",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"DIAGNOSTICO_INVALIDO\", \"mensaje\": \"El diagnóstico debe usar un archivo distinto de la base.\"}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_rechazado",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--diagnostico",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"DIAGNOSTICO_INVALIDO\", \"mensaje\": \"El diagnóstico debe usar un archivo distinto de la base.\"}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_5",
+            "inicio_utc": "2026-11-02T00:11:14.313535+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "consultar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--diagnostico",
+              "<TRABAJO>/consulta.jsonl",
+              "--alias",
+              "principal"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"CONSULTADO\", \"origen\": \"archivo:principal\", \"resumen\": {\"almacen\": \"ALFA\", \"total\": 2, \"codigos\": [\"A01\", \"A03\"]}, \"datos\": {\"articulos\": [[\"A01\", \"Articulo local\", 1], [\"A02\", \"Articulo deshabilitado\", 0], [\"A03\", \"Articulo agotado\", 1], [\"A04\", \"Articulo de otra ubicacion\", 1]], \"almacenes\": [[\"ALFA\"], [\"BETA\"]], \"existencias\": [[\"A01\", \"ALFA\", 5], [\"A02\", \"ALFA\", 8], [\"A03\", \"ALFA\", 3], [\"A04\", \"BETA\", 0]]}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_6",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_6.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:11:14.355537+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          }
+        ],
+        "colision_diagnostico": {
+          "cli": [
+            2,
+            {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "DIAGNOSTICO_INVALIDO",
+                "mensaje": "El diagnóstico debe usar un archivo distinto de la base."
+              }
+            }
+          ],
+          "servidor": [
+            2,
+            {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "DIAGNOSTICO_INVALIDO",
+                "mensaje": "El diagnóstico debe usar un archivo distinto de la base."
+              }
+            }
+          ],
+          "bytes_intactos": true
+        },
+        "directa": {
+          "estado": "CONSULTADO",
+          "origen": "archivo:principal",
+          "resumen": {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          "datos": {
+            "articulos": [
+              [
+                "A01",
+                "Articulo local",
+                1
+              ],
+              [
+                "A02",
+                "Articulo deshabilitado",
+                0
+              ],
+              [
+                "A03",
+                "Articulo agotado",
+                1
+              ],
+              [
+                "A04",
+                "Articulo de otra ubicacion",
+                1
+              ]
+            ],
+            "almacenes": [
+              [
+                "ALFA"
+              ],
+              [
+                "BETA"
+              ]
+            ],
+            "existencias": [
+              [
+                "A01",
+                "ALFA",
+                5
+              ],
+              [
+                "A02",
+                "ALFA",
+                8
+              ],
+              [
+                "A03",
+                "ALFA",
+                3
+              ],
+              [
+                "A04",
+                "BETA",
+                0
+              ]
+            ]
+          }
+        },
+        "http": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "diagnostico_cli": [
+          {
+            "evento": "consulta_catalogo",
+            "origen_configurado": "archivo:principal",
+            "origen_efectivo": "archivo:principal",
+            "almacen": "ALFA",
+            "codigos_disponibles": [
+              "A01",
+              "A03"
+            ]
+          }
+        ],
+        "diagnostico_http": [
+          {
+            "evento": "consulta_catalogo",
+            "origen_configurado": "archivo:principal",
+            "origen_efectivo": "archivo:principal",
+            "almacen": "ALFA",
+            "codigos_disponibles": [
+              "A01",
+              "A03"
+            ]
+          }
+        ],
+        "estado_sin_cambios": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D03",
+      "prueba": "test_d03_http_sobre_importado",
+      "criterio": "D03: HTTP refleja almacén, búsqueda y habilitación después de importar.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "alfa": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "beta": {
+          "almacen": "BETA",
+          "total": 0,
+          "codigos": []
+        },
+        "busqueda": {
+          "almacen": "ALFA",
+          "total": 1,
+          "codigos": [
+            "A03"
+          ]
+        },
+        "deshabilitado": {
+          "almacen": "ALFA",
+          "total": 0,
+          "codigos": []
+        }
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:14.418496+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:14.480345+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:11:14.537964+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "BETA",
+                "codigos_disponibles": []
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=BETA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "BETA",
+              "total": 0,
+              "codigos": []
+            }
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=+AGOTADO+",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 1,
+              "codigos": [
+                "A03"
+              ]
+            }
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=deshabilitado",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 0,
+              "codigos": []
+            }
+          }
+        ],
+        "http": {
+          "alfa": {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          "beta": {
+            "almacen": "BETA",
+            "total": 0,
+            "codigos": []
+          },
+          "busqueda": {
+            "almacen": "ALFA",
+            "total": 1,
+            "codigos": [
+              "A03"
+            ]
+          },
+          "deshabilitado": {
+            "almacen": "ALFA",
+            "total": 0,
+            "codigos": []
+          }
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D05",
+      "prueba": "test_d05_otro_directorio_y_reinicio",
+      "criterio": "D05: una ruta explícita conserva la base entre directorios y reinicios.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "antes_reinicio": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "despues_reinicio": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "sin_resembrado": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:14.621024+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:14.683791+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<TRABAJO>/directorio uno",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_3",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_3.jsonl"
+            ],
+            "directorio": "<TRABAJO>/directorio uno",
+            "inicio_utc": "2026-11-02T00:11:14.732218+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          },
+          {
+            "proceso": "servidor_5",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "principal",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_5.jsonl"
+            ],
+            "directorio": "<TRABAJO>/directorio dos",
+            "inicio_utc": "2026-11-02T00:11:14.794244+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:principal",
+                "origen_efectivo": "archivo:principal",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          }
+        ],
+        "resultado": {
+          "antes_reinicio": {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          "despues_reinicio": {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          "sin_resembrado": true
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D06.a",
+      "prueba": "test_d06a_base_inexistente",
+      "criterio": "D06.a: una ruta inexistente se rechaza sin crear una base.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "error": "BASE_INEXISTENTE",
+        "archivo_creado": false
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:14.854136+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:14.910143+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "consultar",
+              "--base",
+              "<TRABAJO>/ausente.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"BASE_INEXISTENTE\", \"mensaje\": \"La base seleccionada no existe como archivo.\"}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:14.952054+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/ausente.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"BASE_INEXISTENTE\", \"mensaje\": \"La base seleccionada no existe como archivo.\"}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_rechazado",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/ausente.sqlite"
+            ],
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"BASE_INEXISTENTE\", \"mensaje\": \"La base seleccionada no existe como archivo.\"}}\n",
+            "stderr": ""
+          }
+        ],
+        "rechazos": [
+          {
+            "operacion": "consultar",
+            "codigo": 2,
+            "respuesta": {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "BASE_INEXISTENTE",
+                "mensaje": "La base seleccionada no existe como archivo."
+              }
+            }
+          },
+          {
+            "operacion": "importar",
+            "codigo": 2,
+            "respuesta": {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "BASE_INEXISTENTE",
+                "mensaje": "La base seleccionada no existe como archivo."
+              }
+            }
+          },
+          {
+            "operacion": "servir",
+            "codigo": 2,
+            "respuesta": {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "BASE_INEXISTENTE",
+                "mensaje": "La base seleccionada no existe como archivo."
+              }
+            }
+          }
+        ],
+        "archivo_creado": false
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D06.b",
+      "prueba": "test_d06b_esquema_incompatible",
+      "criterio": "D06.b: un esquema incompatible se rechaza sin modificar sus bytes.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "error": "ESQUEMA_INCOMPATIBLE",
+        "bytes_intactos": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:15.074319+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:15.122932+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "consultar",
+              "--base",
+              "<TRABAJO>/incompatible.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"ESQUEMA_INCOMPATIBLE\", \"mensaje\": \"La base no contiene el esquema requerido.\"}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:15.161616+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/incompatible.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"ESQUEMA_INCOMPATIBLE\", \"mensaje\": \"La base no contiene el esquema requerido.\"}}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_rechazado",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/incompatible.sqlite"
+            ],
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"ESQUEMA_INCOMPATIBLE\", \"mensaje\": \"La base no contiene el esquema requerido.\"}}\n",
+            "stderr": ""
+          }
+        ],
+        "rechazos": [
+          {
+            "operacion": "consultar",
+            "codigo": 2,
+            "respuesta": {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "ESQUEMA_INCOMPATIBLE",
+                "mensaje": "La base no contiene el esquema requerido."
+              }
+            }
+          },
+          {
+            "operacion": "importar",
+            "codigo": 2,
+            "respuesta": {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "ESQUEMA_INCOMPATIBLE",
+                "mensaje": "La base no contiene el esquema requerido."
+              }
+            }
+          },
+          {
+            "operacion": "servir",
+            "codigo": 2,
+            "respuesta": {
+              "estado": "RECHAZADO",
+              "error": {
+                "codigo": "ESQUEMA_INCOMPATIBLE",
+                "mensaje": "La base no contiene el esquema requerido."
+              }
+            }
+          }
+        ],
+        "bytes_intactos": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D07.a",
+      "prueba": "test_d07a_rechazo_sin_cambio",
+      "criterio": "D07.a: una entrada inválida posterior conserva las tres tablas persistidas.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "codigo_salida": 1,
+        "estado": "RECHAZADO",
+        "filas_aplicadas": 0,
+        "sin_cambios": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:15.278868+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:15.333513+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:15.381318+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/error_tardio.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 1,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"sha256_fuente\": \"a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42\", \"filas_leidas\": 2, \"filas_validadas\": 1, \"filas_aplicadas\": 0, \"filas_sin_cambio\": 0, \"errores\": [{\"fila\": 3, \"campo\": \"existencias\", \"codigo\": \"CANTIDAD_INVALIDA\", \"mensaje\": \"Se requiere un entero entre 0 y 2147483647.\"}]}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_4",
+            "inicio_utc": "2026-11-02T00:11:15.419148+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "consultar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"CONSULTADO\", \"origen\": \"archivo:principal\", \"resumen\": {\"almacen\": \"ALFA\", \"total\": 2, \"codigos\": [\"A01\", \"A03\"]}, \"datos\": {\"articulos\": [[\"A01\", \"Articulo local\", 1], [\"A02\", \"Articulo deshabilitado\", 0], [\"A03\", \"Articulo agotado\", 1], [\"A04\", \"Articulo de otra ubicacion\", 1]], \"almacenes\": [[\"ALFA\"], [\"BETA\"]], \"existencias\": [[\"A01\", \"ALFA\", 5], [\"A02\", \"ALFA\", 8], [\"A03\", \"ALFA\", 3], [\"A04\", \"BETA\", 0]]}}\n",
+            "stderr": ""
+          }
+        ],
+        "rechazo": {
+          "codigo_salida": 1,
+          "estado": "RECHAZADO",
+          "filas_aplicadas": 0,
+          "sin_cambios": true
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D07.b",
+      "prueba": "test_d07b_repetir_y_conservar_omitidos",
+      "criterio": "D07.b: repetir desde otro proceso no acumula y conserva pares omitidos.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "primera_aplicadas": 1,
+        "segunda_aplicadas": 0,
+        "idempotente": true,
+        "omitidos_intactos": true,
+        "a01": 5
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:15.463906+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:15.525480+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<TRABAJO>/solo_a01.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"5864fc5c9bec102c55cae69a8d6191f6c00dc0d59deef7d3048f1f0beba0e6b8\", \"filas_leidas\": 1, \"filas_validadas\": 1, \"filas_aplicadas\": 1, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:15.579002+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<TRABAJO>/solo_a01.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"5864fc5c9bec102c55cae69a8d6191f6c00dc0d59deef7d3048f1f0beba0e6b8\", \"filas_leidas\": 1, \"filas_validadas\": 1, \"filas_aplicadas\": 0, \"filas_sin_cambio\": 1, \"errores\": []}\n",
+            "stderr": ""
+          }
+        ],
+        "repeticion": {
+          "primera_aplicadas": 1,
+          "segunda_aplicadas": 0,
+          "idempotente": true,
+          "omitidos_intactos": true,
+          "a01": 5
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D08.a",
+      "prueba": "test_d08a_dos_bases_aisladas",
+      "criterio": "D08.a: seleccionar dos archivos conserva sus resultados independientes.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "primera": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "segunda": {
+          "almacen": "ALFA",
+          "total": 1,
+          "codigos": [
+            "A01"
+          ]
+        },
+        "segunda_sin_cambios": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:15.626385+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:15.685827+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/segunda.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:15.740252+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "servidor_4",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--alias",
+              "primera",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_4.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:11:15.778874+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:primera",
+                "origen_efectivo": "archivo:primera",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01",
+                  "A03"
+                ]
+              }
+            ]
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            }
+          },
+          {
+            "proceso": "servidor_6",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/servidor.py",
+              "--puerto",
+              "0",
+              "--base",
+              "<TRABAJO>/segunda.sqlite",
+              "--alias",
+              "segunda",
+              "--diagnostico",
+              "<TRABAJO>/diagnostico_6.jsonl"
+            ],
+            "directorio": "<CODIGO>",
+            "inicio_utc": "2026-11-02T00:11:15.846010+00:00",
+            "disponibilidad": {
+              "servidor": "local",
+              "url": "<URL_LOCAL>"
+            },
+            "codigo_salida_al_cerrar": -15,
+            "cierre": "Proceso terminado por el controlador de la prueba.",
+            "stderr": "",
+            "diagnostico": [
+              {
+                "evento": "consulta_catalogo",
+                "origen_configurado": "archivo:segunda",
+                "origen_efectivo": "archivo:segunda",
+                "almacen": "ALFA",
+                "codigos_disponibles": [
+                  "A01"
+                ]
+              }
+            ]
+          },
+          {
+            "componente": "cliente_http",
+            "metodo": "GET",
+            "url": "<URL_LOCAL>/api/resumen?almacen=ALFA&nombre=",
+            "codigo_http": 200,
+            "json": {
+              "almacen": "ALFA",
+              "total": 1,
+              "codigos": [
+                "A01"
+              ]
+            }
+          }
+        ],
+        "bases": {
+          "primera": {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          "segunda": {
+            "almacen": "ALFA",
+            "total": 1,
+            "codigos": [
+              "A01"
+            ]
+          },
+          "segunda_sin_cambios": true
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "D08.b",
+      "prueba": "test_d08b_no_reinicializar",
+      "criterio": "D08.b: inicializar una base existente no sobrescribe datos ni bytes.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": {
+        "codigo": 2,
+        "error": "BASE_EXISTENTE",
+        "datos_intactos": true,
+        "bytes_intactos": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:11:15.907339+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_2",
+            "inicio_utc": "2026-11-02T00:11:15.959005+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "importar",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"APLICADO\", \"sha256_fuente\": \"d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506\", \"filas_leidas\": 4, \"filas_validadas\": 4, \"filas_aplicadas\": 4, \"filas_sin_cambio\": 0, \"errores\": []}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "cli_3",
+            "inicio_utc": "2026-11-02T00:11:15.995031+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 2,
+            "stdout": "{\"estado\": \"RECHAZADO\", \"error\": {\"codigo\": \"BASE_EXISTENTE\", \"mensaje\": \"El destino ya existe; no se sobrescribe.\"}}\n",
+            "stderr": ""
+          }
+        ],
+        "reinicializar": {
+          "codigo": 2,
+          "error": "BASE_EXISTENTE",
+          "datos_intactos": true,
+          "bytes_intactos": true
+        }
+      },
+      "comando_terminal": null
+    }
+  ]
+}

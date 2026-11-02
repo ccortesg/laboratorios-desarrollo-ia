@@ -1,0 +1,17 @@
+{
+  "estado": "APROBADO",
+  "palabras_markdown": 4228,
+  "palabras_cronica_con_rotulo": 483,
+  "secciones": 10,
+  "fuentes_primarias": 4,
+  "contrato_y_evidencia_cotejados": true,
+  "reto_no_implementado": true,
+  "observaciones_autor_nuevas": "Ninguna",
+  "maestro": "1.0 conservado",
+  "revision_editorial": "Capítulos1–10 pendientes del autor",
+  "word_equivalente": true,
+  "word_visual": "APROBADO",
+  "paginas_word": 10,
+  "sha256_md": "594774a2db632833019d757a391f9f696dbd10bc5f6233431d2d05c7d2099956",
+  "sha256_docx": "b4f7ce92ad49b7f20de6f5be47ce9d6d80a921c5b49300cb12a45d8cf341aa25"
+}

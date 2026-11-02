@@ -1,0 +1,99 @@
+{
+  "bateria": "automatizacion",
+  "estado_codigo": "base",
+  "casos_registrados": 7,
+  "criterios_distintos": 7,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 7,
+  "pruebas": [
+    {
+      "id": "T01",
+      "prueba": "test_t01_actualiza_y_consulta_la_misma_base",
+      "criterio": "T01: la operación válida aplica el CSV y consulta realmente la misma base.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "T02",
+      "prueba": "test_t02_rechazo_detiene_la_consulta",
+      "criterio": "T02: un CSV rechazado detiene el flujo y conserva toda la base.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "T03",
+      "prueba": "test_t03_repeticion_conserva_estado_y_recibo",
+      "criterio": "T03: repetir la entrada conserva estado, pares omitidos y el primer recibo.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "T04",
+      "prueba": "test_t04_base_ausente_no_se_recrea",
+      "criterio": "T04: una base ausente se rechaza antes de crear recibo o importar.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "T05",
+      "prueba": "test_t05_salida_existente_y_protegida",
+      "criterio": "T05: los destinos existentes o protegidos se rechazan antes de importar.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "T06",
+      "prueba": "test_t06_recibo_corresponde_a_bytes_y_pasos",
+      "criterio": "T06: el recibo identifica el CSV usado y las salidas realmente guardadas.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    },
+    {
+      "id": "T07",
+      "prueba": "test_t07_directorio_ajeno_y_rutas_con_espacios",
+      "criterio": "T07: el cwd y los espacios no cambian el código ni la base elegidos.",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución anterior y todavía no tiene operador.",
+      "tipo_error": null,
+      "entrada": null,
+      "esperado": null,
+      "observado": null,
+      "comando_terminal": null
+    }
+  ]
+}

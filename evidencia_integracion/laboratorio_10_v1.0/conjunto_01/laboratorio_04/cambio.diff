@@ -1,0 +1,189 @@
+diff --git a/contexto/ARQUITECTURA.md b/contexto/ARQUITECTURA.md
+index f01ceda..0513aa5 100644
+--- a/contexto/ARQUITECTURA.md
++++ b/contexto/ARQUITECTURA.md
+@@ -1,4 +1,4 @@
+-# Responsabilidades del repositorio en inicio
++# Responsabilidades del repositorio con consulta exacta
+ 
+ ## Implementado
+ 
+@@ -8,16 +8,19 @@
+ | `datos/` | Esquema y cuatro artículos sintéticos |
+ | `solucion/consulta.sql` | Disponibilidad por habilitación, almacén y cantidad positiva |
+ | `catalogo.py` | Consultar disponibilidad y filtrar por subcadena del nombre |
+-| `pruebas.py` | Evaluar C01–C04 y B01–B06 contra resultados públicos |
++| `detalle.py` | Seleccionar un registro disponible por código exacto, o devolver `None` |
++| `pruebas.py` y `pruebas_detalle.py` | Evaluar C01–C04, B01–B06 y N01–N10 contra resultados públicos |
+ | `contexto/` y `AGENTS.md` | Expresar contratos, responsabilidades y continuidad |
+ 
+ `catalogo.py` es una copia exacta de `estados/corregido.py` del laboratorio 3. La consulta sigue siendo `consultar_catalogo(version, almacen="ALFA")`, con única versión `solucion`; cada llamada reconstruye los datos y devuelve diccionarios `codigo` y `nombre` ordenados por código. No hay persistencia.
+ 
+ La búsqueda transmite el almacén, consulta disponibilidad y filtra nombres. Su helper devuelve una lista nueva con diccionarios por referencia; no promete copia profunda. Los diez escenarios no prueban orden entre múltiples artículos disponibles ni Unicode exhaustivo.
+ 
+-## Incremento autorizado todavía no implementado
++## Flujo de la consulta exacta
+ 
+-`ALCANCE.md` define una consulta exacta en `detalle.py`, apoyada directamente en la disponibilidad existente. Se comprobará con N01–N10. No se necesita añadir una interfaz de terminal propia: las pruebas pueden llamar a la función pública.
++`obtener_articulo(almacen, codigo)` llama a `consultar_catalogo("solucion", almacen)`. Compara el código con cada registro disponible y devuelve el que coincide, o `None`. Reutilizar la consulta conserva habilitación, cantidad positiva y ubicación en un único lugar. La función no usa el filtro de nombres porque la normalización textual no forma parte del contrato del identificador.
++
++No se añadió una interfaz de terminal propia: las pruebas llaman a la función pública. El recorrido no demuestra rendimiento bajo volumen; recorre la lista disponible generada por la consulta. No se mide eficiencia ni se cambia la arquitectura para resolver necesidades aún no definidas.
+ 
+ ## Evolución propuesta
+ 
+diff --git a/contexto/CONTEXTO.md b/contexto/CONTEXTO.md
+index af9f148..cbc1037 100644
+--- a/contexto/CONTEXTO.md
++++ b/contexto/CONTEXTO.md
+@@ -1,6 +1,6 @@
+-# Contexto del repositorio en inicio
++# Contexto del repositorio con consulta exacta
+ 
+-**Estado:** laboratorio 4, punto de partida `inicio`. Se conserva el estado corregido del laboratorio 3. `ALCANCE.md` define un incremento todavía no implementado en este punto; las entregas anteriores permanecen intactas.
++**Estado:** laboratorio 4, implementación de referencia `solucion`. Se conserva el estado corregido del laboratorio 3 y se añade el incremento de `ALCANCE.md`; las entregas anteriores permanecen intactas.
+ 
+ ## Regla que se conserva
+ 
+@@ -31,8 +31,10 @@ La salida conserva los diccionarios `codigo` y `nombre` y su orden de entrada. E
+ 
+ C01 a C04 y B01 a B06 conservan literalmente sus métodos y expectativas. La preparación importa `buscar_catalogo` de `catalogo.py`, copia byte a byte de `estados/corregido.py` del laboratorio 3. Los C consultan ALFA con término vacío y los B comparan registros completos con expectativas explícitas. Los cuatro artículos y sus existencias están en `datos/ejemplos.sql`; no se agregaron registros al dataset.
+ 
+-## Incremento previsto y límites
++## Consulta exacta implementada y límites
+ 
+-El contrato de `obtener_articulo(almacen, codigo)` está en `ALCANCE.md`. Esta función aún no existe en `inicio`. N01–N10 son expectativas del incremento, no comprobaciones aprobadas en este punto.
++`detalle.py` implementa `obtener_articulo(almacen, codigo)`. Recibe cadenas, consulta disponibilidad del almacén y devuelve el primer registro cuyo código coincide exactamente, o `None`. La clave primaria del esquema hace únicos los códigos. No retira espacios ni transforma mayúsculas. Su contrato previo está en `ALCANCE.md`.
++
++N01 y N02 cubren artículos disponibles en ALFA y BETA. N03 y N04 excluyen deshabilitado y agotado. N05 y N06 excluyen el artículo remoto en ambas direcciones. N07 comprueba un código inexistente; N08, N09 y N10 comprueban otra caja, espacios y prefijo. Las entradas y expectativas explícitas están en `pruebas_detalle.py`. `pruebas.py` ejecuta los veinte criterios sobre el árbol actual.
+ 
+ La evidencia del recorrido se guarda fuera del repositorio, en la carpeta `evidencia` del paquete. Este contexto expresa requisitos y no sustituye una ejecución. No hay frontend, API, persistencia de solicitudes ni conexión a inventarios reales.
+diff --git a/contexto/CONTINUIDAD.md b/contexto/CONTINUIDAD.md
+index 99aa9a3..e9c98ee 100644
+--- a/contexto/CONTINUIDAD.md
++++ b/contexto/CONTINUIDAD.md
+@@ -1,9 +1,11 @@
+-# Continuidad en el punto de partida
++# Continuidad del incremento implementado
+ 
+-**Estado:** `inicio`, laboratorio 4. No se han recibido observaciones ni aprobación editorial del autor; los borradores siguen pendientes de revisión.
++**Estado:** `solucion`, laboratorio 4. No se han recibido observaciones ni aprobación editorial del autor; los borradores siguen pendientes de revisión.
+ 
+-Se conserva el estado corregido del capítulo 3 como `catalogo.py`, el ejecutor, los datos y la consulta. Los diez métodos C01–C04 y B01–B06 permanecen, con un montaje simplificado para una sola implementación.
++Se añadió `detalle.py` con `obtener_articulo(almacen, codigo)`, que devuelve un artículo disponible por código exacto o `None`. `pruebas_detalle.py` expresa N01–N10 y `pruebas.py` incorpora esa batería. Se actualizaron los cuatro documentos de contexto. `ALCANCE.md` mantiene el contrato previo y el resto del catálogo conserva su contenido.
+ 
+-El contrato previo de `ALCANCE.md` autoriza añadir `obtener_articulo(almacen, codigo)`, su batería y actualizar el contexto. Todavía no se ha implementado en este punto. Primero ejecuta `python pruebas.py` y conserva su resultado. Después sigue el encargo didáctico de `prompts/ENCARGO.md`.
++El recorrido Git tiene dos referencias: `inicio`, con diez pruebas heredadas y el contrato todavía sin implementar; `solucion`, con los veinte criterios. Para revisar el incremento, usa `git diff inicio solucion --`. Para evaluar tus ediciones actuales, ejecuta `python pruebas.py` aquí y revisa `git status --short`, `git diff` y `git diff --cached`, además de los archivos sin seguimiento.
+ 
+-Los resultados esperados son diez aprobaciones de la base y veinte tras el incremento. Las observaciones se guardarán en la evidencia externa al repositorio. La arquitectura futura sigue propuesta; no se han implementado cantidades, reservas, servicios ni una aplicación completa. La ejecución comercial de Codex necesita evidencia propia.
++El verificador del directorio superior extrae y comprueba los dos commits etiquetados. Sus resultados y huellas están en la evidencia externa al repositorio; no certifican modificaciones posteriores del árbol de trabajo. Un `git diff` vacío en el paquete limpio no significa que inicio y solución sean iguales.
++
++La comprobación de acceso a Codex se registra por separado. La sesión comercial no se realizó en esta entrega. Los prompts son didácticos y las pruebas son ejecuciones locales. La arquitectura de una aplicación completa, cantidades, reservas, red, concurrencia y despliegue siguen sin implementar. No se han realizado mediciones de productividad ni pruebas con lectores humanos.
+diff --git a/contexto/DECISIONES.md b/contexto/DECISIONES.md
+index 8e59516..9804dfd 100644
+--- a/contexto/DECISIONES.md
++++ b/contexto/DECISIONES.md
+@@ -50,7 +50,7 @@ El verificador exige una carpeta nueva. Se registran ejecución local, expectati
+ 
+ ## D09 Añadir consulta por código exacto
+ 
+-**Estado:** CONTRATO AUTORIZADO, TODAVÍA NO IMPLEMENTADO EN INICIO. `ALCANCE.md` define N01–N10. La función consultará disponibilidad y devolverá el registro exacto o `None`; no heredará la normalización de la búsqueda por nombre. Esta elección usa el reto anterior como incremento nuevo, sin afirmar que ya estuviera ejecutado en el capítulo 3.
++**Estado:** IMPLEMENTADO EN SOLUCION; el contrato permanece en inicio. `ALCANCE.md` define N01–N10. La función consulta disponibilidad y devuelve el registro exacto o `None`; no hereda la normalización de la búsqueda por nombre. Esta elección usa el reto anterior como incremento nuevo, sin afirmar que ya estuviera ejecutado en el capítulo 3.
+ 
+ ## D10 Distinguir evidencia local y uso de Codex
+ 
+diff --git a/detalle.py b/detalle.py
+new file mode 100644
+index 0000000..74a3359
+--- /dev/null
++++ b/detalle.py
+@@ -0,0 +1,11 @@
++"""Consulta exacta de un articulo dentro del catalogo disponible."""
++
++from laboratorio import consultar_catalogo
++
++
++def obtener_articulo(almacen, codigo):
++    """Devuelve el registro disponible con codigo exacto, o None."""
++    for articulo in consultar_catalogo("solucion", almacen):
++        if articulo["codigo"] == codigo:
++            return articulo
++    return None
+diff --git a/pruebas.py b/pruebas.py
+index 64ae997..929556a 100644
+--- a/pruebas.py
++++ b/pruebas.py
+@@ -6,6 +6,7 @@ import unittest
+ from pathlib import Path
+ 
+ from catalogo import buscar_catalogo
++from pruebas_detalle import DetalleTests
+ 
+ 
+ A01 = [{"codigo": "A01", "nombre": "Articulo local"}]
+@@ -116,6 +117,7 @@ def main():
+     suite = unittest.TestSuite([
+         unittest.defaultTestLoader.loadTestsFromTestCase(DisponibilidadTests),
+         unittest.defaultTestLoader.loadTestsFromTestCase(BusquedaTests),
++        unittest.defaultTestLoader.loadTestsFromTestCase(DetalleTests),
+     ])
+     resultado = ResultadoRegistrado()
+     suite.run(resultado)
+diff --git a/pruebas_detalle.py b/pruebas_detalle.py
+new file mode 100644
+index 0000000..81616ed
+--- /dev/null
++++ b/pruebas_detalle.py
+@@ -0,0 +1,53 @@
++"""Criterios nuevos del contrato de consulta exacta."""
++
++import unittest
++
++from detalle import obtener_articulo
++
++
++class DetalleTests(unittest.TestCase):
++    def comprobar(self, almacen, codigo, esperado):
++        self.entrada = {"almacen": almacen, "codigo": codigo}
++        self.esperado = esperado
++        self.observado = obtener_articulo(almacen, codigo)
++        self.assertEqual(esperado, self.observado)
++
++    def test_n01_articulo_disponible_en_alfa(self):
++        """N01: A01 disponible en ALFA devuelve su registro."""
++        self.comprobar("ALFA", "A01", {"codigo": "A01", "nombre": "Articulo local"})
++
++    def test_n02_articulo_disponible_en_beta(self):
++        """N02: A04 disponible en BETA devuelve su registro."""
++        self.comprobar("BETA", "A04", {"codigo": "A04", "nombre": "Articulo de otra ubicacion"})
++
++    def test_n03_articulo_deshabilitado(self):
++        """N03: A02 deshabilitado en ALFA devuelve None."""
++        self.comprobar("ALFA", "A02", None)
++
++    def test_n04_articulo_agotado(self):
++        """N04: A03 sin existencias en ALFA devuelve None."""
++        self.comprobar("ALFA", "A03", None)
++
++    def test_n05_articulo_remoto_en_alfa(self):
++        """N05: A04 con existencias en BETA se excluye de ALFA."""
++        self.comprobar("ALFA", "A04", None)
++
++    def test_n06_articulo_remoto_en_beta(self):
++        """N06: A01 con existencias en ALFA se excluye de BETA."""
++        self.comprobar("BETA", "A01", None)
++
++    def test_n07_codigo_inexistente(self):
++        """N07: A99 inexistente devuelve None."""
++        self.comprobar("ALFA", "A99", None)
++
++    def test_n08_codigo_con_otra_caja(self):
++        """N08: a01 no coincide exactamente con A01."""
++        self.comprobar("ALFA", "a01", None)
++
++    def test_n09_codigo_con_espacios(self):
++        """N09: espacios exteriores no se retiran del codigo."""
++        self.comprobar("ALFA", " A01 ", None)
++
++    def test_n10_prefijo_del_codigo(self):
++        """N10: A0 no coincide exactamente con A01."""
++        self.comprobar("ALFA", "A0", None)

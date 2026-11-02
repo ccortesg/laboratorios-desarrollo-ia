@@ -1,0 +1,81 @@
+{
+  "estado": "APROBADO",
+  "fecha_hora_utc": "2026-11-02T00:21:44.181888+00:00",
+  "responsable": "Agente de preparación editorial, revisión visual delegada",
+  "alcance": "Páginas 6–10 del render final de diez páginas",
+  "documento": "CAPITULO_10_v1.0.docx",
+  "sha256_docx": "b4f7ce92ad49b7f20de6f5be47ce9d6d80a921c5b49300cb12a45d8cf341aa25",
+  "paginas": [
+    {
+      "pagina": 6,
+      "archivo": "page-6.png",
+      "sha256": "0da1b96dc5dcae55cbc4eac579f6242858736f038144fe48b9d28a7c9f901b17",
+      "resolucion": [
+        1547,
+        2002
+      ],
+      "inspeccion": "Visual individual con view_image, detail original",
+      "estado": "APROBADO",
+      "observacion": "Prompts sin marcadores > residuales; texto y bloques de código legibles, dentro de márgenes."
+    },
+    {
+      "pagina": 7,
+      "archivo": "page-7.png",
+      "sha256": "18d5b5a0ac5e4545d964e9f91718bb27569ea8fbf52d3e86b1830bff37ec0787",
+      "resolucion": [
+        1547,
+        2002
+      ],
+      "inspeccion": "Visual individual con view_image, detail original",
+      "estado": "APROBADO",
+      "observacion": "Recorrido de navegador, CSV y bloque de comparación manual completos y legibles; sin recortes."
+    },
+    {
+      "pagina": 8,
+      "archivo": "page-8.png",
+      "sha256": "f269f76ae5b20f8c535835360c7ffde57e2d2b015563cbd7e424e77d865b2279",
+      "resolucion": [
+        1547,
+        2002
+      ],
+      "inspeccion": "Visual individual con view_image, detail original",
+      "estado": "APROBADO",
+      "observacion": "Tabla de cuatro filas completa en una página; cabecera y cifras legibles; bloques de código completos."
+    },
+    {
+      "pagina": 9,
+      "archivo": "page-9.png",
+      "sha256": "e72bf28a5493ef2bf1a20cff13c7cc311bd28bb7009317baf90192391c6183ff",
+      "resolucion": [
+        1547,
+        2002
+      ],
+      "inspeccion": "Visual individual con view_image, detail original",
+      "estado": "APROBADO",
+      "observacion": "Evidencia, código de reproducción y sección 9 legibles; títulos vinculados al contenido y pie correcto."
+    },
+    {
+      "pagina": 10,
+      "archivo": "page-10.png",
+      "sha256": "4987cce0957139c626e79dc7081f60b4c89d0f6fa7071e79e8968c38cd2b6bf3",
+      "resolucion": [
+        1547,
+        2002
+      ],
+      "inspeccion": "Visual individual con view_image, detail original",
+      "estado": "APROBADO",
+      "observacion": "Reto completo y cuatro entradas bibliográficas agrupadas en la página final; sin página sobrante."
+    }
+  ],
+  "hallazgos_pendientes": [],
+  "correcciones_confirmadas": [
+    "Marcadores > aislados eliminados.",
+    "Tabla comparativa completa en página 8.",
+    "Bibliografía completa en página 10; desapareció la página final casi vacía."
+  ],
+  "limites": [
+    "Este registro no declara inspeccionadas las páginas 1–5; corresponden a la revisión del agente principal.",
+    "La equivalencia de contenido Markdown/Word y los resultados técnicos se registran por separado.",
+    "La aprobación corresponde a la presentación examinada, no a la revisión editorial del autor."
+  ]
+}

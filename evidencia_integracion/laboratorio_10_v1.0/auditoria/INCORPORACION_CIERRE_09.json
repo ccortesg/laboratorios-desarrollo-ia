@@ -1,0 +1,9 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T00:08:06.688530+00:00",
+  "base": "6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3",
+  "zip_recibido": "REVISION_CIERRE_LABORATORIO_09_WSL_v1.0.zip",
+  "sha256_zip": "042a4f2440bc4a8162bb52fc8e3b98d584cc2d8ea23496a2e9f10da958232a62",
+  "archivos_protegidos_base": 2285,
+  "regla": "Copias exactas; evidencias históricas no modificadas."
+}

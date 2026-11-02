@@ -1,0 +1,14 @@
+--- estados/propuesta/operar.py
++++ estados/solucion/operar.py
+@@ -116,9 +116,8 @@
+     importacion, informe = ejecutar("importar", ["importar", "--base", base,
+         "--archivo", instantanea, "--alias", opciones.alias], "APLICADO")
+     confirmada = importacion["estado"] == "APROBADO"
+-    # Defecto didáctico: una importación rechazada se ignora y se consulta el estado anterior.
+-    continuar = confirmada or (importacion["codigo_salida"] == 1
+-        and isinstance(informe, dict) and informe.get("estado") == "RECHAZADO")
++    # La solución exige éxito del paso que modifica el estado antes de consultar.
++    continuar = confirmada
+     if continuar:
+         consulta, datos_consulta = ejecutar("consultar", ["consultar", "--base", base,
+             "--almacen", opciones.almacen, "--nombre", opciones.nombre,

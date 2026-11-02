@@ -1,0 +1,6 @@
+usage: VERIFICAR_PAQUETE.py [-h]
+
+Comprueba bytes y cobertura del paquete, sin red ni escrituras.
+
+options:
+  -h, --help  show this help message and exit

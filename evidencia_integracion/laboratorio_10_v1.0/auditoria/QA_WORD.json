@@ -1,0 +1,66 @@
+{
+  "estado_estructural": "APROBADO",
+  "estado_visual": "APROBADO",
+  "fecha_generacion_utc": "2026-11-02T00:20:32+00:00",
+  "python": "3.12.14",
+  "runtime_primario_declarado": true,
+  "parrafos_contenido": 132,
+  "tablas": 1,
+  "secciones": 10,
+  "bloques_codigo": 9,
+  "hipervinculos_unicos": 4,
+  "equivalencia_texto_en_orden": true,
+  "equivalencia_codigo": true,
+  "equivalencia_urls": true,
+  "metadatos_personales_vacios": true,
+  "sha256_texto_visible_en_orden": "c7c4cb6dad4311916518ea8036e0087fbc346e06584fb90a306c04b14a65ad97",
+  "anchos_tablas_pulgadas": [
+    [
+      2.3,
+      1.4,
+      1.5,
+      1.5
+    ]
+  ],
+  "lineas_codigo_mas_de_80_columnas": [],
+  "nota_codigo": "Las líneas se conservan exactamente; se inspeccionarán los ajustes visuales en el render.",
+  "urls_visibles_largas": [],
+  "nota_bibliografia": "Usar etiquetas descriptivas en hipervínculos conserva sus destinos y evita URLs largas visibles; inspeccionar el render completo.",
+  "sin_comentarios_ni_revisiones": true,
+  "sha256_markdown": "594774a2db632833019d757a391f9f696dbd10bc5f6233431d2d05c7d2099956",
+  "sha256_docx": "b4f7ce92ad49b7f20de6f5be47ce9d6d80a921c5b49300cb12a45d8cf341aa25",
+  "palabras_markdown_por_espacios": 4228,
+  "fuente_presentacion": "CAPITULO_09_v1.0.docx",
+  "sha256_referencia_presentacion": "bbe37f183612530d065a143969c209904eafc812d5adb00d23330efc23c1ee59",
+  "paginas": 10,
+  "paginas_inspeccionadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "fallos_pendientes": [],
+  "inspeccion": "Páginas1–5 revisadas individualmente por editor principal; páginas6–10 por revisor independiente. Tabla y bibliografía juntas; código y pies legibles.",
+  "correcciones_de_presentacion": [
+    "Se omiten marcadores vacíos de cita Markdown.",
+    "Tabla compacta y bibliografía completas en una página cada una."
+  ],
+  "huellas_png": {
+    "page-1.png": "27a4dbcf30d9a292fed2c9e07d8cf39616c6aa48c3e83f24f2161abba25edeaa",
+    "page-10.png": "4987cce0957139c626e79dc7081f60b4c89d0f6fa7071e79e8968c38cd2b6bf3",
+    "page-2.png": "8fd609bd074fad56a6f24f18efaf0530acac03c65c7c27969bfc45a610558d3a",
+    "page-3.png": "bba1cb299282ffc9e458504986c0369df3120ecd3eff05a4af7224785ba104fd",
+    "page-4.png": "cef081cf6de32c7409689afc3d319498421e36c05dd43117c573c295dcc35c45",
+    "page-5.png": "9193ee1f6922416b6418234f34d71bba6a1d79d9a8da7486a577df4860299480",
+    "page-6.png": "0da1b96dc5dcae55cbc4eac579f6242858736f038144fe48b9d28a7c9f901b17",
+    "page-7.png": "18d5b5a0ac5e4545d964e9f91718bb27569ea8fbf52d3e86b1830bff37ec0787",
+    "page-8.png": "f269f76ae5b20f8c535835360c7ffde57e2d2b015563cbd7e424e77d865b2279",
+    "page-9.png": "e72bf28a5493ef2bf1a20cff13c7cc311bd28bb7009317baf90192391c6183ff"
+  }
+}

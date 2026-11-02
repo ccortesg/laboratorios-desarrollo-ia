@@ -1,0 +1,213 @@
+{
+  "fecha_utc": "2026-11-02T00:16:19.237978+00:00",
+  "alcance": "Auditoría por lectura de código, contrato y evidencia existente; no se ejecutó una nueva batería funcional ni se modificó el laboratorio.",
+  "ejecuciones": {
+    "autonomo_01": {
+      "resumen_sha256": "45c40305b803dccee8960a176e3095b138032bf184849fa6d902483d3478cc45",
+      "estado_observado": "APROBADO",
+      "totales_observados": {
+        "ejecutados": 238,
+        "aprobados": 237,
+        "fallidos": 1,
+        "bloqueados": 0,
+        "no_ejecutados": 8,
+        "errores_de_ejecucion": 0
+      },
+      "huellas_recalculadas_solo_lectura": {
+        "estado": "APROBADO",
+        "huellas_finales_comprobadas": 116,
+        "campos_de_huella_capturada": 116,
+        "registros_sin_capturas": 3,
+        "discrepancias": []
+      },
+      "fallos_lab10": [
+        {
+          "estado_codigo": "propuesta",
+          "bateria": "automatizacion",
+          "id": "T02",
+          "tipo_error": "AssertionError"
+        }
+      ],
+      "no_ejecutados_lab10": [
+        {
+          "estado_codigo": "base",
+          "id": "T01"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T02"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T03"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T04"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T05"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T06"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T07"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T08"
+        }
+      ],
+      "archivos_texto_inspeccionados_privacidad": 199
+    },
+    "conjunto_01": {
+      "resumen_sha256": "e0b133eec079db675b9b8298270582255cd181680737d8e4e95a12bd1522fc2f",
+      "estado_observado": "APROBADO",
+      "totales_observados": {
+        "laboratorios": 10,
+        "baterias": 125,
+        "ejecutados": 1043,
+        "aprobados": 1018,
+        "fallidos": 25,
+        "bloqueados": 0,
+        "no_ejecutados_en_baterias": 56,
+        "no_ejecutados_fuera_de_baterias": 10
+      },
+      "huellas_recalculadas_solo_lectura": {
+        "estado": "APROBADO",
+        "huellas_finales_comprobadas": 272,
+        "campos_de_huella_capturada": 272,
+        "registros_sin_capturas": 6,
+        "discrepancias": []
+      },
+      "fallos_lab10": [
+        {
+          "estado_codigo": "propuesta",
+          "bateria": "automatizacion",
+          "id": "T02",
+          "tipo_error": "AssertionError"
+        }
+      ],
+      "no_ejecutados_lab10": [
+        {
+          "estado_codigo": "base",
+          "id": "T01"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T02"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T03"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T04"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T05"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T06"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T07"
+        },
+        {
+          "estado_codigo": "base",
+          "id": "T08"
+        }
+      ],
+      "archivos_texto_inspeccionados_privacidad": 525
+    }
+  },
+  "cotejo_fuentes_ejecutadas": [
+    {
+      "ejecucion": "autonomo_01",
+      "archivos_ejecutables_datos_y_web": 75,
+      "estado": "APROBADO",
+      "diferencias": []
+    },
+    {
+      "ejecucion": "conjunto_01",
+      "archivos_ejecutables_datos_y_web": 75,
+      "estado": "APROBADO",
+      "diferencias": []
+    }
+  ],
+  "herencia": [
+    {
+      "estado_codigo": "base",
+      "archivos_heredados": 17,
+      "extras": [],
+      "estado": "APROBADO",
+      "diferencias_heredadas": []
+    },
+    {
+      "estado_codigo": "propuesta",
+      "archivos_heredados": 17,
+      "extras": [
+        "operar.py"
+      ],
+      "estado": "APROBADO",
+      "diferencias_heredadas": []
+    },
+    {
+      "estado_codigo": "solucion",
+      "archivos_heredados": 17,
+      "extras": [
+        "operar.py"
+      ],
+      "estado": "APROBADO",
+      "diferencias_heredadas": []
+    }
+  ],
+  "anonimizacion": {
+    "estado": "APROBADO",
+    "coincidencias_por_revisar": [],
+    "limite": "Búsqueda acotada de rutas identificables; no demuestra ausencia universal de información identificable."
+  },
+  "infraestructura_separada": {
+    "ro01": {
+      "comandos": {
+        "registros": [
+          {
+            "id": "RO01",
+            "comando": [
+              "python",
+              "-B",
+              "pruebas_operador_recursos.py"
+            ],
+            "codigo_salida": 0,
+            "fecha_utc": "2026-11-02T00:09:30.205543+00:00",
+            "alcance": "Infraestructura; un método de prueba con dos estados y fallo de inicio inyectado. No se suma a T01–T08.",
+            "stdout": "stdout.txt",
+            "sha256_stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "stderr.txt",
+            "sha256_stderr": "ebadc349cbf962ceffe76fd800d7bd865b3b5c723b32caf6c841c5e3f8cc6336",
+            "sha256_stdout_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "sha256_stderr_capturado": "ebadc349cbf962ceffe76fd800d7bd865b3b5c723b32caf6c841c5e3f8cc6336"
+          }
+        ],
+        "convenciones_del_productor": "",
+        "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+      },
+      "huellas": {
+        "estado": "APROBADO",
+        "huellas_finales_comprobadas": 2,
+        "campos_de_huella_capturada": 2,
+        "registros_sin_capturas": 0,
+        "discrepancias": []
+      },
+      "interpretacion": "Una prueba de infraestructura con subcasos propuesta/solución e inyección controlada de OSError; no se cuenta como caso funcional."
+    }
+  }
+}

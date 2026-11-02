@@ -1,0 +1,4 @@
+APROBADO: ZIP de evidencia creado; originales conservados.
+Archivos de evidencia: 1
+Entradas del ZIP incluido manifiesto: 2
+SHA256: 7a3e4d4bbf982017412db8f137f36f730f4668726affd61f25d35b96b53274b6

@@ -1,0 +1,60 @@
+{
+  "fecha_utc": "2026-11-02T00:17:48.839569+00:00",
+  "recuento_independiente_casos": [
+    {
+      "ejecucion": "autonomo_01",
+      "estado": "APROBADO",
+      "baterias": 33,
+      "casos_distintos_solucion": 82,
+      "conteos_observados": {
+        "APROBADO": 237,
+        "NO EJECUTADO": 8,
+        "FALLIDO": 1
+      },
+      "por_estado": {
+        "base": {
+          "APROBADO": 74,
+          "NO EJECUTADO": 8
+        },
+        "propuesta": {
+          "APROBADO": 81,
+          "FALLIDO": 1
+        },
+        "solucion": {
+          "APROBADO": 82
+        }
+      },
+      "discrepancias": []
+    },
+    {
+      "ejecucion": "conjunto_01/laboratorio_10",
+      "estado": "APROBADO",
+      "baterias": 33,
+      "casos_distintos_solucion": 82,
+      "conteos_observados": {
+        "APROBADO": 237,
+        "NO EJECUTADO": 8,
+        "FALLIDO": 1
+      },
+      "por_estado": {
+        "base": {
+          "APROBADO": 74,
+          "NO EJECUTADO": 8
+        },
+        "propuesta": {
+          "APROBADO": 81,
+          "FALLIDO": 1
+        },
+        "solucion": {
+          "APROBADO": 82
+        }
+      },
+      "discrepancias": []
+    }
+  ],
+  "procedencia_heredada": {
+    "estado": "APROBADO",
+    "archivos": 71,
+    "diferencias": []
+  }
+}

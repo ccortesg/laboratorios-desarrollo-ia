@@ -1,0 +1,9 @@
+{
+  "estado": "APROBADO",
+  "fase": "Preparación y extracción; ejecución funcional pendiente en este registro",
+  "archivo": "LABORATORIO_10_v1.0.zip",
+  "sha256": "5e39d5fb92e2408684003809d65f753b16929c7ad649e70f1c8eec0e26eb54f3",
+  "archivos": 450,
+  "crc": "APROBADO",
+  "bytes_extraidos": "Coinciden con los originales nuevos"
+}

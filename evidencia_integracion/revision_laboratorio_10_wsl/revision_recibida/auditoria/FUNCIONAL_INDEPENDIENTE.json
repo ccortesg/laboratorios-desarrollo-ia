@@ -1,0 +1,3051 @@
+{
+  "estado": "APROBADO",
+  "fecha_hora_utc": "2026-11-02T01:45:58.415317+00:00",
+  "fecha_hora_local": "2026-11-01T18:45:58.415317-07:00",
+  "alcance": "Auditoría independiente de registros recibidos; no se ejecutó otra batería funcional ni los scripts recibidos.",
+  "metodo": "Contratos e identificadores reconstruidos a partir del verificador y contrato originales. Recuento de las 125 listas de casos originales; comparación de estados, tipos de error, códigos y totales con el resumen; lectura de procesos T02/T08, infraestructura y observador.",
+  "totales_recontados": {
+    "laboratorios": 10,
+    "baterias": 125,
+    "ejecutados": 1043,
+    "aprobados": 1018,
+    "fallidos_didacticos": 25,
+    "bloqueados": 0,
+    "errores_de_ejecucion": 0,
+    "no_ejecutados_en_baterias": 56,
+    "criterios_ausentes_fuera_de_baterias": 10
+  },
+  "por_laboratorio": {
+    "laboratorio_01": {
+      "APROBADO": 7,
+      "FALLIDO": 1
+    },
+    "laboratorio_02": {
+      "APROBADO": 4
+    },
+    "laboratorio_03": {
+      "APROBADO": 42,
+      "NO EJECUTADO": 6,
+      "FALLIDO": 2
+    },
+    "laboratorio_04": {
+      "APROBADO": 50
+    },
+    "laboratorio_05": {
+      "APROBADO": 70,
+      "NO EJECUTADO": 6,
+      "FALLIDO": 2
+    },
+    "laboratorio_06": {
+      "APROBADO": 93,
+      "NO EJECUTADO": 8,
+      "FALLIDO": 1
+    },
+    "laboratorio_07": {
+      "APROBADO": 134,
+      "NO EJECUTADO": 17,
+      "FALLIDO": 2
+    },
+    "laboratorio_08": {
+      "APROBADO": 171,
+      "NO EJECUTADO": 11,
+      "FALLIDO": 4
+    },
+    "laboratorio_09": {
+      "APROBADO": 210,
+      "FALLIDO": 12
+    },
+    "laboratorio_10": {
+      "APROBADO": 237,
+      "NO EJECUTADO": 8,
+      "FALLIDO": 1
+    }
+  },
+  "laboratorio_10_estados": {
+    "base": {
+      "APROBADO": 74,
+      "NO EJECUTADO": 8
+    },
+    "propuesta": {
+      "APROBADO": 81,
+      "FALLIDO": 1
+    },
+    "solucion": {
+      "APROBADO": 82
+    }
+  },
+  "fallos_esperados_observados": {
+    "laboratorio_01/inicial": [
+      "C04"
+    ],
+    "laboratorio_03/defecto": [
+      "B05",
+      "B06"
+    ],
+    "laboratorio_05/propuesta_resumen": [
+      "P04",
+      "P05"
+    ],
+    "laboratorio_06/propuesta_navegador": [
+      "W05"
+    ],
+    "laboratorio_07/propuesta_integracion": [
+      "I01",
+      "I07"
+    ],
+    "laboratorio_08/propuesta_depuracion": [
+      "D03",
+      "D05",
+      "D08.a"
+    ],
+    "laboratorio_08/propuesta_depuracion_navegador": [
+      "D04"
+    ],
+    "laboratorio_09/base_seguridad": [
+      "S02.a",
+      "S02.b",
+      "S02.c",
+      "S03",
+      "S04.a",
+      "S04.b",
+      "S05.a",
+      "S05.b"
+    ],
+    "laboratorio_09/base_seguridad_navegador": [
+      "S06"
+    ],
+    "laboratorio_09/propuesta_seguridad": [
+      "S02.a",
+      "S02.b",
+      "S02.c"
+    ],
+    "laboratorio_10/propuesta_automatizacion": [
+      "T02"
+    ]
+  },
+  "fuentes_laboratorio_10": {
+    "declaradas": 92,
+    "coincidentes_con_produccion": 92,
+    "discrepancias": []
+  },
+  "infraestructura_separada": {
+    "recolector": {
+      "metodos_observados": 8,
+      "codigo_salida": 0,
+      "estado": "APROBADO"
+    },
+    "evaluador_09": {
+      "metodos_observados": 9,
+      "codigo_salida": 0,
+      "estado": "APROBADO"
+    },
+    "evaluador_10": {
+      "metodos_observados": 9,
+      "codigo_salida": 0,
+      "estado": "APROBADO"
+    },
+    "recursos_sqlite": {
+      "metodos_observados": 4,
+      "codigo_salida": 0,
+      "estado": "APROBADO"
+    },
+    "operador_recursos": {
+      "metodos_observados": 1,
+      "codigo_salida": 0,
+      "estado": "APROBADO"
+    }
+  },
+  "T02": {
+    "propuesta": {
+      "estado_prueba": "FALLIDO",
+      "tipo_error": "AssertionError",
+      "operador_codigo": 0,
+      "pasos": [
+        {
+          "paso": "importar",
+          "estado": "FALLIDO",
+          "codigo_salida": 1
+        },
+        {
+          "paso": "consultar",
+          "estado": "APROBADO",
+          "codigo_salida": 0
+        }
+      ],
+      "base_conservada": true
+    },
+    "solucion": {
+      "estado_prueba": "APROBADO",
+      "tipo_error": null,
+      "operador_codigo": 1,
+      "pasos": [
+        {
+          "paso": "importar",
+          "estado": "FALLIDO",
+          "codigo_salida": 1
+        },
+        {
+          "paso": "consultar",
+          "estado": "NO EJECUTADO",
+          "codigo_salida": null
+        }
+      ],
+      "base_conservada": true
+    }
+  },
+  "T08": {
+    "propuesta": {
+      "estado": "APROBADO",
+      "antes": {
+        "total": "1",
+        "codigos": [
+          "A01"
+        ],
+        "estado": "exito",
+        "http": 200
+      },
+      "despues": {
+        "total": "2",
+        "codigos": [
+          "A01",
+          "A03"
+        ],
+        "estado": "exito",
+        "http": 200
+      },
+      "busqueda": {
+        "total": "1",
+        "codigos": [
+          "A03"
+        ],
+        "estado": "exito",
+        "http": 200
+      },
+      "mismo_servidor": true,
+      "navegador": {
+        "node": "v22.23.1",
+        "playwright": "1.62.1",
+        "navegador": "Chromium",
+        "version_navegador": "151.0.7922.34"
+      },
+      "codigo_proceso_navegador": 0,
+      "cierre_servidor": "-15: terminado explícitamente por el controlador, no error funcional"
+    },
+    "solucion": {
+      "estado": "APROBADO",
+      "antes": {
+        "total": "1",
+        "codigos": [
+          "A01"
+        ],
+        "estado": "exito",
+        "http": 200
+      },
+      "despues": {
+        "total": "2",
+        "codigos": [
+          "A01",
+          "A03"
+        ],
+        "estado": "exito",
+        "http": 200
+      },
+      "busqueda": {
+        "total": "1",
+        "codigos": [
+          "A03"
+        ],
+        "estado": "exito",
+        "http": 200
+      },
+      "mismo_servidor": true,
+      "navegador": {
+        "node": "v22.23.1",
+        "playwright": "1.62.1",
+        "navegador": "Chromium",
+        "version_navegador": "151.0.7922.34"
+      },
+      "codigo_proceso_navegador": 0,
+      "cierre_servidor": "-15: terminado explícitamente por el controlador, no error funcional"
+    }
+  },
+  "sesion_recibida": {
+    "inicio_utc": "2026-11-02T00:58:53.509722+00:00",
+    "entorno": "Linux/WSL2",
+    "sistema": "Linux",
+    "release": "6.18.54.1-microsoft-standard-WSL2",
+    "python_predeterminado": "3.10.12",
+    "sqlite_predeterminado": "3.37.2",
+    "cwd_alias": "REPOSITORIO",
+    "alcance": "Preparacion local del laboratorio 10 sin commit ni publicacion"
+  },
+  "entorno_funcional": {
+    "fecha_hora_utc": "2026-11-02T01:07:25+00:00",
+    "sistema": "Linux",
+    "python": "3.12.16",
+    "implementacion_python": "CPython",
+    "sqlite": "3.53.1",
+    "git": "git version 2.34.1",
+    "dependencias": "Python estándar y Git; Node, Playwright y Chromium si se solicita navegador",
+    "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 a 10",
+    "navegador_solicitado": true,
+    "modalidad": "Comprobaciones locales ejecutadas en copias temporales"
+  },
+  "intentos_integrales_observados": 1,
+  "comando_conjunto": {
+    "comando": [
+      "python",
+      "-B",
+      "herramientas/verificar_todo.py",
+      "--navegador",
+      "--salida",
+      "EVIDENCIA_NUEVA/conjunto"
+    ],
+    "codigo_salida": 0,
+    "inicio_utc": "2026-11-02T01:07:23.991615+00:00",
+    "fin_utc": "2026-11-02T01:32:56.863403+00:00"
+  },
+  "observador_capturas": {
+    "archivo": "soporte_de_sesion/sitecustomize.py",
+    "sha256": "3e9ed84381b29bdfd496d26ad84f029dcf8ac8bd3e5f1260f5b69e479f3f2a2e",
+    "revision": "Sólo intercepta huellas_evidencia para envolver cerrar_evidencia: copia capturas antes de invocar la función original con los mismos argumentos y devuelve su resultado, sin modificar estados o pruebas. No importado ni ejecutado en esta auditoría.",
+    "limite": "Añade I/O y tiempo; no acredita equivalencia de rendimiento. Un error propio de almacenamiento podría impedir cerrar; no se observó aquí."
+  },
+  "precisiones": [
+    "Los casos NO EJECUTADO pueden ser emitidos por un proceso comprobador que detecta la función ausente (base5/base6HTTP/base7integración) o por el verificador sin crear un proceso. Ambas convenciones históricas se conservaron; no se cuentan como ejecución funcional del caso."
+  ],
+  "limites": [
+    "WSL2/Linux del autor; no Windows nativo ni ejecución funcional nueva de esta auditoría.",
+    "Un intento integral observado en el paquete; no se deduce inexistencia de otras sesiones ajenas al envío.",
+    "No se demuestra concurrencia, timeout inducido ni fallos físicos. No hay transacción global.",
+    "No se reevaluó editorialmente el manuscrito.",
+    "Integridad y conservación Git son auditorías complementarias y no casos funcionales."
+  ],
+  "problemas_materiales_pendientes": [],
+  "baterias_recontadas": [
+    {
+      "bateria": "laboratorio_01/inicial",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_01/pruebas_inicial.json",
+      "casos": 4,
+      "ejecutados": 4,
+      "aprobados": 3,
+      "fallidos": 1,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "FALLIDO"
+      },
+      "sha256_fuente": "11d7ad72871f8bb95acd7f2d33283b36498c576ac25ebb0bb7c6d0a0f007be2c"
+    },
+    {
+      "bateria": "laboratorio_01/solucion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_01/pruebas_solucion.json",
+      "casos": 4,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO"
+      },
+      "sha256_fuente": "85772a1b5b6bce7be9ad3b6076fa34ffb66a1a0612901adb9a40f1f7653a21a9"
+    },
+    {
+      "bateria": "laboratorio_02/solucion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_02/pruebas_solucion.json",
+      "casos": 4,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO"
+      },
+      "sha256_fuente": "85772a1b5b6bce7be9ad3b6076fa34ffb66a1a0612901adb9a40f1f7653a21a9"
+    },
+    {
+      "bateria": "laboratorio_03/base",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_03/pruebas_base.json",
+      "casos": 10,
+      "ejecutados": 4,
+      "aprobados": 4,
+      "fallidos": 0,
+      "no_ejecutados": 6,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "NO EJECUTADO",
+        "B02": "NO EJECUTADO",
+        "B03": "NO EJECUTADO",
+        "B04": "NO EJECUTADO",
+        "B05": "NO EJECUTADO",
+        "B06": "NO EJECUTADO"
+      },
+      "sha256_fuente": "c104c81ca40bb65d4cea2f71c65d83751b197438c87ba9eeb2bac049860eca78"
+    },
+    {
+      "bateria": "laboratorio_03/generado",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_03/pruebas_generado.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      },
+      "sha256_fuente": "7401c7a2db7847750526aa61a0e8d012f3384a824b62c4c9672e3e41311f6ae7"
+    },
+    {
+      "bateria": "laboratorio_03/refactorizado",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_03/pruebas_refactorizado.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      },
+      "sha256_fuente": "270aeafa7c08700281c99d2c9b1e6bb11b6e36316450bad856388e608a0b7cb9"
+    },
+    {
+      "bateria": "laboratorio_03/defecto",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_03/pruebas_defecto.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 8,
+      "fallidos": 2,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "FALLIDO",
+        "B06": "FALLIDO"
+      },
+      "sha256_fuente": "ed4f79e25d9c196decfdbf01bca5c33ccc666eefc78cc7d563a7d6f33d4e6df6"
+    },
+    {
+      "bateria": "laboratorio_03/corregido",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_03/pruebas_corregido.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      },
+      "sha256_fuente": "c597f57f9f4a0fea13c8ea97e62d857288e5174b02bcc49ac38e332d8f6d4aba"
+    },
+    {
+      "bateria": "laboratorio_04/inicio",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_04/pruebas_inicio.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO"
+      },
+      "sha256_fuente": "ad4ce07c474d9bcdb73de510d82428a83114d8957ada904f3eb936dddb818e11"
+    },
+    {
+      "bateria": "laboratorio_04/solucion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_04/pruebas_solucion.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_04/arbol_actual",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_04/pruebas_arbol_actual.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_05/base_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_05/base_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_05/base_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_05/base_resumen.json",
+      "casos": 6,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 6,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "NO EJECUTADO",
+        "P02": "NO EJECUTADO",
+        "P03": "NO EJECUTADO",
+        "P04": "NO EJECUTADO",
+        "P05": "NO EJECUTADO",
+        "P06": "NO EJECUTADO"
+      },
+      "sha256_fuente": "bd2f1256c65e496569846f64cd9c8bf897dc88e673c221a8011d5c3f3feafe60"
+    },
+    {
+      "bateria": "laboratorio_05/propuesta_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_05/propuesta_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_05/propuesta_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_05/propuesta_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 4,
+      "fallidos": 2,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "FALLIDO",
+        "P05": "FALLIDO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "a86d3f40e06c9b1d2d7bd6c568568f6b1cbea54c0c3fe849781738e2729ebfd4"
+    },
+    {
+      "bateria": "laboratorio_05/solucion_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_05/solucion_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_05/solucion_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_05/solucion_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "217ebd86ef09cac4e7a1cfef4f874d68e80e657f8bb6881262f019a54bbb0527"
+    },
+    {
+      "bateria": "laboratorio_06/base_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/base_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_06/base_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/base_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_06/base_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/base_http.json",
+      "casos": 5,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 5,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "NO EJECUTADO",
+        "W02": "NO EJECUTADO",
+        "W03": "NO EJECUTADO",
+        "W04.a": "NO EJECUTADO",
+        "W04.b": "NO EJECUTADO"
+      },
+      "sha256_fuente": "94dbd55f90517cdfe761223f8478f1f43f08456015790438b18c404a8b07dc80"
+    },
+    {
+      "bateria": "laboratorio_06/base_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/base_navegador.json",
+      "casos": 3,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 3,
+      "codigo_salida": null,
+      "estados": {
+        "W05": "NO EJECUTADO",
+        "W06.a": "NO EJECUTADO",
+        "W06.b": "NO EJECUTADO"
+      },
+      "sha256_fuente": "540fb98b8b59837615695208bfb0782172958b99bef557b3588a640ae1f7488f"
+    },
+    {
+      "bateria": "laboratorio_06/propuesta_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/propuesta_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_06/propuesta_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/propuesta_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_06/propuesta_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/propuesta_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "67de8a1634676c35f2e0934cf723afcf0ae690810781b843a203ae6f7b298a57"
+    },
+    {
+      "bateria": "laboratorio_06/propuesta_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/propuesta_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 2,
+      "fallidos": 1,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "W05": "FALLIDO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "7e15d43b90163acff579197a97c8f02585d82ead32819fa4ef89c74e0e93787d"
+    },
+    {
+      "bateria": "laboratorio_06/solucion_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/solucion_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_06/solucion_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/solucion_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_06/solucion_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/solucion_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "878be16ca9a0e5cf698e2faf70cd3119b7bc2c0f9a3c04adbf4997df58b6c968"
+    },
+    {
+      "bateria": "laboratorio_06/solucion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_06/solucion_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "14565956936a1762cbb03dfc4e8961204daf6b95b8d80f97d46d6f962d016e20"
+    },
+    {
+      "bateria": "laboratorio_07/base_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/base_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_07/base_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/base_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_07/base_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/base_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_07/base_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/base_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "bf0224262a8ff6030e79adefb14098d15d944feddda70ccce65922396d2f93ad"
+    },
+    {
+      "bateria": "laboratorio_07/base_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/base_integracion.json",
+      "casos": 17,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 17,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "NO EJECUTADO",
+        "I02.a": "NO EJECUTADO",
+        "I02.b": "NO EJECUTADO",
+        "I02.c": "NO EJECUTADO",
+        "I02.d": "NO EJECUTADO",
+        "I02.e": "NO EJECUTADO",
+        "I03.a": "NO EJECUTADO",
+        "I03.b": "NO EJECUTADO",
+        "I03.c": "NO EJECUTADO",
+        "I04.a": "NO EJECUTADO",
+        "I04.b": "NO EJECUTADO",
+        "I04.c": "NO EJECUTADO",
+        "I04.d": "NO EJECUTADO",
+        "I05": "NO EJECUTADO",
+        "I06": "NO EJECUTADO",
+        "I07": "NO EJECUTADO",
+        "I08": "NO EJECUTADO"
+      },
+      "sha256_fuente": "6a338f0b88f918a57af73bcfcc942a4c1dad8b8f39b62ec1b459513249d1ee45"
+    },
+    {
+      "bateria": "laboratorio_07/propuesta_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/propuesta_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_07/propuesta_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/propuesta_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_07/propuesta_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/propuesta_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_07/propuesta_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/propuesta_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "4feb041c6e9a4194ac417442c438373fb1fa67ccb3a1f832eaf722ce7a98965d"
+    },
+    {
+      "bateria": "laboratorio_07/propuesta_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/propuesta_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 15,
+      "fallidos": 2,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "I01": "FALLIDO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "FALLIDO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "7d91922fd07a1974f606ccf7043aa864b537591b57a4d84b6694b9c5fd1c03e0"
+    },
+    {
+      "bateria": "laboratorio_07/solucion_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/solucion_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_07/solucion_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/solucion_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_07/solucion_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/solucion_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_07/solucion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/solucion_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "14565956936a1762cbb03dfc4e8961204daf6b95b8d80f97d46d6f962d016e20"
+    },
+    {
+      "bateria": "laboratorio_07/solucion_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_07/solucion_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "cb405d2829b2380b89d09c76f1685043bd7ce1072dd601fa483fd5943b00503b"
+    },
+    {
+      "bateria": "laboratorio_08/base_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_08/base_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_08/base_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_08/base_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "bf0224262a8ff6030e79adefb14098d15d944feddda70ccce65922396d2f93ad"
+    },
+    {
+      "bateria": "laboratorio_08/base_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_08/base_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_depuracion.json",
+      "casos": 10,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 10,
+      "codigo_salida": null,
+      "estados": {
+        "D01": "NO EJECUTADO",
+        "D02": "NO EJECUTADO",
+        "D03": "NO EJECUTADO",
+        "D05": "NO EJECUTADO",
+        "D06.a": "NO EJECUTADO",
+        "D06.b": "NO EJECUTADO",
+        "D07.a": "NO EJECUTADO",
+        "D07.b": "NO EJECUTADO",
+        "D08.a": "NO EJECUTADO",
+        "D08.b": "NO EJECUTADO"
+      },
+      "sha256_fuente": "945c5785573b96cd6e09bb8bc15dba6d4a7ca35bf90dc057ff9d8a10c04b3697"
+    },
+    {
+      "bateria": "laboratorio_08/base_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/base_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 1,
+      "codigo_salida": null,
+      "estados": {
+        "D04": "NO EJECUTADO"
+      },
+      "sha256_fuente": "c9a3f81f6ecb33c0de49386c39e02b3660f423c402595f94fe54898d62220988"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "4feb041c6e9a4194ac417442c438373fb1fa67ccb3a1f832eaf722ce7a98965d"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 7,
+      "fallidos": 3,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "FALLIDO",
+        "D05": "FALLIDO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "FALLIDO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "c037611ef59c28510af2d4f8066b0f5c88da51f3d127de085b60da0a89d9f2f2"
+    },
+    {
+      "bateria": "laboratorio_08/propuesta_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/propuesta_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 0,
+      "fallidos": 1,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "D04": "FALLIDO"
+      },
+      "sha256_fuente": "2155a9699e831e9849be021f7382faef2d5c51e3fc27d47130bf1a9791515db2"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "14565956936a1762cbb03dfc4e8961204daf6b95b8d80f97d46d6f962d016e20"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "fa6301223d2ce3f87b8b09bb06f86e5ecc1089e331ff562316febec86cd68ff3"
+    },
+    {
+      "bateria": "laboratorio_08/solucion_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_08/solucion_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "2682127a48f3d3cbcc68fcdc869c3fbafeff598ce427ba05de24c20d8de2c8ed"
+    },
+    {
+      "bateria": "laboratorio_09/base_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_09/base_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_09/base_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_09/base_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "bf0224262a8ff6030e79adefb14098d15d944feddda70ccce65922396d2f93ad"
+    },
+    {
+      "bateria": "laboratorio_09/base_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_09/base_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "c3735cdb0db40d53302dfb1ae3d07d21d2d4c2cea3faff66954802df6abd7d8b"
+    },
+    {
+      "bateria": "laboratorio_09/base_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "8f885976ab059ec9ccb5c5c530f4595008c8213807211223e7baebd8e457d2b7"
+    },
+    {
+      "bateria": "laboratorio_09/base_seguridad",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_seguridad.json",
+      "casos": 11,
+      "ejecutados": 11,
+      "aprobados": 3,
+      "fallidos": 8,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "S01": "APROBADO",
+        "S02.a": "FALLIDO",
+        "S02.b": "FALLIDO",
+        "S02.c": "FALLIDO",
+        "S03": "FALLIDO",
+        "S04.a": "FALLIDO",
+        "S04.b": "FALLIDO",
+        "S05.a": "FALLIDO",
+        "S05.b": "FALLIDO",
+        "S07": "APROBADO",
+        "S08": "APROBADO"
+      },
+      "sha256_fuente": "f33cd2201c8faa5e4713ac17c99768431dde8d34b02164d2d396deb3c1e1bde1"
+    },
+    {
+      "bateria": "laboratorio_09/base_seguridad_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/base_seguridad_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 0,
+      "fallidos": 1,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "S06": "FALLIDO"
+      },
+      "sha256_fuente": "f4674f6eb370257ec6217d9716ccd5a6cc708aa1be2af6a3ee312f79df32ec29"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "4feb041c6e9a4194ac417442c438373fb1fa67ccb3a1f832eaf722ce7a98965d"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "24d4dea1284eecde281d07327d15b1099d1a317783666e884cb88333b4036e26"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "1a3eb768a998890def86dbcbe22a415f548f998c4355d4d18272e62a117485d4"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_seguridad",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_seguridad.json",
+      "casos": 11,
+      "ejecutados": 11,
+      "aprobados": 8,
+      "fallidos": 3,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "S01": "APROBADO",
+        "S02.a": "FALLIDO",
+        "S02.b": "FALLIDO",
+        "S02.c": "FALLIDO",
+        "S03": "APROBADO",
+        "S04.a": "APROBADO",
+        "S04.b": "APROBADO",
+        "S05.a": "APROBADO",
+        "S05.b": "APROBADO",
+        "S07": "APROBADO",
+        "S08": "APROBADO"
+      },
+      "sha256_fuente": "01fb5e146cf4d1b8bacd90d8c2212b5d3746ead521a0f4bc575a70751704e769"
+    },
+    {
+      "bateria": "laboratorio_09/propuesta_seguridad_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/propuesta_seguridad_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S06": "APROBADO"
+      },
+      "sha256_fuente": "d5af0877949f1554eb2f419b16308a4bf67ffb7ce79edcf33b02d493ab51b14a"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "14565956936a1762cbb03dfc4e8961204daf6b95b8d80f97d46d6f962d016e20"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "e2b6d140c3ba702d7ddbeadb8949cb40e0ccfdf1846d6f2e01999e408261c532"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "783fca67f1b33fc01daa8efe899d0270a2816cd7204cb0b00ed210bf704716f8"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_seguridad",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_seguridad.json",
+      "casos": 11,
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S01": "APROBADO",
+        "S02.a": "APROBADO",
+        "S02.b": "APROBADO",
+        "S02.c": "APROBADO",
+        "S03": "APROBADO",
+        "S04.a": "APROBADO",
+        "S04.b": "APROBADO",
+        "S05.a": "APROBADO",
+        "S05.b": "APROBADO",
+        "S07": "APROBADO",
+        "S08": "APROBADO"
+      },
+      "sha256_fuente": "b0092229c66952fc54200424a666e591d8a99aec9c9813a057db23ea3b287ddd"
+    },
+    {
+      "bateria": "laboratorio_09/solucion_seguridad_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_09/solucion_seguridad_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S06": "APROBADO"
+      },
+      "sha256_fuente": "9038679e3dd33d8f6d78c5b180d0ad06092198ac02770d0c3aba1a81cbb68a7d"
+    },
+    {
+      "bateria": "laboratorio_10/base_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_10/base_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_10/base_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_10/base_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "bf0224262a8ff6030e79adefb14098d15d944feddda70ccce65922396d2f93ad"
+    },
+    {
+      "bateria": "laboratorio_10/base_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_10/base_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "c09d953d99ef1eccb3963cfe6aaf179fa654fa1b6c038938069865f27dc698e5"
+    },
+    {
+      "bateria": "laboratorio_10/base_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "c03b3b9e13be73640a40a4d46553e95ba30395c118bf6794349f9d37266b76eb"
+    },
+    {
+      "bateria": "laboratorio_10/base_seguridad",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_seguridad.json",
+      "casos": 11,
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S01": "APROBADO",
+        "S02.a": "APROBADO",
+        "S02.b": "APROBADO",
+        "S02.c": "APROBADO",
+        "S03": "APROBADO",
+        "S04.a": "APROBADO",
+        "S04.b": "APROBADO",
+        "S05.a": "APROBADO",
+        "S05.b": "APROBADO",
+        "S07": "APROBADO",
+        "S08": "APROBADO"
+      },
+      "sha256_fuente": "1a7f05dd9437a71e46d6908a9b77b6c4e4789c7c2f94b659c3c87ba5743075e5"
+    },
+    {
+      "bateria": "laboratorio_10/base_seguridad_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_seguridad_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S06": "APROBADO"
+      },
+      "sha256_fuente": "d07fae6c6beaf53ba8268a49df4b3e679564770cb34b65a2822b3f54894cf6eb"
+    },
+    {
+      "bateria": "laboratorio_10/base_automatizacion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_automatizacion.json",
+      "casos": 7,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 7,
+      "codigo_salida": null,
+      "estados": {
+        "T01": "NO EJECUTADO",
+        "T02": "NO EJECUTADO",
+        "T03": "NO EJECUTADO",
+        "T04": "NO EJECUTADO",
+        "T05": "NO EJECUTADO",
+        "T06": "NO EJECUTADO",
+        "T07": "NO EJECUTADO"
+      },
+      "sha256_fuente": "d62cca1c9684d31894801a399a67775a40ede92dcee52a2a45986235d4db1a2c"
+    },
+    {
+      "bateria": "laboratorio_10/base_automatizacion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/base_automatizacion_navegador.json",
+      "casos": 1,
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 1,
+      "codigo_salida": null,
+      "estados": {
+        "T08": "NO EJECUTADO"
+      },
+      "sha256_fuente": "fe151b71fad74a58c4c6334364fe0736abe971d1b4f7b11c98455fe35d2dc868"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "4feb041c6e9a4194ac417442c438373fb1fa67ccb3a1f832eaf722ce7a98965d"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "ddcc786f157fbe84986cb863ad759973ffe71eb889cd2ff5e075f5b154570b03"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "343c0e1d7d4f46581cebdc44f63e1d7972bb0a1c86f412425ed72f284efcc263"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_seguridad",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_seguridad.json",
+      "casos": 11,
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S01": "APROBADO",
+        "S02.a": "APROBADO",
+        "S02.b": "APROBADO",
+        "S02.c": "APROBADO",
+        "S03": "APROBADO",
+        "S04.a": "APROBADO",
+        "S04.b": "APROBADO",
+        "S05.a": "APROBADO",
+        "S05.b": "APROBADO",
+        "S07": "APROBADO",
+        "S08": "APROBADO"
+      },
+      "sha256_fuente": "bad9f8fe0b024b524c6be540724f5da16916f0a2bc914cf4a5de53c0e3346933"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_seguridad_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_seguridad_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S06": "APROBADO"
+      },
+      "sha256_fuente": "4c0b36de575be4ec6dbcb3312d8296246527161c795f2952913c09c42b6ddfe2"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_automatizacion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_automatizacion.json",
+      "casos": 7,
+      "ejecutados": 7,
+      "aprobados": 6,
+      "fallidos": 1,
+      "no_ejecutados": 0,
+      "codigo_salida": 1,
+      "estados": {
+        "T01": "APROBADO",
+        "T02": "FALLIDO",
+        "T03": "APROBADO",
+        "T04": "APROBADO",
+        "T05": "APROBADO",
+        "T06": "APROBADO",
+        "T07": "APROBADO"
+      },
+      "sha256_fuente": "07aaa6d207c04815b6d580ee0d801f9d82877376481511e1c99747a82f73b329"
+    },
+    {
+      "bateria": "laboratorio_10/propuesta_automatizacion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/propuesta_automatizacion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "T08": "APROBADO"
+      },
+      "sha256_fuente": "c1b242f0fa625d94ed862bd9457258bacf70332bd55d8c8c9f489e7417feab7e"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_heredados",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_heredados.json",
+      "casos": 20,
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "C01": "APROBADO",
+        "C02": "APROBADO",
+        "C03": "APROBADO",
+        "C04": "APROBADO",
+        "B01": "APROBADO",
+        "B02": "APROBADO",
+        "B03": "APROBADO",
+        "B04": "APROBADO",
+        "B05": "APROBADO",
+        "B06": "APROBADO",
+        "N01": "APROBADO",
+        "N02": "APROBADO",
+        "N03": "APROBADO",
+        "N04": "APROBADO",
+        "N05": "APROBADO",
+        "N06": "APROBADO",
+        "N07": "APROBADO",
+        "N08": "APROBADO",
+        "N09": "APROBADO",
+        "N10": "APROBADO"
+      },
+      "sha256_fuente": "4e847074003ffe42c96bce6f967da676f39f4e6f24f02bb2f0c8bad6015015d8"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_resumen",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_resumen.json",
+      "casos": 6,
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "P01": "APROBADO",
+        "P02": "APROBADO",
+        "P03": "APROBADO",
+        "P04": "APROBADO",
+        "P05": "APROBADO",
+        "P06": "APROBADO"
+      },
+      "sha256_fuente": "afb0d62831e1e4acacde14bfc04e17593bb7dae31969b55a4114d668f2a6a75b"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_http",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_http.json",
+      "casos": 5,
+      "ejecutados": 5,
+      "aprobados": 5,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W01": "APROBADO",
+        "W02": "APROBADO",
+        "W03": "APROBADO",
+        "W04.a": "APROBADO",
+        "W04.b": "APROBADO"
+      },
+      "sha256_fuente": "2a7639db19a821c0e9906b15eef6f973bce7e2f5394f6b58a3b056ae270de4ec"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_navegador.json",
+      "casos": 3,
+      "ejecutados": 3,
+      "aprobados": 3,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "W05": "APROBADO",
+        "W06.a": "APROBADO",
+        "W06.b": "APROBADO"
+      },
+      "sha256_fuente": "14565956936a1762cbb03dfc4e8961204daf6b95b8d80f97d46d6f962d016e20"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_integracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_integracion.json",
+      "casos": 17,
+      "ejecutados": 17,
+      "aprobados": 17,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "I01": "APROBADO",
+        "I02.a": "APROBADO",
+        "I02.b": "APROBADO",
+        "I02.c": "APROBADO",
+        "I02.d": "APROBADO",
+        "I02.e": "APROBADO",
+        "I03.a": "APROBADO",
+        "I03.b": "APROBADO",
+        "I03.c": "APROBADO",
+        "I04.a": "APROBADO",
+        "I04.b": "APROBADO",
+        "I04.c": "APROBADO",
+        "I04.d": "APROBADO",
+        "I05": "APROBADO",
+        "I06": "APROBADO",
+        "I07": "APROBADO",
+        "I08": "APROBADO"
+      },
+      "sha256_fuente": "338f84fea006716abc2a5bf2a11883100ce464bd5d9d93dc8de0c93f007c3a6b"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_depuracion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_depuracion.json",
+      "casos": 10,
+      "ejecutados": 10,
+      "aprobados": 10,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D01": "APROBADO",
+        "D02": "APROBADO",
+        "D03": "APROBADO",
+        "D05": "APROBADO",
+        "D06.a": "APROBADO",
+        "D06.b": "APROBADO",
+        "D07.a": "APROBADO",
+        "D07.b": "APROBADO",
+        "D08.a": "APROBADO",
+        "D08.b": "APROBADO"
+      },
+      "sha256_fuente": "7289eb3aa7b65cc30440a9e5c7a58f2f4d5099e698f9ccf8ed7e1ab7dadb73f7"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_depuracion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_depuracion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "D04": "APROBADO"
+      },
+      "sha256_fuente": "7e2a610f91f9d3b8ac4403c81757050460269777aac72943a4876cc7a202a864"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_seguridad",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_seguridad.json",
+      "casos": 11,
+      "ejecutados": 11,
+      "aprobados": 11,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S01": "APROBADO",
+        "S02.a": "APROBADO",
+        "S02.b": "APROBADO",
+        "S02.c": "APROBADO",
+        "S03": "APROBADO",
+        "S04.a": "APROBADO",
+        "S04.b": "APROBADO",
+        "S05.a": "APROBADO",
+        "S05.b": "APROBADO",
+        "S07": "APROBADO",
+        "S08": "APROBADO"
+      },
+      "sha256_fuente": "1081db811f64dfae993ca090387aae2eee829a3a7bed05ecf7e48a35eae958c7"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_seguridad_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_seguridad_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "S06": "APROBADO"
+      },
+      "sha256_fuente": "cbe50cee39358247c5085885629e295a70d8b98f8baebb23f26df0f04f91d282"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_automatizacion",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_automatizacion.json",
+      "casos": 7,
+      "ejecutados": 7,
+      "aprobados": 7,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "T01": "APROBADO",
+        "T02": "APROBADO",
+        "T03": "APROBADO",
+        "T04": "APROBADO",
+        "T05": "APROBADO",
+        "T06": "APROBADO",
+        "T07": "APROBADO"
+      },
+      "sha256_fuente": "20b81019e10936669777d17633af47a0bfe0846f8705c7e8c20a917025809153"
+    },
+    {
+      "bateria": "laboratorio_10/solucion_automatizacion_navegador",
+      "fuente": "verificacion_intento_01/conjunto/laboratorio_10/solucion_automatizacion_navegador.json",
+      "casos": 1,
+      "ejecutados": 1,
+      "aprobados": 1,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "codigo_salida": 0,
+      "estados": {
+        "T08": "APROBADO"
+      },
+      "sha256_fuente": "7d480d620d05d989b861ca624f86c06bf6fdf941faf114d322e6af0202d8883e"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Bateria: resumen; estado: base
+P01: NO EJECUTADO
+El incremento resumen.py no existe en el estado base.
+P02: NO EJECUTADO
+El incremento resumen.py no existe en el estado base.
+P03: NO EJECUTADO
+El incremento resumen.py no existe en el estado base.
+P04: NO EJECUTADO
+El incremento resumen.py no existe en el estado base.
+P05: NO EJECUTADO
+El incremento resumen.py no existe en el estado base.
+P06: NO EJECUTADO
+El incremento resumen.py no existe en el estado base.
+Ejecutados: 0; aprobados: 0; fallidos: 0; no ejecutados: 6.

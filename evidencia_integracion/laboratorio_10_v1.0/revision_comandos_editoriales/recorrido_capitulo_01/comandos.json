@@ -1,0 +1,76 @@
+{
+  "registros": [
+    {
+      "id": "bloque_bash_1",
+      "comando": "python estados/solucion/persistencia.py iniciar \\\n  --base trabajo/sesion10.sqlite\npython estados/solucion/persistencia.py consultar \\\n  --base trabajo/sesion10.sqlite --almacen ALFA\n",
+      "inicio_utc": "2026-11-02T00:21:46.777205+00:00",
+      "fin_utc": "2026-11-02T00:21:46.862369+00:00",
+      "codigo_salida_bloque": 0,
+      "nota": "Los códigos de los operadores y pruebas negativas se capturan dentro del bloque; el printf final puede terminar con cero.",
+      "stdout": "1.stdout.txt",
+      "sha256_stdout": "5fdd3dd7d2cf9d9f6ad0206d963fe7bcf19b34fb87d57f33a42caa1ab385146c",
+      "stderr": "1.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "5fdd3dd7d2cf9d9f6ad0206d963fe7bcf19b34fb87d57f33a42caa1ab385146c",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "bloque_bash_2",
+      "comando": "python estados/solucion/operar.py \\\n  --base trabajo/sesion10.sqlite \\\n  --archivo datos/actualizacion_valida.csv \\\n  --almacen ALFA --salida trabajo/recibo10_01\ncodigo_operacion_10=$?\nprintf 'Codigo de la operacion: %s\\n' \"$codigo_operacion_10\"\n",
+      "inicio_utc": "2026-11-02T00:21:46.862707+00:00",
+      "fin_utc": "2026-11-02T00:21:46.993564+00:00",
+      "codigo_salida_bloque": 0,
+      "nota": "Los códigos de los operadores y pruebas negativas se capturan dentro del bloque; el printf final puede terminar con cero.",
+      "stdout": "2.stdout.txt",
+      "sha256_stdout": "b07f290ed3f558fde3493cb0eb34b1ba1ec9667762092190c9a4ffe2a007a35a",
+      "stderr": "2.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "b07f290ed3f558fde3493cb0eb34b1ba1ec9667762092190c9a4ffe2a007a35a",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "bloque_bash_3",
+      "comando": "python estados/solucion/persistencia.py consultar \\\n  --base trabajo/sesion10.sqlite --almacen ALFA\n",
+      "inicio_utc": "2026-11-02T00:21:46.993998+00:00",
+      "fin_utc": "2026-11-02T00:21:47.031538+00:00",
+      "codigo_salida_bloque": 0,
+      "nota": "Los códigos de los operadores y pruebas negativas se capturan dentro del bloque; el printf final puede terminar con cero.",
+      "stdout": "3.stdout.txt",
+      "sha256_stdout": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+      "stderr": "3.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "bloque_bash_5",
+      "comando": "for estado in propuesta solucion\ndo\n  python \"estados/$estado/persistencia.py\" iniciar \\\n    --base \"trabajo/negativo10_$estado.sqlite\" || break\n  python \"estados/$estado/operar.py\" \\\n    --base \"trabajo/negativo10_$estado.sqlite\" \\\n    --archivo datos/error_tardio.csv --almacen ALFA \\\n    --salida \"trabajo/recibo_negativo10_$estado\"\n  codigo_negativo_10=$?\n  printf '%s: codigo %s\\n' \"$estado\" \"$codigo_negativo_10\"\ndone\n",
+      "inicio_utc": "2026-11-02T00:21:47.031923+00:00",
+      "fin_utc": "2026-11-02T00:21:47.350926+00:00",
+      "codigo_salida_bloque": 0,
+      "nota": "Los códigos de los operadores y pruebas negativas se capturan dentro del bloque; el printf final puede terminar con cero.",
+      "stdout": "5.stdout.txt",
+      "sha256_stdout": "2ebc80f89b0b8ee36e1346eb5c35419f79a1f19ff061707517de17bc740899b8",
+      "stderr": "5.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "2ebc80f89b0b8ee36e1346eb5c35419f79a1f19ff061707517de17bc740899b8",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "bloque_bash_6",
+      "comando": "python pruebas_automatizacion.py --estado propuesta \\\n  --json trabajo/t_propuesta_01.json\ncodigo_propuesta_10=$?\nprintf 'Codigo de propuesta: %s\\n' \"$codigo_propuesta_10\"\npython pruebas_automatizacion.py --estado solucion \\\n  --json trabajo/t_solucion_01.json\ncodigo_solucion_10=$?\nprintf 'Codigo de solucion: %s\\n' \"$codigo_solucion_10\"\n",
+      "inicio_utc": "2026-11-02T00:21:47.351111+00:00",
+      "fin_utc": "2026-11-02T00:21:50.155149+00:00",
+      "codigo_salida_bloque": 0,
+      "nota": "Los códigos de los operadores y pruebas negativas se capturan dentro del bloque; el printf final puede terminar con cero.",
+      "stdout": "6.stdout.txt",
+      "sha256_stdout": "4e0470188bf04506f768a18779e01f1eb44f6b94a62c254e7d8c20b34885370e",
+      "stderr": "6.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_stdout_capturado": "4e0470188bf04506f768a18779e01f1eb44f6b94a62c254e7d8c20b34885370e",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "convenciones_del_productor": "",
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas."
+}

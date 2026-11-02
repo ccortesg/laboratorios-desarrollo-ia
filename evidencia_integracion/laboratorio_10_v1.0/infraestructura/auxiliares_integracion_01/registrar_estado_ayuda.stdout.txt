@@ -1,0 +1,22 @@
+usage: REGISTRAR_ESTADO.py [-h] [--repositorio REPOSITORIO] --fase
+                           {antes,preparado} --salida SALIDA
+                           [--registro-inicial REGISTRO_INICIAL]
+                           [--rutas-adaptadas RUTAS_ADAPTADAS]
+                           [--sin-consulta-remota]
+
+Registra una observación Git sin modificar código, índice ni referencias.
+
+options:
+  -h, --help            show this help message and exit
+  --repositorio REPOSITORIO
+  --fase {antes,preparado}
+  --salida SALIDA
+  --registro-inicial REGISTRO_INICIAL
+                        En fase preparado, compara main y las etiquetas con
+                        este antes.json.
+  --rutas-adaptadas RUTAS_ADAPTADAS
+                        Sólo sobre base avanzada: JSON con la lista explícita
+                        de rutas revisadas.
+  --sin-consulta-remota
+                        Sólo para ensayos desconectados; registra NO EJECUTADO
+                        remoto.

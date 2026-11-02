@@ -1,0 +1,31 @@
+{
+  "consulta_utc": "2026-11-02T00:05:21.878442+00:00",
+  "fecha_editorial_local": "2026-11-01",
+  "fuentes": [
+    {
+      "titulo": "Python 3.11 — subprocess",
+      "url": "https://docs.python.org/3.11/library/subprocess.html",
+      "uso_acotado": "Procesos, argumentos como lista, retorno, captura y timeout; límite de archivos batch en Windows.",
+      "tipo": "Primaria oficial"
+    },
+    {
+      "titulo": "Python 3.11 — sqlite3",
+      "url": "https://docs.python.org/3.11/library/sqlite3.html#how-to-use-the-connection-context-manager",
+      "uso_acotado": "Transacción y cierre explícito de conexión; modo rw sin creación implícita.",
+      "tipo": "Primaria oficial"
+    },
+    {
+      "titulo": "Anthropic — Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "uso_acotado": "Distinción conceptual entre flujo definido y decisiones dinámicas de un LLM; artículo 2024, no disponibilidad actual.",
+      "tipo": "Primaria oficial"
+    },
+    {
+      "titulo": "AWS Builders Library — Making retries safe with idempotent APIs",
+      "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+      "uso_acotado": "Repetición y efectos adicionales; el caso local se demuestra con pruebas propias, no uso de AWS.",
+      "tipo": "Primaria oficial"
+    }
+  ],
+  "citas_literales": "No se requieren; desarrollar prosa propia a partir del laboratorio."
+}

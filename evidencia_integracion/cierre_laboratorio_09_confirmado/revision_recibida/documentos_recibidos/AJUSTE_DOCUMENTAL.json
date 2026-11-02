@@ -1,0 +1,9 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-01T23:15:14.763024+00:00",
+  "accion": "Retirada sólo la adición propia al índice README de evidencia, antes de preparar Git.",
+  "motivo": "La referencia ya figura en README y continuidad; se preservan íntegros los 1502 archivos protegidos.",
+  "rutas": [
+    "evidencia_integracion/README.md"
+  ]
+}

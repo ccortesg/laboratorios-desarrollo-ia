@@ -1,0 +1,25 @@
+{
+  "fecha_utc": "2026-11-02T00:12:46.836620+00:00",
+  "estado": "APROBADO",
+  "alcance": "Ayuda y sintaxis de cuatro auxiliares; paquete mínimo sintético válido/alterado y empaquetado de evidencia sintética nueva/salida existente.",
+  "procesos_comprobados": 8,
+  "manifiesto_zip_usa_los_mismos_bytes": true,
+  "zip_existente_conservado": true,
+  "huellas": {
+    "estado": "APROBADO",
+    "comprobadas": 16,
+    "coincidentes": 16,
+    "discrepancias": []
+  },
+  "no_ejecutado": [
+    "Registro offline sobre copia limpia de base: requiere BASE_INTEGRACION y parche finales.",
+    "Verificador del paquete final: requiere manifiesto completo.",
+    "Verificación funcional conjunta: reservada al coordinador."
+  ],
+  "sha256_fuentes": {
+    "EJECUTAR_VERIFICACION.py": "d20f946d98c086a613f5dcd15ec94d01a29e8f782e01c1af64debe424b563882",
+    "EMPAQUETAR_EVIDENCIA.py": "b677e5adfe6e03611f083abee07122e0929f5d77201a6e795740f07591d9a9d8",
+    "REGISTRAR_ESTADO.py": "8048fe54c7c941a589fb98ca44281487fa9c71eb33faa8888b4846962c108ca4",
+    "VERIFICAR_PAQUETE.py": "7c9b441ad3539eaca56923fc2295366c820e471010e2d0380b48e38c8257caf4"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T00:10:57.017877+00:00",
+  "alcance": "El dictamen evalúa la reproducción de los estados didácticos. Los fallos deliberados siguen siendo FALLIDO en sus respectivas pruebas.",
+  "baterias": [
+    {
+      "estado_codigo": "base",
+      "bateria": "heredados",
+      "resultado": "base_heredados.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "base",
+      "bateria": "resumen",
+      "resultado": "base_resumen.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06"
+        ]
+      },
+      "ejecutados": 0,
+      "aprobados": 0,
+      "fallidos": 0,
+      "no_ejecutados": 6,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "heredados",
+      "resultado": "propuesta_heredados.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "propuesta",
+      "bateria": "resumen",
+      "resultado": "propuesta_resumen.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [
+          "P04",
+          "P05"
+        ],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 6,
+      "aprobados": 4,
+      "fallidos": 2,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "heredados",
+      "resultado": "solucion_heredados.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 20,
+      "aprobados": 20,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    },
+    {
+      "estado_codigo": "solucion",
+      "bateria": "resumen",
+      "resultado": "solucion_resumen.json",
+      "patron": {
+        "estado": "APROBADO",
+        "condiciones": {
+          "ids_unicos_y_completos": true,
+          "estados_exactos": true,
+          "fallos_son_aserciones": true,
+          "sin_errores_de_ejecucion": true,
+          "conteos_coherentes": true,
+          "codigo_salida_esperado": true
+        },
+        "fallos_intencionales_esperados": [],
+        "no_ejecutados_esperados": []
+      },
+      "ejecutados": 6,
+      "aprobados": 6,
+      "fallidos": 0,
+      "no_ejecutados": 0,
+      "errores_de_ejecucion": 0
+    }
+  ],
+  "totales": {
+    "ejecutados": 72,
+    "aprobados": 70,
+    "fallidos": 2,
+    "no_ejecutados": 6,
+    "errores_de_ejecucion": 0
+  },
+  "conservacion_heredados": "APROBADO",
+  "base_sin_incremento": "APROBADO",
+  "copilot": "NO EJECUTADO por este verificador",
+  "limites": [
+    "No demuestra una interacción comercial.",
+    "No acredita calidad fuera de los criterios enumerados.",
+    "Los nuevos criterios se omiten únicamente en el estado base."
+  ]
+}

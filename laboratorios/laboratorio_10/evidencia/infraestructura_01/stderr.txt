@@ -1,0 +1,7 @@
+test_no_inicio_del_hijo_conserva_bloqueo_sin_inventar_capturas (__main__.RecursosOperadorTests.test_no_inicio_del_hijo_conserva_bloqueo_sin_inventar_capturas)
+RO01: fallo controlado de inicio permanece BLOQUEADO sin huellas ficticias. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.048s
+
+OK

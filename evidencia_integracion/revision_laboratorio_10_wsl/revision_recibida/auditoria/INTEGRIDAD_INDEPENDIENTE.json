@@ -1,0 +1,116 @@
+{
+  "estado": "APROBADO",
+  "fecha_utc": "2026-11-02T01:43:55.977681+00:00",
+  "alcance": "Auditoría independiente de lectura de los bytes recibidos. No se ejecutaron scripts del ZIP ni el observador sitecustomize; no se repitieron pruebas funcionales.",
+  "manifiesto": {
+    "declarados": 665,
+    "reales_sin_manifiesto": 665,
+    "archivos_zip": 666,
+    "cobertura_completa": true,
+    "coincidencia_sha256_y_tamano": true,
+    "sha256_manifiesto": "a958565a2bad2588413f96c8eeebd26bb37b1e5929eb0d25c24f424e46c271ae"
+  },
+  "huellas": {
+    "sesion": {
+      "declaraciones": 340,
+      "bytes_finales_coincidentes": 340,
+      "capturadas_iguales_a_finales": 337,
+      "capturadas_distintas_de_finales": 3,
+      "archivos_salida_distintos": 340
+    },
+    "auxiliar": {
+      "declaraciones": 284,
+      "bytes_finales_coincidentes": 284,
+      "capturadas_iguales_a_finales": 284,
+      "capturadas_distintas_de_finales": 0,
+      "archivos_salida_distintos": 284
+    },
+    "conjunto": {
+      "declaraciones": 272,
+      "bytes_finales_coincidentes": 272,
+      "capturadas_iguales_a_finales": 272,
+      "capturadas_distintas_de_finales": 0,
+      "archivos_salida_distintos": 272
+    }
+  },
+  "comprobador_original": {
+    "sha256": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+    "modo": "Sólo lectura, Python -I -B; sin --esperadas y sin cerrar_evidencia",
+    "ejecuciones": [
+      {
+        "alcance": "sesion",
+        "codigo_salida": 0,
+        "stdout": "APROBADO: 340/340 huellas stdout/stderr coinciden con los bytes finales.\nComprobación de sólo lectura; no se modificó la evidencia.\n",
+        "stderr": "",
+        "sha256_stdout": "9702d64c67a4e5633e5579cacac0bc6e3f2021cd8778f7bdc96dfce803f76c75",
+        "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "alcance": "auxiliar",
+        "codigo_salida": 0,
+        "stdout": "APROBADO: 284/284 huellas stdout/stderr coinciden con los bytes finales.\nComprobación de sólo lectura; no se modificó la evidencia.\n",
+        "stderr": "",
+        "sha256_stdout": "a720bc74c948d21992029f126504794e4edcc7c1eb6b4849c2ffdaeae2b545f6",
+        "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "alcance": "conjunto",
+        "codigo_salida": 0,
+        "stdout": "APROBADO: 272/272 huellas stdout/stderr coinciden con los bytes finales.\nComprobación de sólo lectura; no se modificó la evidencia.\n",
+        "stderr": "",
+        "sha256_stdout": "cfc13f50339f97d7408bc5012ebb299755784c40be715f1a725a7f00fadf6c03",
+        "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "inventario_capturas": {
+    "declaraciones": 284,
+    "referencias_y_sha_capturados_coincidentes": true,
+    "blobs_distintos_declarados": 95,
+    "sha256_capturados_distintos_en_declaraciones": 36,
+    "originales_fuera_zip": "NO EJECUTADO: no se dispone aquí de esos bytes; la captura previa fue cotejada en WSL según el inventario recibido. La auditoría independiente sólo acredita la coherencia de las declaraciones con los registros y los bytes finales presentes.",
+    "interpretacion_95_blobs": "El script recibido cuenta todos los blobs del almacén externo, incluidos comandos.json y cierres intermedios. Las 284 declaraciones finales se refieren a 36 huellas capturadas distintas. Son universos diferentes y no se suman."
+  },
+  "observador": {
+    "revision_estatica": "APROBADO dentro del alcance revisado",
+    "sha256": "3e9ed84381b29bdfd496d26ad84f029dcf8ac8bd3e5f1260f5b69e479f3f2a2e",
+    "comportamiento": "Se activa con LAB10_ARCHIVO_CAPTURAS; intercepta la carga del módulo huellas_evidencia, lee las salidas declaradas antes del cierre y escribe copias por SHA fuera de la evidencia compartible. El envoltorio pasa salida y transformar a la función original y devuelve su resultado. No se observa alteración de resultados ni de archivos de captura en el código revisado.",
+    "limites": "Es instrumentación adicional de la ejecución WSL; su texto no sustituye una prueba dinámica de transparencia. Fallos de creación del almacén fuera del try podrían interrumpir el proceso; los registros de la ejecución aportada no muestran ese fallo."
+  },
+  "anonimizacion": {
+    "archivos_utf8_revisados": 666,
+    "patrones": "Rutas de perfiles Windows/Linux, scratch privado, tokens GitHub, claves privadas y correos. URL autorizada del repositorio y nombres relativos sintéticos conservados.",
+    "coincidencias": [],
+    "limite": "Revisión acotada; no se inspeccionó el almacén de originales fuera del ZIP."
+  },
+  "problemas": [],
+  "limites": [
+    "SHA-256 y el manifiesto permiten contrastar integridad de los bytes recibidos; no autentican por sí solos la procedencia externa.",
+    "El estado del equipo WSL actual y las fuentes no incluidas requieren su evidencia de identidad y las comprobaciones de continuidad, fuera de esta auditoría de huellas."
+  ],
+  "capturas_saneadas_distintas": [
+    {
+      "registro": "operaciones/comandos.json",
+      "id": "aplicar_parche_una_vez",
+      "flujo": "stderr",
+      "sha256_capturado": "7b2d7cfb26f176f46ca39f3b7887ca376b6679a9849f3d14ec3ff3608b05f579",
+      "sha256_final": "c9da1d8972d6d11543c1e0f18bd5438755d6de323c9804b9bab9f33657893232"
+    },
+    {
+      "registro": "operaciones/comandos.json",
+      "id": "entorno_chromium",
+      "flujo": "stdout",
+      "sha256_capturado": "5f2f0c863d4701b5a85cfd5481b7f33a042cfb7fa432dab0f7ac788a2e0800c8",
+      "sha256_final": "1a18eea1f302668758a680bb0e98327aa7e917778d8643b8bdf901341503c044"
+    },
+    {
+      "registro": "operaciones/comandos.json",
+      "id": "entorno_python_utilizado",
+      "flujo": "stdout",
+      "sha256_capturado": "a310b13baf451eb6196c71f1c5f0b5edcda5549443fcd380b6bdb175cf875c4a",
+      "sha256_final": "8a8e1d3b5f75258a439304fd15125623f04f2e1948013bdc7dd06e5fcfe3a0b7"
+    }
+  ],
+  "fecha_hora_hermosillo": "2026-11-01T18:44:47.633359-07:00",
+  "evidencia_recibida_conservada_tras_revision": true
+}

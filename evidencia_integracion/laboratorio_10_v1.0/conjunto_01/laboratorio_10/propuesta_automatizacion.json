@@ -1,0 +1,1282 @@
+{
+  "bateria": "automatizacion",
+  "estado_codigo": "copia_del_lector",
+  "casos_registrados": 7,
+  "criterios_distintos": 7,
+  "ejecutados": 7,
+  "aprobados": 6,
+  "fallidos": 1,
+  "fallos_de_asercion": 1,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "pruebas": [
+    {
+      "id": "T01",
+      "prueba": "test_t01_actualiza_y_consulta_la_misma_base",
+      "criterio": "T01: la operación válida aplica el CSV y consulta realmente la misma base.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "csv": "datos/actualizacion_valida.csv",
+        "almacen": "ALFA"
+      },
+      "esperado": {
+        "codigo": 0,
+        "estado": "APROBADO",
+        "resumen": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "A03_ALFA": 3,
+        "A02_habilitado": 0
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:33.352148+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_1"
+            ],
+            "codigo_salida": 0,
+            "resultado": {
+              "estado": "APROBADO",
+              "codigo_salida": 0,
+              "fecha_hora_utc": "2026-11-02T00:12:33.557550+00:00",
+              "entrada": {
+                "archivo": "entrada.csv",
+                "bytes": 80,
+                "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+              },
+              "base": "archivo:principal",
+              "almacen": "ALFA",
+              "importacion_confirmada": true,
+              "pasos": [
+                {
+                  "paso": "importar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                },
+                {
+                  "paso": "consultar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                }
+              ],
+              "resumen": {
+                "almacen": "ALFA",
+                "total": 2,
+                "codigos": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+            },
+            "stderr": ""
+          }
+        ],
+        "estado_persistido": {
+          "articulos": [
+            [
+              "A01",
+              "Articulo local",
+              1
+            ],
+            [
+              "A02",
+              "Articulo deshabilitado",
+              0
+            ],
+            [
+              "A03",
+              "Articulo agotado",
+              1
+            ],
+            [
+              "A04",
+              "Articulo de otra ubicacion",
+              1
+            ]
+          ],
+          "almacenes": [
+            [
+              "ALFA"
+            ],
+            [
+              "BETA"
+            ]
+          ],
+          "existencias": [
+            [
+              "A01",
+              "ALFA",
+              5
+            ],
+            [
+              "A02",
+              "ALFA",
+              8
+            ],
+            [
+              "A03",
+              "ALFA",
+              3
+            ],
+            [
+              "A04",
+              "BETA",
+              0
+            ]
+          ]
+        },
+        "recibo": {
+          "archivos_sha256": {
+            "entrada.csv": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+            "resultado.json": "ec97679c216ee27775add95a94f1dfbc2b6bd20c257efdfb9b2c7a69cc2a0502",
+            "importar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stdout.txt": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+            "importar.stdout.txt": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+            "comandos.json": "ada350b8253633a4da3a0a9a08ffbcb7a20d4bbc84b4973fac984321f47efa39",
+            "huellas.json": "8b9a76341883095190cd578ec1cecab54ef5d64658ae5000291d08465eee10c5"
+          },
+          "resultado": {
+            "estado": "APROBADO",
+            "codigo_salida": 0,
+            "fecha_hora_utc": "2026-11-02T00:12:33.557550+00:00",
+            "entrada": {
+              "archivo": "entrada.csv",
+              "bytes": 80,
+              "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+            },
+            "base": "archivo:principal",
+            "almacen": "ALFA",
+            "importacion_confirmada": true,
+            "pasos": [
+              {
+                "paso": "importar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              },
+              {
+                "paso": "consultar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              }
+            ],
+            "resumen": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            },
+            "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+          },
+          "comandos": {
+            "registros": [
+              {
+                "id": "importar",
+                "inicio_utc": "2026-11-02T00:12:33.444883+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "importar",
+                  "--base",
+                  "<BASE>",
+                  "--archivo",
+                  "<RECIBO>/entrada.csv",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "importar.stdout.txt",
+                "sha256_stdout": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+                "stderr": "importar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:33.499510+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              },
+              {
+                "id": "consultar",
+                "inicio_utc": "2026-11-02T00:12:33.499575+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "consultar",
+                  "--base",
+                  "<BASE>",
+                  "--almacen",
+                  "ALFA",
+                  "--nombre",
+                  "",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "consultar.stdout.txt",
+                "sha256_stdout": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+                "stderr": "consultar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:33.557502+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ],
+            "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas.",
+            "convenciones_del_productor": "Comandos fijos; rutas sustituidas por alias. Las capturas se registraron inicialmente como bytes."
+          },
+          "huellas": {
+            "estado": "APROBADO",
+            "comprobadas": 4,
+            "coincidentes": 4,
+            "discrepancias": []
+          }
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "T02",
+      "prueba": "test_t02_rechazo_detiene_la_consulta",
+      "criterio": "T02: un CSV rechazado detiene el flujo y conserva toda la base.",
+      "estado": "FALLIDO",
+      "detalle": "1 != 0",
+      "tipo_error": "AssertionError",
+      "entrada": {
+        "filas": "primera válida y segunda negativa"
+      },
+      "esperado": {
+        "codigo": 1,
+        "estado": "FALLIDO",
+        "consulta": "NO EJECUTADO",
+        "base_conservada": true,
+        "resumen": null
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:33.573154+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<TRABAJO>/entrada_invalida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_1"
+            ],
+            "codigo_salida": 0,
+            "resultado": {
+              "estado": "APROBADO",
+              "codigo_salida": 0,
+              "fecha_hora_utc": "2026-11-02T00:12:33.905931+00:00",
+              "entrada": {
+                "archivo": "entrada.csv",
+                "bytes": 59,
+                "sha256": "359019da6c7e778ebc3a7a9271b20988921109943c9d041f5ac48bc66c80220c"
+              },
+              "base": "archivo:principal",
+              "almacen": "ALFA",
+              "importacion_confirmada": false,
+              "pasos": [
+                {
+                  "paso": "importar",
+                  "estado": "FALLIDO",
+                  "codigo_salida": 1
+                },
+                {
+                  "paso": "consultar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                }
+              ],
+              "resumen": {
+                "almacen": "ALFA",
+                "total": 1,
+                "codigos": [
+                  "A01"
+                ]
+              },
+              "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+            },
+            "stderr": ""
+          }
+        ],
+        "recibo": {
+          "archivos_sha256": {
+            "entrada.csv": "359019da6c7e778ebc3a7a9271b20988921109943c9d041f5ac48bc66c80220c",
+            "resultado.json": "87dec1a8322b936133d328ce368a704543fbada895c9896842e61374ddcce804",
+            "importar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stdout.txt": "dadb1f70b7157d64c2ec1f09808e3afce591e6e23cae06e0827f9a799e6a4a49",
+            "importar.stdout.txt": "2b615a5ab624887f39dd9e5cf4f438e9080c357c0ada5b8b411a2bdee94d8cc6",
+            "comandos.json": "5517a52e3c239b949eb701aa129cc62bfce80cccb53e13d875db3053bb2a3626",
+            "huellas.json": "8b9a76341883095190cd578ec1cecab54ef5d64658ae5000291d08465eee10c5"
+          },
+          "resultado": {
+            "estado": "APROBADO",
+            "codigo_salida": 0,
+            "fecha_hora_utc": "2026-11-02T00:12:33.905931+00:00",
+            "entrada": {
+              "archivo": "entrada.csv",
+              "bytes": 59,
+              "sha256": "359019da6c7e778ebc3a7a9271b20988921109943c9d041f5ac48bc66c80220c"
+            },
+            "base": "archivo:principal",
+            "almacen": "ALFA",
+            "importacion_confirmada": false,
+            "pasos": [
+              {
+                "paso": "importar",
+                "estado": "FALLIDO",
+                "codigo_salida": 1
+              },
+              {
+                "paso": "consultar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              }
+            ],
+            "resumen": {
+              "almacen": "ALFA",
+              "total": 1,
+              "codigos": [
+                "A01"
+              ]
+            },
+            "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+          },
+          "comandos": {
+            "registros": [
+              {
+                "id": "importar",
+                "inicio_utc": "2026-11-02T00:12:33.702108+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "importar",
+                  "--base",
+                  "<BASE>",
+                  "--archivo",
+                  "<RECIBO>/entrada.csv",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 1,
+                "stdout": "importar.stdout.txt",
+                "sha256_stdout": "2b615a5ab624887f39dd9e5cf4f438e9080c357c0ada5b8b411a2bdee94d8cc6",
+                "stderr": "importar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:33.800733+00:00",
+                "estado": "FALLIDO",
+                "sha256_stdout_capturado": "2b615a5ab624887f39dd9e5cf4f438e9080c357c0ada5b8b411a2bdee94d8cc6",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              },
+              {
+                "id": "consultar",
+                "inicio_utc": "2026-11-02T00:12:33.801503+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "consultar",
+                  "--base",
+                  "<BASE>",
+                  "--almacen",
+                  "ALFA",
+                  "--nombre",
+                  "",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "consultar.stdout.txt",
+                "sha256_stdout": "dadb1f70b7157d64c2ec1f09808e3afce591e6e23cae06e0827f9a799e6a4a49",
+                "stderr": "consultar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:33.905877+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "dadb1f70b7157d64c2ec1f09808e3afce591e6e23cae06e0827f9a799e6a4a49",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ],
+            "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas.",
+            "convenciones_del_productor": "Comandos fijos; rutas sustituidas por alias. Las capturas se registraron inicialmente como bytes."
+          },
+          "huellas": {
+            "estado": "APROBADO",
+            "comprobadas": 4,
+            "coincidentes": 4,
+            "discrepancias": []
+          }
+        },
+        "base_conservada": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "T03",
+      "prueba": "test_t03_repeticion_conserva_estado_y_recibo",
+      "criterio": "T03: repetir la entrada conserva estado, pares omitidos y el primer recibo.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "veces": 2,
+        "carpetas_recibo": "distintas"
+      },
+      "esperado": {
+        "codigos": [
+          0,
+          0
+        ],
+        "estado_repetido": true,
+        "recibo_anterior_conservado": true,
+        "pares_omitidos_conservados": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:33.927785+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_1"
+            ],
+            "codigo_salida": 0,
+            "resultado": {
+              "estado": "APROBADO",
+              "codigo_salida": 0,
+              "fecha_hora_utc": "2026-11-02T00:12:34.191769+00:00",
+              "entrada": {
+                "archivo": "entrada.csv",
+                "bytes": 80,
+                "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+              },
+              "base": "archivo:principal",
+              "almacen": "ALFA",
+              "importacion_confirmada": true,
+              "pasos": [
+                {
+                  "paso": "importar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                },
+                {
+                  "paso": "consultar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                }
+              ],
+              "resumen": {
+                "almacen": "ALFA",
+                "total": 2,
+                "codigos": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+            },
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_2"
+            ],
+            "codigo_salida": 0,
+            "resultado": {
+              "estado": "APROBADO",
+              "codigo_salida": 0,
+              "fecha_hora_utc": "2026-11-02T00:12:34.339225+00:00",
+              "entrada": {
+                "archivo": "entrada.csv",
+                "bytes": 80,
+                "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+              },
+              "base": "archivo:principal",
+              "almacen": "ALFA",
+              "importacion_confirmada": true,
+              "pasos": [
+                {
+                  "paso": "importar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                },
+                {
+                  "paso": "consultar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                }
+              ],
+              "resumen": {
+                "almacen": "ALFA",
+                "total": 2,
+                "codigos": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+            },
+            "stderr": ""
+          }
+        ],
+        "estado_repetido": true,
+        "recibo_anterior_conservado": true,
+        "pares_omitidos_conservados": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "T04",
+      "prueba": "test_t04_base_ausente_no_se_recrea",
+      "criterio": "T04: una base ausente se rechaza antes de crear recibo o importar.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "base": "ausente"
+      },
+      "esperado": {
+        "codigo": 2,
+        "error": "BASE_INEXISTENTE",
+        "base_creada": false
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:34.352797+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/ausente.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_1"
+            ],
+            "codigo_salida": 2,
+            "resultado": {
+              "estado": "RECHAZADO",
+              "codigo_salida": 2,
+              "error": {
+                "codigo": "BASE_INEXISTENTE",
+                "mensaje": "La base seleccionada no existe como archivo."
+              }
+            },
+            "stderr": ""
+          }
+        ],
+        "base_creada": false,
+        "recibo_creado": false
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "T05",
+      "prueba": "test_t05_salida_existente_y_protegida",
+      "criterio": "T05: los destinos existentes o protegidos se rechazan antes de importar.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "destinos": [
+          "existente",
+          "datos/recibo_no_autorizado_t05"
+        ]
+      },
+      "esperado": {
+        "codigos": [
+          2,
+          2
+        ],
+        "errores": [
+          "SALIDA_EXISTENTE",
+          "SALIDA_PROTEGIDA"
+        ],
+        "entradas_conservadas": true
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:34.476408+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_anterior"
+            ],
+            "codigo_salida": 2,
+            "resultado": {
+              "estado": "RECHAZADO",
+              "codigo_salida": 2,
+              "error": {
+                "codigo": "SALIDA_EXISTENTE",
+                "mensaje": "El destino del recibo ya existe; usa una carpeta nueva."
+              }
+            },
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<LABORATORIO>/datos/actualizacion_valida.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<LABORATORIO>/datos/recibo_no_autorizado_t05"
+            ],
+            "codigo_salida": 2,
+            "resultado": {
+              "estado": "RECHAZADO",
+              "codigo_salida": 2,
+              "error": {
+                "codigo": "SALIDA_PROTEGIDA",
+                "mensaje": "El recibo debe quedar fuera de los componentes del laboratorio."
+              }
+            },
+            "stderr": ""
+          }
+        ],
+        "entradas_conservadas": true
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "T06",
+      "prueba": "test_t06_recibo_corresponde_a_bytes_y_pasos",
+      "criterio": "T06: el recibo identifica el CSV usado y las salidas realmente guardadas.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "csv": "copia sintética de la actualización"
+      },
+      "esperado": {
+        "snapshot_exacto": true,
+        "sha256_exacto": true,
+        "pasos": [
+          "importar",
+          "consultar"
+        ],
+        "huellas": "APROBADO"
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:34.640216+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/principal.sqlite",
+              "--archivo",
+              "<TRABAJO>/instantanea_original.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/recibo_1"
+            ],
+            "codigo_salida": 0,
+            "resultado": {
+              "estado": "APROBADO",
+              "codigo_salida": 0,
+              "fecha_hora_utc": "2026-11-02T00:12:34.832160+00:00",
+              "entrada": {
+                "archivo": "entrada.csv",
+                "bytes": 80,
+                "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+              },
+              "base": "archivo:principal",
+              "almacen": "ALFA",
+              "importacion_confirmada": true,
+              "pasos": [
+                {
+                  "paso": "importar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                },
+                {
+                  "paso": "consultar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                }
+              ],
+              "resumen": {
+                "almacen": "ALFA",
+                "total": 2,
+                "codigos": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+            },
+            "stderr": ""
+          }
+        ],
+        "recibo": {
+          "archivos_sha256": {
+            "entrada.csv": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+            "resultado.json": "27a471b910f1655d3153a2db359f6fabd6db78438f6f83f1dba2dc9387b9604b",
+            "importar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stdout.txt": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+            "importar.stdout.txt": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+            "comandos.json": "f4c6a6ee5ede51064b5ba6fadb180564829223f29385eb0e15e93d1b4b287155",
+            "huellas.json": "8b9a76341883095190cd578ec1cecab54ef5d64658ae5000291d08465eee10c5"
+          },
+          "resultado": {
+            "estado": "APROBADO",
+            "codigo_salida": 0,
+            "fecha_hora_utc": "2026-11-02T00:12:34.832160+00:00",
+            "entrada": {
+              "archivo": "entrada.csv",
+              "bytes": 80,
+              "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+            },
+            "base": "archivo:principal",
+            "almacen": "ALFA",
+            "importacion_confirmada": true,
+            "pasos": [
+              {
+                "paso": "importar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              },
+              {
+                "paso": "consultar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              }
+            ],
+            "resumen": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            },
+            "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+          },
+          "comandos": {
+            "registros": [
+              {
+                "id": "importar",
+                "inicio_utc": "2026-11-02T00:12:34.734298+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "importar",
+                  "--base",
+                  "<BASE>",
+                  "--archivo",
+                  "<RECIBO>/entrada.csv",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "importar.stdout.txt",
+                "sha256_stdout": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+                "stderr": "importar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:34.779290+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              },
+              {
+                "id": "consultar",
+                "inicio_utc": "2026-11-02T00:12:34.779627+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "consultar",
+                  "--base",
+                  "<BASE>",
+                  "--almacen",
+                  "ALFA",
+                  "--nombre",
+                  "",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "consultar.stdout.txt",
+                "sha256_stdout": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+                "stderr": "consultar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:34.832113+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ],
+            "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas.",
+            "convenciones_del_productor": "Comandos fijos; rutas sustituidas por alias. Las capturas se registraron inicialmente como bytes."
+          },
+          "huellas": {
+            "estado": "APROBADO",
+            "comprobadas": 4,
+            "coincidentes": 4,
+            "discrepancias": []
+          }
+        }
+      },
+      "comando_terminal": null
+    },
+    {
+      "id": "T07",
+      "prueba": "test_t07_directorio_ajeno_y_rutas_con_espacios",
+      "criterio": "T07: el cwd y los espacios no cambian el código ni la base elegidos.",
+      "estado": "APROBADO",
+      "detalle": "",
+      "tipo_error": null,
+      "entrada": {
+        "cwd": "directorio ajeno",
+        "rutas": "con espacios",
+        "script_en_cwd": "no autorizado"
+      },
+      "esperado": {
+        "codigo": 0,
+        "resumen": {
+          "almacen": "ALFA",
+          "total": 2,
+          "codigos": [
+            "A01",
+            "A03"
+          ]
+        },
+        "A03_ALFA": 3
+      },
+      "observado": {
+        "operaciones": [
+          {
+            "proceso": "cli_1",
+            "inicio_utc": "2026-11-02T00:12:34.848566+00:00",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/persistencia.py",
+              "iniciar",
+              "--base",
+              "<TRABAJO>/principal.sqlite"
+            ],
+            "directorio": "<CODIGO>",
+            "codigo_salida": 0,
+            "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+            "stderr": ""
+          },
+          {
+            "proceso": "operador",
+            "comando": [
+              "python",
+              "-B",
+              "<CODIGO>/operar.py",
+              "--base",
+              "<TRABAJO>/datos con espacios/catalogo principal.sqlite",
+              "--archivo",
+              "<TRABAJO>/datos con espacios/lote de entrada.csv",
+              "--almacen",
+              "ALFA",
+              "--nombre",
+              "",
+              "--salida",
+              "<TRABAJO>/datos con espacios/recibo nuevo"
+            ],
+            "codigo_salida": 0,
+            "resultado": {
+              "estado": "APROBADO",
+              "codigo_salida": 0,
+              "fecha_hora_utc": "2026-11-02T00:12:35.037836+00:00",
+              "entrada": {
+                "archivo": "entrada.csv",
+                "bytes": 80,
+                "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+              },
+              "base": "archivo:principal",
+              "almacen": "ALFA",
+              "importacion_confirmada": true,
+              "pasos": [
+                {
+                  "paso": "importar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                },
+                {
+                  "paso": "consultar",
+                  "estado": "APROBADO",
+                  "codigo_salida": 0
+                }
+              ],
+              "resumen": {
+                "almacen": "ALFA",
+                "total": 2,
+                "codigos": [
+                  "A01",
+                  "A03"
+                ]
+              },
+              "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+            },
+            "stderr": ""
+          }
+        ],
+        "estado_persistido": {
+          "articulos": [
+            [
+              "A01",
+              "Articulo local",
+              1
+            ],
+            [
+              "A02",
+              "Articulo deshabilitado",
+              0
+            ],
+            [
+              "A03",
+              "Articulo agotado",
+              1
+            ],
+            [
+              "A04",
+              "Articulo de otra ubicacion",
+              1
+            ]
+          ],
+          "almacenes": [
+            [
+              "ALFA"
+            ],
+            [
+              "BETA"
+            ]
+          ],
+          "existencias": [
+            [
+              "A01",
+              "ALFA",
+              5
+            ],
+            [
+              "A02",
+              "ALFA",
+              8
+            ],
+            [
+              "A03",
+              "ALFA",
+              3
+            ],
+            [
+              "A04",
+              "BETA",
+              0
+            ]
+          ]
+        },
+        "recibo": {
+          "archivos_sha256": {
+            "entrada.csv": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+            "resultado.json": "e883fa070baa5a99b30858a9ae2d9f52590e5dabebe31e8399a7a50ab288178a",
+            "importar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "consultar.stdout.txt": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+            "importar.stdout.txt": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+            "comandos.json": "3df71876b8ebf83e8f4ee18f7ad97fa54d1c4c4932794f4931a9a939ffc02e67",
+            "huellas.json": "8b9a76341883095190cd578ec1cecab54ef5d64658ae5000291d08465eee10c5"
+          },
+          "resultado": {
+            "estado": "APROBADO",
+            "codigo_salida": 0,
+            "fecha_hora_utc": "2026-11-02T00:12:35.037836+00:00",
+            "entrada": {
+              "archivo": "entrada.csv",
+              "bytes": 80,
+              "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+            },
+            "base": "archivo:principal",
+            "almacen": "ALFA",
+            "importacion_confirmada": true,
+            "pasos": [
+              {
+                "paso": "importar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              },
+              {
+                "paso": "consultar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              }
+            ],
+            "resumen": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            },
+            "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+          },
+          "comandos": {
+            "registros": [
+              {
+                "id": "importar",
+                "inicio_utc": "2026-11-02T00:12:34.948143+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "importar",
+                  "--base",
+                  "<BASE>",
+                  "--archivo",
+                  "<RECIBO>/entrada.csv",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "importar.stdout.txt",
+                "sha256_stdout": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+                "stderr": "importar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:34.994698+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "c32dc5cab071d9132861545dad30c1ddb93c94985494b7ac68fa6e5cd93d803d",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              },
+              {
+                "id": "consultar",
+                "inicio_utc": "2026-11-02T00:12:34.994786+00:00",
+                "comando": [
+                  "python",
+                  "-B",
+                  "<CODIGO>/persistencia.py",
+                  "consultar",
+                  "--base",
+                  "<BASE>",
+                  "--almacen",
+                  "ALFA",
+                  "--nombre",
+                  "",
+                  "--alias",
+                  "principal"
+                ],
+                "directorio": "<CODIGO>",
+                "codigo_salida": 0,
+                "stdout": "consultar.stdout.txt",
+                "sha256_stdout": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+                "stderr": "consultar.stderr.txt",
+                "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fin_utc": "2026-11-02T00:12:35.037796+00:00",
+                "estado": "APROBADO",
+                "sha256_stdout_capturado": "ac9d1ce5b768ed0104a351da3cf4b535d0e42ed821152c8c60c569920d02bf9d",
+                "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ],
+            "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas.",
+            "convenciones_del_productor": "Comandos fijos; rutas sustituidas por alias. Las capturas se registraron inicialmente como bytes."
+          },
+          "huellas": {
+            "estado": "APROBADO",
+            "comprobadas": 4,
+            "coincidentes": 4,
+            "discrepancias": []
+          }
+        }
+      },
+      "comando_terminal": null
+    }
+  ]
+}

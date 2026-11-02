@@ -1,0 +1,9 @@
+{
+  "estado": "APROBADO",
+  "protegidos": 2285,
+  "diferencias_protegidas": [],
+  "archivos_nuevos_o_modificados": 1372,
+  "coincidencias_por_revisar": [],
+  "limite": "Patrones acotados más revisión manual del manuscrito, código y evidencia nueva; no certifica ausencia universal de datos identificables.",
+  "fase": "Índice final de preparación antes de emitir el parche"
+}

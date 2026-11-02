@@ -1,0 +1,432 @@
+{
+  "estado": "APROBADO",
+  "archivos_comprobados": 71,
+  "registros": [
+    {
+      "archivo": "contexto/CONTRATO_DEPURACION.md",
+      "esperado": "9ae26d615d4d74a65de841b77cfb913f62f738eda5fdb21d683e78e03776063d",
+      "observado": "9ae26d615d4d74a65de841b77cfb913f62f738eda5fdb21d683e78e03776063d",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "contexto/CONTRATO_INTEGRACION.md",
+      "esperado": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd",
+      "observado": "db1409dd89addaf894ae919e4b8db5a8d7a7488712d0a20b615ae42959bbe9dd",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "contexto/CONTRATO_SEGURIDAD.md",
+      "esperado": "b45561a198876c5ecf45b3bab687cbd0d66871df57b0fd7d8e457fde3d1ef5b2",
+      "observado": "b45561a198876c5ecf45b3bab687cbd0d66871df57b0fd7d8e457fde3d1ef5b2",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "datos/actualizacion_valida.csv",
+      "esperado": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+      "observado": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "datos/error_tardio.csv",
+      "esperado": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+      "observado": "a42b40fd6799a1681284e61d1a3de974bf36847dba6cdf5cabc15e08b51d6d42",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "datos/par_duplicado.csv",
+      "esperado": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6",
+      "observado": "5ee328700c4bcf310b504df06c4b42b1f5ef823bf9a07aba3598603e98b4deb6",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/catalogo.py",
+      "esperado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+      "observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/datos/ejemplos.sql",
+      "esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/datos/esquema.sql",
+      "esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/detalle.py",
+      "esperado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+      "observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/importacion.py",
+      "esperado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+      "observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/laboratorio.py",
+      "esperado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+      "observado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/origen.py",
+      "esperado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+      "observado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/persistencia.py",
+      "esperado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+      "observado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/politica_consulta.py",
+      "esperado": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3",
+      "observado": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/pruebas.py",
+      "esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/pruebas_detalle.py",
+      "esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/resumen.py",
+      "esperado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+      "observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/servidor.py",
+      "esperado": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf",
+      "observado": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/solucion/consulta.sql",
+      "esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/web/app.js",
+      "esperado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+      "observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/web/estilos.css",
+      "esperado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+      "observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/base/web/index.html",
+      "esperado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+      "observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/catalogo.py",
+      "esperado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+      "observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/datos/ejemplos.sql",
+      "esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/datos/esquema.sql",
+      "esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/detalle.py",
+      "esperado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+      "observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/importacion.py",
+      "esperado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+      "observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/laboratorio.py",
+      "esperado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+      "observado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/origen.py",
+      "esperado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+      "observado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/persistencia.py",
+      "esperado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+      "observado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/politica_consulta.py",
+      "esperado": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3",
+      "observado": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas.py",
+      "esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/pruebas_detalle.py",
+      "esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/resumen.py",
+      "esperado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+      "observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/servidor.py",
+      "esperado": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf",
+      "observado": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/solucion/consulta.sql",
+      "esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/web/app.js",
+      "esperado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+      "observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/web/estilos.css",
+      "esperado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+      "observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/propuesta/web/index.html",
+      "esperado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+      "observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/catalogo.py",
+      "esperado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+      "observado": "e4470bf7871016f1ebae09c8fa6be76e61e5d50096faf1fb7535a63ef9fb3961",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/datos/ejemplos.sql",
+      "esperado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "observado": "7f1323ec7e1e5c20debd5cb769f04ed17798b46fd5a4cdd967d2aa0f96c1228c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/datos/esquema.sql",
+      "esperado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "observado": "59146c0eef54cc5d314ad844326a8f204fdc0cd80f0073677f4cf311f3951166",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/detalle.py",
+      "esperado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+      "observado": "92947661e1d1e5f577f38a7b61cfe809b9fb81476bf9091905bb8b67c57133ee",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/importacion.py",
+      "esperado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+      "observado": "283ced2f43c076035b44511cc3a414f5623b7b77e3ef43f8325de5dcfc67e890",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/laboratorio.py",
+      "esperado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+      "observado": "ff75fd35c8de90527557acf01f18451a1910781c96df3906f78e0f528184b2f3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/origen.py",
+      "esperado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+      "observado": "72925c6b70c41bb2ae649ac78cacbbfcbf2e3054b994b431dde309880ff156d5",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/persistencia.py",
+      "esperado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+      "observado": "d89330b3d2348a2c4fd8b39c259dc13278ad3c04b8b38bdad1f5909b44740cb3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/politica_consulta.py",
+      "esperado": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3",
+      "observado": "b25cb281c2ef2bcf42144aa3072e2546192959ee3d7051d35610d90c61b4bbf3",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/pruebas.py",
+      "esperado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "observado": "95d9c980f9b7a0fbd183fd67dc61936fe53b6d4daf6471f4c7f2d7d1f7c10a9a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/pruebas_detalle.py",
+      "esperado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "observado": "ab93024157c36a3a0a83003863c48232ce8be1ee73805984ccf8f72d6f924858",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/resumen.py",
+      "esperado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+      "observado": "4d22f3bcf1acdb14db46387d5402612b6e85fd99fd0b398f7eaafe8501d72837",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/servidor.py",
+      "esperado": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf",
+      "observado": "d7ec3fac93feb0d1db90d566c3e5337f1ab15151ddd07f8139136b28530ae1cf",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/solucion/consulta.sql",
+      "esperado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "observado": "569cad44a1a88e22afcc314fb6518b4c1fcc3a982c8c46a188d23bb7e025fdc9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/web/app.js",
+      "esperado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+      "observado": "cd5a1f089c6532da2a030c6ddf643cf35e7d26398d5195d882cff6e532d344c9",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/web/estilos.css",
+      "esperado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+      "observado": "b6f092bc22e4c370c74f7c9d2d68f81b6fe894a694dd430592121a92b4619c1c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "estados/solucion/web/index.html",
+      "esperado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+      "observado": "7ddac7bf910129ad7013934f506aea985b9a430c8a21fc816ab1cd9b6e4e4498",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_depuracion.py",
+      "esperado": "b57358409a53e391dec92796311132fdbf734cc61a7d000961ec6f524f69ce26",
+      "observado": "b57358409a53e391dec92796311132fdbf734cc61a7d000961ec6f524f69ce26",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_http.py",
+      "esperado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93",
+      "observado": "1d1ecc7f23cf0ce3a75900f34df51fde99ec70f682913d52cbf4d115841c1b93",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_integracion.py",
+      "esperado": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d",
+      "observado": "9d343839c2c81f009b4971cb00ba32830b69d49d29117976eb7db6e8d204df3d",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_navegador.cjs",
+      "esperado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca",
+      "observado": "f9bd0fd8ae5849c7657b4ab22af3c266e9e80da0d762ca43de2818c813a90fca",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_recorrido.cjs",
+      "esperado": "9699b25f7f2d36aac49191b68ca39dff679a435ddf33cc2b33f95fbfdb18d02a",
+      "observado": "9699b25f7f2d36aac49191b68ca39dff679a435ddf33cc2b33f95fbfdb18d02a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_recorrido.py",
+      "esperado": "7d309752a6b076e38afff39df22f5b589634ab2f228d7b8ce20e2e41a6c6769a",
+      "observado": "7d309752a6b076e38afff39df22f5b589634ab2f228d7b8ce20e2e41a6c6769a",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_recursos.py",
+      "esperado": "c16d1495d5d3e7603d486ff6f161c95a8484bbe8413ed5aadd52d65eacba301f",
+      "observado": "c16d1495d5d3e7603d486ff6f161c95a8484bbe8413ed5aadd52d65eacba301f",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_resumen.py",
+      "esperado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+      "observado": "6b6b1699d0c742653c793094ef9f1aca0e2a6b9777958fb161552c80bece1fdf",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_seguridad.py",
+      "esperado": "d09f4959690862d0c991165f359a0ecf549e113bb161a21506a9ac167bdad640",
+      "observado": "d09f4959690862d0c991165f359a0ecf549e113bb161a21506a9ac167bdad640",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_seguridad_navegador.cjs",
+      "esperado": "77db77240865b117e18249d47a5f69bc5a96c16f6bc194a3dd4684f6d2b8e3ec",
+      "observado": "77db77240865b117e18249d47a5f69bc5a96c16f6bc194a3dd4684f6d2b8e3ec",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "pruebas_seguridad_navegador.py",
+      "esperado": "79db1cf23c48b1fe12223150a31e4dd0e30e0b95e0fec1d210df70d74876471c",
+      "observado": "79db1cf23c48b1fe12223150a31e4dd0e30e0b95e0fec1d210df70d74876471c",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "soporte/huellas_evidencia.py",
+      "esperado": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+      "observado": "ee369fc40e4f093b3f5fc890a60db249ac9593730294e2e1f28fc72569f901fd",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "soporte_procesos.py",
+      "esperado": "f77a30b6e808d8b5a263c8a4befadd3b5548b4e80f880b8215c6f2b49fda8f9f",
+      "observado": "f77a30b6e808d8b5a263c8a4befadd3b5548b4e80f880b8215c6f2b49fda8f9f",
+      "estado": "APROBADO"
+    },
+    {
+      "archivo": "soporte_web.py",
+      "esperado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c",
+      "observado": "0b7410d71b914e54b6e9dd709f6660b1547d386f8e976787a33166ba6fcaf86c",
+      "estado": "APROBADO"
+    }
+  ]
+}

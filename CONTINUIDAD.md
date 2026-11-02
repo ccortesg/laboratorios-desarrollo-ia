@@ -1,3 +1,39 @@
+# Continuidad vigente · cierre del laboratorio 10 preparado
+
+**Fecha:** 2026-11-01T19:11:54-07:00 · America/Hermosillo; UTC 2026-11-02T02:11:54.339921+00:00. Estados preparados: [libro 1.9.2](docs/estados/ESTADO_DEL_LIBRO_v1.9.2.md) y [repositorio 1.8.2](docs/estados/ESTADO_REPOSITORIO_v1.8.2.md). Revisión recibida 1.9.1/1.8.1 conservada exacta.
+
+La instrucción expresa del autor autoriza commit en codex/integracion-laboratorio-10, integración en main conservando avances y publicación atómica exclusivamente de main, lab-10-v1.0 y repositorio-v1.6. Este documento se escribe antes del commit y no atribuye publicación futura: commit, integración, etiquetas nuevas y push están pendientes de comprobación. Las consultas posteriores y los estados 1.9.3/1.8.3 se conservarán fuera del commit que describen, sólo según el resultado real.
+
+La sesión WSL auditada registró 125 baterías, 1.043 ejecuciones, 1.018 APROBADO y 25 FALLIDO didácticos exactos; cero bloqueos y errores. Los 56 NO EJECUTADO y diez criterios ausentes se mantienen aparte. Solución 10: 82/82; base: 74 aprobados y ocho NO EJECUTADO; propuesta: 81 aprobados y sólo T02 FALLIDO por aserción. T08 acredita navegador real. Son resultados anteriores, no reejecutados en el cierre.
+
+En este cierre documental se verifican el manifiesto recibido, todas las huellas declaradas, incluidos recibos anidados, la identidad de archivos protegidos y las diferencias del índice. Las ocho pruebas nuevas del recolector aprobaron con código 0, como infraestructura separada. Dos intentos iniciales no arrancaron por una ruta incorrecta al runtime y se conservan como BLOQUEADO; la ruta correcta resolvió el impedimento. No se repite la batería funcional porque se conserva la identidad técnica auditada.
+
+Maestro editorial 1.0 conservado. Los capítulos 1–10 siguen pendientes de revisión editorial integral del autor. No se modifican manuscritos ni se redacta contenido adicional. WSL2/Linux no acredita Windows nativo, CI remota ni una nueva interacción comercial.
+
+Consulta [la revisión incorporada](evidencia_integracion/revision_laboratorio_10_wsl/README.md). Los comprobantes de publicación y sus identidades reales se generan fuera del commit, en `trabajo/cierre_lab10_wsl_20261102T020833Z/`. Las restricciones de preparaciones anteriores describen sus encargos históricos y quedan subordinadas a esta autorización expresa.
+
+## Antecedentes íntegros conservados
+
+# Continuidad vigente · laboratorio 10 preparado para revisión
+
+**Fecha:** 2 de noviembre de 2026, UTC. Estados vigentes: [libro 1.9](docs/estados/ESTADO_DEL_LIBRO_v1.9.md) y [repositorio 1.8](docs/estados/ESTADO_REPOSITORIO_v1.8.md). Maestro editorial 1.0 conservado; los capítulos 1–10 son borradores pendientes de revisión del autor.
+
+El cierre del laboratorio 9 está confirmado en `6a5fdaf36e225c9fd0fac8181e4fda45a987fdd3`, árbol `790e875fc95495c39ea2b5ebe7621a4ae1afa30f`. Main y las etiquetas lab-09-v1.0/repositorio-v1.5 conservaron esa identidad al consultar GitHub el 2 de noviembre de 2026. Las quince etiquetas existentes se conservan. Los estados posteriores 1.8.3/1.7.3, el comprobante confirmado y la revisión WSL se incorporan como copias exactas bajo [cierre confirmado 9](evidencia_integracion/cierre_laboratorio_09_confirmado/README.md). Prevalecen sobre los pendientes históricos de publicación.
+
+La instrucción vigente autoriza producir el capítulo y laboratorio 10 y preparar su integración local. **No autoriza commit, integración en main, creación o movimiento de etiquetas ni push en esta entrega.** Los permisos de cierres anteriores son antecedentes concluidos. Las referencias lab-10-v1.0/repositorio-v1.6 son únicamente nombres previstos para otro encargo.
+
+El laboratorio 10 parte de la solución 9 y mantiene sus 74 casos en los tres estados. Añade ocho criterios/casos T: siete CLI y un navegador real. El operador ejecuta dos CLI fijas, conserva una instantánea del CSV, detiene la solución al rechazar una importación y genera un recibo nuevo. No ejecuta planes de modelos ni comandos arbitrarios. La propuesta continúa ante el rechazo y falla únicamente T02. Una importación ya confirmada no se revierte si después falla la consulta.
+
+La ejecución nueva Linux de producción aprobó 125 baterías y 1.043 ejecuciones: 1.018 APROBADO y 25 FALLIDO didácticos exactos; cero bloqueos. Los 56 NO EJECUTADO y diez criterios ausentes se registran aparte. Las 272/272 huellas declaradas coinciden con los bytes finales. El autónomo se ejecutó por separado: 238 ejecuciones, 237 aprobaciones, T02 FALLIDO y ocho NO EJECUTADO; solución 82/82, huellas 116/116. No se suman ambos recorridos como casos distintos. La evidencia histórica WSL y Windows mantiene su atribución original.
+
+La infraestructura se comprueba separadamente: ocho pruebas del recolector, nueve del evaluador 9, nueve del evaluador 10, cuatro de recursos SQLite y RO01 (un método con dos estados mediante subcasos). RO01 inyecta OSError para verificar clasificación y ausencia de capturas; no describe un incidente operativo real. El recolector y sus ocho pruebas conservan sus bytes originales.
+
+Consulta el contrato en `laboratorios/laboratorio_10/contexto/CONTRATO_AUTOMATIZACION.md`, los resultados en `evidencia_integracion/laboratorio_10_v1.0/` y la guía del paquete INTEGRACION_LABORATORIO_10_v1.0. Las comprobaciones desde ZIP y parche se documentan en sus auditorías; ninguna ejecución Linux acredita Windows nativo ni una sesión comercial.
+
+## Antecedentes conservados
+
+Los textos siguientes conservan las observaciones de sus momentos. La vigencia y los límites actuales son los anteriores.
+
 # Continuidad vigente · cierre del laboratorio 9 preparado
 
 **Fecha:** 1 de noviembre de 2026. Estados vigentes de preparación: [libro 1.8.2](docs/estados/ESTADO_DEL_LIBRO_v1.8.2.md) y [repositorio 1.7.2](docs/estados/ESTADO_REPOSITORIO_v1.7.2.md). Incorporan como antecedente exacto la revisión 1.8.1/1.7.1. Maestro editorial 1.0 sin cambios; capítulos 1–9 pendientes de revisión del autor.

@@ -4,7 +4,7 @@
 
 Este repositorio reúne ejercicios sintéticos del libro «Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro». El principio rector es definir bien el trabajo y reconocer con evidencia cuándo está terminado.
 
-Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–9 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
+Lee `README.md`, `CONTINUIDAD.md` y el paquete `contexto/` del laboratorio antes de modificarlo. Los capítulos 1–10 son borradores pendientes de revisión del autor. El documento maestro editorial v1.0 sigue vigente en las entregas del libro.
 
 ## Trabajo autorizado
 
@@ -56,9 +56,9 @@ Clasifica cada comprobación como APROBADO, FALLIDO, BLOQUEADO o NO EJECUTADO. D
 
 Revisa texto, código, datos, rutas, resultados, metadatos e historial. Omite personas, clientes, marcas laborales, direcciones identificables, secretos y combinaciones que reconozcan sistemas reales. Las tecnologías públicas necesarias para enseñar pueden nombrarse. Para afirmaciones actuales sobre productos, utiliza fuentes oficiales y registra la fecha de consulta.
 
-Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. La evidencia nueva de Codex auditada y la carpeta histórica aún ausente son sesiones distintas; ninguna acredita Copilot. El estado editorial de esta preparación es ESTADO_DEL_LIBRO_v1.8.2.md y el operativo es ESTADO_REPOSITORIO_v1.7.2.md; las revisiones recibidas 1.8.1/1.7.1 se conservan exactas. Los estados posteriores al cierre del laboratorio 8, libro 1.7.4 y repositorio 1.6.4, y su aclaración de entorno WSL ya están incorporados como antecedentes exactos. El cierre Windows y remoto del laboratorio 7 está confirmado por los estados 1.6.2 y 1.5.2, conservados como antecedentes. La producción del capítulo 8 conserva sin cambios el auxiliar de huellas y sus ocho pruebas. Las huellas finales corresponden a bytes guardados; los históricos nunca se reparan retroactivamente.
+Al cerrar una tarea, explica qué cambió, qué ejecutaste, qué resultó y qué queda pendiente. Distingue las sesiones históricas Windows/WSL, los nuevos ensayos Linux y las interacciones comerciales acreditadas. Nunca atribuyas una ejecución local a una herramienta comercial.
 
-El cierre del laboratorio 8 está confirmado en 9212ee99b88f70f0b289837b88d6bbf34da91a52. El autor ha invocado el encargo de cierre del laboratorio 9: autoriza incorporar documentación y evidencia revisadas, crear el commit, integrar en main conservando avances y publicar mediante push atómico sólo main y las etiquetas ligeras nuevas lab-09-v1.0 y repositorio-v1.5. El estado de preparación conserva la publicación pendiente; registra el resultado real y los estados posteriores fuera del commit que acreditan. Conserva las trece etiquetas históricas y cualquier referencia añadida después, sin forzar ni reaplicar el parche. No redactar todavía el capítulo 10.
+La continuidad de cierre preparada es libro 1.9.2 y repositorio 1.8.2; la revisión recibida 1.9.1/1.8.1 está incorporada exacta. El autor invocó PROMPT_CIERRE_LABORATORIO_10_v1.0.md y autoriza crear el commit, integrar en main conservando avances y publicar exclusivamente main y las etiquetas ligeras nuevas lab-10-v1.0/repositorio-v1.6 mediante push atómico, sin forzar. La prohibición de commit/main/etiquetas/push de la preparación anterior correspondía a aquel encargo ya concluido. No reaplicar el parche ni modificar contenido técnico auditado, manuscritos, distribuciones o evidencias anteriores. Comprobar todas las referencias antes y después; registrar el resultado real fuera del commit que acredita. Mantener las quince etiquetas históricas y la revisión editorial pendiente de los capítulos 1–10; maestro editorial 1.0 sin cambios.
 
 ## Corrección de recursos del laboratorio 8
 
@@ -71,3 +71,11 @@ Lee `laboratorios/laboratorio_09/contexto/CONTRATO_SEGURIDAD.md`, registrado ant
 La base conserva FALLIDO exactamente en S02.a/S02.b/S02.c, S03, S04.a/S04.b, S05.a/S05.b y S06; son exigencias nuevas ausentes en la base, no regresiones históricas. La propuesta convierte pares a dict demasiado pronto y falla exclusivamente S02.a/S02.b/S02.c. La solución debe aprobar los 74 casos. Nunca aceptes un error de ejecución como un fallo didáctico.
 
 El recolector y sus ocho pruebas permanecen sin cambios. Las nuevas pruebas focales del evaluador se contabilizan separadas de los contratos funcionales. No reutilices la cifra histórica de huellas como constante: comprueba todas las declaradas en cada ejecución. Mantén también los intentos bloqueados y su posterior resolución.
+
+## Automatización del laboratorio 10
+
+Lee el contrato previo y contexto de `laboratorios/laboratorio_10`. Sus tres estados heredan la solución 9: los 74 casos anteriores deben aprobar en cada uno. T01–T08 son ocho criterios y ocho casos nuevos. La base no incorpora el operador y los ocho T quedan NO EJECUTADO; la propuesta falla únicamente T02 mediante AssertionError y código 1 de su batería; la solución debe aprobar 82 casos. Los fallos de seguridad admitidos en estados históricos del laboratorio 9 no son aceptables en el 10.
+
+El operador tiene comandos fijos, no interpreta CSV o respuestas de modelos como instrucciones. Crea recibos exclusivos, emplea la instantánea realmente importada y consulta la misma base persistente. Una falta de confirmación tras interrumpir un proceso no prueba que la base permanezca intacta. No hay transacción global, reintentos automáticos ni agente comercial.
+
+Conserva los laboratorios 1–9, distribuciones, historial y evidencias anteriores. La nueva regresión RO01 del operador es infraestructura separada. Comprueba todas las huellas declaradas, incluidas las de recibos anidados, sin usar recuentos históricos fijos.

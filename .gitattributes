@@ -30,3 +30,13 @@ docs/estados/ESTADO_REPOSITORIO_v1.6.4.md -text
 evidencia_integracion/cierre_laboratorio_08_confirmado/**/*.md whitespace=-blank-at-eol
 evidencia_integracion/laboratorio_09_v1.0/**/*.diff -whitespace
 evidencia_integracion/laboratorio_09_v1.0/**/*.md whitespace=-blank-at-eol
+
+# Incremento 10 y continuidad exacta posterior al cierre 9.
+laboratorios/laboratorio_10/diferencias/*.diff -whitespace
+docs/estados/ESTADO_DEL_LIBRO_v1.8.3.md -text
+docs/estados/ESTADO_REPOSITORIO_v1.7.3.md -text
+evidencia_integracion/laboratorio_10_v1.0/**/*.diff -whitespace
+# T05 conserva deliberadamente los terminadores CRLF del recibo anterior.
+# Se reconoce CR como terminador; no se normalizan los bytes de evidencia.
+laboratorios/laboratorio_10/evidencia/**/marca.txt -text whitespace=cr-at-eol
+evidencia_integracion/laboratorio_10_v1.0/**/marca.txt -text whitespace=cr-at-eol

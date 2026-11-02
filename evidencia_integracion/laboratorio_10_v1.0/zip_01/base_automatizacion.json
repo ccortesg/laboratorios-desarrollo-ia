@@ -1,0 +1,56 @@
+{
+  "bateria": "automatizacion",
+  "estado_codigo": "base",
+  "casos_registrados": 7,
+  "ejecutados": 0,
+  "aprobados": 0,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 7,
+  "pruebas": [
+    {
+      "id": "T01",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    },
+    {
+      "id": "T02",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    },
+    {
+      "id": "T03",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    },
+    {
+      "id": "T04",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    },
+    {
+      "id": "T05",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    },
+    {
+      "id": "T06",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    },
+    {
+      "id": "T07",
+      "estado": "NO EJECUTADO",
+      "detalle": "El estado base conserva la solución 9 sin operador; incremento no implementado.",
+      "tipo_error": null
+    }
+  ]
+}

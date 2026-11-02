@@ -1,0 +1,8 @@
+{
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "modalidad": "Ejecución local Linux; no acredita Windows, WSL del autor ni sesión comercial.",
+  "navegador_seleccionado": "Chrome for Testing 151.0.7922.34 mediante LAB06_CHROMIUM",
+  "dependencias": "Playwright del entorno disponible cuando la comprobación lo requiere."
+}

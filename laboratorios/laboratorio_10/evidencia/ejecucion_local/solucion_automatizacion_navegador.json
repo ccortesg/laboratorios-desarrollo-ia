@@ -1,0 +1,316 @@
+{
+  "bateria": "automatizacion_navegador",
+  "casos_registrados": 1,
+  "criterios_distintos": 1,
+  "ejecutados": 1,
+  "aprobados": 1,
+  "fallidos": 0,
+  "fallos_de_asercion": 0,
+  "errores_de_ejecucion": 0,
+  "bloqueados": 0,
+  "no_ejecutados": 0,
+  "entorno": {
+    "node": "v24.22.1",
+    "playwright": "1.62.1",
+    "navegador": "Chromium",
+    "version_navegador": "151.0.7922.34"
+  },
+  "pruebas": [
+    {
+      "id": "T08",
+      "entrada": {
+        "secuencia": [
+          "servidor vivo",
+          "catálogo inicial",
+          "operador CLI",
+          "catálogo posterior"
+        ]
+      },
+      "esperado": {
+        "antes": {
+          "total": "1",
+          "codigos": [
+            "A01"
+          ],
+          "estado": "exito",
+          "http": 200
+        },
+        "despues": {
+          "total": "2",
+          "codigos": [
+            "A01",
+            "A03"
+          ],
+          "estado": "exito",
+          "http": 200
+        },
+        "busqueda": {
+          "total": "1",
+          "codigos": [
+            "A03"
+          ],
+          "estado": "exito",
+          "http": 200
+        }
+      },
+      "observado": {
+        "respuestas_http": [
+          {
+            "almacen": "ALFA",
+            "total": 1,
+            "codigos": [
+              "A01"
+            ]
+          },
+          {
+            "almacen": "ALFA",
+            "total": 2,
+            "codigos": [
+              "A01",
+              "A03"
+            ]
+          },
+          {
+            "almacen": "ALFA",
+            "total": 1,
+            "codigos": [
+              "A03"
+            ]
+          }
+        ],
+        "antes": {
+          "total": "1",
+          "codigos": [
+            "A01"
+          ],
+          "estado": "exito",
+          "http": 200
+        },
+        "operador": {
+          "codigo_salida": 0,
+          "resultado": {
+            "estado": "APROBADO",
+            "codigo_salida": 0,
+            "fecha_hora_utc": "2026-11-02T00:11:24.035907+00:00",
+            "entrada": {
+              "archivo": "entrada.csv",
+              "bytes": 80,
+              "sha256": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506"
+            },
+            "base": "archivo:principal",
+            "almacen": "ALFA",
+            "importacion_confirmada": true,
+            "pasos": [
+              {
+                "paso": "importar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              },
+              {
+                "paso": "consultar",
+                "estado": "APROBADO",
+                "codigo_salida": 0
+              }
+            ],
+            "resumen": {
+              "almacen": "ALFA",
+              "total": 2,
+              "codigos": [
+                "A01",
+                "A03"
+              ]
+            },
+            "limite": "Cada CLI tiene su propio alcance. Una importación confirmada no se revierte si falla después la consulta. Sin confirmación observada, una interrupción tampoco demuestra que SQLite permaneció sin cambios."
+          },
+          "comando": [
+            "python",
+            "-B",
+            "<CODIGO>/operar.py",
+            "--base",
+            "<BASE>",
+            "--archivo",
+            "datos/actualizacion_valida.csv",
+            "--almacen",
+            "ALFA",
+            "--salida",
+            "<RECIBO>"
+          ]
+        },
+        "despues": {
+          "total": "2",
+          "codigos": [
+            "A01",
+            "A03"
+          ],
+          "estado": "exito",
+          "http": 200
+        },
+        "busqueda": {
+          "total": "1",
+          "codigos": [
+            "A03"
+          ],
+          "estado": "exito",
+          "http": 200
+        },
+        "mismo_servidor": true
+      },
+      "estado": "APROBADO",
+      "tipo_error": null,
+      "detalle": ""
+    }
+  ],
+  "proceso_navegador": {
+    "comando": [
+      "node",
+      "<LABORATORIO>/pruebas_automatizacion_navegador.cjs",
+      "--url",
+      "<URL_LOCAL>",
+      "--json",
+      "<TRABAJO>/navegador.json",
+      "--codigo",
+      "<CODIGO>",
+      "--base",
+      "<TRABAJO>/principal.sqlite",
+      "--archivo",
+      "<LABORATORIO>/datos/actualizacion_valida.csv",
+      "--recibo",
+      "<TRABAJO>/recibo",
+      "--python",
+      "python"
+    ],
+    "codigo_salida": 0,
+    "stdout": "T08: APROBADO\n",
+    "stderr": ""
+  },
+  "estado_persistido_final": {
+    "articulos": [
+      [
+        "A01",
+        "Articulo local",
+        1
+      ],
+      [
+        "A02",
+        "Articulo deshabilitado",
+        0
+      ],
+      [
+        "A03",
+        "Articulo agotado",
+        1
+      ],
+      [
+        "A04",
+        "Articulo de otra ubicacion",
+        1
+      ]
+    ],
+    "almacenes": [
+      [
+        "ALFA"
+      ],
+      [
+        "BETA"
+      ]
+    ],
+    "existencias": [
+      [
+        "A01",
+        "ALFA",
+        5
+      ],
+      [
+        "A02",
+        "ALFA",
+        8
+      ],
+      [
+        "A03",
+        "ALFA",
+        3
+      ],
+      [
+        "A04",
+        "BETA",
+        0
+      ]
+    ]
+  },
+  "operaciones_controlador": [
+    {
+      "proceso": "cli_1",
+      "inicio_utc": "2026-11-02T00:11:22.661435+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/persistencia.py",
+        "iniciar",
+        "--base",
+        "<TRABAJO>/principal.sqlite"
+      ],
+      "directorio": "<CODIGO>",
+      "codigo_salida": 0,
+      "stdout": "{\"estado\": \"INICIALIZADO\"}\n",
+      "stderr": ""
+    },
+    {
+      "proceso": "servidor_2",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/servidor.py",
+        "--puerto",
+        "0",
+        "--base",
+        "<TRABAJO>/principal.sqlite",
+        "--alias",
+        "principal",
+        "--diagnostico",
+        "<TRABAJO>/diagnostico_2.jsonl"
+      ],
+      "directorio": "<CODIGO>",
+      "inicio_utc": "2026-11-02T00:11:22.709818+00:00",
+      "disponibilidad": {
+        "servidor": "local",
+        "url": "<URL_LOCAL>"
+      },
+      "codigo_salida_al_cerrar": -15,
+      "cierre": "Proceso terminado por el controlador de la prueba.",
+      "stderr": "",
+      "diagnostico": [
+        {
+          "evento": "consulta_catalogo",
+          "origen_configurado": "archivo:principal",
+          "origen_efectivo": "archivo:principal",
+          "almacen": "ALFA",
+          "codigos_disponibles": [
+            "A01"
+          ]
+        },
+        {
+          "evento": "consulta_catalogo",
+          "origen_configurado": "archivo:principal",
+          "origen_efectivo": "archivo:principal",
+          "almacen": "ALFA",
+          "codigos_disponibles": [
+            "A01",
+            "A03"
+          ]
+        },
+        {
+          "evento": "consulta_catalogo",
+          "origen_configurado": "archivo:principal",
+          "origen_efectivo": "archivo:principal",
+          "almacen": "ALFA",
+          "codigos_disponibles": [
+            "A01",
+            "A03"
+          ]
+        }
+      ]
+    }
+  ],
+  "recibo_conservado": "solucion_automatizacion_navegador_recibo",
+  "estado_codigo": "copia_del_lector"
+}

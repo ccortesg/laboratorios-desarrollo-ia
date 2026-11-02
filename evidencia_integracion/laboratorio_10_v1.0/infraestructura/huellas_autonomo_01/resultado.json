@@ -1,0 +1,12 @@
+{
+  "estado": "APROBADO",
+  "codigo_salida": 0,
+  "codigo_esperado": 0,
+  "huellas": {
+    "estado": "APROBADO",
+    "comprobadas": 2,
+    "coincidentes": 2,
+    "discrepancias": []
+  },
+  "id": "huellas_autonomo_bytes_finales"
+}

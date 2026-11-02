@@ -1,0 +1,14 @@
+usage: EJECUTAR_VERIFICACION.py [-h] [--repositorio REPOSITORIO]
+                                --registro-preparado REGISTRO_PREPARADO
+                                --salida SALIDA
+
+Ejecuta la revisión local y conserva capturas nuevas; no publica ni hace
+commits.
+
+options:
+  -h, --help            show this help message and exit
+  --repositorio REPOSITORIO
+  --registro-preparado REGISTRO_PREPARADO
+                        JSON de la fase preparado que identifica el HEAD y el
+                        índice que se verificarán.
+  --salida SALIDA

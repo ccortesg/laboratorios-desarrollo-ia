@@ -1,0 +1,60 @@
+{
+  "registros": [
+    {
+      "id": "importar",
+      "inicio_utc": "2026-11-02T00:11:07.006883+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/persistencia.py",
+        "importar",
+        "--base",
+        "<BASE>",
+        "--archivo",
+        "<RECIBO>/entrada.csv",
+        "--alias",
+        "principal"
+      ],
+      "directorio": "<CODIGO>",
+      "codigo_salida": 1,
+      "stdout": "importar.stdout.txt",
+      "sha256_stdout": "2b615a5ab624887f39dd9e5cf4f438e9080c357c0ada5b8b411a2bdee94d8cc6",
+      "stderr": "importar.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fin_utc": "2026-11-02T00:11:07.050999+00:00",
+      "estado": "FALLIDO",
+      "sha256_stdout_capturado": "2b615a5ab624887f39dd9e5cf4f438e9080c357c0ada5b8b411a2bdee94d8cc6",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "consultar",
+      "inicio_utc": "2026-11-02T00:11:07.051068+00:00",
+      "comando": [
+        "python",
+        "-B",
+        "<CODIGO>/persistencia.py",
+        "consultar",
+        "--base",
+        "<BASE>",
+        "--almacen",
+        "ALFA",
+        "--nombre",
+        "",
+        "--alias",
+        "principal"
+      ],
+      "directorio": "<CODIGO>",
+      "codigo_salida": 0,
+      "stdout": "consultar.stdout.txt",
+      "sha256_stdout": "dadb1f70b7157d64c2ec1f09808e3afce591e6e23cae06e0827f9a799e6a4a49",
+      "stderr": "consultar.stderr.txt",
+      "sha256_stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fin_utc": "2026-11-02T00:11:07.096446+00:00",
+      "estado": "APROBADO",
+      "sha256_stdout_capturado": "dadb1f70b7157d64c2ec1f09808e3afce591e6e23cae06e0827f9a799e6a4a49",
+      "sha256_stderr_capturado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "convenciones": "Copia de integración saneada: sha256_stdout/stderr identifican los bytes finales guardados; los campos *_capturado conservan la huella de captura. Se preservan LF/CRLF salvo sustituciones explícitas de saneamiento. Las entradas sin salidas no adquieren archivos ni huellas.",
+  "convenciones_del_productor": "Comandos fijos; rutas sustituidas por alias. Las capturas se registraron inicialmente como bytes."
+}

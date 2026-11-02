@@ -1,0 +1,8 @@
+{
+  "sistema": "Linux",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "modalidad": "Ejecución local Linux; no acredita Windows, WSL del autor ni sesión comercial.",
+  "navegador_seleccionado": "No seleccionado por este auxiliar",
+  "dependencias": "Playwright del entorno disponible cuando la comprobación lo requiere."
+}

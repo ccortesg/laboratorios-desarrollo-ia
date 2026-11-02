@@ -1,8 +1,8 @@
-"""Ejecuta los nueve recorridos en copias temporales y conserva evidencia nueva.
+"""Ejecuta los diez recorridos en copias temporales y conserva evidencia nueva.
 
 Los fallos didácticos esperados se evalúan por identificador y tipo de error.
 La evidencia histórica distribuida nunca se sobrescribe. Requiere Python 3.11+
-y Git. Los laboratorios 6 a 9 usan HTTP local; --navegador requiere Node, Playwright
+y Git. Los laboratorios 6 a 10 usan HTTP local; --navegador requiere Node, Playwright
 y Chromium instalados. No descarga dependencias ni contacta servicios externos.
 """
 
@@ -45,6 +45,8 @@ S_NAVEGADOR = ["S06"]
 S_BASE_FALLOS = ["S02.a", "S02.b", "S02.c", "S03", "S04.a", "S04.b",
                  "S05.a", "S05.b"]
 S_PROPUESTA_FALLOS = ["S02.a", "S02.b", "S02.c"]
+T = ["T%02d" % n for n in range(1, 8)]
+T_NAVEGADOR = ["T08"]
 
 
 def leer_json(ruta):
@@ -216,20 +218,52 @@ def huellas_laboratorio_web(carpeta):
     return resultado
 
 
+def conservar_herencia_laboratorio_10(raiz):
+    """Contrasta el nuevo ejercicio con la solución anterior, sin confiar sólo en su manifiesto."""
+    raiz = Path(raiz)
+    origen = raiz / "laboratorios" / "laboratorio_09" / "estados" / "solucion"
+    destino = raiz / "laboratorios" / "laboratorio_10" / "estados"
+    referencia = huellas_laboratorio_web(origen)
+    estados = []
+    for estado in ("base", "propuesta", "solucion"):
+        actuales = huellas_laboratorio_web(destino / estado)
+        nombres = set(referencia) | ({"operar.py"} if estado != "base" else set())
+        registros = [{"archivo": nombre, "sha256_esperado": esperado,
+                      "sha256_observado": actuales.get(nombre),
+                      "estado": "APROBADO" if actuales.get(nombre) == esperado else "FALLIDO"}
+                     for nombre, esperado in referencia.items()]
+        correcto = (bool(referencia) and set(actuales) == nombres
+                    and all(r["estado"] == "APROBADO" for r in registros))
+        estados.append({"estado_codigo": estado,
+                        "estado": "APROBADO" if correcto else "FALLIDO",
+                        "conjunto_de_archivos_correcto": set(actuales) == nombres,
+                        "archivos_heredados_comprobados": len(registros),
+                        "archivos_adicionales_admitidos": ["operar.py"] if estado != "base" else [],
+                        "registros": registros})
+    return {"estado": "APROBADO" if all(e["estado"] == "APROBADO" for e in estados) else "FALLIDO",
+            "origen": "laboratorios/laboratorio_09/estados/solucion",
+            "destino": "laboratorios/laboratorio_10/estados",
+            "alcance": "La base conserva exactamente la solución 9; propuesta y solución sólo añaden operar.py dentro de sus estados.",
+            "estados": estados}
+
+
 def evaluar_laboratorio_web(evidencia, navegador, numero=6):
     resumen = leer_json(evidencia / "resumen.json")
     comandos = leer_json(evidencia / "comandos.json")["registros"]
     codigos = {comando["id"]: comando["codigo_salida"] for comando in comandos}
     grupos = {"heredados": C + B + N, "resumen": P,
               "http": W_HTTP, "navegador": W_NAVEGADOR}
-    if numero in {7, 8, 9}:
+    if numero in {7, 8, 9, 10}:
         grupos["integracion"] = I
-    if numero in {8, 9}:
+    if numero in {8, 9, 10}:
         grupos["depuracion"] = D
         grupos["depuracion_navegador"] = D_NAVEGADOR
-    if numero == 9:
+    if numero in {9, 10}:
         grupos["seguridad"] = S
         grupos["seguridad_navegador"] = S_NAVEGADOR
+    if numero == 10:
+        grupos["automatizacion"] = T
+        grupos["automatizacion_navegador"] = T_NAVEGADOR
     estados = ["base", "propuesta", "solucion"]
     ids_comandos = {estado + "_" + grupo for estado in estados for grupo in grupos}
     pares = {(estado, grupo) for estado in estados for grupo in grupos}
@@ -241,7 +275,8 @@ def evaluar_laboratorio_web(evidencia, navegador, numero=6):
                   and resumen[{6: "base_sin_incremento_web",
                                7: "base_sin_incremento_integracion",
                                8: "base_sin_incremento_depuracion",
-                               9: "base_sin_incremento_seguridad"}[numero]] == "APROBADO"
+                               9: "base_sin_incremento_seguridad",
+                               10: "base_sin_incremento_automatizacion"}[numero]] == "APROBADO"
                   and resumen["navegador_solicitado"] == navegador)
     baterias = []
     declaradas = {(b["estado_codigo"], b["bateria"]): b for b in resumen["baterias"]}
@@ -251,9 +286,10 @@ def evaluar_laboratorio_web(evidencia, navegador, numero=6):
             sin_incremento = (estado == "base" and (
                 (numero == 6 and grupo in {"http", "navegador"})
                 or (numero == 7 and grupo == "integracion")
-                or (numero == 8 and grupo in {"depuracion", "depuracion_navegador"})))
+                or (numero == 8 and grupo in {"depuracion", "depuracion_navegador"})
+                or (numero == 10 and grupo in {"automatizacion", "automatizacion_navegador"})))
             no_ejecutados = ids if sin_incremento or (
-                grupo in {"navegador", "depuracion_navegador", "seguridad_navegador"}
+                grupo in {"navegador", "depuracion_navegador", "seguridad_navegador", "automatizacion_navegador"}
                 and not navegador) else []
             fallos = (["W05"] if numero == 6 and estado == "propuesta"
                       and grupo == "navegador" and navegador else
@@ -269,14 +305,17 @@ def evaluar_laboratorio_web(evidencia, navegador, numero=6):
                               S_PROPUESTA_FALLOS if estado == "propuesta" else [])
                 elif grupo == "seguridad_navegador" and estado == "base" and navegador:
                     fallos = S_NAVEGADOR
+            if numero == 10 and estado == "propuesta" and grupo == "automatizacion":
+                fallos = ["T02"]
             baterias.append(evaluar_bateria(
                 leer_json(evidencia / (nombre + ".json")), "laboratorio_%02d/" % numero + nombre,
                 ids, codigos[nombre],
                 fallos=fallos, no_ejecutados=no_ejecutados,
                 permitir_bloqueo=not no_ejecutados,
-                bloqueos_parciales=(S if numero == 9 and grupo == "seguridad" else
+                bloqueos_parciales=(S if numero in {9, 10} and grupo == "seguridad" else
+                                    T if numero == 10 and grupo == "automatizacion" else
                                     {"D02", "D03", "D05", "D08.a"}
-                                    if numero in {8, 9} and grupo == "depuracion" else ()),
+                                    if numero in {8, 9, 10} and grupo == "depuracion" else ()),
             ))
             declarada = declaradas[(estado, grupo)]
             observada = baterias[-1]
@@ -319,7 +358,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
         "implementacion_python": platform.python_implementation(),
         "sqlite": sqlite3.sqlite_version, "git": version_git.stdout.strip(),
         "dependencias": "Python estándar y Git; Node, Playwright y Chromium si se solicita navegador",
-        "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 a 9",
+        "red": "Solo HTTP de las aplicaciones locales de los laboratorios 6 a 10",
         "navegador_solicitado": navegador,
         "modalidad": "Comprobaciones locales ejecutadas en copias temporales",
     })
@@ -430,7 +469,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                                "motivo": "No se completó o no se pudo validar el registro del recorrido.",
                                "tipo_error": type(error).__name__})
 
-        for numero in [6, 7, 8, 9]:
+        for numero in [6, 7, 8, 9, 10]:
             nombre = "laboratorio_%02d" % numero
             fuente, copia = raiz / "laboratorios" / nombre, temporal / nombre
             evidencia = salida / nombre
@@ -438,6 +477,12 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                 anteriores = huellas_laboratorio_web(fuente)
                 if not anteriores or not (fuente / "verificar.py").is_file():
                     raise ErrorPreparacion("Faltan materiales de " + nombre + ".")
+                if numero == 10:
+                    herencia = conservar_herencia_laboratorio_10(raiz)
+                    guardar_json(salida / "conservacion_base_laboratorio_10.json", herencia)
+                    if herencia["estado"] != "APROBADO":
+                        raise ErrorPreparacion("La herencia del laboratorio 10 difiere de la solución 9.",
+                                               estado="FALLIDO")
                 shutil.copytree(fuente, copia, ignore=shutil.ignore_patterns(
                     "node_modules", "__pycache__", "trabajo", "*.pyc", "*.pyo"))
                 argumentos = ["verificar.py", "--salida", str(evidencia)]
@@ -449,7 +494,8 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                               str(raiz / "laboratorios" / "laboratorio_06" / "node_modules"),
                               str(raiz / "laboratorios" / "laboratorio_07" / "node_modules"),
                               str(raiz / "laboratorios" / "laboratorio_08" / "node_modules"),
-                              str(raiz / "laboratorios" / "laboratorio_09" / "node_modules")]
+                              str(raiz / "laboratorios" / "laboratorio_09" / "node_modules"),
+                              str(raiz / "laboratorios" / "laboratorio_10" / "node_modules")]
                 if os.environ.get("NODE_PATH"):
                     rutas_node.append(os.environ["NODE_PATH"])
                 codigo = ejecutar(argumentos, copia, raiz, salida, temporal,
@@ -494,7 +540,7 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
     resumen_general = {
         "estado": estado_final,
         "fecha_hora_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "objeto": "Integración local de los nueve laboratorios distribuidos",
+        "objeto": "Integración local de los diez laboratorios distribuidos",
         "alcance_ejecutado": "APROBADO" if estado_final == "NO EJECUTADO" else estado_final,
         "extremo_a_extremo_laboratorio_06": next(
             (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_06"), "NO EJECUTADO"),
@@ -504,6 +550,8 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
             (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_08"), "NO EJECUTADO"),
         "extremo_a_extremo_laboratorio_09": next(
             (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_09"), "NO EJECUTADO"),
+        "extremo_a_extremo_laboratorio_10": next(
+            (r["estado"] for r in resultados if r["laboratorio"] == "laboratorio_10"), "NO EJECUTADO"),
         "criterio": "Patrones exactos de resultados, reconstrucción Git y conservación de referencias.",
         "laboratorios": resultados, "baterias": baterias,
         "totales": {
@@ -525,7 +573,8 @@ def verificar(salida, raiz=RAIZ, navegador=False, node="node"):
                                   "laboratorio_08/propuesta_depuracion_navegador": ["D04"],
                                   "laboratorio_09/base_seguridad": S_BASE_FALLOS,
                                   "laboratorio_09/base_seguridad_navegador": S_NAVEGADOR,
-                                  "laboratorio_09/propuesta_seguridad": S_PROPUESTA_FALLOS},
+                                  "laboratorio_09/propuesta_seguridad": S_PROPUESTA_FALLOS,
+                                  "laboratorio_10/propuesta_automatizacion": ["T02"]},
         "interpretacion": "Un recorrido APROBADO conserva FALLIDO en sus criterios defectuosos esperados; no tolera otros errores. "
         "Sin --navegador, salida 0 aprueba únicamente el alcance ejecutado y el estado global es NO EJECUTADO.",
         "evidencia_historica": "Conservada en cada laboratorio; estos archivos describen una ejecución nueva.",
@@ -546,7 +595,7 @@ def main():
     parser.add_argument("--salida", type=Path, default=RAIZ / "trabajo" / "verificacion",
                         help="Carpeta nueva; por defecto trabajo/verificacion en este repositorio.")
     parser.add_argument("--navegador", action="store_true",
-                        help="Ejecuta Chromium real para W05/W06, D04 y S06; necesario para APROBADO global.")
+                        help="Ejecuta Chromium real para W05/W06, D04, S06 y T08; necesario para APROBADO global.")
     parser.add_argument("--node", default="node", help="Ejecutable Node para las pruebas de navegador.")
     opciones = parser.parse_args()
     try:
@@ -563,6 +612,7 @@ def main():
     print("Extremo a extremo del laboratorio 7: " + registro["extremo_a_extremo_laboratorio_07"] + ".")
     print("Extremo a extremo del laboratorio 8: " + registro["extremo_a_extremo_laboratorio_08"] + ".")
     print("Extremo a extremo del laboratorio 9: " + registro["extremo_a_extremo_laboratorio_09"] + ".")
+    print("Extremo a extremo del laboratorio 10: " + registro["extremo_a_extremo_laboratorio_10"] + ".")
     print("Huellas de salidas: {estado}; {coincidentes}/{comprobadas} coinciden con los bytes finales."
           .format(**registro["huellas_salidas"]))
     for bateria in registro["baterias"]:
@@ -577,7 +627,8 @@ def main():
           "I01 e I07 en propuesta del laboratorio 7; "
           "D03, D05 y D08.a en propuesta del laboratorio 8, y D04 únicamente al ejecutar navegador; "
           "S02.a/S02.b/S02.c, S03, S04.a/S04.b y S05.a/S05.b en base del laboratorio 9, "
-          "además de S06 únicamente al ejecutar navegador; S02.a/S02.b/S02.c en propuesta del laboratorio 9.")
+          "además de S06 únicamente al ejecutar navegador; S02.a/S02.b/S02.c en propuesta del laboratorio 9; "
+          "T02 en propuesta del laboratorio 10.")
     print("Evidencia nueva guardada en la carpeta indicada; evidencia histórica conservada.")
     return {"APROBADO": 0, "NO EJECUTADO": 0, "FALLIDO": 1, "BLOQUEADO": 2}[registro["estado"]]
 

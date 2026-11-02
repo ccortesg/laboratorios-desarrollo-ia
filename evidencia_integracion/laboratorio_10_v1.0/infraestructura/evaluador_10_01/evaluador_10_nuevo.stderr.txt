@@ -1,0 +1,23 @@
+test_bloqueo_parcial_cli_se_conserva_sin_aprobarlo (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_bloqueo_parcial_cli_se_conserva_sin_aprobarlo)
+E10.07: un impedimento de ejecución en T04 no se convierte en éxito. ... ok
+test_cotejo_heredado_rechaza_bytes_cambiados_y_archivos_extra_en_base (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_cotejo_heredado_rechaza_bytes_cambiados_y_archivos_extra_en_base)
+E10.09: el manifiesto propio no puede ocultar cambios al material heredado. ... ok
+test_navegador_solicitado_pero_bloqueado_no_aprueba_extremo_a_extremo (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_navegador_solicitado_pero_bloqueado_no_aprueba_extremo_a_extremo)
+E10.08: la petición de navegador no acredita su ejecución efectiva. ... ok
+test_no_acredita_automatizacion_inexistente_en_la_base (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_no_acredita_automatizacion_inexistente_en_la_base)
+E10.05: base no tiene operar.py; T01–T08 deben seguir NO EJECUTADO. ... ok
+test_no_arrastra_excepciones_didacticas_de_la_seguridad_anterior (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_no_arrastra_excepciones_didacticas_de_la_seguridad_anterior)
+E10.02: los fallos admitidos en estados del laboratorio 9 no pasan al 10. ... ok
+test_patron_completo_con_un_fallo_y_base_sin_operador (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_patron_completo_con_un_fallo_y_base_sin_operador)
+E10.01: heredar la solución 9 obliga a aprobar los 74 casos previos. ... ok
+test_rechaza_caso_ausente_o_duplicado_con_totales_recalculados (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_rechaza_caso_ausente_o_duplicado_con_totales_recalculados)
+E10.04: los conteos coherentes no reemplazan la identidad de cada caso. ... ok
+test_sin_navegador_conserva_no_ejecutado_global (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_sin_navegador_conserva_no_ejecutado_global)
+E10.06: T08 se comprueba en navegador y no se infiere de la CLI. ... ok
+test_t02_exige_asercion_salida_uno_y_presencia_del_defecto (test_evaluador_laboratorio_10.EvaluadorLaboratorio10Tests.test_t02_exige_asercion_salida_uno_y_presencia_del_defecto)
+E10.03: una excepción de infraestructura o un éxito no prueban el defecto. ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.071s
+
+OK

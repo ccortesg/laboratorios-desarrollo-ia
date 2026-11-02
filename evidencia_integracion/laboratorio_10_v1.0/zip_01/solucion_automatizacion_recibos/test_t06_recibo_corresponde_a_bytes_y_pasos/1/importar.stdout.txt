@@ -1,0 +1,1 @@
+{"estado": "APLICADO", "sha256_fuente": "d4c2daa0016e34ea251cb2d3eed024c7e3150347a360e1b7781e798011344506", "filas_leidas": 4, "filas_validadas": 4, "filas_aplicadas": 4, "filas_sin_cambio": 0, "errores": []}
