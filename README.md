@@ -2,13 +2,13 @@
 
 Material de acompañamiento de **Desarrollo de Software en la Era de la IA: Domina Codex, Grok Build y las Herramientas del Futuro**. Diez ejercicios locales sobre un catálogo ficticio para practicar cómo definir trabajo, revisar cambios y reconocer resultados con evidencia mediante CLARO.
 
-**Estado comprobado el 2 de noviembre de 2026:** repositorio privado; base de main `a8b779f5cf5f876bcf4a1a18e906e75e59d003ee`, árbol `69d691ec538807193e6e2437946197da86fd8837`. Las 17 etiquetas, incluidas lab-10-v1.0 y repositorio-v1.6, están presentes; esas dos coinciden con la base. Las guías para lectores y QR son una nueva preparación documental. La subida de este incremento se acredita en un comprobante posterior externo al commit; consulta [su alcance y pendientes](docs/publicacion/ESTADO_PREPARACION_PUBLICA_v1.0.md).
+**Licencias aprobadas el 2 de noviembre de 2026:** [MIT para el código propio](LICENSE) y [CC BY 4.0 para la documentación seleccionada](LICENSES/CC-BY-4.0.txt). Consulta [rutas, exclusiones y atribución](LICENCIAS.md). La apertura pública está autorizada después de verificar este incremento; el [registro operativo](docs/publicacion/ESTADO_APERTURA_PUBLICA_v1.0.md) distingue la preparación de la operación administrativa y las comprobaciones anónimas posteriores. Los informes anteriores describen sus fechas y se conservan como antecedentes.
 
-**Estado editorial:** capítulos 1–10 pendientes de revisión del autor; maestro editorial 1.0 vigente. El capítulo 1 conserva el título original «El nuevo oficio del desarrollador: del código al resultado». Los manuscritos se entregan por separado. Este repositorio no publica ni aprueba el libro y todavía no tiene una licencia elegida por el autor.
+**Estado editorial:** capítulos 1–10 pendientes de revisión del autor; maestro editorial 1.0 vigente. El capítulo 1 conserva el título original «El nuevo oficio del desarrollador: del código al resultado». Los manuscritos se entregan por separado. Este repositorio no publica ni aprueba el libro.
 
 ## Empieza con el laboratorio 1
 
-1. Abre la [ficha del laboratorio 1](docs/lectores/laboratorio_01.md) y descarga su [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_01_v1.0.zip). Mientras el repositorio sea privado necesitas acceso autorizado; también puedes abrir [el archivo en GitHub](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_01_v1.0.zip) y descargarlo con tu sesión.
+1. Abre la [ficha del laboratorio 1](docs/lectores/laboratorio_01.md) y descarga su [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_01_v1.0.zip). Consulta junto al ZIP los [avisos de licencia](docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-01), [MIT](LICENSE) y [CC BY 4.0](LICENSES/CC-BY-4.0.txt); el archivo histórico permanece intacto.
 2. Extrae el ZIP en una carpeta nueva. Abre una terminal en **laboratorio_01/**, junto a laboratorio.py. Necesitas Python con sqlite3 y unittest (referencia técnica: Python 3.12), editor y terminal. No necesitas pip, Git, Node ni cuentas comerciales para ejecutar este ejercicio.
 3. Ejecuta cada comando y observa su resultado. `python` puede llamarse `python3` o `py -3` en tu equipo:
 
@@ -42,7 +42,7 @@ Cada ficha indica objetivo, descarga versionada, requisitos, carpeta de ejecuci�
 
 [Índice de lectores, descargas y correcciones](docs/lectores/README.md) · [mapa único y hashes](docs/lectores/mapa_laboratorios.json).
 
-El 4 necesita Git y usa `python herramientas/preparar_laboratorio_04.py` desde la raíz del repositorio completo; su carpeta visible no es un Git independiente. El 5 requiere Python 3.10+; el 6 añade una web local y navegador manual; del 7 al 10 se requiere Python 3.11+. Sólo las comprobaciones automatizadas de navegador requieren Node 20+, Playwright y Chromium. Sigue el README técnico de cada versión para instalarlos. El 8 recomienda **1.0.1** y conserva 1.0 como antecedente de su corrección de recursos SQLite.
+El 4 necesita Git; su ZIP autónomo incluye repositorio/.git y ofrece el recorrido principal. El preparador del repositorio completo es una alternativa documentada en la ficha. El 5 requiere Python 3.10+; el 6 añade una web local y navegador manual; del 7 al 10 se requiere Python 3.11+. Sólo las comprobaciones automatizadas de navegador requieren Node 20+, Playwright y Chromium. Sigue el README técnico de cada versión para instalarlos. El 8 recomienda **1.0.1** y conserva 1.0 como antecedente de su corrección de recursos SQLite.
 
 ## Cómo leer los resultados
 
@@ -73,6 +73,6 @@ Elige un destino nuevo. Sin --navegador el global queda NO EJECUTADO. Consulta [
 - trabajo/: prácticas y comprobantes nuevos ignorados por Git.
 - [VERSIONES](VERSIONES.md), [PROCEDENCIA](PROCEDENCIA.json) y [CONTINUIDAD](CONTINUIDAD.md): antecedentes y trazabilidad técnica.
 
-Para correcciones o incidencias sigue [correcciones y soporte](docs/lectores/README.md#correcciones-y-soporte); no incluyas datos personales ni secretos. La [propuesta de licencia](docs/publicacion/PROPUESTA_LICENCIA_v1.0.md) requiere decisión del autor. Los QR y los [recuadros de integración](docs/publicacion/INTEGRACION_QR_EN_LIBRO_v1.0.md) se preparan para la siguiente revisión editorial: todavía no están insertados en los capítulos.
+Para correcciones o incidencias sigue [correcciones y soporte](docs/lectores/README.md#correcciones-y-soporte); no incluyas datos personales ni secretos. La [propuesta histórica de licencia](docs/publicacion/PROPUESTA_LICENCIA_v1.0.md) queda resuelta por las [licencias aprobadas](LICENCIAS.md). Los QR y los [recuadros de integración](docs/publicacion/INTEGRACION_QR_EN_LIBRO_v1.0.md) se preparan para la siguiente revisión editorial: todavía no están insertados en los capítulos.
 
 La cabecera anterior de «cierre preparado» y el README completo se conservan byte por byte como [antecedente identificable](docs/publicacion/antecedentes/README_ANTES_PREPARACION_v1.0.txt). Sus pendientes describen aquel momento y no sustituyen las referencias consultadas en esta preparación.

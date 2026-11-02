@@ -6,7 +6,7 @@ Fuente única: [mapa de laboratorios](../lectores/mapa_laboratorios.json). Los d
 
 Ubicación propuesta: sección **Preparación del laboratorio** de cada capítulo. Colocar el QR a **42 × 42 mm**, incluyendo sus cuatro módulos de margen blanco, sin recortar, deformar ni superponer elementos. Preferir SVG para maquetación; conservar el PNG como alternativa. Los módulos son negros y el fondo blanco opaco. El QR es complementario: conservar ambos enlaces de texto en papel y enlaces activos en la edición digital.
 
-La [hoja de revisión](../lectores/qr/hoja_revision.svg) representa los diez QR a ese tamaño en A4. La decodificación digital y la inspección visual no sustituyen un escaneo físico de una prueba de imprenta. Mientras el repositorio sea privado, el QR no concede acceso; acceso anónimo y apertura pública siguen pendientes de otro encargo.
+La [hoja de revisión](../lectores/qr/hoja_revision.svg) representa los diez QR a ese tamaño en A4. La decodificación digital y la inspección visual no sustituyen un escaneo físico de una prueba de imprenta. Las licencias están aprobadas en este encargo; consulta [alcance](../../LICENCIAS.md) y [avisos de las descargas](AVISOS_DISTRIBUCIONES_v1.0.md). La operación de apertura y las comprobaciones anónimas se acreditan después en el comprobante externo. La hoja conserva su leyenda histórica de preparación privada.
 
 ## Capítulo 1 · Preparación del laboratorio
 
@@ -18,7 +18,7 @@ La [hoja de revisión](../lectores/qr/hoja_revision.svg) representa los diez QR 
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_01.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_01.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_01_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_01_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-01) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python con sqlite3 y unittest de la biblioteca estándar; referencia técnica Python 3.12. Editor y terminal. Sin pip, Git, Node ni cuenta comercial para este recorrido.
 >
@@ -38,7 +38,7 @@ SHA-256 del ZIP: `e47d0a8e23f63d84fe0030438e6f5e729d4a0faa955c27d2fede3120f8d57e
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_02.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_02.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_02_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_02_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-02) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python con sqlite3 y unittest; referencia técnica Python 3.12. Editor y terminal. Sin paquetes adicionales.
 >
@@ -58,7 +58,7 @@ SHA-256 del ZIP: `442e63d079fa229e500199ca3e5292369238c658e72db83cadc1ac243d31d4
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_03.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_03.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_03_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_03_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-03) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3 con sqlite3 y unittest; referencia técnica Python 3.12. Sólo biblioteca estándar.
 >
@@ -78,11 +78,11 @@ SHA-256 del ZIP: `a4cf307bc71287e3030118fb97098489b082a5935f09e601c06258e1db300d
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_04.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_04.md)
 >
-> Descarga directa: [ZIP 1.1](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_04_v1.1.zip)
+> Descarga directa: [ZIP 1.1](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_04_v1.1.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-04) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
-> Requisitos esenciales: Git y Python con sqlite3 y unittest. Para el preparador, una copia completa de este repositorio, incluido historiales/laboratorio_04.bundle.
+> Requisitos esenciales: Git y Python con sqlite3 y unittest; sólo biblioteca estándar. El ZIP incluye repositorio/.git; no necesita el repositorio completo ni servicios comerciales.
 >
-> Primer paso: descarga y extrae en una carpeta nueva. Carpeta de ejecución: Raíz del repositorio completo; después trabajo/laboratorio_04 y su repositorio/. Ejecuta `python herramientas/preparar_laboratorio_04.py`. Sigue el recorrido completo de la guía y no reemplaces evidencia anterior.
+> Primer paso: descarga y extrae en una carpeta nueva. Carpeta de ejecución: laboratorio_04/ del ZIP extraído; después laboratorio_04/repositorio/. Ejecuta `python --version`. Sigue el recorrido completo de la guía y no reemplaces evidencia anterior.
 >
 > Texto alternativo digital: «Código QR que abre la guía del laboratorio 04, versión 1.1, con requisitos, descarga y correcciones. El enlace de texto a la guía ofrece el mismo acceso».
 
@@ -98,7 +98,7 @@ SHA-256 del ZIP: `6409c16235a406a7d22bb983327369647419c6b3c1237c443ee590dafe0511
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_05.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_05.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_05_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_05_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-05) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3.10 o posterior con SQLite y biblioteca estándar. Sin paquetes adicionales ni servicios.
 >
@@ -118,7 +118,7 @@ SHA-256 del ZIP: `82130be2e74782c699c5aef6e70ab9e715cc9c68676c873c67f39fd2f37a2f
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_06.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_06.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_06_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_06_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-06) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3.10 o posterior con SQLite y un navegador para uso manual. Sólo la automatización requiere Node 20+, Playwright y Chromium.
 >
@@ -138,7 +138,7 @@ SHA-256 del ZIP: `79728447611c6ddbb1ab1615ca573a1e7199390c4890ec8796e699003b0880
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_07.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_07.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_07_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_07_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-07) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3.11 o posterior con SQLite. Sólo la automatización de la web heredada requiere Node 20+, Playwright y Chromium.
 >
@@ -158,7 +158,7 @@ SHA-256 del ZIP: `2f579f87eb3a907e67ab195acb285543ee5997a805ff1add2e422dc7bc9b0b
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_08.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_08.md)
 >
-> Descarga directa: [ZIP 1.0.1](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_08_v1.0.1.zip)
+> Descarga directa: [ZIP 1.0.1](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_08_v1.0.1.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-08) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3.11 o posterior con SQLite y un navegador manual. Para automatizar: Node 20+, Playwright y Chromium.
 >
@@ -178,7 +178,7 @@ SHA-256 del ZIP: `8e445b1ecb195e96999f9ab7123e4bbeb93ce43a056a0fefbb91e3379f617c
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_09.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_09.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_09_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_09_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-09) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3.11 o posterior con SQLite y un navegador manual. Para automatizar: Node 20+, Playwright y Chromium.
 >
@@ -198,7 +198,7 @@ SHA-256 del ZIP: `6010765d31beab92b35447439864e5af0b321c99962b7bc692a0dacf66ecc1
 >
 > Guía: [https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_10.md](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_10.md)
 >
-> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_10_v1.0.zip)
+> Descarga directa: [ZIP 1.0](https://raw.githubusercontent.com/ccortesg/laboratorios-desarrollo-ia/a8b779f5cf5f876bcf4a1a18e906e75e59d003ee/distribuciones/LABORATORIO_10_v1.0.zip) · [avisos](https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-10) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: Python 3.11 o posterior con SQLite. El operador no requiere navegador; la automatización web requiere Node 20+, Playwright y Chromium.
 >

@@ -1,5 +1,5 @@
 {
-  "version_mapa": "1.0",
+  "version_mapa": "1.1",
   "repositorio": "https://github.com/ccortesg/laboratorios-desarrollo-ia",
   "fecha_preparacion": "2026-11-02",
   "visibilidad_observada": "private",
@@ -63,7 +63,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "21d923563fc7006d86006a6264916b9c3dc487407642b3845cdf6cd96f337f38",
-      "qr_svg_sha256": "d83482b4ea7fbcbe33724c3963f109be8a0c6820e08b6e18c8202e22380c1bef"
+      "qr_svg_sha256": "d83482b4ea7fbcbe33724c3963f109be8a0c6820e08b6e18c8202e22380c1bef",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-01"
     },
     {
       "numero": 2,
@@ -110,7 +111,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "82aca4e1639a48da47dce38b159894d18450c6e30b149d95c5ff48b89b0b9b0e",
-      "qr_svg_sha256": "b4740358ddf6f500c9c74ac43dfe1448d1ef31ab4a753c64efa0af36814638d6"
+      "qr_svg_sha256": "b4740358ddf6f500c9c74ac43dfe1448d1ef31ab4a753c64efa0af36814638d6",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-02"
     },
     {
       "numero": 3,
@@ -157,7 +159,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "c0caf5794510cda5d7b5b706a4842122a17dbb67a7313b6c3ff2c5619716a314",
-      "qr_svg_sha256": "b204f3e8fff1fb77b58228da43985e724259d4cd95d095dc85801859e8ab3c56"
+      "qr_svg_sha256": "b204f3e8fff1fb77b58228da43985e724259d4cd95d095dc85801859e8ab3c56",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-03"
     },
     {
       "numero": 4,
@@ -166,7 +169,7 @@
       "fuente_titulo": "CAPITULO_04_v1.1.md y DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md (entrega editorial externa; no se incorporan manuscritos al repositorio)",
       "version": "1.1",
       "objetivo": "Revisar referencias y el árbol de trabajo de un repositorio sintético; añadir consulta exacta por código.",
-      "requisitos": "Git y Python con sqlite3 y unittest. Para el preparador, una copia completa de este repositorio, incluido historiales/laboratorio_04.bundle.",
+      "requisitos": "Git y Python con sqlite3 y unittest; sólo biblioteca estándar. El ZIP incluye repositorio/.git; no necesita el repositorio completo ni servicios comerciales.",
       "ficha": "docs/lectores/laboratorio_04.md",
       "url_guia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_04.md",
       "zip": "distribuciones/LABORATORIO_04_v1.1.zip",
@@ -176,17 +179,23 @@
       "destino_qr": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/lectores/laboratorio_04.md",
       "qr_png": "docs/lectores/qr/laboratorio_04.png",
       "qr_svg": "docs/lectores/qr/laboratorio_04.svg",
-      "carpeta_ejecucion": "Raíz del repositorio completo; después trabajo/laboratorio_04 y su repositorio/",
+      "carpeta_ejecucion": "laboratorio_04/ del ZIP extraído; después laboratorio_04/repositorio/",
       "comandos_minimos": [
-        "python herramientas/preparar_laboratorio_04.py",
-        "cd trabajo/laboratorio_04",
-        "python verificar.py --salida evidencia_referencias",
+        "python --version",
+        "python -c \"import sqlite3, unittest; print(sqlite3.sqlite_version)\"",
+        "git --version",
+        "python verificar.py --salida mi_evidencia",
         "cd repositorio",
-        "python pruebas.py",
-        "git diff inicio solucion --"
+        "git status --short",
+        "git log --oneline --decorate",
+        "git rev-parse refs/tags/inicio",
+        "git rev-parse refs/tags/solucion",
+        "git diff --stat inicio solucion --",
+        "git diff inicio solucion -- detalle.py pruebas_detalle.py pruebas.py",
+        "python pruebas.py"
       ],
       "resultados_esperados": "Referencias inicio: diez APROBADO; solucion: veinte APROBADO. El árbol recién preparado debe aprobar veinte. N01–N10 no existen en inicio y quedan NO EJECUTADO. El verificador histórico no acredita tus ediciones actuales.",
-      "limites": "Códigos exactos como cadenas: sin normalización ni prefijos. La instantánea visible en laboratorios/ no es un Git independiente. Usa el preparador; conserva cualquier copia previa.",
+      "limites": "Códigos exactos como cadenas, sin normalización ni prefijos. Conservar .git del ZIP. El verificador compara etiquetas; pruebas.py comprueba el árbol actual. El preparador sólo es la alternativa del repositorio completo.",
       "readme_tecnico": "laboratorios/laboratorio_04/README.md",
       "comprobacion_enlace": {
         "zip_autenticado": "APROBADO",
@@ -207,7 +216,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "bf6974ec7d00d277ca162021d4d8d51a6e42050f28d63ea51ce1cefb3afaa91d",
-      "qr_svg_sha256": "2533714b631f3be4adb0646f3db25333b8ce0d84658dc464e59a9352a786103c"
+      "qr_svg_sha256": "2533714b631f3be4adb0646f3db25333b8ce0d84658dc464e59a9352a786103c",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-04"
     },
     {
       "numero": 5,
@@ -255,7 +265,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "7f8d1f923395c4d4751b4546009bfe01ad55190c443d81bb49a1585c707cb094",
-      "qr_svg_sha256": "992874868b5ab2fc590b1dbbd9429a776a8fa05d7d4419daf92e65cd7168a768"
+      "qr_svg_sha256": "992874868b5ab2fc590b1dbbd9429a776a8fa05d7d4419daf92e65cd7168a768",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-05"
     },
     {
       "numero": 6,
@@ -300,7 +311,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "60d2cc59ff35a0dae00040a89f6c00ad2c561688b4953670511652a6088a83af",
-      "qr_svg_sha256": "7c82dda8b77da548f3d5f5fba97b951f68a7a048a140d47e4f3dc8067682eae1"
+      "qr_svg_sha256": "7c82dda8b77da548f3d5f5fba97b951f68a7a048a140d47e4f3dc8067682eae1",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-06"
     },
     {
       "numero": 7,
@@ -347,7 +359,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "07a43fb4cf6adcc90930fe2d2c1087168648ce68f632cc2e5a5851e407537899",
-      "qr_svg_sha256": "484b8e313376b697db04473923cd8a591d30265d39fd158b132786293c29bf09"
+      "qr_svg_sha256": "484b8e313376b697db04473923cd8a591d30265d39fd158b132786293c29bf09",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-07"
     },
     {
       "numero": 8,
@@ -394,7 +407,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "3ed501318b5557786376f23ace7920800a1578fcf09accb6eaa9b64f310f21eb",
-      "qr_svg_sha256": "e20f983b0bc2960997d3876927ad7c0ba05a48007119900ac5ee6d4b76848264"
+      "qr_svg_sha256": "e20f983b0bc2960997d3876927ad7c0ba05a48007119900ac5ee6d4b76848264",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-08"
     },
     {
       "numero": 9,
@@ -443,7 +457,8 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "d756f94c5093776a137fa07d74a67f21a975f0979ea997d06a3ebcef18f5ec2a",
-      "qr_svg_sha256": "9f86cce6edd7853569f61485345076ee5e06eb7838ec2fc2d21a490b5617d105"
+      "qr_svg_sha256": "9f86cce6edd7853569f61485345076ee5e06eb7838ec2fc2d21a490b5617d105",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-09"
     },
     {
       "numero": 10,
@@ -491,14 +506,23 @@
         "equivalencia": "Píxeles RGB del SVG renderizado idénticos al PNG"
       },
       "qr_png_sha256": "b4c1f201af0c8556b615355676cf75ba9f20982c891100f819bb5250592e5542",
-      "qr_svg_sha256": "d22da6ba87bd9b03c7f75771436f04e48f154dd25dea6ec1ae2399dcbb091e2f"
+      "qr_svg_sha256": "d22da6ba87bd9b03c7f75771436f04e48f154dd25dea6ec1ae2399dcbb091e2f",
+      "avisos_licencia": "https://github.com/ccortesg/laboratorios-desarrollo-ia/blob/main/docs/publicacion/AVISOS_DISTRIBUCIONES_v1.0.md#laboratorio-10"
     }
   ],
-  "estado_instantanea": "Antes del commit: la verificación de main autenticada posterior al push se acredita únicamente en el comprobante externo de la entrega.",
+  "estado_instantanea": "Actualización de licencias y LEC-01 previa al commit y apertura. Los estados históricos se conservan con sus fechas; los resultados anónimos posteriores se acreditan fuera del commit.",
   "cotejo_indice_editorial": {
     "estado": "APROBADO",
     "fuente": "DOCUMENTO_MAESTRO_EDITORIAL_v1.0.md y capítulos 2–5 facilitados por el autor; consulta externa de lectura, sin incorporar ni modificar manuscritos",
     "fecha_utc": "2026-11-02T20:17:07.637612+00:00",
     "capitulos": 10
+  },
+  "licencias": {
+    "fecha_efectiva": "2026-11-02",
+    "alcance": "../../LICENCIAS.md",
+    "mit": "../../LICENSE",
+    "cc_by": "../../LICENSES/CC-BY-4.0.txt",
+    "inventario_distribuciones": "../publicacion/LICENCIAS_DISTRIBUCIONES_v1.0.json",
+    "avisos": "../publicacion/AVISOS_DISTRIBUCIONES_v1.0.md"
   }
 }

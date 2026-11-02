@@ -1,3 +1,13 @@
+# Continuidad · licencias y apertura autorizada
+
+2 de noviembre de 2026. El autor aprobó MIT para el código propio, CC BY 4.0 para la documentación didáctica seleccionada, titular Carlos Armando Cortés García y año 2026, y autoriza integración, push normal y apertura después de verificar. Esta instrucción resuelve los pendientes anteriores de licencia y visibilidad. Consulta [alcance y atribución](LICENCIAS.md), [estado operativo previo](docs/publicacion/ESTADO_APERTURA_PUBLICA_v1.0.md) y [precisión PUB-EV-01](docs/publicacion/ACLARACION_EVIDENCIA_PUBLICACION_v1.1.md).
+
+LEC-01 se corrige en la ficha y el recuadro 4: recorrido principal desde el ZIP autónomo con .git conservado; preparador del repositorio completo como alternativa. Se mantienen bytes de laboratorios, distribuciones, bundles, contratos, recolector y evidencias; también etiquetas, destinos QR y sus archivos. El comprobante posterior al push y apertura queda fuera del commit acreditado, en trabajo/CIERRE_APERTURA_PUBLICA_v1.0.zip. Los resultados administrativos y anónimos posteriores no se anticipan en esta instantánea.
+
+Manuscrito y capítulos fuera de las licencias. Maestro editorial 1.0 y capítulo 1 original conservados; capítulos 1–10 pendientes de revisión. Inserción editorial y prueba física de escaneo posteriores. No se crean etiquetas, Releases ni Pages.
+
+## Antecedentes íntegros
+
 # Continuidad vigente · cierre del laboratorio 10 preparado
 
 **Fecha:** 2026-11-01T19:11:54-07:00 · America/Hermosillo; UTC 2026-11-02T02:11:54.339921+00:00. Estados preparados: [libro 1.9.2](docs/estados/ESTADO_DEL_LIBRO_v1.9.2.md) y [repositorio 1.8.2](docs/estados/ESTADO_REPOSITORIO_v1.8.2.md). Revisión recibida 1.9.1/1.8.1 conservada exacta.

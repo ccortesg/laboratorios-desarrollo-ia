@@ -43,7 +43,7 @@ Fuente única: [mapa de laboratorios](../lectores/mapa_laboratorios.json). Los d
 
 Ubicación propuesta: sección **Preparación del laboratorio** de cada capítulo. Colocar el QR a **42 × 42 mm**, incluyendo sus cuatro módulos de margen blanco, sin recortar, deformar ni superponer elementos. Preferir SVG para maquetación; conservar el PNG como alternativa. Los módulos son negros y el fondo blanco opaco. El QR es complementario: conservar ambos enlaces de texto en papel y enlaces activos en la edición digital.
 
-La [hoja de revisión](../lectores/qr/hoja_revision.svg) representa los diez QR a ese tamaño en A4. La decodificación digital y la inspección visual no sustituyen un escaneo físico de una prueba de imprenta. Mientras el repositorio sea privado, el QR no concede acceso; acceso anónimo y apertura pública siguen pendientes de otro encargo.
+La [hoja de revisión](../lectores/qr/hoja_revision.svg) representa los diez QR a ese tamaño en A4. La decodificación digital y la inspección visual no sustituyen un escaneo físico de una prueba de imprenta. Las licencias están aprobadas en este encargo; consulta [alcance](../../LICENCIAS.md) y [avisos de las descargas](AVISOS_DISTRIBUCIONES_v1.0.md). La operación de apertura y las comprobaciones anónimas se acreditan después en el comprobante externo. La hoja conserva su leyenda histórica de preparación privada.
 
 '''
     blocks=[]
@@ -83,7 +83,7 @@ La [hoja de revisión](../lectores/qr/hoja_revision.svg) representa los diez QR 
 >
 > Guía: [{lab['url_guia']}]({lab['url_guia']})
 >
-> Descarga directa: [ZIP {lab['version']}]({lab['url_descarga']})
+> Descarga directa: [ZIP {lab['version']}]({lab['url_descarga']}) · [avisos]({lab['avisos_licencia']}) · [MIT](../../LICENSE) · [CC BY 4.0](../../LICENSES/CC-BY-4.0.txt)
 >
 > Requisitos esenciales: {lab['requisitos']}
 >
